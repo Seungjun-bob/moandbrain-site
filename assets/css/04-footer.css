@@ -1,0 +1,68 @@
+/* 푸터 (tiffany .footer-content: bg 샴페인 → 극연 세이지 · padding 96 0 44 · 이메일행 → 카카오톡 행 · 5열 · 하단행 · 사업자 줄) */
+.footer-email-signup { background: var(--white); border-top: 1px solid var(--grey-12); padding: 72px 24px; text-align: center; }
+.footer-email-signup__inner { max-width: 640px; margin: 0 auto; }
+.footer-email-signup h2 { margin-bottom: 12px; }
+.footer-email-signup p { margin-bottom: 24px; color: var(--text-3); }
+.footer-email-signup .btn { min-width: 220px; }
+
+.footer-content { background: var(--color-light); padding: 96px 0 96px; color: var(--text); }   /* 아래 96: 플로팅 카카오(bottom 20 · 48px)가 사업자 줄을 안 덮게 */
+.footer-content .footer-email-signup { margin: -96px 0 96px; }
+.footer-columns { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+.footer-item .title { font-family: var(--font-sans); font-size: var(--fs-14); line-height: var(--lh-14); font-weight: 500; margin-bottom: 20px; }
+.footer-item .title button { display: none; }
+.menu-footer li + li { margin-top: 12px; }
+.menu-footer a { font-size: var(--fs-14); line-height: var(--lh-14); color: var(--text-2); }
+.menu-footer a:hover { color: var(--black); text-decoration: underline; text-underline-offset: 4px; }
+
+.footer-bottom { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; margin-top: 88px; padding-top: 32px; border-top: 1px solid var(--grey-12); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--text-3); }
+.footer-bottom__left { display: flex; gap: 24px; }
+.footer-bottom__right { display: flex; justify-content: flex-end; gap: 20px; }
+.footer-bottom__right a { color: var(--text-2); }
+.footer-bottom__right a:hover { color: var(--black); text-decoration: underline; text-underline-offset: 4px; }
+.monogram { display: inline-flex; align-items: center; justify-self: center; height: 40px; color: var(--black); }
+.monogram img { height: 32px; width: auto; }
+.footer-legal { margin-top: 40px; font-size: 12px; line-height: 20px; color: var(--muted); }
+.footer-legal .sep { color: var(--grey-12); }
+.footer-legal .slot--inline { min-width: 64px; font-size: 12px; }
+.footer-email-signup .slot--inline { min-width: 0; }
+
+/* SNS 아이콘 한 줄 (노션 "SNS채널 아이콘") — 원형 36 · 이름 글자 없음(title/aria-label) · 실제 브랜드 아이콘 이미지로 교체 전까지 약어 */
+.sns { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.sns__row { display: flex; gap: 10px; }
+.sns__item { display: inline-flex; }
+.sns__icon { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--grey-12); background: var(--white); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-en); font-size: 10px; letter-spacing: .02em; color: var(--text); transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+a.sns__item:hover .sns__icon { background: var(--color-key); border-color: var(--color-key); }
+.sns__item--slot .sns__icon { border: 1.5px dashed #c00; color: #c00; background: #fff5f5; }
+.sns__note { font-size: 11px; line-height: 14px; }
+@media (max-width: 1199.98px) { .sns { align-items: center; } .sns__row { gap: 8px; } .sns__icon { width: 32px; height: 32px; font-size: 9px; } }
+
+/* 간이 헤더/푸터 (visit.html) */
+.simple-header { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--grey-12); height: 128px; display: flex; align-items: center; justify-content: space-between; padding: 0 36px; }
+.simple-header .logo-home { position: static; transform: none; width: auto; }
+.simple-header .wordmark { font-size: 44px; }
+.simple-header a.body_14 { display: inline-flex; align-items: center; gap: 8px; color: var(--text); }
+.simple-footer { background: var(--color-light); padding: 48px 0 44px; }
+.simple-footer .footer-bottom { margin-top: 0; padding-top: 0; border-top: 0; }
+
+@media (max-width: 1199.98px) {
+  .footer-content { padding: 48px 0 32px; }
+  .footer-columns { display: block; }
+  .footer-item { border-bottom: 1px solid var(--grey-12); }
+  .footer-item .title { margin: 0; }
+  .footer-item .title button { display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 18px 0; text-align: left; font-weight: 500; }
+  .footer-item .title button .icon { transition: transform var(--dur) var(--ease); }
+  .footer-item.is-open .title button .icon { transform: rotate(180deg); }
+  .footer-item .title span.static { display: none; }
+  .menu-footer { display: none; padding: 0 0 18px; }
+  .footer-item.is-open .menu-footer { display: block; }
+  .footer-bottom { grid-template-columns: 1fr; text-align: center; margin-top: 40px; gap: 20px; }
+  .footer-content { padding: 0 0 48px; }
+  .footer-content .footer-email-signup { margin: 0 0 48px; padding: 48px 24px; }
+  .footer-legal { margin-top: 24px; text-align: center; }
+  .footer-bottom__left, .footer-bottom__right { justify-content: center; flex-wrap: wrap; }
+  .simple-header { height: 59px; padding: 0 12px; }
+  .simple-header .wordmark { font-size: 20px; }
+}
+@media (min-width: 1200px) {
+  .footer-item .title span.static { display: inline; }
+}

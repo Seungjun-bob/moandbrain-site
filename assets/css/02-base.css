@@ -1,0 +1,95 @@
+/* 기본 타이포 · 컨테이너 · 버튼 · 유틸 (tiffany global.css 대응) */
+html { font-size: 16px; }
+body {
+  font-family: var(--font-sans); font-size: var(--fs-16); line-height: var(--lh-16);
+  color: var(--text); background: var(--white); -webkit-font-smoothing: antialiased;
+  word-break: keep-all; overflow-wrap: break-word;   /* 한글 어절 단위 줄바꿈 (제목 고아 방지) */
+}
+body.nav-mobile-open { overflow: hidden; }
+p { font-size: var(--fs-body); line-height: var(--lh-body); }
+a { color: var(--text-2); transition: color var(--dur) var(--ease); }
+a:hover { color: var(--black); }
+:focus-visible { outline: 2px solid var(--color-deep); outline-offset: 2px; border-radius: 2px; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 0; top: -68px; background: var(--white); padding: 16px; z-index: 1000; }
+.skip:focus { top: 0; }
+
+/* 제목 — tiffany h1~h3: Sterling SSM 32/40 400 */
+h1, h2, h3, .h-serif { font-family: var(--font-serif); font-weight: 400; font-size: var(--fs-h); line-height: var(--lh-h); letter-spacing: 0; color: var(--text); }
+.h-serif--lg { font-size: var(--fs-h-lg); line-height: var(--lh-h-lg); }
+.h-serif--sm { font-size: 20px; line-height: 28px; }
+.h-en { font-family: var(--font-serif-en); }
+.kicker { font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); }
+
+/* 본문 유틸 — tiffany body_13 / body_14 / body_16 / body_16_p / subtitle_11_sb */
+.body_13 { font-size: var(--fs-body); line-height: var(--lh-body); }
+.body_14 { font-size: var(--fs-14); line-height: var(--lh-14); }
+.body_16 { font-size: var(--fs-16); line-height: var(--lh-16); }
+.body_16_p { font-size: var(--fs-16); line-height: var(--lh-16-p); }
+.subtitle_11_sb { font-size: 11px; line-height: 16px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; }
+.text-center { text-align: center; }
+.text-serif { font-family: var(--font-serif); }
+.text-deep { color: var(--color-deep); }
+.link-underlined { text-decoration: underline; text-underline-offset: 4px; color: var(--text); font-size: var(--fs-14); line-height: var(--lh-14); }
+.link-underlined:hover { color: var(--color-deep); }
+.num { font-family: var(--font-en); font-weight: 300; font-size: 56px; line-height: 1; letter-spacing: -.02em; }
+.num--xl { font-size: 88px; }
+
+/* 컨테이너 */
+.container-tiff { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 8px 16px; }
+.container { width: 100%; max-width: calc(var(--container) + var(--side) * 2); margin: 0 auto; padding: 0 var(--side); }
+.container--wide { max-width: calc(1401px + var(--side) * 2); }
+.padding-block-component { height: 24px; }
+.padding-block-component--lg { height: 48px; }
+.padding-block-component--xl { height: 96px; }
+@media (max-width: 719.98px) { .padding-block-component { height: 12px; } .padding-block-component--lg { height: 24px; } .padding-block-component--xl { height: 48px; } }
+
+/* 버튼 — tiffany .btn: 13/16 500 uppercase · padding 23 32 21 · radius 0 · 높이 60 */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-sans); font-size: var(--fs-cta); line-height: var(--lh-cta); font-weight: 500;
+  letter-spacing: .02em; text-transform: uppercase; text-align: center;
+  padding: var(--btn-pad); border: 1px solid transparent; border-radius: 0; min-height: var(--btn-h);
+  color: var(--text); background: transparent; transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+  white-space: nowrap;
+}
+.btn-primary { background: var(--black); border-color: var(--black); color: var(--white); }
+.btn-primary:hover { background: #222; border-color: #222; color: var(--white); }
+.btn-light { background: var(--white); border-color: var(--white); color: var(--black); }
+.btn-light:hover { background: var(--color-light); border-color: var(--color-light); color: var(--black); }
+.btn-outline { background: transparent; border-color: var(--black); color: var(--black); }
+.btn-outline:hover { background: var(--black); color: var(--white); }
+.btn-outline-light { background: transparent; border-color: var(--white); color: var(--white); }
+.btn-outline-light:hover { background: var(--white); color: var(--black); }
+.btn-champagne { background: var(--color-light); border-color: var(--color-light); color: var(--black); }
+.btn-champagne:hover { background: var(--color-key); border-color: var(--color-key); color: var(--black); }
+.btn-key { background: var(--color-key); border-color: var(--color-key); color: var(--color-dark); }
+.btn-key:hover { background: var(--color-mid); border-color: var(--color-mid); color: var(--color-dark); }
+.btn-block { display: flex; width: 100%; }
+.btn-sm { min-height: 48px; padding: 15px 24px 13px; }
+
+/* 아이콘 */
+.icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.icon--sm { width: 16px; height: 16px; }
+.icon--xs { width: 12px; height: 12px; }
+
+/* 반응형 표시 유틸 (tiffany d-none / d-lg-flex) */
+@media (max-width: 1199.98px) { .d-lg-only { display: none !important; } }
+@media (min-width: 1200px) { .d-mobile-only { display: none !important; } }
+
+/* 이미지 플레이스홀더 (오프라인 시 회색 배경 + alt) */
+.ph { background: var(--grey-06); color: var(--muted); font-size: 12px; display: block; width: 100%; object-fit: cover; }
+.ratio-1x1 { aspect-ratio: 1 / 1; }
+.ratio-4x5 { aspect-ratio: 4 / 5; }
+.ratio-3x2 { aspect-ratio: 3 / 2; }
+.ratio-16x9 { aspect-ratio: 16 / 9; }
+.img-cover { width: 100%; height: 100%; object-fit: cover; }
+
+/* 브레드크럼 — tiffany .tiff-storepage-breadcrumbs: 푸터 위 97px 밴드, 중앙, 14px uppercase, 상단선 */
+.tiff-storepage-breadcrumbs { border-top: 1px solid var(--grey-12); background: var(--white); display: flex; justify-content: center; align-items: center; min-height: 97px; }
+.breadcrumb { display: flex; flex-wrap: wrap; justify-content: center; font-size: var(--fs-14); line-height: var(--lh-14); text-transform: uppercase; margin: 40px 12px; }
+.breadcrumb li { color: var(--text); }
+.breadcrumb li + li { padding-left: 8px; }
+.breadcrumb li + li::before { content: "/"; color: var(--muted); padding-right: 8px; }
+.breadcrumb li.active { color: var(--muted); }
+.breadcrumb a:hover { text-decoration: underline; }

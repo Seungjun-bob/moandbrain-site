@@ -1,0 +1,55 @@
+/* 모앤브레인 홈페이지 — 디자인 토큰 (tiffany.kr 실측 수치 + 기획안 팔레트) */
+:root {
+  /* 기획안 팔레트 (image2) */
+  --color-key: #C2E2D3;      /* 키컬러 — tiffany --Tiffany-Blue 자리 */
+  --color-mid: #7BBFA7;      /* 미드 세이지 — hover */
+  --color-deep: #3D7A66;     /* 딥 세이지 — 글자·아이콘 강조, tiffany --Tiffany-ADA 자리 */
+  --color-dark: #1E2E2A;     /* 다크 그린 — 어두운 섹션 배경 */
+  --color-light: #EEF7F3;    /* 극연 세이지 — 푸터·서비스 블록 배경, tiffany 샴페인 자리 */
+  --white: #fff;
+  --black: #000;
+  --text: #000;
+  --text-2: #444;            /* 링크 기본 */
+  --text-3: #4d4d4d;         /* 보조 */
+  --muted: #6c757d;          /* 브레드크럼 비활성 */
+  --grey-02: rgba(0, 0, 0, .02);
+  --grey-06: rgba(0, 0, 0, .06);
+  --grey-12: rgba(0, 0, 0, .12);
+  --swatch-bg: #efefef;
+
+  /* 폰트 — tiffany: Sterling SSM(세리프) / Santral(영문) / Noto Sans KR(한글 본문) */
+  --font-sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Verdana, sans-serif;
+  --font-serif: "Noto Serif KR", "EB Garamond", "Apple Myungjo", "Batang", serif;
+  --font-serif-en: "EB Garamond", "Noto Serif KR", "Apple Myungjo", "Batang", serif;
+  --font-en: "Inter", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+
+  /* 타이포 스케일 (tiffany 실측) */
+  --fs-h: 32px; --lh-h: 40px;        /* h1~h3 (375: 24/32) */
+  --fs-h-lg: 40px; --lh-h-lg: 48px;  /* PDP 제목 */
+  --fs-h2: 24px; --lh-h2: 32px;      /* 본문 h2 (page-head h1만 32) */
+  --fs-body: 14px; --lh-body: 22px;  /* p (tiffany 13 → 14, 11·13 단계 제거) */
+  --fs-14: 14px; --lh-14: 20px;
+  --fs-16: 16px; --lh-16: 24px;      /* a, 메뉴 링크 */
+  --lh-16-p: 28px;                   /* 단락 */
+  --fs-cta: 13px; --lh-cta: 16px;    /* 버튼 */
+  --fs-nav: 14px; --lh-nav: 16px;    /* 메뉴 */
+  --fs-nav-serif: 15px;
+
+  /* 레이아웃 */
+  --banner-h: 40px;            /* 띠배너 (tiffany 40 · 375: 48) — 닫으면 0 */
+  --header-h: 163px;
+  --header-total: calc(var(--banner-h) + var(--header-h));
+  --container: 1200px;
+  --container-max: 1920px;
+  --gutter: 24px;
+  --side: 24px;
+  --btn-pad: 23px 32px 21px;
+  --btn-h: 60px;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --dur: .3s;
+}
+@media (max-width: 1199.98px) {
+  :root { --banner-h: 40px; --header-h: 59px; --fs-h: 24px; --lh-h: 32px; --fs-h2: 22px; --lh-h2: 30px; --side: 12px; }
+}
+@media (max-width: 719.98px) { :root { --banner-h: 80px; } }   /* tiffany 375: 2줄 80 */
+html[data-banner="closed"] { --banner-h: 0px; }

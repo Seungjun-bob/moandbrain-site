@@ -1,0 +1,95 @@
+/* 띠배너 + 본 헤더 + 메가메뉴 + 모바일 드로어 (tiffany .header-banner / .main-header / .main-menu) */
+
+/* 띠배너 (tiffany.kr 실측): 40 · 375는 80(위 10 / 아래 6, 2줄) · 13px/20px 검정 중앙 · 문장은 밑줄 없이 링크 문구만 밑줄 · 좌우 9×14 검정 chevron · 닫기 없음 */
+.header-banner { position: relative; height: var(--banner-h); background: var(--color-key); color: #000; display: flex; align-items: center; justify-content: center; padding: 0 44px; overflow: hidden; z-index: 11; }
+html[data-banner="closed"] .header-banner { display: none; }
+.header-banner__inner { position: relative; width: 100%; max-width: 900px; height: 100%; text-align: center; font-size: 13px; line-height: 20px; word-break: keep-all; }
+.header-banner__msg { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); margin: 0; padding: 0 8px; opacity: 0; transition: opacity .4s var(--ease); pointer-events: none; color: #000; }
+.header-banner__msg.is-active { opacity: 1; pointer-events: auto; }
+.header-banner__msg a { color: #000; text-decoration: underline; text-underline-offset: 2px; }
+.header-banner__arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; color: #000; }
+.header-banner__arrow svg { width: 9px; height: 14px; fill: none; stroke: #000; stroke-width: 1.5; }
+.header-banner__arrow--prev { left: 12px; }
+.header-banner__arrow--next { right: 12px; }
+.header-banner__demo { position: absolute; left: 44px; top: 50%; transform: translateY(-50%); font-size: 11px; line-height: 14px; padding: 1px 6px; border: 1px dashed #c00; background: rgba(255,255,255,.7); }
+@media (max-width: 719.98px) { .header-banner { padding: 10px 44px 6px; } .header-banner__msg { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; } .header-banner__demo { display: none; } }
+
+/* 본 헤더: sticky · 흰색 · 높이 163(375: 59) · padding-top 28 · 하단선 */
+.main-header { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--grey-12); height: var(--header-h); padding: 28px 0 0; transition: transform .4s var(--ease), box-shadow var(--dur) var(--ease); }
+.main-header.is-scrolled { box-shadow: 0 1px 0 var(--grey-12); }
+.header-row { position: relative; display: flex; align-items: center; justify-content: space-between; height: 70px; padding: 0 36px; max-width: var(--container-max); margin: 0 auto; }
+.header-left, .header-right { display: flex; align-items: center; gap: 20px; z-index: 2; }
+.header-button { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; color: #212529; }
+.navbar-toggler { color: #000; }
+.header-button:hover { color: var(--color-deep); }
+.navbar-toggler { display: none; width: 26px; }
+
+/* 로고: tiffany 634×70 중앙 세리프 워드마크 → EB Garamond 대문자 자간 */
+.logo-home { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; height: 70px; width: 634px; max-width: 60%; color: var(--black); }
+.logo-home img { height: 100%; width: auto; max-width: 100%; display: block; }
+.wordmark { font-family: var(--font-serif-en); font-weight: 400; font-size: 56px; line-height: 1; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; color: var(--black); }
+.wordmark .amp { letter-spacing: 0; margin: 0 .02em; font-style: italic; }
+.wordmark--footer { font-size: 22px; }
+
+/* 메뉴줄: 로고 아래 1줄 · 14px · 간격 8 8 23 · 마지막 항목 세리프 + "•" */
+.main-menu { max-width: var(--container-max); margin: 0 auto; }
+.navbar-nav { display: flex; justify-content: center; align-items: flex-end; gap: 0; height: 63px; padding: 0 24px; }
+.nav-item { position: relative; }
+.nav-link { display: inline-block; font-size: var(--fs-nav); line-height: var(--lh-nav); color: var(--text); margin: 8px 8px 23px; padding: 0 0 4px; border-bottom: 1px solid transparent; transition: border-color var(--dur) var(--ease); }
+.nav-item:hover > .nav-link, .nav-item.is-open > .nav-link, .nav-link[aria-current="page"] { border-bottom-color: var(--black); }
+.nav-item--serif .nav-link { font-family: var(--font-serif); font-size: var(--fs-nav-serif); }
+.nav-item--serif::before { content: "•"; font-size: 10px; margin: 0 8px 0 12px; position: relative; top: -10px; color: var(--text); }
+.submenu-toggle-btn { display: none; }
+
+/* 메가메뉴: 전폭 흰 패널 · padding 0 24 · 열 그룹(제목 + 링크 16/24) · 하단선 */
+.dropdown-menu { position: absolute; left: 0; right: 0; top: 100%; background: var(--white); border-top: 1px solid var(--grey-12); border-bottom: 1px solid var(--grey-12); padding: 0 24px; display: none; z-index: 9; }
+.nav-item { position: static; }
+.nav-item.is-open > .dropdown-menu { display: block; }
+.dropdown-menu__inner { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 24px; max-width: var(--container); margin: 0 auto; padding: 40px 0 48px; }
+.menu-group__title { font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); margin-bottom: 20px; }
+.menu-group li + li { margin-top: 12px; }
+.menu-group a { font-size: var(--fs-16); line-height: var(--lh-16); color: #212529; }
+.menu-group a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.menu-group a.is-all { text-decoration: underline; text-underline-offset: 4px; margin-top: 4px; display: inline-block; }
+.menu-group--sub { text-align: center; }
+.menu-group__link { display: inline-block; font-family: var(--font-serif); font-size: 20px; line-height: 28px; color: var(--text); padding-bottom: 4px; border-bottom: 1px solid transparent; }
+.menu-group__link:hover { border-bottom-color: var(--black); }
+.menu-group__desc { display: block; margin-top: 6px; font-size: 12px; line-height: 16px; color: var(--muted); }
+.dropdown-menu__inner:has(.menu-group--sub) { padding: 36px 0 40px; }
+.menu-group--tiles { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px; }
+.tab-nav-item { display: block; text-align: center; }
+.tab-nav-item img { aspect-ratio: 210 / 226; object-fit: cover; width: 100%; }
+.tab-nav-item-text { display: inline-block; margin-top: 8px; font-size: var(--fs-14); line-height: 22px; text-decoration: underline; text-underline-offset: 4px; }
+.menu-backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, .35); opacity: 0; pointer-events: none; transition: opacity var(--dur) var(--ease); z-index: 8; }
+body.menu-open .menu-backdrop { opacity: 1; pointer-events: auto; }
+
+/* 375~1199: 헤더 59 · 햄버거 · 로고 181×23 · 드로어 */
+@media (max-width: 1199.98px) {
+  .main-header { padding: 0; border-bottom-color: transparent; }          /* tiffany 375: 맨 위에선 선 없음 */
+  .main-header.is-scrolled { border-bottom-color: var(--grey-12); box-shadow: none; }   /* 스크롤하면 전폭 1px */
+  .header-row { height: var(--header-h); padding: 0 12px; }
+  .header-left, .header-right { gap: 16px; }
+  .navbar-toggler { display: inline-flex; }
+  .logo-home { width: 181px; height: 20px; max-width: 50%; }   /* tiffany 375 로고 181×20 */
+  .wordmark { font-size: 20px; letter-spacing: .12em; }
+  .main-menu { position: fixed; top: var(--drawer-top, var(--header-total)); left: 0; bottom: 0; width: min(375px, 100%); background: var(--white); transform: translateX(-100%); transition: transform var(--dur) var(--ease); overflow-y: auto; z-index: 12; border-top: 1px solid var(--grey-12); }
+  body.nav-mobile-open .main-menu { transform: translateX(0); }
+  .navbar-nav { display: block; height: auto; padding: 16px 0 40px; }
+  .nav-item { position: relative; border-bottom: 1px solid var(--grey-06); }
+  .nav-link { display: block; margin: 0; padding: 18px 56px 18px 16px; font-size: var(--fs-16); line-height: var(--lh-16); border-bottom: 0; }
+  .nav-item--serif::before { display: none; }
+  .nav-item--serif .nav-link { font-size: 17px; }
+  .submenu-toggle-btn { display: flex; position: absolute; right: 12px; top: 18px; width: 24px; height: 24px; align-items: center; justify-content: center; transition: transform var(--dur) var(--ease); }
+  .nav-item.is-open .submenu-toggle-btn { transform: rotate(180deg); }
+  .dropdown-menu { position: static; border: 0; padding: 0 16px 8px; background: var(--color-light); }
+  .dropdown-menu__inner { display: block; padding: 8px 0 8px; }
+  .menu-group + .menu-group { margin-top: 20px; }
+  .menu-group--sub { text-align: left; }
+  .menu-group--sub + .menu-group--sub { margin-top: 0; }
+  .menu-group__link { font-family: var(--font-sans); font-size: 15px; line-height: 22px; display: block; padding: 10px 0; border-bottom: 0; }
+  .menu-group__desc { display: inline; margin: 0 0 0 8px; }
+  .menu-group__title { margin-bottom: 10px; }
+  .menu-group li + li { margin-top: 8px; }
+  .menu-group--tiles { display: none; }
+  .menu-backdrop { top: var(--drawer-top, var(--header-total)); }
+}
