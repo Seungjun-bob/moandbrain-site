@@ -61,6 +61,10 @@
   function syncCta() { if (!ctaBar) return; var r = ctaBar.getBoundingClientRect(); var stuck = getComputedStyle(ctaBar).display !== 'none' && Math.round(r.bottom) >= window.innerHeight - 1; document.body.classList.toggle('cta-stuck', stuck); }
   if (ctaBar) { window.addEventListener('scroll', syncCta, { passive: true }); window.addEventListener('resize', syncCta); syncCta(); }
 
+  // ── 떠 있는 카카오 상담: 푸터 맨 아래 사업자 줄이 보이면 숨긴다 (저작권 줄을 덮지 않게)
+  var legal = document.querySelector('.site-footer__legal');
+  if (legal && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { document.body.classList.toggle('footer-end', es[0].isIntersecting); }).observe(legal);
+
   // ── 현재 페이지 표시
   var here = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
   document.querySelectorAll('.nav-link').forEach(function (a) {

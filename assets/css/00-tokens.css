@@ -1,11 +1,14 @@
-/* 모앤브레인 홈페이지 — 디자인 토큰 (tiffany.kr 실측 수치 + 기획안 팔레트) */
+/* 모앤브레인 홈페이지 — 디자인 토큰 (tiffany.kr 실측 수치 + 기획안 키컬러) · 9/30 anti-AI 규칙(docs/07): 색 B안 · 제목 마루 부리 */
+@font-face { font-family: 'MaruBuri'; src: url('../fonts/MaruBuri-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'MaruBuri'; src: url('../fonts/MaruBuri-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
 :root {
   /* 기획안 팔레트 (image2) */
   --color-key: #C2E2D3;      /* 키컬러 — tiffany --Tiffany-Blue 자리 */
-  --color-mid: #7BBFA7;      /* 미드 세이지 — hover */
-  --color-deep: #3D7A66;     /* 딥 세이지 — 글자·아이콘 강조, tiffany --Tiffany-ADA 자리 */
-  --color-dark: #1E2E2A;     /* 다크 그린 — 어두운 섹션 배경 */
-  --color-light: #EEF7F3;    /* 극연 세이지 — 푸터·서비스 블록 배경, tiffany 샴페인 자리 */
+  --color-mid: #000;         /* 9/30: 미드 세이지 안 씀 → 검정 */
+  --color-deep: #000;        /* 9/30: 딥 세이지 안 씀 → 검정 */
+  --color-dark: #000;        /* 9/30: 진녹 면 안 씀 → 검정 (organiccare 푸터) */
+  --color-light: #fff;       /* 9/30: 하위 페이지 상자 바탕을 걷어낸다 (상자 대신 선) */
+  --mint-soft: #EEF7F3;      /* 극연 민트 — tiffany 샴페인 자리, 한 페이지 두 곳까지 */
   --white: #fff;
   --black: #000;
   --text: #000;
@@ -19,9 +22,9 @@
 
   /* 폰트 — tiffany: Sterling SSM(세리프) / Santral(영문) / Noto Sans KR(한글 본문) */
   --font-sans: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Verdana, sans-serif;
-  --font-serif: "Noto Serif KR", "EB Garamond", "Apple Myungjo", "Batang", serif;
-  --font-serif-en: "EB Garamond", "Noto Serif KR", "Apple Myungjo", "Batang", serif;
-  --font-en: "Inter", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  --font-serif: "MaruBuri", "Noto Serif KR", "Apple Myungjo", "Batang", serif;
+  --font-serif-en: "MaruBuri", "Noto Serif KR", "Apple Myungjo", "Batang", serif;
+  --font-en: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;   /* Inter 안 씀 */
 
   /* 타이포 스케일 (tiffany 실측) */
   --fs-h: 32px; --lh-h: 40px;        /* h1~h3 (375: 24/32) */
@@ -37,7 +40,7 @@
 
   /* 레이아웃 */
   --banner-h: 40px;            /* 띠배너 (tiffany 40 · 375: 48) — 닫으면 0 */
-  --header-h: 163px;
+  --header-h: 88px;            /* 9/30: organiccare 헤더 (tiffany 163 → 88) */
   --header-total: calc(var(--banner-h) + var(--header-h));
   --container: 1200px;
   --container-max: 1920px;
@@ -49,7 +52,7 @@
   --dur: .3s;
 }
 @media (max-width: 1199.98px) {
-  :root { --banner-h: 40px; --header-h: 59px; --fs-h: 24px; --lh-h: 32px; --fs-h2: 22px; --lh-h2: 30px; --side: 12px; }
+  :root { --banner-h: 40px; --header-h: 56px; --fs-h: 24px; --lh-h: 32px; --fs-h2: 22px; --lh-h2: 30px; --side: 12px; }
 }
-@media (max-width: 719.98px) { :root { --banner-h: 80px; } }   /* tiffany 375: 2줄 80 */
+@media (max-width: 719.98px) { :root { --banner-h: 64px; } }   /* 2줄 */
 html[data-banner="closed"] { --banner-h: 0px; }

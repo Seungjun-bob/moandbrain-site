@@ -15,11 +15,11 @@ a:hover { color: var(--black); }
 .skip:focus { top: 0; }
 
 /* 제목 — tiffany h1~h3: Sterling SSM 32/40 400 */
-h1, h2, h3, .h-serif { font-family: var(--font-serif); font-weight: 400; font-size: var(--fs-h); line-height: var(--lh-h); letter-spacing: 0; color: var(--text); }
+h1, h2, h3, .h-serif { font-family: var(--font-serif); font-weight: 600; font-size: var(--fs-h); line-height: var(--lh-h); letter-spacing: 0; color: var(--text); }
 .h-serif--lg { font-size: var(--fs-h-lg); line-height: var(--lh-h-lg); }
 .h-serif--sm { font-size: 20px; line-height: 28px; }
 .h-en { font-family: var(--font-serif-en); }
-.kicker { font-size: 12px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); }
+.kicker { font-size: 13px; line-height: 20px; letter-spacing: 0; color: var(--text-3); }   /* 9/30: 영문 대문자 라벨 안 씀 */
 
 /* 본문 유틸 — tiffany body_13 / body_14 / body_16 / body_16_p / subtitle_11_sb */
 .body_13 { font-size: var(--fs-body); line-height: var(--lh-body); }
@@ -32,8 +32,8 @@ h1, h2, h3, .h-serif { font-family: var(--font-serif); font-weight: 400; font-si
 .text-deep { color: var(--color-deep); }
 .link-underlined { text-decoration: underline; text-underline-offset: 4px; color: var(--text); font-size: var(--fs-14); line-height: var(--lh-14); }
 .link-underlined:hover { color: var(--color-deep); }
-.num { font-family: var(--font-en); font-weight: 300; font-size: 56px; line-height: 1; letter-spacing: -.02em; }
-.num--xl { font-size: 88px; }
+.num { font-family: var(--font-serif); font-weight: 600; font-size: 40px; line-height: 1; letter-spacing: -.02em; }
+.num--xl { font-size: 48px; }   /* 9/30: 숫자 장식 줄임 */
 
 /* 컨테이너 */
 .container-tiff { width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 8px 16px; }
@@ -47,7 +47,7 @@ h1, h2, h3, .h-serif { font-family: var(--font-serif); font-weight: 400; font-si
 /* 버튼 — tiffany .btn: 13/16 500 uppercase · padding 23 32 21 · radius 0 · 높이 60 */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--font-sans); font-size: var(--fs-cta); line-height: var(--lh-cta); font-weight: 500;
+  font-family: var(--font-sans); font-size: 14px; line-height: var(--lh-cta); font-weight: 500;
   letter-spacing: .02em; text-transform: uppercase; text-align: center;
   padding: var(--btn-pad); border: 1px solid transparent; border-radius: 0; min-height: var(--btn-h);
   color: var(--text); background: transparent; transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease);
@@ -56,15 +56,15 @@ h1, h2, h3, .h-serif { font-family: var(--font-serif); font-weight: 400; font-si
 .btn-primary { background: var(--black); border-color: var(--black); color: var(--white); }
 .btn-primary:hover { background: #222; border-color: #222; color: var(--white); }
 .btn-light { background: var(--white); border-color: var(--white); color: var(--black); }
-.btn-light:hover { background: var(--color-light); border-color: var(--color-light); color: var(--black); }
+.btn-light:hover { background: #f2f2f2; border-color: #f2f2f2; color: var(--black); }
 .btn-outline { background: transparent; border-color: var(--black); color: var(--black); }
 .btn-outline:hover { background: var(--black); color: var(--white); }
 .btn-outline-light { background: transparent; border-color: var(--white); color: var(--white); }
 .btn-outline-light:hover { background: var(--white); color: var(--black); }
-.btn-champagne { background: var(--color-light); border-color: var(--color-light); color: var(--black); }
-.btn-champagne:hover { background: var(--color-key); border-color: var(--color-key); color: var(--black); }
-.btn-key { background: var(--color-key); border-color: var(--color-key); color: var(--color-dark); }
-.btn-key:hover { background: var(--color-mid); border-color: var(--color-mid); color: var(--color-dark); }
+.btn-champagne { background: var(--white); border-color: var(--black); color: var(--black); }   /* 9/30: 보조 버튼 = 테두리 */
+.btn-champagne:hover { background: var(--black); border-color: var(--black); color: var(--white); }
+.btn-key { background: var(--black); border-color: var(--black); color: var(--white); }
+.btn-key:hover { background: #222; border-color: #222; color: var(--white); }
 .btn-block { display: flex; width: 100%; }
 .btn-sm { min-height: 48px; padding: 15px 24px 13px; }
 
