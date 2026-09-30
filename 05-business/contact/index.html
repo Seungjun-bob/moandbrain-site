@@ -13,13 +13,12 @@
 <link rel="stylesheet" href="../../assets/css/02-base.css">
 <link rel="stylesheet" href="../../assets/css/03-header.css">
 <link rel="stylesheet" href="../../assets/css/04-footer.css">
-<link rel="stylesheet" href="../../assets/css/05-blocks.css">
-<link rel="stylesheet" href="../../assets/css/08-story-visit.css">
 <link rel="stylesheet" href="../../assets/css/09-site.css">
-<link rel="stylesheet" href="../../assets/css/10-rules.css">
 <link rel="stylesheet" href="../../assets/css/11-home.css">
+<link rel="stylesheet" href="../../assets/css/12-sub.css">
 </head>
-<body class="is-draft">
+<body class="sub">
+<script>(function(){var q=new URLSearchParams(location.search).get('draft'),on=null;try{if(q!==null)sessionStorage.setItem('mb-draft',q==='0'?'0':'1');on=sessionStorage.getItem('mb-draft')}catch(e){}if(q!==null)on=q==='0'?'0':'1';if(on==='1')document.body.classList.add('is-draft')})()</script>
 <a class="skip" href="#main">본문으로 바로가기</a>
 <div class="header-banner" data-header-banner role="region" aria-label="공지"><button class="header-banner__arrow header-banner__arrow--prev" type="button" aria-label="이전 공지" data-banner-prev><svg viewBox="0 0 9 14" width="9" height="14" aria-hidden="true"><path d="M8 13 2 7l6-6"/></svg></button><div class="header-banner__inner" aria-live="polite"><p class="header-banner__msg is-active"><span>첫 방문 40% 할인 혜택을 네이버 예약에서 확인하세요</span> <a href="https://m.booking.naver.com/booking/13/bizes/1490004" target="_blank" rel="noopener">첫 방문 프로그램 보기</a></p><p class="header-banner__msg"><span>숨은 모발을 찾고, 지친 두뇌를 충전하는 곳 | 모앤브레인</span></p><p class="header-banner__msg"><span>커플 · 2인 동시 관리 가능</span> <a href="../../06-booking/book/index.html">프라이빗룸 예약하기</a></p></div><button class="header-banner__arrow header-banner__arrow--next" type="button" aria-label="다음 공지" data-banner-next><svg viewBox="0 0 9 14" width="9" height="14" aria-hidden="true"><path d="m1 1 6 6-6 6"/></svg></button></div>
 <header class="main-header" id="site-header">
@@ -30,17 +29,10 @@
 </div>
 </header>
 <div class="menu-backdrop" data-menu-backdrop></div>
-<main id="main">
-<div class="crumb-top"><nav aria-label="현재 위치"><ol class="breadcrumb"><li><a href="../../index.html">홈</a></li><li class="active">협업·비즈니스</li><li class="active">협업 문의</li></ol></nav></div>
-<div class="page-head"><span class="kicker">협업·비즈니스</span><h1>협업 문의</h1><nav class="sub-nav" aria-label="협업·비즈니스"><a href="../../05-business/partnership/index.html">기업 · 플랫폼 · 단체 · 행사 제휴</a><a href="../../05-business/contact/index.html" aria-current="page">협업 문의</a></nav></div>
-<div class="page-body"><p>모앤브레인과 함께할 브랜드·콘텐츠·B2B·교육 협업을 기다립니다. 아래 문의 양식을 통해 제안 내용을 남겨주시면 검토 후 연락드리겠습니다.</p>
-<span class="src">출처 · 사장님 답 9/30</span></div>
-<section class="page-body sec" id="brand"><h2 class="sec__title">브랜드 협업</h2><div class="todo">브랜드 협업 범위 · 사례</div><div class="slot slot--text"><span class="slot__label">문안 자리</span><span class="slot__meta">항목 2개 · 각 1~3문장</span><ul class="slot__items"><li>브랜드 협업 범위</li><li>사례</li></ul></div></section>
-<section class="page-body sec" id="content"><h2 class="sec__title">콘텐츠·제품 협업</h2><div class="todo">콘텐츠·제품 협업 범위 · 사례</div><div class="slot slot--text"><span class="slot__label">문안 자리</span><span class="slot__meta">항목 2개 · 각 1~3문장</span><ul class="slot__items"><li>콘텐츠·제품 협업 범위</li><li>사례</li></ul></div></section>
-<section class="page-body sec" id="b2b"><h2 class="sec__title">B2B 및 플랫폼 제휴</h2><div class="todo">B2B·플랫폼 제휴 조건</div><div class="slot slot--text"><span class="slot__label">문안 자리</span><span class="slot__meta">항목 1개 · 각 1~3문장</span><ul class="slot__items"><li>B2B·플랫폼 제휴 조건</li></ul></div></section>
-<section class="page-body sec" id="contact-form"><h2 class="sec__title">담당자 연락처 / 문의폼</h2><dl class="spec"><dt>이메일</dt><dd>yandy1111@naver.com</dd><dt>전화</dt><dd>010-3064-9020</dd></dl>
-<p>홈페이지 문의 양식을 통해 접수해 주세요. 확인 후 담당자가 순차적으로 연락드립니다.</p>
-<div class="todo">문의 양식 연결 — 정적 초안이라 전송 서버가 없음 (아임웹 폼으로 연결 예정)</div><div class="slot slot--text"><span class="slot__label">문안 자리</span><span class="slot__meta">항목 1개 · 각 1~3문장</span><ul class="slot__items"><li>문의 양식 연결</li></ul></div></section>
+<main id="main" class="s-page s-page--list">
+<header class="s-head"><div class="s-wrap"><p class="s-head__parent">협업·비즈니스</p><h1>협업 문의</h1></div></header>
+<div class="s-wrap s-body s-intro"><p class="s-p">모앤브레인과 함께할 브랜드·콘텐츠·B2B·교육 협업을 기다립니다. 아래 문의 양식을 통해 제안 내용을 남겨주시면 검토 후 연락드리겠습니다.</p><div class="d-only"><span class="src">출처 · 사장님 답 9/30</span></div></div>
+<div class="s-wrap s-listwrap"><div class="s-listcol"><ul class="s-list"><li class="s-list__row" id="brand"><h2 class="s-list__title">브랜드 협업</h2><div class="s-body s-body--sm d-only"><div class="d-only"><div class="todo">브랜드 협업 범위 · 사례</div><div class="slot slot--text"><span class="slot__label">문안 자리</span><span class="slot__meta">항목 2개 · 각 1~3문장</span><ul class="slot__items"><li>브랜드 협업 범위</li><li>사례</li></ul></div></div></div></li><li class="s-list__row" id="content"><h2 class="s-list__title">콘텐츠·제품 협업</h2><div class="s-body s-body--sm d-only"><div class="d-only"><div class="todo">콘텐츠·제품 협업 범위 · 사례</div><div class="slot slot--text"><span class="slot__label">문안 자리</span><span class="slot__meta">항목 2개 · 각 1~3문장</span><ul class="slot__items"><li>콘텐츠·제품 협업 범위</li><li>사례</li></ul></div></div></div></li><li class="s-list__row" id="b2b"><h2 class="s-list__title">B2B 및 플랫폼 제휴</h2><div class="s-body s-body--sm d-only"><div class="d-only"><div class="todo">B2B·플랫폼 제휴 조건</div><div class="slot slot--text"><span class="slot__label">문안 자리</span><span class="slot__meta">항목 1개 · 각 1~3문장</span><ul class="slot__items"><li>B2B·플랫폼 제휴 조건</li></ul></div></div></div></li></ul></div><aside class="s-panelbox" id="contact-form"><h2>담당자 연락처 / 문의폼</h2><p class="s-panelbox__text">홈페이지 문의 양식을 통해 접수해 주세요. 확인 후 담당자가 순차적으로 연락드립니다.</p><dl class="h-dl h-dl--dark"><div><dt>이메일</dt><dd><a href="mailto:yandy1111@naver.com">yandy1111@naver.com</a></dd></div><div><dt>전화</dt><dd><a href="tel:010-3064-9020">010-3064-9020</a></dd></div></dl><div class="d-only"><div class="todo">문의 양식 연결 — 정적 초안이라 전송 서버가 없음 (아임웹 폼으로 연결 예정)</div></div></aside></div>
 </main>
 <footer class="site-footer">
 <div class="site-footer__inner">
@@ -55,5 +47,6 @@
 <script src="../../assets/js/menu.js"></script>
 <script src="../../assets/js/accordion.js"></script>
 <script src="../../assets/js/video.js"></script>
+<script src="../../assets/js/tabs.js"></script>
 </body>
 </html>

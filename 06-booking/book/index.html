@@ -13,13 +13,12 @@
 <link rel="stylesheet" href="../../assets/css/02-base.css">
 <link rel="stylesheet" href="../../assets/css/03-header.css">
 <link rel="stylesheet" href="../../assets/css/04-footer.css">
-<link rel="stylesheet" href="../../assets/css/05-blocks.css">
-<link rel="stylesheet" href="../../assets/css/08-story-visit.css">
 <link rel="stylesheet" href="../../assets/css/09-site.css">
-<link rel="stylesheet" href="../../assets/css/10-rules.css">
 <link rel="stylesheet" href="../../assets/css/11-home.css">
+<link rel="stylesheet" href="../../assets/css/12-sub.css">
 </head>
-<body class="is-draft has-cta-bar">
+<body class="sub">
+<script>(function(){var q=new URLSearchParams(location.search).get('draft'),on=null;try{if(q!==null)sessionStorage.setItem('mb-draft',q==='0'?'0':'1');on=sessionStorage.getItem('mb-draft')}catch(e){}if(q!==null)on=q==='0'?'0':'1';if(on==='1')document.body.classList.add('is-draft')})()</script>
 <a class="skip" href="#main">본문으로 바로가기</a>
 <div class="header-banner" data-header-banner role="region" aria-label="공지"><button class="header-banner__arrow header-banner__arrow--prev" type="button" aria-label="이전 공지" data-banner-prev><svg viewBox="0 0 9 14" width="9" height="14" aria-hidden="true"><path d="M8 13 2 7l6-6"/></svg></button><div class="header-banner__inner" aria-live="polite"><p class="header-banner__msg is-active"><span>첫 방문 40% 할인 혜택을 네이버 예약에서 확인하세요</span> <a href="https://m.booking.naver.com/booking/13/bizes/1490004" target="_blank" rel="noopener">첫 방문 프로그램 보기</a></p><p class="header-banner__msg"><span>숨은 모발을 찾고, 지친 두뇌를 충전하는 곳 | 모앤브레인</span></p><p class="header-banner__msg"><span>커플 · 2인 동시 관리 가능</span> <a href="../../06-booking/book/index.html">프라이빗룸 예약하기</a></p></div><button class="header-banner__arrow header-banner__arrow--next" type="button" aria-label="다음 공지" data-banner-next><svg viewBox="0 0 9 14" width="9" height="14" aria-hidden="true"><path d="m1 1 6 6-6 6"/></svg></button></div>
 <header class="main-header" id="site-header">
@@ -30,26 +29,9 @@
 </div>
 </header>
 <div class="menu-backdrop" data-menu-backdrop></div>
-<main id="main">
-<div class="crumb-top"><nav aria-label="현재 위치"><ol class="breadcrumb"><li><a href="../../index.html">홈</a></li><li class="active">예약</li><li class="active">예약하기</li></ol></nav></div>
-<div class="page-head"><span class="kicker">예약</span><h1>예약하기</h1><nav class="sub-nav" aria-label="예약"><a href="../../06-booking/book/index.html" aria-current="page">예약하기</a><a href="../../06-booking/faq/index.html">FAQ</a></nav></div>
-<div class="page-body"><div class="btn-row"><a class="btn btn-primary btn-sm" href="https://m.booking.naver.com/booking/13/bizes/1490004" target="_blank" rel="noopener">네이버 예약으로 이동</a></div>
-<div class="steps-4"><div class="step4"><span class="step4__no">1</span><h3>프로그램 확인</h3></div><div class="step4"><span class="step4__no">2</span><h3>지점 확인</h3></div><div class="step4"><span class="step4__no">3</span><h3>날짜·시간 선택</h3></div><div class="step4"><span class="step4__no">4</span><h3>예약금 결제 · 확정</h3></div></div>
-<span class="src">출처 · 순서 = 노션 06 예약하기 4단계 (프로그램 선택 · 지점 선택 · 날짜/시간 선택 · 예약 페이지 연결)</span>
-<h2>프로그램 참고</h2>
-<p>처음 방문이면 네이버 예약의 "첫 방문 l 40% 할인혜택" 탭에서 고르면 됩니다. 이름을 누르면 프로그램 소개로 갑니다.</p>
-<div class="proglist"><h3 class="proglist__cat">두피·탈모 케어</h3><a class="proglist__row" href="../../02-program/scalp/index.html#hidden-hair-90"><span class="proglist__name">숨은 모발찾기 · 두피순환케어</span><span class="proglist__meta">90분 · 첫방문가 100,000원</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a><a class="proglist__row" href="../../02-program/scalp/index.html#scalp-brain-allinone-120"><span class="proglist__name">SCALP + BRAIN 올인원</span><span class="proglist__meta">120분 · 첫방문가 120,000원</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a><h3 class="proglist__cat">브레인·디톡스 케어</h3><a class="proglist__row" href="../../02-program/brain/index.html#relax-50"><span class="proglist__name">브레인 릴렉스 헤드스파</span><span class="proglist__meta">50분 · 첫방문가 85,000원</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a><a class="proglist__row" href="../../02-program/brain/index.html#check-90"><span class="proglist__name">브레인 체크 · 두피순환 헤드스파</span><span class="proglist__meta">90분 · 첫방문가 100,000원</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a><h3 class="proglist__cat">스페셜 케어 <span class="proglist__badge">추후 오픈 예정</span></h3><a class="proglist__row proglist__row--soon" href="../../02-program/special/index.html#senior"><span class="proglist__name">시니어 활력케어 | VITALITY CARE</span><span class="proglist__meta">120분 · 상담 후 진행</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a><a class="proglist__row proglist__row--soon" href="../../02-program/special/index.html#mom"><span class="proglist__name">임산부 릴랙스케어 | MOM RELAX</span><span class="proglist__meta">90분 · 상담 후 진행</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a><a class="proglist__row proglist__row--soon" href="../../02-program/special/index.html#sensitive"><span class="proglist__name">민감·트러블 집중케어 | SCALP INTENSIVE</span><span class="proglist__meta">90분 · 상담 후 진행</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a><a class="proglist__row proglist__row--soon" href="../../02-program/special/index.html#teen"><span class="proglist__name">청소년 성장기 두피케어 | TEEN SCALP CARE</span><span class="proglist__meta">70분 · 상담 후 진행</span><svg class="icon icon--sm" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></div>
-<span class="src">출처 · 프로그램·시간 = 노션 02 · 첫방문가·탭 이름 = 네이버 예약 메뉴 2026-09-09 · 스페셜 4종은 재방문 메뉴 "상담 후 진행"</span>
-<h2>지점 · 오시는 길</h2>
-<dl class="spec"><dt>본점</dt><dd>서울특별시 송파구 삼학사로 40, 이영빌딩 4층 (석촌동)</dd><dt>가까운 역</dt><dd>석촌고분역 3번 출구 도보 3분</dd><dt>주차</dt><dd>건물 오른편에 주차가 가능하며, 만차시 삼전동공영주차장 이용(삼전동175-8) / 주차비지원</dd><dt>지도</dt><dd><a href="https://map.naver.com/p/entry/place/2026231998" target="_blank" rel="noopener">네이버 지도에서 보기</a> · <a href="../../01-moandbrain/directions/index.html">오시는 길 안내</a></dd></dl>
-<span class="src">출처 · 주소·역·주차 = 기획안 pptx 슬라이드 23 · 호수 = 사전조사</span>
-<h2>예약 안내</h2>
-<p>날짜와 시간은 네이버 예약 페이지에서 선택합니다. 신청 후 확정 방식입니다.</p>
-<dl class="spec"><dt>예약금</dt><dd>첫 방문 상품 30,000원. 재방문·교육 상품은 예약금 없음</dd><dt>변경 · 취소</dt><dd>예약일 1일 전까지 변경 및 취소 가능합니다.</dd><dt>환불</dt><dd>예약일 1일 전까지 취소 시 예약금 전액 환불됩니다. 당일 취소 및 노쇼 시 예약금은 환불되지 않습니다.</dd><dt>노쇼</dt><dd>노쇼 시 예약금은 환불되지 않으며, 이후 예약 시 예약금 결제 후 예약이 확정됩니다.</dd><dt>2인 관리</dt><dd>커플·가족·친구 등 2인 동시 관리가 가능하며, 2인용 프라이빗룸에서 함께 이용하실 수 있습니다.</dd></dl>
-<span class="src">출처 · 예약금·변경·취소·2인 관리 = 사장님 답 9/30</span>
-<div class="btn-row"><a class="btn btn-primary btn-sm" href="https://m.booking.naver.com/booking/13/bizes/1490004" target="_blank" rel="noopener">네이버 예약으로 이동</a><a class="btn btn-outline btn-sm" href="https://map.naver.com/p/entry/place/2026231998" target="_blank" rel="noopener">네이버 플레이스</a></div>
-<span class="src">출처 · 확정 방식·예약금 = 네이버 예약 설정(사전조사 collector clean/12_booking_biz.csv · 14_booking_menus.csv)</span></div>
-<div class="cta-bar" data-cta-bar><a class="btn btn-primary btn-block" href="https://m.booking.naver.com/booking/13/bizes/1490004" target="_blank" rel="noopener">네이버 예약으로 이동</a></div>
+<main id="main" class="s-page s-page--stack">
+<header class="s-head"><div class="s-wrap"><p class="s-head__parent">예약</p><h1>예약하기</h1></div></header>
+<section class="s-band s-band--steps"><ol class="s-steps"><li><span class="s-steps__name"><span>1</span><span>프로그램 선택</span></span><p class="s-steps__text">처음 방문이면 네이버 예약의 "첫 방문 l 40% 할인혜택" 탭에서 고르면 됩니다.</p><a class="h-link" href="../../02-program/choose/index.html">프로그램 전체</a></li><li><span class="s-steps__name"><span>2</span><span>지점 선택</span></span><p class="s-steps__text">모앤브레인 본점<br>서울특별시 송파구 삼학사로 40, 이영빌딩 4층 (석촌동)</p><a class="h-link" href="../../01-moandbrain/directions/index.html">오시는 길 안내</a></li><li><span class="s-steps__name"><span>3</span><span>날짜 / 시간 선택</span></span><p class="s-steps__text">날짜와 시간은 네이버 예약 페이지에서 선택합니다. 신청 후 확정 방식입니다.</p></li><li><span class="s-steps__name"><span>4</span><span>예약 페이지 연결</span></span><a class="h-btn" href="https://m.booking.naver.com/booking/13/bizes/1490004" target="_blank" rel="noopener">네이버 예약</a><a class="h-link" href="https://map.naver.com/p/entry/place/2026231998" target="_blank" rel="noopener">네이버 플레이스</a></li></ol><div class="s-steps__src d-only"><div class="d-only"><span class="src">출처 · 단계 = 노션 06 예약하기 (프로그램 선택 · 지점 선택 · 날짜 / 시간 선택 · 예약 페이지 연결) · 탭 이름과 확정 방식 = 네이버 예약 설정 · 주소 = 사장님 답 9/30</span></div></div></section>
 </main>
 <footer class="site-footer">
 <div class="site-footer__inner">
@@ -64,5 +46,6 @@
 <script src="../../assets/js/menu.js"></script>
 <script src="../../assets/js/accordion.js"></script>
 <script src="../../assets/js/video.js"></script>
+<script src="../../assets/js/tabs.js"></script>
 </body>
 </html>
