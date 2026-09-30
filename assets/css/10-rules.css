@@ -92,19 +92,7 @@ body.footer-end .kakao-float { opacity: 0; pointer-events: none; }
 /* 헤더에 하단선이 생겼으니 모바일 브레드크럼 위의 선은 뺀다 (두 줄로 겹쳐 보임) */
 @media (max-width: 1199.98px) { .crumb-top::before { display: none; } .crumb-top { padding-top: 6px; } }
 
-/* ── 9/30 사진 자리 정리: 사진은 사진이 곧 내용인 곳에만. 목록 · 랜딩은 글 목록 ── */
-/* 상위 랜딩 목차 (C12 안내 표 모양): 하위 카테고리(왼쪽) + 상세 링크(오른쪽) · 상자 · 사진 없이 선만 */
-.toc { border-top: 1px solid var(--black); }
-.page-body .btn-row + .toc { margin-top: 32px; }
-.toc__row { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 8px 32px; padding: 24px 0; border-bottom: 1px solid var(--grey-12); }
-.page-body .toc__name { margin: 0; font-size: 20px; line-height: 30px; }
-.toc__name a { color: var(--black); }
-.toc__name a:hover, .toc__links a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.toc__note { display: block; margin-top: 2px; font-family: var(--font-sans); font-weight: 400; font-size: 13px; line-height: 20px; color: var(--text-3); }
-.toc__links { display: grid; gap: 6px; padding-top: 3px; }
-.toc__links a { font-size: 15px; line-height: 24px; color: var(--black); }
-@media (max-width: 719.98px) { .toc__row { grid-template-columns: 1fr; padding: 20px 0; } .page-body .toc__name { font-size: 18px; line-height: 26px; } }
-
+/* ── 9/30 사진 자리 정리: 사진은 사진이 곧 내용인 곳에만 ── */
 /* 촬영 사진 묶음 (C14): 2열 · 3:2 · 사진 아래 사실 캡션 */
 .photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; margin: 24px 0; }
 .page-body .photo-grid figure { margin: 0; }
@@ -112,17 +100,45 @@ body.footer-end .kakao-float { opacity: 0; pointer-events: none; }
 .page-body .photo-grid figcaption { margin-top: 10px; text-align: left; font-size: 13px; line-height: 20px; color: var(--text-3); }
 @media (max-width: 719.98px) { .photo-grid { grid-template-columns: 1fr; gap: 20px; } }
 
-/* 사진이 아직 없는 프로그램 상세(스페셜 4종): 갤러리 없이 패널 + 본문 */
-.pdp--plain { grid-template-areas: "panel body"; }
-.pdp--plain .pdp-body { padding-top: 40px; }
-@media (max-width: 1199.98px) { .pdp--plain { grid-template-areas: "panel" "body"; } .pdp--plain .pdp-body { padding-top: 24px; } }
-
 /* 4요소 도식: 그림 없이 글만 — 위 선 */
 .page-body .plus-grid { align-items: start; margin: 24px 0; }
 .page-body .plus-card h3 { margin-top: 0; }
 .plus-card { text-align: left; padding-top: 16px; border-top: 1px solid var(--black); }
 .plus-grid .plus { align-self: center; }
 
-/* 넓은 페이지에서 사진 한 장 자리는 사진 묶음의 한 칸 크기로 */
-.page-wide .slot-imgs[style*="--n:1"] { max-width: calc(50% - 8px); }
-@media (max-width: 719.98px) { .page-wide .slot-imgs[style*="--n:1"] { max-width: none; } }
+/* ── 9/30 하위 카테고리 = 한 페이지: 노션 불릿은 그 페이지의 절 (상위 랜딩 · 상세 페이지 없음) ── */
+/* 같은 메뉴의 하위 카테고리 한 줄 — 옆 페이지로 가는 길 */
+.sub-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 28px; margin-top: 20px; font-size: 14px; line-height: 20px; }
+.sub-nav a { padding: 6px 0; color: var(--text-3); border-bottom: 1px solid transparent; }
+.sub-nav a:hover, .sub-nav a[aria-current="page"] { color: var(--black); border-bottom-color: var(--black); }
+/* 절: 선으로 나누고 제목은 소제목 크기. 절 안의 제목은 한 단계씩 내린다 */
+.sec { border-top: 1px solid var(--grey-12); padding-top: 40px; padding-bottom: 56px; scroll-margin-top: calc(var(--header-h) + 16px); }
+.page-head + .sec { border-top: 0; padding-top: 24px; }
+.page-body .sec__title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px; margin: 0 0 20px; font-size: 24px; line-height: 34px; }
+.page-body .sec__title + * { margin-top: 0; }
+.sec__meta { font-family: var(--font-sans); font-weight: 400; font-size: 14px; line-height: 20px; color: var(--text-3); }
+.sec__title .h-badge { align-self: center; font-family: var(--font-sans); }
+.page-body h3.h-lv2 { font-size: 20px; line-height: 30px; margin: 36px 0 12px; }
+.page-body h4.h-lv3 { font-family: var(--font-serif); font-weight: 600; font-size: 17px; line-height: 26px; margin: 24px 0 8px; color: var(--black); }
+/* 프로그램 절: 메인의 프로그램 본문 부품을 그대로 쓴다 (사진 1 + 작은 사진 2 · 표 · 가격 · 예약) */
+.sec--prog { line-height: normal; }
+.sec--prog .h-acc__body { padding: 0; }
+.sec--prog .h-acc__info > p + p { margin-top: -12px; }
+.prog__media { width: 520px; flex-shrink: 0; }
+.prog__media > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.prog__thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
+.prog__thumbs img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.sec--prog > .src { margin-top: 20px; }
+@media (max-width: 1199.98px) { .prog__media { width: 100%; } }
+@media (max-width: 719.98px) {
+  .sub-nav { gap: 0 20px; margin-top: 14px; font-size: 13px; }
+  .sec { padding-top: 32px; padding-bottom: 40px; }
+  .page-body .sec__title { font-size: 20px; line-height: 30px; margin-bottom: 16px; }
+  .page-body h3.h-lv2 { font-size: 18px; line-height: 28px; margin-top: 28px; }
+}
+
+/* 절 안의 사진 한 장 자리는 사진 묶음의 한 칸 크기로 (합친 페이지가 빈 자리로 길어지지 않게) */
+.sec .slot-imgs[style*="--n:1"] { max-width: 368px; }
+@media (max-width: 719.98px) { .sec .slot-imgs[style*="--n:1"] { max-width: none; } }
+/* 넓은 비교 표: 머리글을 줄바꿈해 1200 안에 들어오게 */
+.page-body table.table--wide th { white-space: normal; vertical-align: bottom; }
