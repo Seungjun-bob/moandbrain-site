@@ -1,4 +1,4 @@
-/* 푸터 — 9/30 anti-AI 컴포넌트 C15: organiccare 검정 푸터(위아래 60/30 · 큰 로고) + tiffany 사업자 줄(13px 회색) + 사이트맵(노션 6분류) */
+/* 푸터 — 9/30 anti-AI 컴포넌트 C15: organiccare 검정 푸터(위아래 60/30) + tiffany 사업자 줄(13px 회색) + 사이트맵(노션 6분류). 큰 로고는 뺐다(9/30 대표 — 헤더에 이미 있다) */
 .site-footer { background: var(--black); color: var(--white); }
 .site-footer__inner { max-width: var(--container-max); margin: 0 auto; padding: 60px 48px 30px; display: flex; flex-direction: column; gap: 48px; }
 .site-footer a { color: var(--white); }
@@ -18,10 +18,6 @@
 .footer-item .title button { display: none; color: var(--white); }
 .menu-footer li + li { margin-top: 10px; }
 .menu-footer a { font-size: 13px; line-height: 20px; color: rgba(255, 255, 255, .72); }
-
-/* 큰 로고 */
-.site-footer__wordmark { display: block; }
-.site-footer__wordmark img { display: block; width: 100%; height: auto; }
 
 /* 사업자 줄 */
 .site-footer__legal { display: flex; justify-content: space-between; gap: 32px; font-size: 13px; line-height: 22px; color: rgba(255, 255, 255, .6); }

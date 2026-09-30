@@ -37,7 +37,6 @@
 .h-hero__card-text { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
 .h-hero__card-name { font-family: var(--font-serif); font-weight: 600; font-size: 18px; line-height: 26px; }
 .h-hero__card-meta { font-size: 13px; color: var(--text-3); }
-.h-hero__wordmark { display: block; width: 100%; height: auto; }
 .h-hero__ctrl { position: absolute; right: 36px; top: calc(var(--header-h) + 16px); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; color: var(--white); }
 .h-hero__ctrl .icon { stroke: var(--white); }
 .h-hero__ctrl[data-state="playing"] .i-play, .h-hero__ctrl[data-state="paused"] .i-pause { display: none; }   /* 재생 중엔 정지 아이콘, 멈추면 재생 아이콘 */
