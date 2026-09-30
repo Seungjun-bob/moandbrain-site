@@ -13,12 +13,18 @@
 .h-link--light { color: var(--white); }
 .h-link--light:hover { color: var(--white); }
 .h-badge { display: inline-block; font-size: 11px; line-height: 16px; font-weight: 500; letter-spacing: .02em; padding: 4px 8px; background: var(--color-key); color: var(--black); }
-.h-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 60px; padding: 0 32px; background: var(--black); border: 1px solid var(--black); color: var(--white); font-size: 14px; font-weight: 500; white-space: nowrap; }
+.h-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 60px; padding: 0 32px; background: var(--black); border: 1px solid var(--black); color: var(--white); font-size: 14px; font-weight: 500; white-space: nowrap; transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease); }
 .h-btn:hover { background: #222; color: var(--white); }
 .h-btn--light { background: var(--white); border-color: var(--white); color: var(--black); }
 .h-btn--light:hover { background: #f2f2f2; color: var(--black); }
 .h-btn--line-light { background: transparent; border-color: var(--white); color: var(--white); }
 .h-btn--line-light:hover { background: var(--white); color: var(--black); }
+/* 외부 서비스로 가는 행동 버튼은 그 서비스 색 (10/1 대표): 네이버 예약 = 네이버 녹색 · 카카오 = 카카오 노랑 + 공식 말풍선. 밑줄 글자 링크는 그대로 검정 */
+.h-btn--naver { background: var(--naver); border-color: var(--naver); color: var(--white); font-weight: 700; }
+.h-btn--naver:hover { background: var(--naver-dark); border-color: var(--naver-dark); color: var(--white); }
+.h-btn--kakao { gap: 8px; background: var(--kakao); border-color: var(--kakao); color: var(--kakao-text); }
+a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-dark); color: var(--kakao-text); }
+.h-btn .k-symbol { width: 20px; height: 20px; stroke: none; }
 .h-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ── C6 첫 화면 (organiccare 전폭 + 하단 큰 로고 · salonix 떠 있는 상품 카드) ── */
@@ -33,6 +39,9 @@
 .h-hero__copy .h-link { align-self: flex-start; font-size: 16px; }
 .h-hero__card { display: flex; gap: 16px; align-items: center; width: 380px; flex-shrink: 0; padding: 10px 20px 10px 10px; background: var(--white); color: var(--black); }
 .h-hero__card:hover { color: var(--black); }
+.h-hero__copy, .h-hero__card { animation: h-rise .7s var(--ease) .15s both; }   /* 페이지가 열릴 때 한 번 (동작 줄이기 설정이면 01-reset 이 끈다) */
+.h-hero__card { animation-delay: .35s; }
+@keyframes h-rise { from { opacity: 0; transform: translateY(16px); } }
 .h-hero__card img { width: 92px; height: 92px; object-fit: cover; flex-shrink: 0; }
 .h-hero__card-text { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
 .h-hero__card-name { font-family: var(--font-serif); font-weight: 600; font-size: 18px; line-height: 26px; }
@@ -65,7 +74,9 @@
 .h-card { display: flex; flex-direction: column; gap: 12px; color: var(--black); }
 .h-card:hover { color: var(--black); }
 .h-card:hover .h-card__name { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
-.h-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.h-card__img { display: block; overflow: hidden; }
+.h-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s var(--ease); }
+@media (hover: hover) { .h-card:hover img { transform: scale(1.03); } }
 .h-card__q { margin-top: 8px; font-size: 15px; line-height: 24px; color: var(--text-3); }
 .h-card__name { font-family: var(--font-serif); font-weight: 600; font-size: 24px; line-height: 34px; }
 .h-card__meta { font-size: 14px; }
@@ -85,9 +96,8 @@
 .h-acc__time-price { display: none; }
 .h-acc__icon { display: flex; }
 .h-acc__icon .icon { width: 20px; height: 20px; }
-.h-acc__item .i-minus { display: none; }
-.h-acc__item[open] .i-plus { display: none; }
-.h-acc__item[open] .i-minus { display: inline; }
+.i-pm__v { transform-box: view-box; transform-origin: 50% 50%; transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease); }   /* + 의 세로 막대 */
+.h-acc__item[open]:not(.is-closing) .i-pm__v { transform: rotate(90deg); opacity: 0; }   /* 열리면 누우며 사라져 − 가 된다 (닫히는 동안에는 먼저 + 로 돌아온다) */
 .h-acc__body { display: flex; gap: 48px; padding: 8px 0 40px; }
 .h-acc__body > img { width: 520px; aspect-ratio: 4 / 3; object-fit: cover; flex-shrink: 0; }
 .h-acc__info { display: flex; flex-direction: column; gap: 24px; flex-grow: 1; }

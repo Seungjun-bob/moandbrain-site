@@ -19,6 +19,13 @@ body:not(.is-draft) .d-only { display: none !important; }
 .s-tab { flex-shrink: 0; padding-bottom: 6px; font-family: var(--font-serif); font-weight: 400; font-size: 20px; line-height: 30px; color: var(--text-3); border-bottom: 2px solid transparent; white-space: nowrap; }
 .s-tab:hover { color: var(--black); }
 .s-tab[aria-current="true"] { font-weight: 600; color: var(--black); border-bottom-color: var(--black); }
+/* 밑줄이 탭 사이를 옮겨 간다: tabs.js 가 지금 탭의 자리(--tab-x)와 폭(--tab-w)을 알려 주면 줄 하나가 움직인다. 스크립트가 없으면 위의 탭 밑줄 그대로 */
+.s-tabs.is-js { position: relative; }
+.s-tabs.is-js .s-tab[aria-current="true"] { border-bottom-color: transparent; }
+.s-tabs.is-js::after { content: ""; position: absolute; left: 0; bottom: 0; width: var(--tab-w, 0); height: 2px; background: var(--black); transform: translateX(var(--tab-x, 0)); }
+.s-tabs.is-ready::after { transition: transform var(--dur) var(--ease), width var(--dur) var(--ease); }
+.s-panel.is-entering { animation: s-enter var(--dur) var(--ease) both; }   /* 탭을 눌러 바뀐 내용이 옅게 올라온다 */
+@keyframes s-enter { from { opacity: 0; transform: translateY(8px); } }
 .s-tab__short { display: none; }
 
 /* ── 탭 내용 ── */

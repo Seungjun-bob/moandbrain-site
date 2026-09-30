@@ -50,6 +50,13 @@
   --btn-h: 60px;
   --ease: cubic-bezier(.4, 0, .2, 1);
   --dur: .3s;
+  --dur-fast: .2s;           /* hover · 메뉴 펼침 */
+  /* 외부 서비스로 가는 행동 버튼만 그 서비스 색 (10/1 대표 · docs/07 규칙 5 예외) */
+  --naver: #03C75A;          /* 네이버 지정 녹색 — 네이버 로그인 버튼 사용 가이드 */
+  --naver-dark: #02B350;
+  --kakao: #FEE500;          /* 카카오 디자인 가이드: 컨테이너 #FEE500 · 글자 검정 85% */
+  --kakao-dark: #F2DA00;
+  --kakao-text: rgba(0, 0, 0, .85);
 }
 @media (max-width: 1199.98px) {
   :root { --banner-h: 40px; --header-h: 56px; --fs-h: 24px; --lh-h: 32px; --fs-h2: 22px; --lh-h2: 30px; --side: 12px; }

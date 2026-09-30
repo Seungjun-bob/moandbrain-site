@@ -29,10 +29,12 @@
 /* ── 검수 표시 스위치: <body class="is-draft"> 가 아니면 출처 · 빨간 표기 · 자리가 모두 사라진다 (하위 페이지의 .d-only 는 12-sub.css) ── */
 body:not(.is-draft) .src, body:not(.is-draft) .todo, body:not(.is-draft) .todo-inline, body:not(.is-draft) .slot { display: none; }
 
-/* ── 떠 있는 카카오 상담: 직각 테두리 버튼 (노란 알약 아님 · 규칙 7). 푸터 맨 아래 사업자 줄이 보이면 숨는다(header.js 가 body.footer-end 를 붙인다) ── */
-.kakao-float { position: fixed; right: 20px; bottom: 20px; z-index: 20; display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 18px; background: var(--white); color: var(--black); border: 1px solid var(--black); font-size: 14px; font-weight: 500;
-  transition: opacity var(--dur) var(--ease), background-color var(--dur) var(--ease), color var(--dur) var(--ease); }
-.kakao-float:hover { background: var(--black); color: var(--white); }
+/* ── 떠 있는 카카오 상담: 카카오 노랑 + 공식 말풍선 (10/1 대표 · 직각은 그대로, 알약 아님 · 규칙 7). 메인에서는 첫 화면을 지나면 나타난다(body.kakao-wait). 푸터 맨 아래 사업자 줄이 보이면 숨는다(header.js 가 body.footer-end 를 붙인다) ── */
+.kakao-float { position: fixed; right: 20px; bottom: 20px; z-index: 20; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; background: var(--kakao); color: var(--kakao-text); border: 1px solid var(--kakao); font-size: 14px; font-weight: 500;
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease); }
+a.kakao-float:hover { background: var(--kakao-dark); border-color: var(--kakao-dark); color: var(--kakao-text); }
+.k-symbol { width: 18px; height: 18px; flex-shrink: 0; }   /* 공식 말풍선 — 형태 · 비율 · 색을 바꾸지 않는다 (assets/img/logo/kakao-symbol.svg) */
+body.kakao-wait .kakao-float { opacity: 0; transform: translateY(8px); pointer-events: none; }
 .kakao-float .todo-inline { font-size: 12px; }
 body.footer-end .kakao-float { opacity: 0; pointer-events: none; }
 @media (max-width: 719.98px) {

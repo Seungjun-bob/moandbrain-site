@@ -23,8 +23,8 @@
 .header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 24px; }
 .header-link { font-size: 14px; line-height: 20px; color: var(--black); }
 .header-link:hover { text-decoration: underline; text-underline-offset: 4px; color: var(--black); }
-.header-book { display: inline-flex; align-items: center; height: 44px; padding: 0 24px; background: var(--black); border: 1px solid var(--black); color: var(--white); font-size: 14px; font-weight: 500; white-space: nowrap; }
-.header-book:hover { background: #222; color: var(--white); }
+.header-book { display: inline-flex; align-items: center; height: 44px; padding: 0 24px; background: var(--naver); border: 1px solid var(--naver); color: var(--white); font-size: 14px; font-weight: 700; white-space: nowrap; transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease); }   /* 네이버 예약 = 네이버 녹색 (10/1) */
+.header-book:hover { background: var(--naver-dark); border-color: var(--naver-dark); color: var(--white); }
 .navbar-toggler { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; color: var(--black); }
 
 /* 메뉴 줄 */
@@ -51,14 +51,18 @@ body.has-overlay-header .main-header { background: transparent; border-bottom-co
 body.has-overlay-header .main-header .nav-link,
 body.has-overlay-header .main-header .header-link,
 body.has-overlay-header .main-header .navbar-toggler { color: var(--white); }
-body.has-overlay-header .main-header .header-book { background: transparent; border-color: var(--white); color: var(--white); }
 body.has-overlay-header .main-header .logo-img--dark { display: none; }
 body.has-overlay-header .main-header .logo-img--light { display: block; }
 body.has-overlay-header .main-header.is-scrolled, body.has-overlay-header.menu-open .main-header { background: var(--white); border-bottom-color: var(--grey-12); }
 body.has-overlay-header .main-header.is-scrolled :is(.nav-link, .header-link, .navbar-toggler), body.has-overlay-header.menu-open .main-header :is(.nav-link, .header-link, .navbar-toggler) { color: var(--black); }
-body.has-overlay-header .main-header.is-scrolled .header-book, body.has-overlay-header.menu-open .main-header .header-book { background: var(--black); border-color: var(--black); color: var(--white); }
 body.has-overlay-header .main-header.is-scrolled .logo-img--dark, body.has-overlay-header.menu-open .main-header .logo-img--dark { display: block; }
 body.has-overlay-header .main-header.is-scrolled .logo-img--light, body.has-overlay-header.menu-open .main-header .logo-img--light { display: none; }
+
+/* 1200 이상: 펼침 메뉴가 뚝 나타나지 않고 옅어지며 조금 내려온다 (닫힐 때는 다 옅어진 뒤에 감춘다) */
+@media (min-width: 1200px) {
+  .dropdown-menu { display: block; visibility: hidden; opacity: 0; transform: translateY(-6px); pointer-events: none; transition: opacity var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease), visibility 0s linear var(--dur-fast); }
+  .nav-item.is-open > .dropdown-menu { visibility: visible; opacity: 1; transform: none; pointer-events: auto; transition-delay: 0s; }
+}
 
 /* 1200~1320: 메뉴 간격을 줄여 오른쪽 행동(카카오 상담 + 네이버 예약)과 붙지 않게 */
 @media (min-width: 1200px) and (max-width: 1320px) { .header-row { padding: 0 32px; } .navbar-nav { gap: 28px; } .header-link { white-space: nowrap; } }
@@ -77,7 +81,6 @@ body.has-overlay-header .main-header.is-scrolled .logo-img--light, body.has-over
   body.has-overlay-header.nav-mobile-open .main-header :is(.nav-link, .header-link, .navbar-toggler) { color: var(--black); }
   body.has-overlay-header.nav-mobile-open .main-header .logo-img--dark { display: block; }
   body.has-overlay-header.nav-mobile-open .main-header .logo-img--light { display: none; }
-  body.has-overlay-header.nav-mobile-open .main-header .header-book { background: var(--black); border-color: var(--black); color: var(--white); }
   .navbar-nav { display: block; padding: 8px 0 40px; }
   .nav-item { position: relative; border-bottom: 1px solid var(--grey-12); }
   .nav-link { display: block; padding: 18px 56px 18px 16px; font-family: var(--font-serif); font-weight: 600; font-size: 18px; line-height: 26px; color: var(--black) !important; border-bottom: 0; }

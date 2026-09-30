@@ -33,7 +33,7 @@
   .footer-item .title span.static { display: none; }
   .footer-item .title button { display: flex; width: 100%; min-height: 48px; align-items: center; justify-content: space-between; padding: 12px 0; text-align: left; font-weight: 500; font-size: 14px; }
   .footer-item .title button .icon { transition: transform var(--dur) var(--ease); }
-  .footer-item.is-open .title button .icon { transform: rotate(180deg); }
+  .footer-item.is-open:not(.is-closing) .title button .icon { transform: rotate(180deg); }   /* 닫히기 시작하면 화살표가 먼저 돌아온다 (accordion.js 가 높이를 움직인다) */
   .menu-footer { display: none; padding: 0 0 16px; }
   .footer-item.is-open .menu-footer { display: block; }
   .site-footer__legal { flex-direction: column; gap: 12px; font-size: 12px; line-height: 20px; }
