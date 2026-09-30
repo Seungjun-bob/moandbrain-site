@@ -1,5 +1,5 @@
 /* 메인 — 캔버스 MAIN v2 (9/30 대표 채택) · 컴포넌트 C5 C6 C7 C8 C9 C10 C12 C14 C16 · 규칙 docs/07
-   순서: 첫 화면 → 소개 → 첫 방문 단계 → 고민별 추천(극연 민트 1) → 첫 방문 프로그램 → 아카데미 → 교육 문의 → 자주 묻는 질문 → 예약 안내(극연 민트 2) */
+   순서: 첫 화면 → 소개 → 첫 방문 단계 → 고민별 추천(극연 민트 1) → 첫 방문 프로그램 → 아카데미(글 6칸) → 교육 문의 → 자주 묻는 질문 → 예약 안내(극연 민트 2) */
 .home main { padding-bottom: 0; }
 .h-wrap { width: 100%; max-width: 1344px; margin: 0 auto; }
 .h-wrap--1200 { max-width: 1200px; }
@@ -111,21 +111,14 @@
 .h-acc--faq .h-acc__item summary { min-height: 80px; }
 .h-acc--faq .h-acc__answer { padding: 0 0 28px; font-size: 16px; line-height: 28px; }
 
-/* ── C9 아카데미 (organiccare 캐러셀 + tiffany product-tile · 상자·알약 없음) ── */
+/* ── 아카데미: 교육 과정 6칸 — 교육 장면 사진이 없어 글만 (위 선 + 이름 + 곁말 + 소개 · 하위 페이지 카드와 같은 모양) ── */
 .h-academy { padding: 96px 24px; border-top: 1px solid var(--grey-12); }
 .h-academy .h-wrap { display: flex; flex-direction: column; gap: 40px; }
-.h-arrows { display: flex; gap: 8px; }
-.h-arrow { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid var(--black); background: var(--white); color: var(--black); }
-.h-arrow:hover { background: var(--black); color: var(--white); }
-.h-arrow[disabled] { opacity: .3; pointer-events: none; }
-.h-arrow .icon { width: 20px; height: 20px; }
-.h-track { display: flex; gap: 32px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
-.h-track::-webkit-scrollbar { display: none; }
-.h-course { display: flex; flex-direction: column; gap: 10px; flex: 0 0 calc((100% - 96px) / 4); scroll-snap-align: start; color: var(--black); }
+.h-courses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; }
+.h-course { display: flex; flex-direction: column; gap: 10px; height: 100%; padding-top: 20px; border-top: 1px solid var(--black); color: var(--black); }
 .h-course:hover { color: var(--black); }
 .h-course:hover .h-course__name { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
-.h-course img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
-.h-course__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 10px; margin-top: 6px; }
+.h-course__head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 10px; }
 .h-course__name { font-family: var(--font-serif); font-weight: 600; font-size: 20px; line-height: 30px; }
 .h-course__tag { font-size: 13px; color: var(--text-3); }
 .h-course__desc { font-size: 14px; line-height: 22px; color: var(--text-3); }
@@ -167,7 +160,7 @@
   .h-steps__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
   .h-acc__body { flex-direction: column; gap: 20px; }
   .h-acc__body > img { width: 100%; }
-  .h-course { flex-basis: calc((100% - 32px) / 2.2); }
+  .h-courses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .h-booking .h-wrap { flex-direction: column; gap: 32px; }
   .h-booking figure { width: 100%; }
   .h-booking figure img { aspect-ratio: 4 / 3; }
@@ -183,7 +176,6 @@
   .h-actions .h-btn { width: 100%; min-width: 0; }
   .h-actions { justify-content: center; }
   .h-hero { height: max(640px, 86svh); }
-  .h-hero video { object-position: 14% 50%; }
   .h-hero__body { left: 20px; right: 20px; bottom: 28px; gap: 22px; }
   .h-hero__row { flex-direction: column; align-items: stretch; gap: 22px; }
   .h-hero__copy { gap: 12px; }
@@ -232,12 +224,12 @@
   .h-price__now { font-size: 24px; line-height: 32px; }
   .h-price__note { font-size: 12px; }
   .h-note { font-size: 13px; }
-  .h-academy { padding: 64px 0 64px 20px; }
+  .h-academy { padding: 64px 20px; }
   .h-academy .h-wrap { gap: 24px; }
-  .h-academy .h-head { flex-direction: row; align-items: flex-end; padding-right: 20px; }
-  .h-arrow { width: 44px; height: 44px; }
-  .h-track { gap: 12px; padding-right: 20px; }
-  .h-course { flex: 0 0 280px; gap: 8px; }
+  .h-courses { grid-template-columns: 1fr; gap: 0; }
+  .h-course { gap: 6px; padding: 18px 0; border-top-color: var(--grey-12); }
+  .h-courses li:first-child .h-course { border-top-color: var(--black); }
+  .h-courses li:last-child .h-course { border-bottom: 1px solid var(--grey-12); }
   .h-course__name { font-size: 18px; line-height: 26px; }
   .h-course__desc { font-size: 13px; line-height: 21px; }
   .h-academy__by { font-size: 12px; }
