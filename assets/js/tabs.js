@@ -3,6 +3,13 @@
    - 스크립트가 꺼져 있으면 절이 모두 펼쳐져 보인다 (숨김은 여기서만 건다)
    - 검수 모드가 아니면 내용이 없는 절의 탭은 CSS 가 감춘다 → 보이는 첫 탭부터 연다
    - 탭을 누르면 밑줄이 그 탭으로 옮겨 가고 내용이 옅게 올라온다 (처음 열릴 때는 움직이지 않는다) */
+(function () {   // 같은 메뉴의 페이지 줄(.s-menu): 좁은 화면에서 줄이 옆으로 넘치면 지금 페이지가 보이게 민다 (글꼴이 늦게 와 글자 폭이 바뀌면 다시)
+  var menu = document.querySelector('.s-menu'), cur = menu && menu.querySelector('[aria-current="page"]');
+  if (!cur) return;
+  function reveal() { if (menu.scrollWidth > menu.clientWidth && cur.offsetLeft + cur.offsetWidth > menu.scrollLeft + menu.clientWidth) menu.scrollLeft = cur.offsetLeft - 20; }
+  reveal();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(reveal);
+})();
 (function () {
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-tab]'));
   if (!tabs.length) return;

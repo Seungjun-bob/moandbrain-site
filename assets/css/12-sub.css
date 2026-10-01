@@ -10,9 +10,16 @@ body:not(.is-draft) .d-only { display: none !important; }
 .s-wrap { width: 100%; max-width: 1248px; margin: 0 auto; padding: 0 24px; }
 
 /* ── 머리: 상위 메뉴 이름 → 제목 → 절 탭 (제목 아래 가로 선 없음) ── */
-.s-head { padding-top: 72px; }
-.s-head__parent { font-size: 14px; line-height: 22px; color: var(--text-3); }
-.s-head h1 { margin-top: 8px; font-size: 40px; line-height: 52px; }
+.s-head { padding-top: 64px; }
+/* 같은 메뉴의 페이지 줄 (10/1 · 캔버스 하위 탭): 메뉴 이름(굵게) | 페이지들. 지금 페이지 = 검정 500 + 1px 밑줄 (헤더 메뉴의 지금 표시와 같다) · 절 탭(명조 20 · 2px)과는 글꼴로 나뉜다 */
+.s-menu { position: relative; display: flex; align-items: center; gap: 28px; white-space: nowrap; overflow-x: auto; scrollbar-width: none; }   /* relative: tabs.js 가 지금 페이지 자리(offsetLeft)를 이 줄 기준으로 잰다 */
+.s-menu::-webkit-scrollbar { display: none; }
+.s-menu__top { display: flex; align-items: center; gap: 28px; flex-shrink: 0; font-size: 15px; line-height: 22px; font-weight: 700; color: var(--black); }
+.s-menu__top::after { content: ""; width: 1px; height: 12px; background: rgba(0, 0, 0, .24); }
+.s-menu__link { flex-shrink: 0; padding: 4px 0 3px; font-size: 15px; line-height: 22px; color: var(--text-3); border-bottom: 1px solid transparent; transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease); }
+.s-menu__link:hover { color: var(--black); }
+.s-menu__link[aria-current="page"] { font-weight: 500; color: var(--black); border-bottom-color: var(--black); }
+.s-head h1 { margin-top: 16px; font-size: 40px; line-height: 52px; }
 /* 절 탭 — 목차형: 제목과 같은 명조 · 지금 절만 검정 600 + 글자 폭 2px 밑줄 (출처: 메가메뉴 하위 카테고리 글자) */
 .s-tabs { display: flex; gap: 40px; margin-top: 24px; overflow-x: auto; scrollbar-width: none; }
 .s-tabs::-webkit-scrollbar { display: none; }
@@ -192,9 +199,11 @@ body:not(.is-draft) .d-only { display: none !important; }
 /* ── 719 이하 (캔버스 모바일 390) ── */
 @media (max-width: 719.98px) {
   .s-wrap { padding: 0 20px; }
-  .s-head { padding-top: 32px; }
-  .s-head__parent { font-size: 13px; line-height: 20px; }
-  .s-head h1 { margin-top: 6px; font-size: 30px; line-height: 40px; }
+  .s-head { padding-top: 12px; }
+  .s-menu { gap: 20px; margin: 0 -20px; padding: 0 20px; }   /* 한 줄을 옆으로 민다 · 누르는 높이 44 */
+  .s-menu__top { gap: 20px; font-size: 14px; line-height: 20px; }
+  .s-menu__link { padding: 12px 0 11px; font-size: 14px; line-height: 20px; }
+  .s-head h1 { margin-top: 12px; font-size: 30px; line-height: 40px; }
   .s-tabs { gap: 24px; margin-top: 8px; margin-right: -20px; padding-right: 20px; }
   .s-tab { padding: 10px 0 6px; font-size: 18px; line-height: 26px; }
   .s-tab__full { display: none; }
