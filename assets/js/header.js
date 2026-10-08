@@ -1,4 +1,4 @@
-/* 헤더 동작: 띠배너 회전·닫기 · 스크롤 그림자 · 모바일 드로어(헤더 바로 아래에 붙임) · 현재 페이지 표시 · 떠 있는 카카오 버튼 (푸터 접이식은 accordion.js) */
+/* 헤더 동작: 띠배너 회전·닫기 · 스크롤 그림자 · 모바일 드로어(헤더 바로 아래에 붙임) · 현재 페이지 표시 · 모바일 아래 고정 바 (푸터 접이식은 accordion.js) */
 (function () {
   var html = document.documentElement;
 
@@ -61,14 +61,11 @@
   function syncCta() { if (!ctaBar) return; var r = ctaBar.getBoundingClientRect(); var stuck = getComputedStyle(ctaBar).display !== 'none' && Math.round(r.bottom) >= window.innerHeight - 1; document.body.classList.toggle('cta-stuck', stuck); }
   if (ctaBar) { window.addEventListener('scroll', syncCta, { passive: true }); window.addEventListener('resize', syncCta); syncCta(); }
 
-  // ── 떠 있는 카카오 상담: 푸터 맨 아래 사업자 줄이 보이면 숨긴다 (저작권 줄을 덮지 않게)
-  var legal = document.querySelector('.site-footer__legal');
-  if (legal && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { document.body.classList.toggle('footer-end', es[0].isIntersecting); }).observe(legal);
-  // 메인: 첫 화면(영상 · 상품 카드)이 절반 넘게 보이는 동안에는 나오지 않는다 → 지나면 나타난다 (09-site.css body.kakao-wait)
+  // ── 모바일 아래 고정 바: 메인에서는 첫 화면(영상 · 네이버 예약 버튼)이 절반 넘게 보이는 동안 숨는다 → 지나면 나타난다 (09-site.css body.mbar-wait · 10/8)
   var hero = document.querySelector('.h-hero');
-  if (hero && document.querySelector('.kakao-float') && 'IntersectionObserver' in window) {
-    document.body.classList.add('kakao-wait');
-    new IntersectionObserver(function (es) { document.body.classList.toggle('kakao-wait', es[0].intersectionRatio >= 0.5); }, { threshold: [0.5] }).observe(hero);
+  if (hero && document.querySelector('.m-bar') && 'IntersectionObserver' in window) {
+    document.body.classList.add('mbar-wait');
+    new IntersectionObserver(function (es) { document.body.classList.toggle('mbar-wait', es[0].intersectionRatio >= 0.5); }, { threshold: [0.5] }).observe(hero);
   }
 
   // ── 현재 페이지 표시

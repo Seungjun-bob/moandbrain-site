@@ -1,4 +1,4 @@
-/* 사이트 공통: 검수 모드 표시(빨간 표기 · 채울 자리) · 떠 있는 카카오 상담 · 모바일 줄바꿈
+/* 사이트 공통: 검수 모드 표시(빨간 표기 · 채울 자리) · 모바일 아래 고정 바 · 모바일 줄바꿈
    9/30: 옛 하위 페이지 틀(05-blocks · 08-story-visit · 10-rules)을 걷어내고 여기에는 메인과 하위 페이지가 함께 쓰는 것만 남겼다 */
 
 /* ── 빨간 표기 (라벨) — 검수 모드(?draft=1)에서만 보인다 ── */
@@ -29,16 +29,20 @@
 /* ── 검수 표시 스위치: <body class="is-draft"> 가 아니면 출처 · 빨간 표기 · 자리가 모두 사라진다 (하위 페이지의 .d-only 는 12-sub.css) ── */
 body:not(.is-draft) .src, body:not(.is-draft) .todo, body:not(.is-draft) .todo-inline, body:not(.is-draft) .slot { display: none; }
 
-/* ── 떠 있는 카카오 상담: 카카오 노랑 + 공식 말풍선 (10/1 대표 · 직각은 그대로, 알약 아님 · 규칙 7). 메인에서는 첫 화면을 지나면 나타난다(body.kakao-wait). 푸터 맨 아래 사업자 줄이 보이면 숨는다(header.js 가 body.footer-end 를 붙인다) ── */
-.kakao-float { position: fixed; right: 20px; bottom: 20px; z-index: 20; display: flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; background: var(--kakao); color: var(--kakao-text); border: 1px solid var(--kakao); font-size: 14px; font-weight: 500;
-  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease); }
-a.kakao-float:hover { background: var(--kakao-dark); border-color: var(--kakao-dark); color: var(--kakao-text); }
+/* ── 모바일 아래 고정 바 (10/8 · 캔버스 v6 · 사이트 전체): 네이버 예약 = 검정(늘 보이는 자리라 초록 안 씀 · 10/2) + 전화(카카오채널 주소가 오면 카카오 노랑 + 공식 말풍선)
+   떠 있는 카카오 버튼(주소가 없어 눌러도 반응 없던 것)을 대신한다. 메인에서는 첫 화면이 절반 넘게 보이는 동안 숨는다(header.js → body.mbar-wait) · PC 는 헤더에 같은 두 행동이 있다 ── */
 .k-symbol { width: 18px; height: 18px; flex-shrink: 0; }   /* 공식 말풍선 — 형태 · 비율 · 색을 바꾸지 않는다 (assets/img/logo/kakao-symbol.svg) */
-body.kakao-wait .kakao-float { opacity: 0; transform: translateY(8px); pointer-events: none; }
-.kakao-float .todo-inline { font-size: 12px; }
-body.footer-end .kakao-float { opacity: 0; pointer-events: none; }
+.m-bar { display: none; }
 @media (max-width: 719.98px) {
-  .kakao-float { right: 12px; bottom: 12px; }
-  .kakao-float .todo-inline { font-size: 11px; }
+  body { padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }   /* 바가 푸터 끝을 가리지 않게 */
+  .m-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px)); background: var(--white); border-top: 1px solid var(--grey-12);
+    transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease); }
+  .m-bar a { display: flex; align-items: center; justify-content: center; gap: 6px; height: 48px; font-size: 14px; font-weight: 500; }
+  .m-bar__book { background: var(--black); color: var(--white); }
+  .m-bar__book:hover { color: var(--white); }
+  .m-bar__tel { border: 1px solid var(--black); color: var(--black); }
+  .m-bar__tel svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .m-bar__kakao { background: var(--kakao); color: var(--kakao-text); }
+  body.mbar-wait .m-bar, body.nav-mobile-open .m-bar { transform: translateY(100%); opacity: 0; pointer-events: none; }
   .br-lg { display: none; }   /* 기획안 줄바꿈은 넓은 화면에서만 */
 }
