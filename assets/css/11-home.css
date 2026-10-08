@@ -139,7 +139,7 @@ a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-
 /* ── 05 올인원: 전폭 사진 + 글은 사진 아래 (organiccare 전폭 · tiffany 3단) ── */
 .h-allin { padding: 0 0 96px; }
 .h-allin__photo { margin: 0; }
-.h-allin__photo img { display: block; width: 100%; height: 560px; object-fit: cover; }
+.h-allin__photo video { display: block; width: 100%; height: 560px; object-fit: cover; background: #e9e7e3; }   /* 점포 영상 루프 (10/8) */
 .h-allin__row { display: flex; justify-content: space-between; gap: 64px; margin-top: 56px; padding: 0 24px; box-sizing: border-box; max-width: calc(1344px + 48px); }
 .h-allin__text { width: 624px; flex-shrink: 0; display: flex; flex-direction: column; gap: 28px; }
 .h-allin__lead { font-size: 18px; line-height: 30px; }
@@ -181,19 +181,22 @@ a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-
 .h-space .h-wrap { display: flex; flex-direction: column; gap: 40px; }
 .h-space figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .h-space figcaption { font-size: 13px; line-height: 20px; color: var(--text-3); }
-.h-space__big img { display: block; width: 100%; aspect-ratio: 1344 / 560; object-fit: cover; }
+.h-space__big video { display: block; width: 100%; aspect-ratio: 1344 / 560; object-fit: cover; background: #e9e7e3; }   /* 점포 영상 루프 (10/8) */
 .h-space__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .h-space__grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 
-/* ── 교육 및 창업과정 한 줄 띠 (사장님 지정 자리 9/30 · 상세는 메뉴) ── */
-.h-aband { padding: 64px 24px; border-top: 1px solid var(--grey-12); }
-.h-aband__row { display: flex; align-items: flex-start; gap: 64px; }
-.h-aband__head { width: 360px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px; }
-.h-aband__title { font-family: var(--font-serif); font-weight: 600; font-size: 28px; line-height: 38px; }
-.h-aband__by { font-size: 13px; line-height: 20px; color: var(--text-3); }
-.h-aband__list { flex: 1 1 auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 32px; padding-top: 4px; }
-.h-aband__list li { font-size: 15px; line-height: 24px; }
-.h-aband__links { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding-top: 4px; }
+/* ── 교육 및 창업과정 (10/8 대표 "눈에 잘 안 들어온다" → 띠를 구역으로): 제목 40 · 과정 이름 + 곁말 2열 줄 목록 · 네이버 교육 상담 예약 ── */
+.h-academy { padding: 96px 24px; border-top: 1px solid var(--grey-12); }
+.h-academy .h-wrap { display: flex; flex-direction: column; gap: 40px; }
+.h-academy__by { font-size: 14px; line-height: 22px; color: var(--text-3); }
+.h-courses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, auto); grid-auto-flow: column; column-gap: 48px; }
+.h-courses li { border-bottom: 1px solid var(--grey-12); }
+.h-courses li:nth-child(3n+1) { border-top: 1px solid var(--black); }
+.h-course { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; padding: 20px 0; color: var(--black); }
+.h-course:hover { color: var(--black); }
+.h-course:hover .h-course__name { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+.h-course__name { font-family: var(--font-serif); font-weight: 600; font-size: 20px; line-height: 30px; }
+.h-course__tag { font-size: 13px; line-height: 20px; color: var(--text-3); }
 
 /* ── 13 마지막 예약 + 12 브랜드 한 줄: 흰 판 + 건물 사진 (10/8 대표 — 검정 푸터와 이어지지 않게) ── */
 .h-cta { display: flex; min-height: 600px; border-top: 1px solid var(--grey-12); }
@@ -215,8 +218,8 @@ a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-
   .h-rec { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .h-hidden__row { grid-template-columns: minmax(0, 1fr); grid-template-areas: "text" "media" "buy"; row-gap: 32px; }
   .h-hidden__buy { margin-top: 0; }
-  .h-brain__row, .h-together__row, .h-aband__row { flex-direction: column; gap: 32px; }
-  .h-brain__photo, .h-brain__text, .h-together__text, .h-aband__head { width: 100%; }
+  .h-brain__row, .h-together__row { flex-direction: column; gap: 32px; }
+  .h-brain__photo, .h-brain__text, .h-together__text { width: 100%; }
   .h-allin__row { flex-direction: column; gap: 24px; }
   .h-allin__text { width: 100%; }
   .h-first__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
@@ -306,7 +309,7 @@ a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-
   .h-plist__price s { font-size: 12px; }
   /* 05 */
   .h-allin { padding: 0 0 64px; border-top: 1px solid var(--grey-12); }
-  .h-allin__photo img { height: auto; aspect-ratio: 390 / 280; }
+  .h-allin__photo video { height: auto; aspect-ratio: 390 / 280; }
   .h-allin__row { margin-top: 28px; padding: 0 20px; gap: 16px; }
   .h-allin__text { gap: 16px; }
   .h-allin__lead { font-size: 14px; line-height: 24px; }
@@ -342,22 +345,21 @@ a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-
   .h-space .h-head > .h-link { order: 5; align-self: flex-start; }
   .h-space .h-head__text { gap: 16px; }
   .h-space .h-space__big { margin-top: 8px; }   /* .h-space figure { margin: 0 } 보다 구체적으로 */
-  .h-space__big img { aspect-ratio: 350 / 262; }
-  .h-space__grid { gap: 16px 8px; }
+  .h-space__big video { aspect-ratio: 350 / 262; }
+  .h-space__grid { gap: 8px; }   /* 캡션을 뺀 뒤(10/8) 위아래도 8 */
   .h-space figure { gap: 6px; }
   .h-space figcaption { font-size: 12px; line-height: 18px; }
   /* 교육 띠 */
-  .h-aband { padding: 48px 20px; }
-  .h-aband__row { gap: 14px; align-items: stretch; }
-  .h-aband__head { display: contents; }   /* 캔버스 모바일: 제목 → 과정 이름 → 담당 → 링크 */
-  .h-aband__list { order: 1; }
-  .h-aband__by { order: 2; }
-  .h-aband__links { order: 3; margin-top: 4px; padding-top: 0; }
-  .h-aband__title { font-size: 22px; line-height: 32px; }
-  .h-aband__by { font-size: 12px; line-height: normal; }
-  .h-aband__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 16px; padding-top: 0; }
-  .h-aband__list li { font-size: 14px; line-height: 22px; }
-  .h-aband__links { flex-direction: row; gap: 24px; }
+  .h-academy { padding: 64px 20px; }
+  .h-academy .h-wrap { gap: 20px; }
+  .h-academy__by { font-size: 12px; line-height: 18px; }
+  .h-courses { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+  .h-courses li:nth-child(3n+1) { border-top: 0; }
+  .h-courses li:first-child { border-top: 1px solid var(--black); }
+  .h-course { padding: 16px 0; gap: 2px 8px; }
+  .h-course__name { font-size: 18px; line-height: 26px; }
+  .h-course__tag { font-size: 12px; }
+  .h-academy .h-actions { margin-top: 4px; }
   /* 13 */
   .h-cta__text { padding: 44px 20px 52px; gap: 24px; align-items: stretch; }
   .h-cta__brand { font-size: 13px; line-height: 21px; margin-bottom: -10px; }
@@ -370,3 +372,11 @@ a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-
 
 /* ── 캔버스 대조 보정 (9/30부터: 캔버스는 작은 글자에 줄 높이를 따로 주지 않았다 — 본문 24px 을 물려받으면 줄마다 커진다) ── */
 .home main { line-height: normal; }
+
+/* ── 사진 자리 잡기 (10/8 대표 "밋밋하다" → docs/07 3-6): 화면에 들어올 때 1.04 → 1 한 번. motion.js 가 html.js-motion 을 붙였을 때만(동작 줄이기 · 스크립트 없음이면 그대로) ── */
+.h-frame { display: block; overflow: hidden; }
+.h-brain__photo, .h-space__grid figure, .h-cta__photo { overflow: hidden; }
+.js-motion .h-settle img { transform: scale(1.04); transition: transform .9s var(--ease); }
+.js-motion .h-settle.is-in img { transform: none; }
+@media (hover: hover) { .js-motion .h-wcard:hover .h-settle.is-in img { transform: scale(1.03); transition-duration: .6s; } }
+@media (prefers-reduced-motion: reduce) { .js-motion .h-settle img { transform: none; transition: none; } }
