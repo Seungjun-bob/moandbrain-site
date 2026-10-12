@@ -307,3 +307,10 @@ body:not(.is-draft) .d-only { display: none !important; }
   .s-table--cards td::before { content: attr(data-label); flex-shrink: 0; font-size: 12px; color: var(--text-3); }
   .s-table--cards td:nth-child(2) { font-family: var(--font-serif); font-weight: 600; font-size: 16px; line-height: 24px; }
 }
+
+/* 머리 가운데 정렬 (10/12 대표 "같은 메뉴 줄을 가운데에") — 줄만이 아니라 머리 전체(메뉴 줄 · 제목 · 절 탭)를 가운데로 둔다. 줄 하나만 가운데면 왼쪽 선이 어긋난다.
+   출처: tiffany ⑤ 세리프 제목 중앙(C5). 본문은 그대로 왼쪽. 좁은 화면(720 미만)은 줄이 옆으로 밀려야 해서 왼쪽 그대로 */
+@media (min-width: 720px) {
+  .s-head .s-wrap { text-align: center; }
+  .s-head .s-menu, .s-head .s-tabs { justify-content: center; }
+}

@@ -380,3 +380,25 @@ a.h-btn--kakao:hover { background: var(--kakao-dark); border-color: var(--kakao-
 .js-motion .h-settle.is-in img { transform: none; }
 @media (hover: hover) { .js-motion .h-wcard:hover .h-settle.is-in img { transform: scale(1.03); transition-duration: .6s; } }
 @media (prefers-reduced-motion: reduce) { .js-motion .h-settle img { transform: none; transition: none; } }
+
+/* C17 후기 (10/12 대표 "네이버에서 찾아서 넣어") — 출처: serenebloom 후기 구역(인용 여러 개를 나란히) + tiffany 13px 캡션(C14)
+   네이버 방문자 리뷰 발췌 · 작성자 정보 없음. 별 · 리뷰 키워드 알약 · 따옴표 그림 · 카드 상자 없이 위쪽 선 하나 (규칙 · docs/07 1절 "알약 20여 개" "숫자 장식") */
+.h-review { padding: 96px 24px; border-top: 1px solid var(--grey-12); }
+.rv-grid { display: grid; gap: 40px; }
+.rv-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; }
+.rv-grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.rv { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; padding-top: 24px; border-top: 1px solid var(--black); }
+.rv__q { margin: 0; }
+.rv__q p { font-family: var(--font-serif); font-weight: 400; font-size: 18px; line-height: 30px; color: var(--black); }
+.rv__meta { font-size: 13px; line-height: 20px; color: var(--text-3); }
+.rv-note { margin-top: 32px; }
+@media (max-width: 1199.98px) {
+  .rv-grid--3 { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
+}
+@media (max-width: 719.98px) {
+  .h-review { padding: 64px 20px; }
+  .rv-grid { gap: 32px; }
+  .rv-grid--2 { grid-template-columns: minmax(0, 1fr); }
+  .rv-grid--3 { margin-top: 32px; }
+  .rv__q p { font-size: 16px; line-height: 28px; }
+}
