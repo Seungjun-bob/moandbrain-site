@@ -360,6 +360,124 @@ tr.done td.tk-t{text-decoration:line-through}
   .cust-tbl th:nth-child(3),.cust-tbl td:nth-child(3),.cust-tbl th:nth-child(5),.cust-tbl td:nth-child(5),.cust-tbl th:nth-child(n+8),.cust-tbl td:nth-child(n+8){display:none}
   .table-wrap{overflow-x:auto}
 }
+
+/* ── CRM v3 (10/14) — 평가 반영: 입력 칸 대비 · 막힘 이유 · 보내기 막대 · 회차 기록 서랍 · 고객 페이지 미리보기 · 가져오기
+   빨강은 오류에만(평가 DS-07) · 누르는 곳 44px(UI-16) · 모바일 고정 버튼 없음(UI-07) ── */
+:root{--line-in:#767676;--bad:#b00020}
+.input,.select,.textarea{border-color:var(--line-in)}
+.input::placeholder,.textarea::placeholder{color:var(--ink-3)}
+.input:focus-visible,.select:focus-visible,.textarea:focus-visible,.out:focus-visible{outline:2px solid #000;outline-offset:1px}
+[aria-invalid=true]{border-color:var(--bad)!important}
+.badge-bad,.note-q{color:var(--ink-2)!important}
+.btn:disabled,.btn[disabled]{background:#f2f2f2!important;color:var(--ink-3)!important;box-shadow:inset 0 0 0 1px var(--line-in)!important;cursor:not-allowed;opacity:1}
+.ferr{color:var(--bad);font-size:13px;line-height:20px;margin:6px 0 0}
+.ferr:empty{display:none}
+.ck{display:flex;align-items:center;gap:10px;min-height:44px;font-size:14px;cursor:pointer}
+.ck input{width:18px;height:18px;accent-color:#000;margin:0}
+.btnrow{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-top:16px}
+.show-m{display:none}
+.v3-setup{margin:0 0 28px;padding:12px 16px;background:var(--mint-soft);font-size:14px;line-height:22px}
+.warn{color:#000;font-weight:500;margin:8px 0 0}
+
+/* 홈 */
+.sendl span{word-break:keep-all}
+
+/* 회차 기록 서랍 */
+.rec-no{font-size:15px;margin:0 0 20px}
+.rec-no b{font:600 20px/28px var(--serif);margin-right:8px}
+.rec-h{font:600 16px/24px var(--serif);margin:28px 0 14px;padding-top:16px;border-top:1px solid #000}
+fieldset.fld{border:0;padding:0;margin:0 0 22px;min-width:0}
+fieldset.fld legend{font-size:13px;color:var(--ink-2);margin-bottom:8px;padding:0}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.three label{font-size:13px;color:var(--ink-2);display:grid;gap:6px}
+.hc{margin-bottom:8px}
+.up2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.up{display:grid;gap:6px;font-size:13px;color:var(--ink-2)}
+.up input{font-size:13px;max-width:100%}
+.up img{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line)}
+.rec-done p{margin:0 0 12px}
+.rec-acts{display:grid;gap:4px;justify-items:start;margin-top:20px}
+.rec-acts .btn{margin-bottom:12px}
+.rec-acts .u{min-height:44px;font-size:15px}
+.logtxt{white-space:pre-wrap;font:400 14px/24px var(--font);background:#fafafa;border:1px solid var(--line);padding:16px;margin:0 0 12px}
+
+/* 고객 한 페이지 */
+.pass-note{margin:16px 0 0;line-height:24px}
+.vtbl td{vertical-align:top}
+
+/* 고객 페이지 미리보기 · 컨디션포털 */
+.portal3{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:56px;align-items:start}
+.ptbl tr.sel td{background:var(--key)}
+.ptbl .u{font-size:15px;min-height:32px}
+.pv-acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px}
+.pv-note{margin:14px 0 16px;max-width:520px}
+.pv-frame{width:392px;border:1px solid #000;background:#fff}
+.pv-frame iframe{display:block;width:390px;height:760px;border:0}
+
+/* 예약문자 v3 */
+.msg3 .kinds label{align-items:flex-start}
+.msg3 .kinds input{margin-top:3px}
+.kn{display:flex;flex-direction:column}
+.kn small{font-size:12px;line-height:18px;color:var(--ink-2);font-weight:400}
+.kinds label.on .kn small{color:#000}
+.kfs{border:0;padding:0;margin:0;min-width:0}
+.kfs legend{padding:0}
+.kwhen{margin:12px 0 0}
+.find2{display:grid;grid-template-columns:200px minmax(0,1fr);gap:12px}
+.recv{font-size:14px;line-height:22px;margin:-8px 0 22px}
+.linkline{margin:-6px 0 20px}
+.out{min-height:200px}
+.adfix{margin:0;padding:10px 16px;background:#f2f2f2;font-size:14px;line-height:22px;color:var(--ink-2);border:1px solid var(--line)}
+.adfix+.out,.out+.adfix{margin-top:-1px}
+.edited{margin:10px 0 0}
+.why{margin:16px 0 0;padding:12px 16px;border:1px solid #000;font-size:14px;line-height:22px}
+.why.none{display:none}
+.sendbar{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.donemsg{margin:12px 0 0}
+.qbar{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:12px 16px;background:var(--mint-soft);margin:0 0 22px;font-size:14px}
+.qbar .u.cur{font-weight:700}
+.qbar .u.sent{color:var(--ink-3)}
+.camp{margin-bottom:48px}
+
+/* 고객 관리 · 설정 · 가져오기 */
+.cfind{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin:0 0 24px}
+.cfind .input{width:280px}
+.segs{display:flex;flex-wrap:wrap;gap:4px 20px}
+.segs .u{text-decoration:none;min-height:44px;font-size:15px;color:var(--ink-2)}
+.segs .u.on{color:#000;font-weight:700;text-decoration:underline}
+.set2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.set2 #sf{max-width:520px}
+.steps{margin:0;padding:0;list-style:none;border-top:1px solid #000}
+.steps li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.steps li .s13{grid-column:1/-1}
+.isteps{display:flex;flex-wrap:wrap;gap:8px 28px;margin:0 0 28px;padding:0 0 12px;list-style:none;border-bottom:1px solid var(--line);font-size:14px;color:var(--ink-3)}
+.isteps li.on{color:#000;font-weight:700}
+.isteps li.ok{color:var(--ink-2)}
+.imap select{min-width:180px}
+.isum{font-size:15px}
+.ipv tr.skip td{color:var(--ink-2)}
+.ttbl td:nth-child(3){color:var(--ink-2)}
+
+@media (pointer:coarse){
+  .ln .u,.sendl .u,.kvl .u,.v2-acts .u,.btnrow .u,.pv-acts .u{display:inline-flex;align-items:center;min-height:44px}
+  .chk{position:relative}
+  .chk::before{content:"";position:absolute;inset:-12px}
+}
+@media (max-width:860px){
+  .portal3,.set2{grid-template-columns:1fr;gap:40px}
+  .pv-frame{display:none}
+  .find2{grid-template-columns:1fr}
+  .three{grid-template-columns:1fr 1fr}
+  .cfind .input{width:100%}
+  .show-m{display:block;margin-top:4px}
+  .out-foot .btn{position:static}
+  .sendbar .btn{flex:1 1 100%;height:56px}
+  .pass{padding-top:16px}
+  .pass-note{margin-top:12px}
+  .ctabs{margin-top:32px}
+  .up2{grid-template-columns:1fr}
+  .drawer{width:100%!important}
+}
 </style>
 </head>
 <body>
@@ -367,8 +485,18 @@ tr.done td.tk-t{text-decoration:line-through}
 <div id="overlay-root"></div>
 <div class="toast-stack" id="toasts" aria-live="polite"></div>
 <script>const MEETING = true;
+/* ── v3 (10/14): 공개판 데모 시계 — 실제 오늘 날짜와 지금 시각으로 움직인다.
+   검사 · 캡처는 ?today=2026-09-14&now=10:00 처럼 고정한다 ── */
+const V3 = true;
+const V3_Q = new URLSearchParams(location.search);
+const v3pad = n => String(n).padStart(2, '0');
+const V3_TODAY = (() => { const q = V3_Q.get('today'); if (q && /^\d{4}-\d{2}-\d{2}$/.test(q)) return q; const d = new Date(); return `${d.getFullYear()}-${v3pad(d.getMonth() + 1)}-${v3pad(d.getDate())}`; })();
+const V3_NOW = V3_TODAY + ' ' + (() => { const q = V3_Q.get('now'); if (q && /^\d{2}:\d{2}$/.test(q)) return q; const d = new Date(); return `${v3pad(d.getHours())}:${v3pad(d.getMinutes())}`; })();
+
+;
 /* ── 가상 데이터 — 인물 · 연락처 · 기록 전부 가상. 사장님 노션 구조(A~E)의 데이터 모델을 따른다 ── */
-const TODAY = '2026-09-14';
+const SEED_DAY = '2026-09-14'; // 가상 데이터를 만든 날 — v3 공개판은 실제 오늘로 옮긴다(v3_pre.js · 맨 아래 shiftSeed)
+const TODAY = typeof V3_TODAY !== 'undefined' ? V3_TODAY : SEED_DAY;
 const CAP = 2; // 시간당 동시 관리 인원 — 원장 두 분 각자 (대표 확인 9/14)
 const SLOTS = []; // 30분 칸 (대표 9/14) · 영업 10:00~20:00 — 사장님 확인 필요
 for (let h = 10; h < 20; h++) SLOTS.push(`${h}:00`, `${h}:30`);
@@ -507,6 +635,21 @@ const MSGLOG = [
   L('2026-09-14 09:30', 'c15', 'T_DEPOSIT_GUIDE_FIRST_VISIT', '알림톡', 'SENT', '노쇼 이력 있음'),
 ];
 
+// 공개판(v3)은 데모 날짜가 실제 오늘이라, 가상 기록의 날짜도 같은 날 수만큼 옮긴다 (요일 · 간격은 그대로)
+(function shiftSeed() {
+  if (TODAY === SEED_DAY) return;
+  const n = Math.round((new Date(TODAY + 'T00:00:00') - new Date(SEED_DAY + 'T00:00:00')) / 864e5);
+  const sh = s => {
+    if (!s) return s;
+    const d = new Date(s.slice(0, 10) + 'T00:00:00'); d.setDate(d.getDate() + n);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}` + s.slice(10);
+  };
+  CUSTOMERS.forEach(c => { c.first = sh(c.first); c.last = sh(c.last); });
+  RESV.forEach(r => { r.date = sh(r.date); });
+  VISITS.forEach(v => { v.date = sh(v.date); });
+  MSGLOG.forEach(l => { l.at = sh(l.at); });
+})();
+
 ;
 /* ── 뼈대: 공용 도구 · 메뉴 · 화면 전환 · 드로어 · 토스트 · 오늘 보낼 안내 규칙 ── */
 const VIEWS = {};
@@ -559,7 +702,7 @@ const isConflict = r => r.status === 'REQUESTED' && !laneFor(r.date, r.time, r.p
 const freeTimes = (date, pid) => SLOTS.filter(t => laneFor(date, t, pid));
 
 // 데모 시계 · 예약금 기한 (기한이 지나면 빨간 표시만, 취소는 사람이)
-const NOW = '2026-09-14 10:00';
+const NOW = typeof V3_NOW !== 'undefined' ? V3_NOW : '2026-09-14 10:00';
 const DEP_HOURS = 12; // 입금 기한 — 사장님 확인 필요
 const addHours = (at, h) => { const d = new Date(at.replace(' ', 'T') + ':00'); d.setHours(d.getHours() + h); return `${iso(d)} ${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`; };
 const depDue = r => { const s = MSGLOG.filter(l => l.cid === r.cid && l.key === 'T_DEPOSIT_GUIDE_FIRST_VISIT').map(l => l.at).sort().pop(); return s ? addHours(s, DEP_HOURS) : null; };
@@ -646,8 +789,8 @@ const SUBNAV = {
   msg: [['#/messages', '문자 작성'], ['#/messages/log', '문자 기록'], ['#/campaigns', '광고 문자'], ['#/messages/auto', '자동 발송 (나중)']],
   set: [['#/settings/templates', '메시지 문구'], ['#/settings/channels', '예약 채널'], ...(MEETING ? [] : [['#/settings/programs', '상품 · 메뉴']])],
 };
-const navOf = h => h.startsWith('#/customer') || h === '#/b2b' ? '#/customers' : (h.startsWith('#/messages') || h === '#/campaigns') ? '#/messages' : h.startsWith('#/settings') ? '#/settings/templates' : h;
-const FOOT = '데모 화면입니다. 인물, 연락처, 숫자는 모두 가상이고 저장되지 않습니다.';
+const navOf = h => h.startsWith('#/customer') || h === '#/b2b' ? '#/customers' : (h.startsWith('#/messages') || h === '#/campaigns') ? '#/messages' : h.startsWith('#/settings') ? NAV2[NAV2.length - 1][0] : h;
+const FOOT = typeof V3 !== 'undefined' ? '데모 화면입니다. 인물, 연락처, 숫자는 모두 가상입니다. 입력한 내용은 이 브라우저에만 저장됩니다.' : '데모 화면입니다. 인물, 연락처, 숫자는 모두 가상이고 저장되지 않습니다.';
 
 function renderShell(cur) {
   const hq = STATE.mode === 'hq';
@@ -1530,14 +1673,16 @@ function sendRows() { // 보낼 날이 된 안내 — 회차 기록 · 복사 �
   });
   return rows;
 }
-const MONTHS = ['2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09'];
+const mAdd = (m, n) => { const d = new Date(Number(m.slice(0, 4)), Number(m.slice(5, 7)) - 1 + n, 1); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`; };
+const MONTHS = [-5, -4, -3, -2, -1, 0].map(n => mAdd(TODAY.slice(0, 7), n)); // 이번 달까지 6달
 const mName = m => `${Number(m.slice(5))}월`;
 const THIS_M = TODAY.slice(0, 7);
+const UPTO = Number(TODAY.slice(8));
 // 지난달까지는 가상 숫자 · 이번 달은 데모 기록에서 센다
 const STATS = {
-  '2026-04': { done: 12, first: 4, back: 1, pass: 1, noshow: 1 }, '2026-05': { done: 15, first: 6, back: 2, pass: 0, noshow: 1 },
-  '2026-06': { done: 13, first: 5, back: 2, pass: 1, noshow: 1 }, '2026-07': { done: 11, first: 4, back: 1, pass: 0, noshow: 2 },
-  '2026-08': { done: 16, first: 7, back: 3, pass: 2, noshow: 1 },
+  [MONTHS[0]]: { done: 12, first: 4, back: 1, pass: 1, noshow: 1 }, [MONTHS[1]]: { done: 15, first: 6, back: 2, pass: 0, noshow: 1 },
+  [MONTHS[2]]: { done: 13, first: 5, back: 2, pass: 1, noshow: 1 }, [MONTHS[3]]: { done: 11, first: 4, back: 1, pass: 0, noshow: 2 },
+  [MONTHS[4]]: { done: 16, first: 7, back: 3, pass: 2, noshow: 1 },
 };
 function statOf(m) {
   if (m !== THIS_M) return STATS[m];
@@ -1548,15 +1693,15 @@ function statOf(m) {
     pass: 0, noshow: RESV.filter(r => ['NO_SHOW', 'CANCELED'].includes(r.status) && inM(r.date)).length };
 }
 const NAVER = { // 사장님이 매월 옮겨 적는 숫자 — 데모 값은 예시
-  '2026-06': { rate: '9%', rev: '2', rank: '14위', ad: '안 함' }, '2026-07': { rate: '8%', rev: '1', rank: '13위', ad: '안 함' },
-  '2026-08': { rate: '12%', rev: '4', rank: '13위', ad: '8/18부터' },
+  [MONTHS[2]]: { rate: '9%', rev: '2', rank: '14위', ad: '안 함' }, [MONTHS[3]]: { rate: '8%', rev: '1', rank: '13위', ad: '안 함' },
+  [MONTHS[4]]: { rate: '12%', rev: '4', rank: '13위', ad: `${Number(MONTHS[4].slice(5))}/18부터` },
 };
 function barsHTML(cls, sel, act) {
   const max = Math.max(...MONTHS.map(m => statOf(m).done));
   const bar = m => { const v = statOf(m).done, part = m === THIS_M, c = [m === sel ? 'sel' : '', part ? 'part' : ''].join(' ').trim();
     return act ? `<button type="button" class="${c}" style="height:${Math.round(v / max * 100)}%" data-act="sm" data-m="${m}" aria-label="${mName(m)} ${v}건"><b>${v}</b></button>` : `<div class="${c}" style="height:${Math.round(v / max * 100)}%"></div>`; };
   return cls === 'chart'
-    ? `<div class="chart">${MONTHS.map(bar).join('')}</div><div class="chart-x">${MONTHS.map(m => `<span class="${m === sel ? 'sel' : ''}">${mName(m)}${m === THIS_M ? ' 14일까지' : ''}</span>`).join('')}</div>`
+    ? `<div class="chart">${MONTHS.map(bar).join('')}</div><div class="chart-x">${MONTHS.map(m => `<span class="${m === sel ? 'sel' : ''}">${mName(m)}${m === THIS_M ? ` ${UPTO}일까지` : ''}</span>`).join('')}</div>`
     : `<div class="bars">${MONTHS.map(bar).join('')}</div><div class="bars-x">${MONTHS.map(m => `<span>${mName(m)}</span>`).join('')}</div>`;
 }
 
@@ -1565,7 +1710,7 @@ VIEWS['#/'] = {
   lead: () => `오늘 방문 ${todayVisits().length}명, 보낼 문자 ${sendRows().reduce((n, r) => n + r.ids.length, 0)}건`,
   acts: () => '<button type="button" class="btn btn-primary btn-lg" data-act="compose" data-kid="before">예약문자 만들기</button>',
   render() {
-    const tv = todayVisits(), rows = sendRows(), s = statOf(THIS_M), prev = STATS['2026-08'];
+    const tv = todayVisits(), rows = sendRows(), s = statOf(THIS_M), prev = STATS[MONTHS[4]];
     const low = CUSTOMERS.filter(c => c.pass && c.pass.left <= 3);
     const notBack = CUSTOMERS.filter(c => c.visits === 1 && c.last && diffDays(c.last, TODAY) >= 14 && !hasRebook(c.id, c.last));
     const dorm = CUSTOMERS.filter(c => c.seg === 'DORMANT');
@@ -1583,9 +1728,9 @@ VIEWS['#/'] = {
         <p class="s13 muted" style="margin:12px 0 0">보낼 날이 된 안내만 보입니다. 재방문 안내는 광고라서 수신에 동의한 손님만 나옵니다.</p></section>
     </div>
     <section class="month">
-      <div><h2 class="v2-h">${mName(THIS_M)} (${Number(TODAY.slice(8))}일까지)</h2>
+      <div><h2 class="v2-h">${mName(THIS_M)} (${UPTO}일까지)</h2>
         <div class="k-label">이용 완료</div><div class="k-num num">${s.done}<small>건</small></div>
-        <div class="k-cmp">8월 한 달 ${prev.done}건</div>${barsHTML('bars', THIS_M, false)}</div>
+        <div class="k-cmp">${mName(MONTHS[4])} 한 달 ${prev.done}건</div>${barsHTML('bars', THIS_M, false)}</div>
       <div><h2 class="v2-h">살필 고객</h2>
         <table class="spec">
           <tr><td>회원권 3회 이하</td><td class="v num">${low.length}명</td><td>재등록 상담 · ${custLinks(low.map(c => c.id)) || '없음'}</td></tr>
@@ -1601,14 +1746,14 @@ VIEWS['#/'] = {
 // ── 운영 업무 · 콘텐츠 운영 (제안 화면 홈의 "고객 업무 · 운영 업무 · 콘텐츠 업무") ──
 const TK = (id, cat, title, due, every, done, href) => ({ id, cat, title, due, every: every || '', done: !!done, href: href || '' });
 const TASKS = [
-  TK('k1', 'ops', '월 1회 확인표 — 8월 숫자 옮겨 적기', '2026-09-07', '매월 첫 주', false, '#/stats'),
-  TK('k2', 'ops', '회원권 3회 이하 손님 재등록 상담', '2026-09-14', '', false, '#/customer/c2'),
-  TK('k3', 'ops', '컨디션포털 링크가 없는 손님 정리', '2026-09-20', '', false, '#/customers'),
-  TK('k4', 'ops', '스마트플레이스 통계 화면 저장', '2026-10-05', '분기마다'),
-  TK('k5', 'content', '플레이스 소식 — 50분 메뉴 안내 게시 여부 정하기', '2026-09-18'),
-  TK('k6', 'content', '블로그 · 인스타그램 관리 후기 글', '2026-09-25', '매월'),
-  TK('k7', 'content', '가을 안내 문자 문구 정하기 (광고 수신 동의 손님)', '2026-09-30', '계절마다', false, '#/campaigns'),
-  TK('k8', 'content', '홈페이지 공지 띠 문구 바꾸기', '2026-09-10', '필요할 때', true),
+  TK('k1', 'ops', `월 1회 확인표 — ${mName(MONTHS[4])} 숫자 옮겨 적기`, addDays(TODAY, -7), '매월 첫 주', false, '#/stats'),
+  TK('k2', 'ops', '회원권 3회 이하 손님 재등록 상담', addDays(TODAY, 0), '', false, '#/customer/c2'),
+  TK('k3', 'ops', '컨디션포털 링크가 없는 손님 정리', addDays(TODAY, 6), '', false, '#/customers'),
+  TK('k4', 'ops', '스마트플레이스 통계 화면 저장', addDays(TODAY, 21), '분기마다'),
+  TK('k5', 'content', '플레이스 소식 — 50분 메뉴 안내 게시 여부 정하기', addDays(TODAY, 4)),
+  TK('k6', 'content', '블로그 · 인스타그램 관리 후기 글', addDays(TODAY, 11), '매월'),
+  TK('k7', 'content', '가을 안내 문자 문구 정하기 (광고 수신 동의 손님)', addDays(TODAY, 16), '계절마다', false, '#/campaigns'),
+  TK('k8', 'content', '홈페이지 공지 띠 문구 바꾸기', addDays(TODAY, -4), '필요할 때', true),
 ];
 const CAT = { ops: '운영 업무', content: '콘텐츠 운영' };
 const dueTxt = t => `${Number(t.due.slice(5, 7))}/${Number(t.due.slice(8))}${!t.done && t.due < TODAY ? ' 지남' : ''}`;
@@ -1659,18 +1804,18 @@ const ROWS_NAVER = [
 ];
 VIEWS['#/stats'] = {
   title: '통계', lead: '매월 첫 주에 지난달 숫자를 확인합니다.',
-  acts: () => { const m = STATE.sm || '2026-08', i = MONTHS.indexOf(m);
+  acts: () => { const m = STATE.sm || MONTHS[4], i = MONTHS.indexOf(m);
     return `<div class="mnav2"><button type="button" class="arw" data-act="sm" data-m="${MONTHS[i - 1] || ''}" aria-label="이전 달"${i ? '' : ' disabled'}></button><span>2026년 ${mName(m)}</span><button type="button" class="arw nx" data-act="sm" data-m="${MONTHS[i + 1] || ''}" aria-label="다음 달"${i < MONTHS.length - 1 ? '' : ' disabled'}></button></div>`; },
   render() {
-    const m = STATE.sm || '2026-08', i = MONTHS.indexOf(m), s = statOf(m), part = m === THIS_M;
+    const m = STATE.sm || MONTHS[4], i = MONTHS.indexOf(m), s = statOf(m), part = m === THIS_M;
     const cols = MONTHS.slice(Math.max(0, i - 2), i + 1), full = MONTHS.slice(0, 5), avg = Math.round(full.reduce((n, x) => n + STATS[x].done, 0) / full.length);
     const old = x => cols.length === 3 && x === cols[0] ? ' hide-m' : '';
-    const head = `<thead><tr><th>지표</th>${cols.map(x => `<th class="${x === m ? 'sel' : ''}${old(x)}">${mName(x)}${x === THIS_M ? ' (14일까지)' : ''}</th>`).join('')}<th class="src">${'세는 방법'}</th></tr></thead>`;
+    const head = `<thead><tr><th>지표</th>${cols.map(x => `<th class="${x === m ? 'sel' : ''}${old(x)}">${mName(x)}${x === THIS_M ? ` (${UPTO}일까지)` : ''}</th>`).join('')}<th class="src">${'세는 방법'}</th></tr></thead>`;
     const crmCell = (k, x) => { const v = statOf(x); return k === 'back' ? `${v.first}명 중 ${v.back}명` : v[k]; };
     const nv = NAVER[m];
     return `<div class="stat"><div class="stat-top">
-        <div><div class="k-label">${mName(m)} 이용 완료${part ? ' (14일까지)' : ''}</div><div class="k-num num">${s.done}<small>건</small></div>
-          <div class="k-cmp">${i ? `${mName(MONTHS[i - 1])} ${statOf(MONTHS[i - 1]).done}건, ` : ''}4~8월 평균 ${avg}건</div>
+        <div><div class="k-label">${mName(m)} 이용 완료${part ? ` (${UPTO}일까지)` : ''}</div><div class="k-num num">${s.done}<small>건</small></div>
+          <div class="k-cmp">${i ? `${mName(MONTHS[i - 1])} ${statOf(MONTHS[i - 1]).done}건, ` : ''}${mName(MONTHS[0])}~${mName(MONTHS[4])} 평균 ${avg}건</div>
           <p class="s13" style="margin:20px 0 0;max-width:320px">이용 완료는 회차 기록을 남긴 방문을 셉니다. 노쇼 · 취소는 빼고 셉니다.</p></div>
         <div>${barsHTML('chart', m, true)}</div></div>
       <h2 class="v2-h">이 화면이 세는 것</h2>
@@ -1726,6 +1871,962 @@ VIEWS['#/customers'] = { ..._custView, sub: 'cust' };
 VIEWS['#/b2b'] = { ...VIEWS['#/b2b'], title: '고객 관리', sub: 'cust' };
 ['#/messages/log', '#/campaigns', '#/messages/auto'].forEach(h => { VIEWS[h] = { ...VIEWS[h], sub: 'msg' }; });
 ['#/settings/templates', '#/settings/channels', '#/settings/programs'].forEach(h => { VIEWS[h] = { ...VIEWS[h], title: '설정', sub: 'set' }; });
+
+;
+/* ── 고객 페이지 링크: 기록을 JSON → deflate-raw → base64url 로 바꿔 주소의 # 뒤에 담는다.
+   # 뒤는 브라우저 안에서만 읽고 서버로 보내지 않는다 (RFC 3986 3.5). CRM과 고객 페이지가 같은 파일을 쓴다 ── */
+const b64u = u8 => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); };
+const unb64u = s => { s = s.replace(/-/g, '+').replace(/_/g, '/'); const b = atob(s + '==='.slice((s.length + 3) % 4)); return Uint8Array.from(b, c => c.charCodeAt(0)); };
+async function zpipe(u8, T) { const r = new Blob([u8]).stream().pipeThrough(new T('deflate-raw')); return new Uint8Array(await new Response(r).arrayBuffer()); }
+async function packRec(o) {
+  const raw = new TextEncoder().encode(JSON.stringify(o));
+  if (typeof CompressionStream === 'undefined') return '0' + b64u(raw);
+  return '1' + b64u(await zpipe(raw, CompressionStream));
+}
+async function unpackRec(s) {
+  const z = s[0] === '1', u8 = unb64u(s.slice(1));
+  return JSON.parse(new TextDecoder().decode(z ? await zpipe(u8, DecompressionStream) : u8));
+}
+
+;
+/* ── v3 (10/14) 바탕: 매장 정보 · 가상 기록 보강 · 문자 종류와 문구 · 고객 페이지 링크 · 보내기 도구 ──
+   평가 5분야(docs/평가_v3/) P0을 반영한다. 공개판에만 들어간다(build.py JS_MEET) */
+
+// ── 매장 정보 — 문구의 빈 자리가 여기서 채워진다 (설정 › 매장 정보). 값은 홈페이지 · 사장님 원문에 이미 공개된 것
+const SHOP = {
+  name: '모앤브레인',
+  phone: '010-3064-9020',
+  addr: '서울시 송파구 삼학사로 40 이영빌딩 4층 401호 (빽다방 오른편 건물)',
+  way: '9호선 석촌고분역 3번 출구 도보 3분',
+  map: 'https://naver.me/Futtj0EO',
+  parking: '건물 1층 주차 가능, 만차 시 인근 공영주차장 이용',
+  book: 'https://m.booking.naver.com/booking/13/bizes/1490004',
+  review: 'https://m.place.naver.com/place/2026231998/review/visitor',
+  account: '',            // 첫 방문 예약금 계좌 — 사장님 확인 전이라 비워 둔다(비어 있으면 그 문구는 복사가 막힌다)
+  optout: '무료 수신거부: 이 번호로 "거부"라고 답장', // 예시 — 실제 방법은 KISA(118) 확인 뒤 바꾼다
+  texts: {},              // 사장님이 넣은 원문 (종류 id → 문구)
+  saved: false,
+};
+const STAFF_NAME = { a: '원장 A', b: '원장 B' };
+
+// ── 가상 기록 보강: 전체 번호(가짜 국번 010-0000) · 동의 날짜 · 회차의 고객용 기록 ──
+CUSTOMERS.forEach(c => {
+  if (c.phone) c.phone = c.phone.replace('••••', '0000');
+  c.consentAt = c.consent ? (c.first || addDays(TODAY, -3)) : '';
+  c.consentHow = c.consent ? '첫 방문 문진표' : '';
+});
+cust('c15').memo = '노쇼 뒤 다시 신청';
+const EXP = (cid, no, o) => { const v = VISITS.find(x => x.cid === cid && x.no === no); if (v) Object.assign(v, o); };
+const lastVisitOf = cid => VISITS.filter(v => v.cid === cid).sort((a, b) => b.date.localeCompare(a.date) || b.no - a.no)[0];
+EXP('c2', 13, { staff: 'b', meas: { bs: 72, st: 58, vt: '보통' } });
+EXP('c2', 14, {
+  staff: 'b', note: '정수리 쪽 각질이 지난번보다 적었어요. 열감이 조금 남아 있어서 진정 위주로 했습니다.',
+  photos: [{ k: 'b', src: 'ex:before-scalp' }, { k: 'a', src: 'ex:after-scalp' }, { k: 'b', src: 'ex:before-pore' }, { k: 'a', src: 'ex:after-pore' }],
+  meas: { bs: 78, st: 51, vt: '활력' },
+  home: ['샴푸는 저녁에 한 번, 미지근한 물로 해 주세요.', '드라이는 찬바람으로 두피부터 말려 주세요.', '다음 방문 전까지 염색은 미뤄 주세요.'],
+});
+EXP('c7', 11, { staff: 'a', note: '피지가 많은 편이라 스케일링을 한 번 더 했어요. 다음에 현미경으로 같은 자리를 다시 찍어 볼게요.',
+  home: ['샴푸 뒤에는 두피까지 완전히 말려 주세요.', '모자는 오래 쓰지 않는 게 좋아요.'] });
+EXP('c14', 9, { staff: 'a', note: '가려움이 있어서 진정과 보습 위주로 했어요.', home: ['뜨거운 물 대신 미지근한 물로 감아 주세요.'] });
+VISITS.filter(v => v.no === 1 && v.memo.startsWith('첫 방문')).forEach(v => Object.assign(v, {
+  staff: 'a', memo: '첫 방문, 뇌파와 맥파 측정, 현미경 촬영',
+  note: '첫 방문이라 상담과 측정을 같이 했어요. 정수리 쪽에 피지가 많은 편이에요.',
+  photos: [{ k: 'b', src: 'ex:before-scalp' }, { k: 'a', src: 'ex:after-scalp' }], meas: { bs: 70, st: 62, vt: '보통' },
+  home: ['샴푸는 저녁에 한 번, 미지근한 물로 해 주세요.', '드라이는 찬바람으로 두피부터 말려 주세요.'],
+}));
+VISITS.forEach(v => { if (!v.staff) v.staff = 'a'; if (!v.next && v === lastVisitOf(v.cid)) v.next = addDays(v.date, 14); });
+
+// 문자 기록 — v1의 알림톡 자동 발송 기록을 "복사해 직접 보냄"으로 (v3는 자동 발송이 없다)
+const OLD_KEY = { T_D_MINUS_1: 'd1', T_DEPOSIT_GUIDE_FIRST_VISIT: 'freq', T_RESERVATION_CONFIRMED: 'fpaid', T_POSTCARE_PORTAL_NEXT_DAY: 'check', T_REVIEW_REQUEST_2_3D: 'thanks' };
+MSGLOG.splice(0, MSGLOG.length, ...MSGLOG.filter(l => l.status === 'SENT' && OLD_KEY[l.key])
+  .map(l => ({ at: l.at, cid: l.cid, kid: OLD_KEY[l.key], key: 'K_' + OLD_KEY[l.key], via: '복사', status: 'SENT', note: '', text: '' })));
+
+// ── 전화번호 ──
+const digits = s => String(s || '').replace(/\D/g, '');
+function normPhone(s) { // 숫자만 → 010-0000-0000. +82 10… → 010… 형식이 틀리면 ''
+  let d = digits(s);
+  if (d.startsWith('82')) d = '0' + d.slice(2);
+  if (d.length === 10 && d.startsWith('10')) d = '0' + d;
+  if (!/^01[016789]\d{7,8}$/.test(d)) return '';
+  return d.length === 11 ? `${d.slice(0, 3)}-${d.slice(3, 7)}-${d.slice(7)}` : `${d.slice(0, 3)}-${d.slice(3, 6)}-${d.slice(6)}`;
+}
+const showPhone = p => p ? p.replace(/^(\d{3})-\d{3,4}-/, '$1-••••-') : '';
+const last4 = p => digits(p).slice(-4);
+const isDemoNum = p => /^010-0000-/.test(p || '');
+
+// ── 날짜 말 ──
+const mdw = s => `${Number(s.slice(5, 7))}월 ${Number(s.slice(8, 10))}일(${WD[dow(s)]})`;
+const dayWord = s => s === TODAY ? '오늘' : s === addDays(TODAY, 1) ? '내일' : s === addDays(TODAY, -1) ? '어제' : mdw(s);
+const nowHour = () => Number(NOW.slice(11, 13));
+const isNight = () => nowHour() >= 21 || nowHour() < 8;
+const consentOld = c => !!(c && c.consent && c.consentAt && diffDays(c.consentAt, TODAY) > 730);
+
+// ── 문자 종류 — 사장님 도구의 11가지 순서 그대로 + 회원권 남은 횟수 (10/14 평가 US-12)
+// text = 사장님 원문 · ex = 예시 문구(사장님 원문을 받으면 설정 › 메시지 문구에서 바꾼다)
+// 광고(ad)는 (광고) 머리와 수신거부 꼬리를 문구 칸 밖에 고정한다 (정보통신망법 제50조 · 시행령 별표 6)
+const VISIT_BEFORE = '안녕하세요, {고객명}님\n모앤브레인 방문 예약을 안내드립니다🍀\n\n✅ 예약정보\n- 일시: {일시}\n- 프로그램: [{프로그램}]\n- 소요시간: {소요시간}분\n\n✅ 주소 및 위치\nhttps://naver.me/Futtj0EO\n서울시 송파구 삼학사로 40 이영빌딩 4층 401호 (빽다방 오른편 건물)\n\n9호선 석촌고분역 3번 출구 도보 3분\n(3번출구 오른편 식자재마트 방향)\n\n📌 주차 안내\n건물 1층 주차 가능\n만차 시 인근 공영주차장 이용';
+const KINDS3 = [
+  { id: 'before', name: 'MO&BRAIN 방문 전 알림', grp: '', when: '예약을 받은 뒤', visit: 1, text: VISIT_BEFORE },
+  { id: 'd1', name: '방문 전날 안내', grp: '방문 전후', when: '방문 전날', visit: 1, day: 1,
+    ex: '안녕하세요, {고객명}님\n{언제} 모앤브레인 예약 있으셔서 한 번 더 안내드려요.\n\n✅ 예약정보\n- 일시: {일시}\n- 프로그램: [{프로그램}]\n- 위치: {지도}\n\n시간 변경이나 취소는 이 번호로 연락 주세요.' },
+  { id: 'd0', name: '당일 안내', grp: '방문 전후', when: '방문 당일 아침', visit: 1, day: 0,
+    ex: '{고객명}님, {언제} {시간}에 뵙겠습니다.\n\n- 프로그램: [{프로그램}]\n- 위치: {지도}\n- 주차: {주차}\n\n건물 4층 401호로 올라오시면 됩니다.' },
+  { id: 'thanks', name: '첫방문 감사', grp: '방문 전후', when: '첫 방문 2~3일 뒤', rec: 1,
+    ex: '{고객명}님, 모앤브레인입니다.\n처음 와 주셔서 감사했어요.\n\n관리 받으신 기록은 여기서 다시 보실 수 있어요.\n{기록링크}\n\n괜찮으셨다면 네이버에 짧게 후기 남겨 주세요.\n{리뷰링크}' },
+  { id: 'check', name: '상태 확인', grp: '방문 전후', when: '관리 다음날, 기록 링크와 함께', rec: 1,
+    ex: '{고객명}님, 모앤브레인입니다.\n{방문때} 관리 받으시고 두피는 좀 어떠세요?\n\n관리 기록과 홈케어 방법 보내드려요.\n{기록링크}\n\n궁금한 점은 이 번호로 문자 주세요.' },
+  { id: 'revisit', name: '재방문 안내', grp: '방문 전후', when: '마지막 방문 2주 뒤, 광고', ad: 1,
+    ex: '{고객명}님, 지난번 관리 받으신 지 좀 됐네요.\n두피 상태가 궁금하시면 다음에 오셨을 때 지난번과 같은 자리를 찍어서 비교해 드릴게요.\n\n예약: {예약링크}' },
+  { id: 'freq', name: '첫 방문 [ 예약 신청·입금 ] 안내', grp: '첫 방문', when: '첫 방문 신청을 받았을 때',
+    ex: '안녕하세요, {고객명}님\n모앤브레인 첫 방문 예약 신청 확인했어요.\n\n✅ 신청 내용\n- 일시: {일시}\n- 프로그램: [{프로그램}]\n\n✅ 예약금 안내\n첫 방문은 예약금 30,000원을 받고 있어요.\n- 계좌: {계좌}\n\n입금 확인되면 확정 문자 보내드릴게요.' },
+  { id: 'fpaid', name: '첫 방문 [ 입금 완료·예약 ] 확정', grp: '첫 방문', when: '입금을 확인했을 때', visit: 1,
+    ex: '{고객명}님, 예약금 입금 확인했어요.\n{일시} 예약이 확정되었습니다.\n\n- 프로그램: [{프로그램}]\n- 소요시간: {소요시간}분\n- 위치: {지도}\n\n첫 방문은 상담과 측정이 있어서 시간이 조금 더 걸릴 수 있어요.' },
+  { id: 'fconf', name: '첫 방문 [ 예약 확정 ] 안내', grp: '첫 방문', when: '예약금 없이 확정했을 때', visit: 1,
+    ex: '안녕하세요, {고객명}님\n모앤브레인 첫 방문 예약이 확정되었어요.\n\n✅ 예약정보\n- 일시: {일시}\n- 프로그램: [{프로그램}]\n\n📌 오시는 날\n왁스나 스프레이 없이 와 주세요.\n두피 상태를 그대로 봐야 해서요.' },
+  { id: 'trial', name: '체험단 [ 신청·예약 절차 ] 안내', grp: '체험단 · 협업', when: '체험단 신청을 받았을 때',
+    ex: '안녕하세요, {고객명}님\n모앤브레인 체험단 신청해 주셔서 감사해요.\n\n✅ 진행 순서\n1. 아래 네이버 예약에서 원하시는 날짜로 신청\n2. 확정 문자를 받으시면 방문\n3. 방문 뒤 일주일 안에 후기 작성\n\n예약: {예약링크}\n\n📌 후기에는 체험단으로 방문했다는 표시를 꼭 넣어 주세요.' },
+  { id: 'influ', name: '인플루언서 [ 협업·신청 예약 절차 ] 안내', grp: '체험단 · 협업', when: '협업 문의를 받았을 때',
+    ex: '안녕하세요, {고객명}님\n모앤브레인에 협업 문의 주셔서 감사해요.\n\n✅ 진행 순서\n1. 가능한 날짜를 두세 개 알려 주세요.\n2. 날짜가 정해지면 네이버 예약으로 잡아 드려요.\n3. 그날 오셔서 관리 받으시고 촬영하시면 돼요.\n\n📌 콘텐츠에는 협찬 표시를 꼭 넣어 주세요.' },
+  { id: 'pass', name: '회원권 남은 횟수', grp: '회원권', when: '3회 이하 남았을 때', added: 1,
+    ex: '{고객명}님, 모앤브레인입니다.\n{회원권} 남은 횟수 알려드려요.\n\n- 남은 횟수: {남은횟수}회\n- 지금까지 방문: {방문수}회\n\n알고 계신 횟수와 다르면 말씀해 주세요.' },
+];
+const kind3 = id => KINDS3.find(k => k.id === id);
+const kindSrc = k => SHOP.texts[k.id] ? '사장님 원문' : k.text ? '사장님 원문' : '예시 문구';
+const kindBase = k => SHOP.texts[k.id] || k.text || k.ex || '';
+const NEED = { // 빈 자리 → 무엇을 하면 되는지
+  고객명: '고객을 고르세요.', 일시: '예약 날짜와 시간을 넣으세요.', 시간: '예약 시간을 넣으세요.', 언제: '예약 날짜를 넣으세요.',
+  계좌: '설정 › 매장 정보에 예약금 계좌를 넣으세요.', 리뷰링크: '설정 › 매장 정보에 리뷰 링크를 넣으세요.', 예약링크: '설정 › 매장 정보에 네이버 예약 링크를 넣으세요.',
+  지도: '설정 › 매장 정보에 지도 링크를 넣으세요.', 주차: '설정 › 매장 정보에 주차 안내를 넣으세요.',
+  기록링크: '이 손님은 회차 기록이 없어 고객 페이지를 만들 수 없습니다. 회차 기록을 먼저 남기세요.', 방문때: '이 손님은 방문 기록이 없습니다.',
+  지난일수: '이 손님은 방문 기록이 없습니다.', 회원권: '이 손님은 회원권이 없습니다.', 남은횟수: '이 손님은 회원권이 없습니다.',
+};
+function fillText(k, f, base) {
+  const c = f.cid ? cust(f.cid) : null, p = f.pid ? prog(f.pid) : null, lv = c ? lastVisitOf(c.id) : null;
+  const val = {
+    고객명: c && c.name, 프로그램: p && p.name, 소요시간: p && p.min,
+    일시: f.date && f.time ? `${mdw(f.date)} ${f.time}` : '', 시간: f.time, 언제: f.date ? dayWord(f.date) : '',
+    지도: SHOP.map, 주소: SHOP.addr, 주차: SHOP.parking, 매장전화: SHOP.phone, 예약링크: SHOP.book, 리뷰링크: SHOP.review, 계좌: SHOP.account,
+    기록링크: f.link, 방문때: lv ? (lv.date === TODAY ? '오늘' : lv.date === addDays(TODAY, -1) ? '어제' : `${Number(lv.date.slice(5, 7))}월 ${Number(lv.date.slice(8))}일`) : '',
+    지난일수: c && c.last ? diffDays(c.last, TODAY) : '', 회원권: c && c.pass && c.pass.type, 남은횟수: c && c.pass ? c.pass.left : '', 방문수: c ? c.visits : '',
+  };
+  return (base != null ? base : kindBase(k)).replace(/\{([^}]+)\}/g, (m, key) => (val[key] !== undefined && val[key] !== '' && val[key] !== null && val[key] !== false) ? String(val[key]) : m);
+}
+const holesOf = t => [...new Set((t.match(/\{([^}]+)\}/g) || []).map(x => x.slice(1, -1)))];
+const adHead = () => `(광고) ${SHOP.name} ${SHOP.phone}`;
+const adTail = () => SHOP.optout;
+const fullText = (k, body) => k.ad ? `${adHead()}\n${body}\n\n${adTail()}` : body;
+function blockOf(k, f, body) { // 복사 · 보내기를 막는 이유 (없으면 '')
+  const c = f.cid ? cust(f.cid) : null;
+  if (!body.trim()) return '문구가 비어 있습니다.';
+  const holes = holesOf(body);
+  if (holes.length) return holes.map(h => `{${h}} — ${NEED[h] || '이 자리를 채우세요.'}`).join('\n');
+  if (k.ad) {
+    if (!c) return '광고 문자는 받는 고객을 골라야 합니다. 광고 수신에 동의했는지 확인하기 위해서입니다.';
+    if (!c.consent) return `${c.name}님은 광고 수신에 동의하지 않았습니다. 이 안내는 광고라서 보낼 수 없습니다.`;
+    if (consentOld(c)) return `${c.name}님은 광고 수신 동의를 받은 지 2년이 지났습니다. 동의를 다시 확인한 뒤 보내세요.`;
+    if (!SHOP.optout) return '설정 › 매장 정보에 수신거부 방법을 넣어야 광고 문자를 보낼 수 있습니다.';
+    if (isNight()) return '밤 9시부터 아침 8시까지는 광고 문자를 보낼 수 없습니다. 이 시간에는 따로 받은 동의가 필요합니다.';
+  }
+  return '';
+}
+
+// ── 고객 페이지 (컨디션포털) — 링크 안에 이번 기록을 담는다. 내부 메모 · 연락처 · 광고 동의는 넣지 않는다 ──
+const PORTAL_PUBLIC = 'https://seungjun-bob.github.io/moandbrain-site/crm/p/';
+const portalBase = () => /^https?:/.test(location.protocol) ? new URL('p/', location.href).href : PORTAL_PUBLIC;
+const portalLocal = () => /^https?:/.test(location.protocol) ? 'p/' : 'p/index.html';
+const isExPhoto = x => x.src.startsWith('ex:');
+function recOf(cid) {
+  const c = cust(cid), vs = VISITS.filter(v => v.cid === cid).sort((a, b) => b.date.localeCompare(a.date) || b.no - a.no);
+  if (!c || !vs.length) return null;
+  const v = vs[0], pv = vs.slice(1).find(x => x.meas);
+  return {
+    v: 1, demo: 1, n: c.name, d: v.date, no: v.no, st: STAFF_NAME[v.staff] || '', p: prog(v.pid).name, a: v.aroma, nt: v.note || '',
+    ph: (v.photos || []).filter(isExPhoto).map(x => [x.k, x.src.slice(3)]), up: (v.photos || []).some(x => !isExPhoto(x)) ? 1 : 0,
+    m: v.meas || null, pm: pv ? Object.assign({ d: pv.date }, pv.meas) : null, hc: (v.home || []).filter(Boolean).slice(0, 3), nx: v.next || '',
+    h: vs.slice(0, 10).map(x => [x.no, x.date, prog(x.pid).name, x.aroma, (x.note || '').slice(0, 40)]),
+    pass: c.pass ? [c.pass.type, c.pass.left] : null,
+    s: { nm: SHOP.name, ph: SHOP.phone, bk: SHOP.book, mp: SHOP.map, ad: SHOP.addr },
+  };
+}
+const LINKS = {}; // cid → { sig, hash } — 같은 기록이면 다시 만들지 않는다
+async function portalHash(cid) {
+  const r = recOf(cid); if (!r) return '';
+  const sig = JSON.stringify(r);
+  if (LINKS[cid] && LINKS[cid].sig === sig) return LINKS[cid].hash;
+  const hash = await packRec(r);
+  LINKS[cid] = { sig, hash };
+  return hash;
+}
+const portalURL = async cid => { const h = await portalHash(cid); return h ? portalBase() + '#' + h : ''; };
+const portalLocalURL = async cid => { const h = await portalHash(cid); return h ? portalLocal() + '#' + h : ''; };
+
+// ── 보내기 — 마지막 "보내기"는 사장님이 문자 앱 · 카카오톡에서 직접 누른다 ──
+const IS_IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const IS_TOUCH = matchMedia('(pointer:coarse)').matches;
+const smsHref = (phone, text) => `sms:${phone && !isDemoNum(phone) ? digits(phone) : ''}${IS_IOS ? '&' : '?'}body=${encodeURIComponent(text)}`;
+async function copyText(t) { try { await navigator.clipboard.writeText(t); return true; } catch (e) { return false; } }
+const VIA = { copy: '복사', sms: '문자 앱', share: '공유', mark: '보냄 표시' };
+function logSend(cid, kid, via, text, extra) {
+  if (!cid) return null;
+  const l = Object.assign({ at: NOW, cid, kid, key: 'K_' + kid, via: VIA[via] || via, status: 'SENT', note: '', text: text || '' }, extra || {});
+  MSGLOG.push(l);
+  if (kid === 'check' || kid === 'thanks') cust(cid).portalSent = TODAY;
+  return l;
+}
+const kindName = kid => (kind3(kid) || { name: kid === 'card' ? '사진 카드' : kid }).name;
+const sentToday = (cid, kid) => MSGLOG.some(l => l.cid === cid && l.kid === kid && l.at.slice(0, 10) === TODAY);
+
+;
+/* ── v3 화면 ①: 홈 · 회차 기록 서랍 · 고객 한 페이지 · 컨디션포털 ──
+   관리 직후 기록 → 고객 페이지 → 보내기가 한 줄로 이어지게 (평가 US-01 · UX-1 · CRM-01 · DS-02) */
+
+const recOfToday = cid => VISITS.find(v => v.cid === cid && v.date === TODAY);
+const setupSteps = () => {
+  const shopOk = SHOP.saved && ['phone', 'addr', 'map', 'book', 'optout'].every(k => SHOP[k]);
+  const imported = BATCHES.some(b => !b.undone);
+  const orig = KINDS3.filter(k => k.text || SHOP.texts[k.id]).length;
+  return [
+    { t: '매장 정보 확인', ok: shopOk, href: '#/settings/shop', note: shopOk ? (SHOP.account ? '' : '예약금 계좌가 비어 있음') : '전화, 주소, 지도, 예약 링크, 수신거부 방법' },
+    { t: '고객 명단 가져오기', ok: imported, href: '#/settings/import', note: imported ? '' : '지금은 예시 고객으로 보고 있음' },
+    { t: '안내 문구 원문 넣기', ok: orig === KINDS3.length, href: '#/settings/templates', note: `원문 ${orig} / ${KINDS3.length}` },
+  ];
+};
+
+// ── 홈: 보낼 문자 — 보낼 날이 된 안내만, 오늘 복사 · 문자 앱 · 공유로 처리한 사람은 빠진다 ──
+function sendRows3() {
+  const rows = [], add = (kid, ids, why) => { const left = ids.filter(id => !sentToday(id, kid)); if (left.length) rows.push({ kid, ids: left, done: ids.length - left.length, why }); };
+  add('d1', [...new Set(RESV.filter(r => r.date === addDays(TODAY, 1) && HOLDS.includes(r.status)).map(r => r.cid))], '내일 방문');
+  add('check', [...new Set(VISITS.filter(v => v.date === addDays(TODAY, -1)).map(v => v.cid))], '어제 관리 받은 손님 (기록 링크와 함께)');
+  add('thanks', [...new Set(VISITS.filter(v => v.no === 1 && [2, 3].includes(diffDays(v.date, TODAY))).map(v => v.cid))], '2~3일 전 첫 방문');
+  add('pass', CUSTOMERS.filter(c => c.pass && c.pass.left <= 3 && !MSGLOG.some(l => l.cid === c.id && l.kid === 'pass' && diffDays(l.at.slice(0, 10), TODAY) < 30)).map(c => c.id), '회원권 3회 이하');
+  return rows;
+}
+const sendCount = () => sendRows3().reduce((n, r) => n + r.ids.length, 0);
+const nameList = ids => ids.map(id => esc(cust(id).name)).join(', ');
+
+VIEWS['#/'] = {
+  title: () => fmtDL(TODAY),
+  lead: () => `오늘 방문 ${todayVisits().length}명, 보낼 문자 ${sendCount()}건`,
+  acts: () => '<button type="button" class="btn btn-primary btn-lg" data-act="compose" data-kid="before">예약문자 만들기</button>',
+  render() {
+    const tv = todayVisits(), rows = sendRows3(), s = statOf(THIS_M), prev = STATS[MONTHS[4]], st = setupSteps(), stOk = st.filter(x => x.ok).length;
+    const low = CUSTOMERS.filter(c => c.pass && c.pass.left <= 3);
+    const notBack = CUSTOMERS.filter(c => c.visits === 1 && c.last && diffDays(c.last, TODAY) >= 14 && !hasRebook(c.id, c.last));
+    const dorm = CUSTOMERS.filter(c => c.seg === 'DORMANT');
+    const tasks = TASKS.filter(t => !t.done).sort((a, b) => a.due.localeCompare(b.due)).slice(0, 3);
+    return `${stOk < st.length ? `<p class="v3-setup">처음 시작 ${stOk} / ${st.length} — ${st.filter(x => !x.ok).map(x => `<a class="u" href="${x.href}">${x.t}</a>`).join(', ')}</p>` : ''}
+    <div class="home-top">
+      <section><div class="v2-hrow"><h2 class="v2-h">오늘 방문</h2><button type="button" class="u" data-act="vadd-open">방문 적기</button></div>
+        ${tv.length ? `<table class="ln"><thead><tr><th class="t-time">시간</th><th>고객</th><th class="hide-m">프로그램</th><th class="r">회차 기록</th></tr></thead><tbody>${tv.map(r => {
+          const c = cust(r.cid), done = recOfToday(c.id);
+          return `<tr><td class="num">${r.time}</td><td><a class="u" style="font-size:15px" href="#/customer/${c.id}">${esc(c.name)}</a> <span class="dim s13">${done ? done.no + '회차' : c.visits ? (maxNo(c.id) + 1) + '회차' : '첫 방문'}</span></td><td class="hide-m">${esc(prog(r.pid).name)}</td>
+            <td class="r">${done ? `<span class="dim s13">기록함</span> <button type="button" class="u" data-act="compose" data-kid="check" data-cid="${c.id}">보내기</button>` : `<button type="button" class="u" data-act="rec-open" data-cid="${c.id}" data-rid="${r.id}">기록</button>`}</td></tr>`; }).join('')}</tbody></table>`
+          : '<p class="muted">오늘 방문할 손님이 없습니다.</p>'}
+        <p class="s13 muted" style="margin:12px 0 0">안내 문자 만들 때 넣은 예약과 "방문 적기"로 적은 손님이 여기 나옵니다.</p></section>
+      <section><div class="v2-hrow"><h2 class="v2-h">보낼 문자</h2><a class="u" href="#/messages/log">문자 기록</a></div>
+        <ul class="sendl">${rows.map(r => `<li><b>${esc(kindName(r.kid))}</b><span>${r.why} ${r.ids.length}명: ${nameList(r.ids)}${r.done ? ` (${r.done}명 보냄)` : ''}</span><button type="button" class="u" data-act="compose" data-kid="${r.kid}" data-ids="${r.ids.join(',')}">문구 만들기</button></li>`).join('') || '<li><span class="empty">오늘 보낼 안내가 없습니다.</span></li>'}</ul>
+        <p class="s13 muted" style="margin:12px 0 0">문구를 복사하거나 문자 앱으로 넘기면 목록에서 빠집니다. 재방문 안내는 <a class="u s13" href="#/campaigns">광고 문자</a>에 따로 있습니다.</p></section>
+    </div>
+    <section class="month">
+      <div><h2 class="v2-h">${mName(THIS_M)} (${UPTO}일까지)</h2>
+        <div class="k-label">이용 완료</div><div class="k-num num">${s.done}<small>건</small></div>
+        <div class="k-cmp">${mName(MONTHS[4])} 한 달 ${prev.done}건</div>${barsHTML('bars', THIS_M, false)}</div>
+      <div><h2 class="v2-h">챙길 손님</h2>
+        <table class="spec">
+          <tr><td>회원권 3회 이하</td><td class="v num">${low.length}명</td><td>남은 횟수 안내 · ${custLinks(low.map(c => c.id)) || '없음'}</td></tr>
+          <tr><td>첫 방문 뒤 2주 넘게 안 온 손님</td><td class="v num">${notBack.length}명</td><td>${custLinks(notBack.map(c => c.id)) || '없음'} (광고 수신 동의 ${notBack.filter(c => c.consent).length}명)</td></tr>
+          <tr><td>6개월 넘게 안 온 손님</td><td class="v num">${dorm.length}명</td><td>${custLinks(dorm.map(c => c.id)) || '없음'} (광고 수신 동의 ${dorm.filter(c => c.consent).length}명)</td></tr>
+        </table>
+        <p class="s13 muted" style="margin:12px 0 0">다음 방문 일정을 이미 적어 둔 손님은 빼고 셉니다.</p></div>
+    </section>
+    <section class="tasks"><h2 class="v2-h">남은 업무</h2>${taskTable(tasks, true)}</section>`;
+  },
+};
+
+// 방문 적기 — 네이버에서 받은 예약을 오늘 목록에 옮겨 적는다 (예약 자체는 네이버)
+ACTIONS['vadd-open'] = () => {
+  const people = [...CUSTOMERS].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+  openDrawer('방문 적기', `<div class="stack" id="va">
+    <p class="s13 muted" style="margin:0">네이버에서 받은 예약을 이 목록에 적습니다. 예약 확정 · 취소는 네이버에서 합니다.</p>
+    <div class="fld"><label for="va-c">고객</label><select id="va-c" class="input select" name="cid"><option value="">고르세요</option>${people.map(p => `<option value="${p.id}">${esc(p.name)}${p.phone ? ' · ' + last4(p.phone) : ''}</option>`).join('')}</select>
+      <p class="s13 muted" style="margin:6px 0 0">처음 오는 손님은 <button type="button" class="u" data-act="cf-open">고객 등록</button>부터 합니다.</p></div>
+    <div class="two"><div class="fld"><label for="va-d">날짜</label><input id="va-d" type="date" class="input" name="date" value="${TODAY}"></div>
+      <div class="fld"><label for="va-t">시간</label><input id="va-t" type="time" class="input" name="time" step="1800" value="11:00"></div></div>
+    <div class="fld"><label for="va-p">프로그램</label><select id="va-p" class="input select" name="pid">${PROGRAMS.map(p => `<option value="${p.id}">${esc(p.name)} (${p.min}분)</option>`).join('')}</select></div>
+    <p class="ferr" id="va-err" role="alert"></p></div>`, '<button type="button" class="btn btn-pearl" data-act="close">닫기</button><button type="button" class="btn btn-primary" data-act="vadd-save">목록에 적기</button>', 460);
+};
+ACTIONS['vadd-save'] = () => {
+  const v = n => $(`#va [name=${n}]`).value;
+  if (!v('cid')) { $('#va-err').textContent = '고객을 고르세요.'; $('#va-c').focus(); return; }
+  if (!v('time')) { $('#va-err').textContent = '시간을 넣으세요.'; $('#va-t').focus(); return; }
+  const c = cust(v('cid'));
+  upsertVisit({ cid: c.id, date: v('date'), time: v('time'), pid: v('pid') });
+  closeDrawer(); redraw(); toast(`${c.name}님 ${dayWord(v('date'))} ${v('time')} 방문을 적었습니다`);
+};
+
+// ── 회차 기록 서랍 — 30초 안에 끝나게 지난 회차 값을 미리 채운다 ──
+const EX_PHOTOS = { scalp: ['before-scalp', 'after-scalp'], pore: ['before-pore', 'after-pore'] };
+const BAN_NOTE = /치료|발모|의학|완치|처방/;
+function downscale(file, max = 960) {
+  return new Promise((res, rej) => {
+    const fr = new FileReader();
+    fr.onerror = rej;
+    fr.onload = () => { const im = new Image(); im.onerror = rej; im.onload = () => {
+      const s = Math.min(1, max / Math.max(im.width, im.height)), cv = document.createElement('canvas');
+      cv.width = Math.round(im.width * s); cv.height = Math.round(im.height * s);
+      cv.getContext('2d').drawImage(im, 0, 0, cv.width, cv.height); res(cv.toDataURL('image/jpeg', 0.75)); }; im.src = fr.result; };
+    fr.readAsDataURL(file);
+  });
+}
+ACTIONS['rec-open'] = el => {
+  const c = cust(el.dataset.cid), r = el.dataset.rid ? RESV.find(x => x.id === el.dataset.rid) : null, lv = lastVisitOf(c.id);
+  const no = maxNo(c.id) + 1, pid = r ? r.pid : lv ? lv.pid : 'p1', home = (lv && lv.home) || [];
+  STATE.rec = { cid: c.id, rid: r ? r.id : '', up: {} };
+  const opt = (v, l, cur) => `<option value="${v}"${v === cur ? ' selected' : ''}>${l}</option>`;
+  openDrawer(`회차 기록 · ${esc(c.name)}`, `<div id="rf">
+    <p class="rec-no"><b>${no}회차</b> <span class="muted">${c.pass ? `${c.pass.type} ${c.pass.left}회 남음` : c.visits ? `지난 방문 ${fmtD(c.last)}` : '첫 방문'}</span></p>
+    <div class="two"><div class="fld"><label for="rf-d">날짜</label><input id="rf-d" type="date" class="input" name="date" value="${r ? r.date : TODAY}"></div>
+      <div class="fld"><label for="rf-s">담당</label><select id="rf-s" class="input select" name="staff">${Object.entries(STAFF_NAME).map(([k, n]) => opt(k, n, r && r.lane ? r.lane : (lv && lv.staff) || 'a')).join('')}</select></div></div>
+    <div class="two"><div class="fld"><label for="rf-p">프로그램</label><select id="rf-p" class="input select" name="pid">${PROGRAMS.map(p => opt(p.id, esc(p.name), pid)).join('')}</select></div>
+      <div class="fld"><label for="rf-a">아로마</label><select id="rf-a" class="input select" name="aroma">${AROMA.map(a => opt(a, a, lv ? lv.aroma : AROMA[0])).join('')}</select></div></div>
+    <h3 class="rec-h">고객 페이지에 보이는 것</h3>
+    <div class="fld"><label for="rf-n">원장님 한마디</label><textarea id="rf-n" class="textarea" name="note" rows="3" aria-describedby="rf-n-h rf-n-e" placeholder="예: 정수리 쪽 각질이 지난번보다 적었어요."></textarea>
+      <p class="s13 muted" id="rf-n-h" style="margin:6px 0 0">관리 · 케어까지만 씁니다. 치료나 효과를 단정하는 말은 쓰지 않습니다.</p><p class="ferr" id="rf-n-e" role="alert"></p></div>
+    <fieldset class="fld rec-ph"><legend>사진 (케어 전 · 후)</legend>
+      <label class="ck"><input type="checkbox" name="ex_scalp" checked> 예시 사진: 두피 전후</label>
+      <label class="ck"><input type="checkbox" name="ex_pore"> 예시 사진: 모공 전후</label>
+      <div class="up2">${['b', 'a'].map(k => `<label class="up"><span>${k === 'b' ? '케어 전' : '케어 후'} 사진 올리기</span><input type="file" accept="image/*" data-change="rec-up" data-k="${k}"><img alt="" id="rf-up-${k}" hidden></label>`).join('')}</div>
+      <p class="s13 muted" style="margin:6px 0 0">예시 사진은 홈페이지에 공개한 현미경 사진입니다. 올린 사진은 링크에 안 들어갑니다. 저장한 뒤 "사진 카드"로 따로 보내세요.</p></fieldset>
+    <fieldset class="fld"><legend>측정값 (측정 장비에서 옮겨 적기, 없으면 비움)</legend>
+      <div class="three"><label>브레인 점수<input class="input num" name="bs" inputmode="numeric"></label><label>스트레스<input class="input num" name="st" inputmode="numeric"></label>
+        <label>신체 활력<select class="input select" name="vt">${['', '활력', '보통', '관심'].map(x => opt(x, x || '–', '')).join('')}</select></label></div></fieldset>
+    <fieldset class="fld"><legend>홈케어 (3줄까지)</legend>${[0, 1, 2].map(i => `<input class="input hc" name="hc${i}" value="${esc(home[i] || '')}" aria-label="홈케어 ${i + 1}">`).join('')}</fieldset>
+    <div class="fld"><label for="rf-x">다음 방문 권유</label><select id="rf-x" class="input select" name="next">${[['7', '1주 뒤'], ['14', '2주 뒤'], ['21', '3주 뒤'], ['28', '4주 뒤'], ['', '정하지 않음']].map(([v, l]) => opt(v, l, '14')).join('')}</select></div>
+    <h3 class="rec-h">고객에게 안 보이는 것</h3>
+    <div class="fld"><label for="rf-m">내부 메모</label><textarea id="rf-m" class="textarea" name="memo" rows="2" placeholder="다음 회차에 볼 것"></textarea></div>
+    ${c.pass && c.pass.left > 0 ? `<label class="ck"><input type="checkbox" name="deduct" checked> 회원권 1회 차감 (${c.pass.type} ${c.pass.left}회 → ${c.pass.left - 1}회)</label>` : ''}
+  </div>`, '<button type="button" class="btn btn-pearl" data-act="close">닫기</button><button type="button" class="btn btn-primary" data-act="rec-save">저장</button>', 560);
+};
+CHANGES['rec-up'] = async el => {
+  const f = el.files && el.files[0]; if (!f) return;
+  try { const src = await downscale(f); STATE.rec.up[el.dataset.k] = src; const im = $('#rf-up-' + el.dataset.k); im.src = src; im.hidden = false; }
+  catch (e) { toast('사진을 읽지 못했습니다. 다른 사진을 골라 주세요'); }
+};
+ACTIONS['rec-save'] = () => {
+  const s = STATE.rec, c = cust(s.cid), f = n => $(`#rf [name=${n}]`), note = f('note').value.trim();
+  if (BAN_NOTE.test(note)) { $('#rf-n-e').textContent = `"${note.match(BAN_NOTE)[0]}"는 쓸 수 없습니다. 피부미용업이라 "관리 · 케어"까지만 씁니다.`; f('note').setAttribute('aria-invalid', 'true'); f('note').focus(); return; }
+  const date = f('date').value || TODAY, photos = [];
+  if (f('ex_scalp').checked) photos.push({ k: 'b', src: 'ex:before-scalp' }, { k: 'a', src: 'ex:after-scalp' });
+  if (f('ex_pore').checked) photos.push({ k: 'b', src: 'ex:before-pore' }, { k: 'a', src: 'ex:after-pore' });
+  ['b', 'a'].forEach(k => { if (s.up[k]) photos.push({ k, src: s.up[k] }); });
+  const num = n => { const x = f(n).value.trim(); return x === '' ? null : Number(x); };
+  const meas = (num('bs') != null || num('st') != null || f('vt').value) ? { bs: num('bs'), st: num('st'), vt: f('vt').value } : null;
+  const prevC = { visits: c.visits, last: c.last, first: c.first, pass: c.pass ? { ...c.pass } : null };
+  const v = V(c.id, maxNo(c.id) + 1, date, f('pid').value, f('aroma').value, f('memo').value.trim());
+  Object.assign(v, { staff: f('staff').value, note, photos, meas, home: [0, 1, 2].map(i => f('hc' + i).value.trim()).filter(Boolean), next: f('next').value ? addDays(date, Number(f('next').value)) : '' });
+  VISITS.push(v);
+  c.visits += 1; if (!c.last || date > c.last) c.last = date; if (!c.first || date < c.first) c.first = date;
+  let passMsg = '';
+  if (f('deduct') && f('deduct').checked) { c.pass.left -= 1; passMsg = `회원권 ${c.pass.type} ${c.pass.left}회 남음`; }
+  const r = s.rid ? RESV.find(x => x.id === s.rid) : RESV.find(x => x.cid === c.id && x.date === date && HOLDS.includes(x.status));
+  const prevR = r ? r.status : null; if (r) r.status = 'VISIT_COMPLETED';
+  c.seg = segOf(c);
+  STATE.undo = { v, cid: c.id, prevC, r, prevR };
+  redraw();
+  paintDrawer('rec-done', `회차 기록 · ${esc(c.name)}`, `<div class="rec-done">
+    <p class="rec-no"><b>${v.no}회차 기록을 저장했습니다</b>${passMsg ? `<span class="muted">${passMsg}</span>` : ''}</p>
+    <p class="muted">고객 페이지에도 바로 들어갔습니다.</p>
+    <div class="rec-acts">
+      <button type="button" class="btn btn-primary btn-lg" data-act="compose" data-kid="check" data-cid="${c.id}">기록 보내기 (문자 만들기)</button>
+      <button type="button" class="u" data-act="pv-open" data-cid="${c.id}">고객 페이지 새 창으로 보기</button>
+      ${photos.some(x => !isExPhoto(x)) ? `<button type="button" class="u" data-act="card-open" data-cid="${c.id}">올린 사진으로 사진 카드 만들기</button>` : ''}
+      <button type="button" class="u" data-act="rec-undo">저장 되돌리기</button>
+    </div></div>`, '<button type="button" class="btn btn-pearl" data-act="close">닫기</button>', 560);
+};
+ACTIONS['rec-undo'] = () => {
+  const u = STATE.undo; if (!u) return;
+  const i = VISITS.indexOf(u.v); if (i >= 0) VISITS.splice(i, 1);
+  Object.assign(cust(u.cid), u.prevC); if (u.r) u.r.status = u.prevR;
+  cust(u.cid).seg = segOf(cust(u.cid)); STATE.undo = null;
+  closeDrawer(); redraw(); toast('회차 기록을 되돌렸습니다');
+};
+ACTIONS['pv-open'] = async el => { const w = window.open('', '_blank'); const u = await portalURL(el.dataset.cid); if (w) w.location = u; else location.href = u; };
+
+// ── 사진 카드 — 올린 사진은 링크에 못 담으므로 이미지로 만들어 공유 창 · 저장으로 보낸다 (평가 CRM-14 · 방식 D) ──
+ACTIONS['card-open'] = async el => {
+  const c = cust(el.dataset.cid), v = lastVisitOf(c.id), ph = (v.photos || []);
+  const pick = k => (ph.filter(x => x.k === k && !isExPhoto(x))[0] || ph.filter(x => x.k === k)[0] || {}).src;
+  const load = src => new Promise(res => { if (!src) return res(null); const im = new Image(); im.onload = () => res(im); im.onerror = () => res(null); im.src = isExPhotoSrc(src) ? 'p/img/' + src.slice(3) + '.jpg' : src; });
+  const [b, a] = await Promise.all([load(pick('b')), load(pick('a'))]);
+  const W = 1080, H = 1350, cv = document.createElement('canvas'); cv.width = W; cv.height = H;
+  const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.fillRect(0, 0, W, H); g.fillStyle = '#000';
+  g.font = '600 40px MaruBuri, serif'; g.textAlign = 'center'; g.fillText('MO&BRAIN', W / 2, 110);
+  g.fillRect(80, 150, W - 160, 2);
+  g.font = '600 56px MaruBuri, serif'; g.fillText(`${c.name}님의 관리 기록`, W / 2, 260);
+  g.font = '400 32px "Noto Sans KR", sans-serif'; g.fillStyle = '#4d4d4d'; g.fillText(`${mdw(v.date)}, ${v.no}회차`, W / 2, 320);
+  const box = (im, x, label) => { g.fillStyle = '#f2f2f2'; g.fillRect(x, 400, 440, 560); if (im) { const s = Math.max(440 / im.width, 560 / im.height), w = im.width * s, h = im.height * s; g.save(); g.beginPath(); g.rect(x, 400, 440, 560); g.clip(); g.drawImage(im, x + (440 - w) / 2, 400 + (560 - h) / 2, w, h); g.restore(); } g.fillStyle = '#000'; g.font = '500 32px "Noto Sans KR", sans-serif'; g.fillText(label, x + 220, 1010); };
+  box(b, 80, '케어 전'); box(a, 560, '케어 후');
+  g.font = '400 30px "Noto Sans KR", sans-serif'; g.fillStyle = '#000';
+  const words = (v.note || '').split(' '); let line = '', y = 1110;
+  words.forEach(w => { if (g.measureText(line + w).width > W - 200) { g.fillText(line.trim(), W / 2, y); line = ''; y += 46; } line += w + ' '; }); if (line.trim()) g.fillText(line.trim(), W / 2, y);
+  g.font = '400 26px "Noto Sans KR", sans-serif'; g.fillStyle = '#767676'; g.fillText(`${SHOP.name} ${SHOP.phone}`, W / 2, H - 60);
+  cv.toBlob(async blob => {
+    const file = new File([blob], `모앤브레인_${v.no}회차.jpg`, { type: 'image/jpeg' });
+    const url = URL.createObjectURL(blob);
+    openDrawer(`사진 카드 · ${esc(c.name)}`, `<div class="stack"><img src="${url}" alt="${esc(c.name)}님 ${v.no}회차 사진 카드" style="width:100%;border:1px solid var(--line)">
+      <p class="s13 muted" style="margin:0">휴대폰에서는 "공유"로 카카오톡에 바로 넘길 수 있습니다. 받는 사람은 카카오톡에서 고릅니다.</p></div>`,
+      `<a class="btn btn-pearl" href="${url}" download="모앤브레인_${v.no}회차.jpg">이미지 저장</a>${navigator.canShare && navigator.canShare({ files: [file] }) ? '<button type="button" class="btn btn-primary" data-act="card-share">공유</button>' : ''}`, 520);
+    STATE.card = { file, cid: c.id };
+  }, 'image/jpeg', 0.88);
+};
+const isExPhotoSrc = s => typeof s === 'string' && s.startsWith('ex:');
+ACTIONS['card-share'] = async () => {
+  const s = STATE.card; if (!s) return;
+  try { await navigator.share({ files: [s.file] }); logSend(s.cid, 'card', 'share', '사진 카드'); toast('공유 창을 열었습니다'); }
+  catch (e) { if (e.name !== 'AbortError') toast('공유하지 못했습니다. "이미지 저장"으로 받아 보내 주세요'); }
+};
+
+// ── 고객 한 페이지 (v2 → v3: 회차 기록 버튼 · 고객 페이지 탭) ──
+VIEWS['#/customer'] = {
+  crumb: () => `<a href="#/customers">고객 관리</a> / ${esc(cust(STATE.cid).name)}`,
+  title: () => esc(cust(STATE.cid).name),
+  lead: () => { const c = cust(STATE.cid); return c.first ? `${c.age}, ${c.first.slice(0, 4)}년 ${Number(c.first.slice(5, 7))}월 처음 방문` : `${c.age}, 아직 방문 전`; },
+  acts: () => `<button type="button" class="u" data-act="cf-open" data-id="${STATE.cid}">정보 수정</button><button type="button" class="u" data-act="compose" data-cid="${STATE.cid}" data-kid="${cust(STATE.cid).visits ? 'check' : 'before'}">문자 만들기</button><button type="button" class="btn btn-primary btn-lg" data-act="rec-open" data-cid="${STATE.cid}">회차 기록</button>`,
+  render() {
+    const c = cust(STATE.cid), tab = STATE.ctab || '회차';
+    const visits = VISITS.filter(v => v.cid === c.id).sort((a, b) => b.date.localeCompare(a.date) || b.no - a.no);
+    const logs = MSGLOG.filter(l => l.cid === c.id).sort((a, b) => b.at.localeCompare(a.at));
+    const kv = [['연락처', c.phone ? `<span class="num">${showPhone(c.phone)}</span>${isDemoNum(c.phone) ? ' <span class="dim s13">(데모용 가짜 번호)</span>' : ''}` : '<span class="muted">없음 (앱 예약이라 받지 못함)</span>'],
+      ['광고 수신 동의', c.consent ? `${consentOld(c) ? '<b>2년 지남, 다시 확인 필요</b>' : '동의'} <span class="dim s13">${fmtD(c.consentAt)} ${esc(c.consentHow || '')}</span>` : c.consentCheck ? '<b>확인 필요</b> <span class="dim s13">가져온 파일에 동의 날짜가 없음</span>' : '동의 안 함 (예약 · 방문 안내만)'],
+      ['처음 온 곳', CHANNELS[c.ch] ? CHANNELS[c.ch].name : esc(c.ch || '–')],
+      ['고객 페이지', visits.length ? `${visits[0].no}회차 기록까지 &nbsp;<button type="button" class="u" data-act="ctab" data-t="페이지">보기</button>${c.portalSent ? ` <span class="dim s13">링크 보낸 날 ${fmtD(c.portalSent)}</span>` : ''}` : '<span class="muted">회차 기록이 생기면 만들어집니다</span>'],
+      ...(c.memo ? [['메모', esc(c.memo)]] : [])];
+    const right = c.pass
+      ? `<div class="k-label">회원권 ${c.pass.type}</div><div class="k-num num" style="font-size:44px;line-height:52px">${c.pass.left}<small>회 남음</small></div><div class="k-cmp">방문 ${c.visits}회, 마지막 ${fmtD(c.last)}</div>${c.pass.left <= 3 ? `<p class="s13 pass-note">3회 이하입니다. <button type="button" class="u" data-act="compose" data-kid="pass" data-cid="${c.id}">남은 횟수 안내</button></p>` : ''}`
+      : `<div class="k-label">방문</div><div class="k-num num" style="font-size:44px;line-height:52px">${c.visits}<small>회</small></div><div class="k-cmp">${c.visits ? `처음 ${fmtD(c.first)}, 마지막 ${fmtD(c.last)}` : '아직 방문 기록이 없습니다'}</div>`;
+    const tabs = [['회차', '회차 기록'], ['페이지', '고객 페이지'], ['문자', '문자 기록']];
+    const pane = tab === '회차'
+      ? (visits.length ? `<table class="ln vtbl"><thead><tr><th>회차</th><th>날짜</th><th>프로그램</th><th class="hide-m">원장님 한마디</th><th class="r">사진</th></tr></thead><tbody>${visits.map(v => `<tr><td class="num">${v.no}</td><td class="num nowrap">${fmtD(v.date)}</td><td>${esc(prog(v.pid).name)}<span class="show-m s13 muted">${esc(v.note || v.memo || '')}</span></td><td class="hide-m">${esc(v.note) || '<span class="dim">–</span>'}${v.memo ? `<br><span class="dim s13">메모: ${esc(v.memo)}</span>` : ''}</td><td class="r">${(v.photos || []).length ? (v.photos.length / 2) + '쌍' : '–'}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 방문 기록이 없습니다. 관리가 끝나면 "회차 기록"을 누르세요.</p>')
+      : tab === '페이지' ? portalPane(c.id)
+        : (logs.length ? `<table class="ln"><thead><tr><th>날짜</th><th>안내</th><th class="r">방법</th></tr></thead><tbody>${logs.map(l => `<tr><td class="num nowrap">${fmtAt(l.at)}</td><td>${esc(kindName(l.kid))}${l.text ? ` <button type="button" class="u s13" data-act="log-text" data-i="${MSGLOG.indexOf(l)}">문구</button>` : ''}</td><td class="r">${esc(l.via)}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 보낸 안내가 없습니다.</p>');
+    return `<div class="cgrid"><div class="kvl">${kv.map(([k, v]) => `<div><span>${k}</span><span>${v}</span></div>`).join('')}</div><div class="pass">${right}</div></div>
+      <nav class="v2-sub ctabs" aria-label="고객 기록">${tabs.map(([k, l]) => `<a href="#" data-act="ctab" data-t="${k}"${k === tab ? ' class="on" aria-current="true"' : ''}>${l}</a>`).join('')}</nav>${pane}`;
+  },
+  mount: el => mountPreview(el),
+};
+ACTIONS.ctab = el => { STATE.ctab = el.dataset.t; redraw(); };
+const _custAct = ACTIONS.cust;
+ACTIONS.cust = el => { STATE.ctab = '회차'; _custAct(el); };
+ACTIONS['log-text'] = el => { const l = MSGLOG[Number(el.dataset.i)]; openDrawer(`${esc(kindName(l.kid))} · ${esc(cust(l.cid).name)}`, `<pre class="logtxt">${esc(l.text)}</pre><p class="s13 muted">${fmtAt(l.at)} ${esc(l.via)}</p>`, '', 460); };
+
+// 고객 페이지 미리보기 — 고객이 받는 주소를 그대로 띄운다 (휴대폰 그림이 아님)
+function portalPane(cid) {
+  if (!VISITS.some(v => v.cid === cid)) return '<p class="muted">회차 기록이 없어 고객 페이지가 아직 없습니다.</p>';
+  return `<div class="pv">
+    <div class="pv-acts"><button type="button" class="btn btn-primary btn-lg" data-act="compose" data-kid="check" data-cid="${cid}">기록 보내기</button>
+      <button type="button" class="u" data-act="pv-open" data-cid="${cid}">새 창에서 열기</button><button type="button" class="u" data-act="pv-copy" data-cid="${cid}">링크 복사</button></div>
+    <p class="s13 muted pv-note">손님 휴대폰에는 이렇게 보입니다. 연락처와 내부 메모는 들어가지 않습니다. 링크만 있으면 누구나 열 수 있으니 본인에게만 보내세요.</p>
+    <div class="pv-frame"><iframe data-pv="${cid}" title="${esc(cust(cid).name)}님 고객 페이지 미리보기" loading="lazy"></iframe></div></div>`;
+}
+async function mountPreview(el) {
+  const f = el.querySelector('iframe[data-pv]'); if (!f) return;
+  const u = await portalLocalURL(f.dataset.pv); if (u && f.isConnected) f.src = u;
+}
+ACTIONS['pv-copy'] = async el => { const u = await portalURL(el.dataset.cid); toast(await copyText(u) ? '고객 페이지 링크를 복사했습니다' : '복사하지 못했습니다. "새 창에서 열기"로 연 뒤 주소를 복사해 주세요'); };
+
+// ── 컨디션포털 — 고객 목록 + 실제 고객 페이지 (평가 DS-02) ──
+VIEWS['#/portal'] = {
+  title: '컨디션포털', lead: '고객이 링크로 받아 여는 관리 기록 페이지입니다. 회차를 기록하면 바로 반영됩니다.',
+  render() {
+    const list = CUSTOMERS.filter(c => VISITS.some(v => v.cid === c.id)).map(c => ({ c, v: lastVisitOf(c.id) })).sort((a, b) => b.v.date.localeCompare(a.v.date));
+    const sel = STATE.pcid && list.some(x => x.c.id === STATE.pcid) ? STATE.pcid : (list[0] && list[0].c.id);
+    STATE.pcid = sel;
+    return `<div class="portal3"><div>
+        <table class="ln ptbl"><thead><tr><th>고객</th><th>최근 회차</th><th class="r">링크 보낸 날</th></tr></thead><tbody>${list.map(({ c, v }) => `<tr class="${c.id === sel ? 'sel' : ''}"><td><button type="button" class="u" data-act="psel" data-id="${c.id}"${c.id === sel ? ' aria-current="true"' : ''}>${esc(c.name)}</button></td><td class="num">${v.no}회차 <span class="dim s13">${fmtD(v.date)}</span></td><td class="r num">${c.portalSent ? fmtD(c.portalSent) : '<span class="dim">–</span>'}</td></tr>`).join('')}</tbody></table>
+        <p class="s13 muted" style="margin:14px 0 0">회차 기록이 있는 고객만 보입니다. 지금 노션으로 운영하는 페이지는 옮기기 전까지 그대로 씁니다.</p></div>
+      <div>${sel ? portalPane(sel) : '<p class="muted">회차 기록이 있는 고객이 없습니다.</p>'}</div></div>`;
+  },
+  mount: el => mountPreview(el),
+};
+ACTIONS.psel = el => { STATE.pcid = el.dataset.id; redraw(); };
+ACTIONS.portal = el => { STATE.pcid = el.dataset.id; if (location.hash === '#/portal') redraw(); else location.hash = '#/portal'; };
+
+;
+/* ── v3 화면 ②: 예약문자 작성기 · 문자 기록 · 광고 문자 ──
+   틀린 문구가 나가지 않게(날짜 계산 · 빈 자리 막기 · 기본 고객 없음 · 고친 문구 지키기)
+   보내기는 문자 앱 열기 · 공유 · 복사 — 마지막 보내기는 사장님이 누른다 (평가 US-03~06 · UI-03 · 04 · 09 · CRM-05 · 06) */
+
+const needsWhen = k => /\{(일시|시간|언제)\}/.test(kindBase(k));
+const needsProg = k => /\{(프로그램|소요시간)\}/.test(kindBase(k));
+const needsLink = k => /\{기록링크\}/.test(kindBase(k));
+function cmpFor3(cid) { // 고객을 고르면 다음 일정 · 프로그램을 채운다 (네이버 예약 정보는 모른다 — 적어 둔 일정만)
+  const c = cid ? cust(cid) : null;
+  const r = c && RESV.filter(x => x.cid === cid && x.date >= TODAY && HOLDS.includes(x.status) && x.status !== 'VISIT_COMPLETED').sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time))[0];
+  const lv = c && lastVisitOf(cid);
+  return { cid: cid || '', date: r ? r.date : '', time: r ? r.time : '', pid: r ? r.pid : lv ? lv.pid : 'p1', link: '', linkFor: '' };
+}
+const cmp3 = () => STATE.cmp3 || (STATE.cmp3 = { kid: 'before', text: null, editedNote: '', queue: [], qi: 0, addVisit: true, done: '', ...cmpFor3('') });
+ACTIONS.compose = el => {
+  const d = el.dataset, ids = d.ids ? d.ids.split(',') : d.cid ? [d.cid] : [];
+  STATE.cmp3 = { kid: d.kid || 'before', text: null, editedNote: '', queue: ids, qi: 0, addVisit: true, done: '', ...cmpFor3(ids[0] || '') };
+  if (d.date) STATE.cmp3.date = d.date;
+  closeDrawer();
+  if (location.hash === '#/messages') redraw(); else location.hash = '#/messages';
+};
+ACTIONS['msg-open'] = el => ACTIONS.compose({ dataset: { cid: el.dataset.id, kid: 'check' } });
+CHANGES.cmp = el => {
+  const f = cmp3(), k = el.dataset.k, v = el.type === 'checkbox' ? el.checked : el.value;
+  if (k === 'kid') { f.kid = v; f.text = null; f.editedNote = ''; f.done = ''; return redraw(); }
+  if (k === 'addVisit') { f.addVisit = v; return; }
+  if (k === 'cid') {
+    const old = f.cid ? cust(f.cid).name : '', nw = v ? cust(v).name : '';
+    Object.assign(f, cmpFor3(v)); f.queue = v ? [v] : []; f.qi = 0; f.done = '';
+    if (f.text != null && old && nw) { f.text = f.text.split(old).join(nw); f.editedNote = `고친 문구를 그대로 두고 이름만 ${nw}님으로 바꿨습니다.`; }
+    return redraw();
+  }
+  f[k] = v; f.done = '';
+  if (f.text != null) f.editedNote = '입력을 바꿨지만 직접 고친 문구는 그대로 두었습니다.';
+  redraw();
+};
+INPUTS['cmp-text'] = el => { // 다시 그리지 않고 막힘 이유 · 버튼만 고친다 (입력 중 커서 유지)
+  const f = cmp3(); f.text = el.value; f.done = '';
+  const why = blockNow(), w = $('#cmp-why');
+  if (w) { w.innerHTML = why ? esc(why).replace(/\n/g, '<br>') : ''; w.classList.toggle('none', !why); }
+  document.querySelectorAll('.sendbar .btn').forEach(b => { b.disabled = !!why; });
+};
+INPUTS['cmp-find'] = el => { STATE.cmpFind = el.value; const q = el.value.trim(), s = $('#cmp-cid'); if (!s) return;
+  [...s.options].forEach(o => { o.hidden = !!q && !!o.value && !o.textContent.includes(q); }); };
+ACTIONS['cmp-reset'] = () => { const f = cmp3(); f.text = null; f.editedNote = ''; redraw(); };
+ACTIONS['cmp-next'] = el => {
+  const f = cmp3(), i = Number(el.dataset.i);
+  Object.assign(f, cmpFor3(f.queue[i]), { qi: i, text: null, editedNote: '', done: '' }); redraw();
+};
+function cmpText(f, k) { const body = f.text != null ? f.text : fillText(k, f); return { body, full: fullText(k, body) }; }
+function afterSend(via, ok) {
+  const f = cmp3(), k = kind3(f.kid), { full } = cmpText(f, k);
+  if (!ok) return;
+  if (f.cid) {
+    logSend(f.cid, f.kid, via, full);
+    if (k.visit && f.addVisit && f.date && f.time) upsertVisit({ cid: f.cid, date: f.date, time: f.time, pid: f.pid });
+  }
+  f.done = via; redraw();
+}
+const blockNow = () => { const f = cmp3(), k = kind3(f.kid); return blockOf(k, f, cmpText(f, k).body); };
+ACTIONS['send-copy'] = async () => {
+  if (blockNow()) return;
+  const f = cmp3(), ok = await copyText(cmpText(f, kind3(f.kid)).full);
+  if (ok) { afterSend('copy', true); toast('복사했습니다. 카카오톡이나 문자에 붙여 넣어 보내세요'); }
+  else { f.done = 'copy-fail'; redraw(); const t = $('#cmp-out'); if (t) { t.focus(); t.select(); } }
+};
+ACTIONS['send-sms'] = () => {
+  if (blockNow()) return;
+  const f = cmp3(), c = f.cid ? cust(f.cid) : null, href = smsHref(c && c.phone, cmpText(f, kind3(f.kid)).full);
+  afterSend('sms', true);
+  location.href = href;
+};
+ACTIONS['send-share'] = async () => {
+  if (blockNow()) return;
+  const f = cmp3();
+  try { await navigator.share({ text: cmpText(f, kind3(f.kid)).full }); afterSend('share', true); }
+  catch (e) { if (e.name !== 'AbortError') toast('공유 창을 열지 못했습니다. 복사로 보내 주세요'); }
+};
+
+VIEWS['#/messages'] = {
+  title: '예약 · 안내 문자 작성', sub: 'msg', lead: '안내를 고르고 문구를 확인한 뒤, 문자 앱이나 카카오톡으로 직접 보냅니다.',
+  render() {
+    const f = cmp3(), k = kind3(f.kid) || KINDS3[0], c = f.cid ? cust(f.cid) : null;
+    if (needsLink(k) && f.cid && f.linkFor !== f.cid) { // 고객 페이지 링크는 만들고 나서 다시 그린다
+      const cid = f.cid; f.linkFor = cid;
+      portalURL(cid).then(u => { if (cmp3().cid === cid) { cmp3().link = u; redraw(); } });
+    }
+    const { body, full } = cmpText(f, k), why = blockOf(k, f, body), src = kindSrc(k);
+    let g = null;
+    const opt = (v, l, cur) => `<option value="${v}"${v === cur ? ' selected' : ''}>${l}</option>`;
+    const kinds = KINDS3.map(x => {
+      const head = x.grp !== g ? ((g = x.grp) ? `<div class="grp">${x.grp}</div>` : '') : '';
+      return `${head}<label class="${x.id === f.kid ? 'on' : ''}"><input type="radio" name="kid" value="${x.id}" data-change="cmp" data-k="kid"${x.id === f.kid ? ' checked' : ''}><span class="kn">${esc(x.name)}<small>${esc(x.when)}</small></span>${x.ad ? '<span class="wait">광고</span>' : ''}</label>`;
+    }).join('');
+    const people = [...CUSTOMERS].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+    const q = f.queue.length > 1 ? `<div class="qbar" role="status"><b>보낼 사람 ${f.qi + 1} / ${f.queue.length}</b> ${f.queue.map((id, i) => `<button type="button" class="u${i === f.qi ? ' cur' : ''}${sentToday(id, f.kid) ? ' sent' : ''}" data-act="cmp-next" data-i="${i}">${esc(cust(id).name)}${sentToday(id, f.kid) ? ' (보냄)' : ''}</button>`).join(' ')}</div>` : '';
+    const nextI = f.queue.findIndex((id, i) => i !== f.qi && !sentToday(id, f.kid));
+    const recv = c ? (c.phone ? `<b>${esc(c.name)}</b> <span class="num">${showPhone(c.phone)}</span>${isDemoNum(c.phone) ? ' <span class="dim s13">데모용 가짜 번호라 문자 앱에서 받는 사람을 직접 고릅니다</span>' : ''}` : `<b>${esc(c.name)}</b> <span class="muted">연락처 없음 (앱 예약) — 그 앱 채팅으로 직접 보내세요</span>`) : '<span class="muted">고객을 고르세요</span>';
+    const lv = c && lastVisitOf(c.id);
+    const doneMsg = { copy: '복사했습니다. 카카오톡이나 문자에 붙여 넣어 보내세요.', sms: '문자 앱을 열었습니다. 보내기는 문자 앱에서 누르세요.', share: '공유 창을 열었습니다. 받는 사람은 카카오톡에서 고르세요.', 'copy-fail': '자동 복사가 되지 않았습니다. 문구 칸을 길게 눌러 복사해 주세요.' }[f.done] || '';
+    const touch = IS_TOUCH, share = !!navigator.share;
+    const btn = (act, label, primary) => `<button type="button" class="btn ${primary ? 'btn-primary' : 'btn-pearl'} btn-lg" data-act="${act}"${why ? ' disabled aria-describedby="cmp-why"' : ''}>${label}</button>`;
+    const btns = touch ? btn('send-sms', '문자 앱으로 열기', true) + (share ? btn('send-share', '공유 (카카오톡)') : '') + btn('send-copy', '복사')
+      : btn('send-copy', f.done === 'copy' ? '복사했습니다' : '문구 복사', true) + (share ? btn('send-share', '공유') : '');
+    const rows = Math.min(12, Math.max(8, body.split('\n').length + 1)); // 긴 문구는 칸 안에서 스크롤 — 보내기 버튼이 첫 화면 가까이 (UI-05)
+    return `<div class="msg msg3">
+      <fieldset class="fld kfs"><legend class="lab">안내 종류</legend><div class="kinds">${kinds}</div>
+        <select class="input select kinds-m" aria-label="안내 종류" data-change="cmp" data-k="kid">${[...new Set(KINDS3.map(x => x.grp))].map(gr => { const o = KINDS3.filter(x => x.grp === gr).map(x => opt(x.id, esc(x.name) + (x.ad ? ' (광고)' : ''), f.kid)).join(''); return gr ? `<optgroup label="${gr}">${o}</optgroup>` : o; }).join('')}</select>
+        <p class="s13 muted kwhen">보낼 때: ${esc(k.when)} · ${src === '예시 문구' ? '예시 문구 (직접 쓰신 문구 없음)' : '사장님 원문'}</p></fieldset>
+      <div>
+        ${q}
+        <div class="fld"><label for="cmp-cid">고객</label>
+          <div class="find2"><input class="input" id="cmp-find" placeholder="이름이나 번호 뒤 4자리" aria-label="고객 찾기" data-input="cmp-find" value="${esc(STATE.cmpFind || '')}">
+          <select id="cmp-cid" class="input select" data-change="cmp" data-k="cid">${opt('', '고르지 않음', f.cid)}${people.map(p => opt(p.id, `${esc(p.name)} (${p.phone ? last4(p.phone) + ', ' : ''}${p.visits ? p.visits + '회 방문' : '방문 전'})`, f.cid)).join('')}</select></div></div>
+        <p class="recv">받는 사람 ${recv}</p>
+        ${needsWhen(k) || needsProg(k) ? `<div class="fgrid">
+          ${needsWhen(k) ? `<div class="fld"><label for="cmp-date">예약 날짜 · 시간</label><div class="two"><input id="cmp-date" type="date" class="input num" value="${f.date}" data-change="cmp" data-k="date"><input type="time" class="input num" value="${f.time}" step="1800" data-change="cmp" data-k="time" aria-label="예약 시간"></div>
+            ${k.day != null && f.date && diffDays(TODAY, f.date) !== k.day ? `<p class="s13 warn">고른 날짜가 ${k.day ? '내일' : '오늘'}이 아닙니다. 문구에는 "${dayWord(f.date)}"로 들어갑니다.</p>` : ''}</div>` : ''}
+          ${needsProg(k) ? `<div class="fld"><label for="cmp-pid">프로그램</label><select id="cmp-pid" class="input select" data-change="cmp" data-k="pid">${PROGRAMS.map(p => opt(p.id, `${esc(p.name)} (${p.min}분)`, f.pid)).join('')}</select></div>` : ''}</div>` : ''}
+        ${needsLink(k) ? `<p class="s13 linkline">고객 페이지 링크: ${c ? (lv ? `${lv.no}회차 기록 (${fmtD(lv.date)}) <button type="button" class="u s13" data-act="pv-open" data-cid="${c.id}">미리보기</button>` : '회차 기록이 없음') : '고객을 고르면 만들어집니다'}</p>` : ''}
+        <div class="fld" style="margin-bottom:8px"><label for="cmp-out">완성 문구 <span class="dim">(${src}${f.text != null ? ', 직접 고침' : ''})</span></label></div>
+        ${k.ad ? `<p class="adfix" aria-label="고칠 수 없는 머리">${esc(adHead())}</p>` : ''}
+        <textarea id="cmp-out" class="out" rows="${rows}" data-input="cmp-text" aria-describedby="cmp-why">${esc(body)}</textarea>
+        ${k.ad ? `<p class="adfix" aria-label="고칠 수 없는 꼬리">${esc(adTail())}</p><p class="s13 muted">(광고) 표시와 수신거부 줄은 법으로 정해져 있어 고칠 수 없습니다. 설정 › 매장 정보에서 바꿉니다.</p>` : ''}
+        ${f.editedNote ? `<p class="s13 edited">${esc(f.editedNote)} <button type="button" class="u s13" data-act="cmp-reset">새 문구로 바꾸기</button></p>` : ''}
+        ${k.visit && f.cid ? `<label class="ck s13"><input type="checkbox" data-change="cmp" data-k="addVisit"${f.addVisit ? ' checked' : ''}> 보낼 때 이 날짜와 시간을 방문 목록에 적기</label>` : ''}
+        <p id="cmp-why" class="why${why ? '' : ' none'}" role="status">${why ? esc(why).replace(/\n/g, '<br>') : ''}</p>
+        <div class="sendbar">${btns}</div>
+        ${doneMsg ? `<p class="s13 donemsg" role="status">${doneMsg}${f.done !== 'copy-fail' && nextI >= 0 ? ` <button type="button" class="u s13" data-act="cmp-next" data-i="${nextI}">다음 사람: ${esc(cust(f.queue[nextI]).name)}</button>` : ''}</p>` : ''}
+        <p class="s13 dim" style="margin:10px 0 0">여기서는 문자가 나가지 않습니다. ${touch ? '문자 앱이나 카카오톡에서 보내기를 누르세요.' : '복사해서 카카오톡이나 문자로 보내세요.'} 복사한 날은 문자 기록에 남습니다.</p>
+      </div></div>`;
+  },
+};
+
+// ── 문자 기록 — 복사 · 문자 앱 · 공유로 처리한 기록 (보냈는지는 휴대폰에서) ──
+VIEWS['#/messages/log'] = {
+  title: '문자 기록', sub: 'msg', lead: '복사하거나 문자 앱 · 공유 창을 연 기록입니다. 실제로 보냈는지는 휴대폰에서 확인하세요.',
+  render() {
+    const rows = MSGLOG.map((l, i) => ({ l, i })).sort((a, b) => b.l.at.localeCompare(a.l.at));
+    if (!rows.length) return '<p class="muted">아직 기록이 없습니다.</p>';
+    return `<table class="ln logtbl"><thead><tr><th>날짜</th><th>고객</th><th>안내</th><th class="r">방법</th></tr></thead><tbody>${rows.map(({ l, i }) => `<tr><td class="num nowrap">${fmtAt(l.at)}</td><td><a class="u" href="#/customer/${l.cid}">${esc(cust(l.cid).name)}</a></td><td>${esc(kindName(l.kid))}${(kind3(l.kid) || {}).ad ? ' <span class="dim s13">(광고)</span>' : ''}${l.text ? ` <button type="button" class="u s13" data-act="log-text" data-i="${i}">문구</button>` : ''}</td><td class="r">${esc(l.via)}</td></tr>`).join('')}</tbody></table>`;
+  },
+};
+
+// ── 광고 문자 — 동의한 고객 명단에서 한 명씩 (일괄 · 자동 발송 없음, 평가 CRM-11) ──
+VIEWS['#/campaigns'] = {
+  title: '광고 문자', sub: 'msg', lead: '광고 수신에 동의한 고객에게만, 한 명씩 문구를 만들어 보냅니다.',
+  render() {
+    const base = CUSTOMERS.filter(c => c.visits && !c.pass && !hasRebook(c.id, c.last || TODAY));
+    const ok = c => c.consent && !consentOld(c) && c.phone;
+    const groups = [
+      ['재방문 안내 — 마지막 방문 2주 ~ 3달', base.filter(c => { const d = diffDays(c.last, TODAY); return d >= 14 && d <= 92; })],
+      ['오랜만에 인사 — 6개월 넘게 안 온 고객', base.filter(c => diffDays(c.last, TODAY) >= 180)],
+    ];
+    const out = list => { const n = list.filter(c => !c.consent).length, o = list.filter(c => consentOld(c)).length, p = list.filter(c => c.consent && !consentOld(c) && !c.phone).length;
+      return [n && `동의 안 함 ${n}명`, o && `동의 2년 지남 ${o}명`, p && `연락처 없음 ${p}명`].filter(Boolean).join(', '); };
+    return `${isNight() ? '<p class="why">지금은 밤 9시 ~ 아침 8시라 광고 문자를 보낼 수 없습니다. 이 시간에는 따로 받은 동의가 필요합니다.</p>' : ''}
+      ${groups.map(([t, list]) => { const go = list.filter(ok);
+        return `<section class="camp"><div class="v2-hrow"><h2 class="v2-h">${t}</h2>${go.length ? `<button type="button" class="u" data-act="compose" data-kid="revisit" data-ids="${go.map(c => c.id).join(',')}">${go.length}명 차례대로 문구 만들기</button>` : ''}</div>
+          ${go.length ? `<table class="ln"><thead><tr><th>고객</th><th>마지막 방문</th><th class="hide-m">동의한 날</th><th class="r"></th></tr></thead><tbody>${go.map(c => `<tr><td><a class="u" href="#/customer/${c.id}">${esc(c.name)}</a></td><td class="num">${fmtD(c.last)} <span class="dim s13">${diffDays(c.last, TODAY)}일 전</span></td><td class="hide-m num">${fmtD(c.consentAt)}</td><td class="r">${sentToday(c.id, 'revisit') ? '<span class="dim s13">오늘 보냄</span>' : `<button type="button" class="u" data-act="compose" data-kid="revisit" data-cid="${c.id}">문구 만들기</button>`}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">보낼 수 있는 고객이 없습니다.</p>'}
+          ${out(list) ? `<p class="s13 muted" style="margin:10px 0 0">빠진 고객: ${out(list)}</p>` : ''}</section>`; }).join('')}
+      <p class="s13 muted" style="margin:32px 0 0">회원권 고객과 다음 방문을 적어 둔 고객은 빼고 셉니다. 생일 · 계절 인사도 광고로 봅니다(KISA 불법스팸 방지 안내서).</p>`;
+  },
+};
+VIEWS['#/messages/auto'] = undefined; delete VIEWS['#/messages/auto'];
+SUBNAV.msg.splice(0, SUBNAV.msg.length, ['#/messages', '문자 작성'], ['#/messages/log', '문자 기록'], ['#/campaigns', '광고 문자']);
+
+;
+/* ── v3 화면 ③: 고객 관리(찾기 · 중복 경고) · 설정(매장 정보 · 메시지 문구 · 데이터) · 처음 데이터 가져오기 · 백업
+   가져오기는 이 브라우저 안에서만 읽는다. 네이버 예약자 엑셀은 받지 않는다(네이버 안내: 홍보 목적 사용 금지) ── */
+
+const BATCHES = []; // 가져오기 묶음 — 되돌리기용 { id, at, added:[cid], merged:[{cid, prev}], undone }
+const META = { backupAt: '' };
+
+// ── 고객 관리: 이름 · 뒤 4자리 찾기, 이름은 진짜 링크 (평가 US-08 · UI-01) ──
+VIEWS['#/customers'] = {
+  title: '고객 관리', sub: 'cust',
+  acts: () => '<a class="u" href="#/settings/import">명단 가져오기</a><button type="button" class="btn btn-primary btn-lg" data-act="cf-open">고객 등록</button>',
+  render() {
+    const seg = STATE.seg || '전체', qq = (STATE.cfind || '').trim();
+    const tabs = [['전체', null], ['신규', 'NEW'], ['회원권', 'VIP'], ['일반', '일반'], ['휴면', 'DORMANT']];
+    const list = CUSTOMERS.filter(c => (seg === '전체' || c.seg === tabs.find(t => t[0] === seg)[1]) && (!qq || c.name.includes(qq) || (qq.length >= 3 && digits(c.phone).endsWith(digits(qq)) && digits(qq))))
+      .sort((a, b) => (b.last || '').localeCompare(a.last || ''));
+    return `<div class="cfind"><input class="input" type="search" id="cfind" placeholder="이름이나 번호 뒤 4자리로 찾기" aria-label="고객 찾기" value="${esc(STATE.cfind || '')}" data-input="cfind">
+      <nav class="segs" aria-label="고객 구분">${tabs.map(([l, k]) => `<button type="button" class="u${l === seg ? ' on' : ''}" data-act="seg" data-seg="${l}"${l === seg ? ' aria-pressed="true"' : ' aria-pressed="false"'}>${l} <span class="dim">${k ? CUSTOMERS.filter(c => c.seg === k).length : CUSTOMERS.length}</span></button>`).join('')}</nav></div>
+      ${list.length ? `<table class="ln ctbl"><thead><tr><th>고객</th><th class="r">방문</th><th>마지막 방문</th><th class="hide-m">회원권</th><th class="hide-m">광고 수신</th><th class="hide-m r">고객 페이지</th></tr></thead><tbody>${list.map(c => `<tr>
+        <td><a class="u" href="#/customer/${c.id}" style="font-size:15px">${esc(c.name)}</a> <span class="dim s13">${c.phone ? last4(c.phone) : '번호 없음'} · ${c.age || ''}</span></td>
+        <td class="r num">${c.visits}</td><td class="num nowrap">${fmtD(c.last)}</td>
+        <td class="hide-m">${c.pass ? `${c.pass.type} ${c.pass.left <= 3 ? `<b>${c.pass.left}회 남음</b>` : c.pass.left + '회 남음'}` : '<span class="dim">–</span>'}</td>
+        <td class="hide-m">${c.consent ? (consentOld(c) ? '<b>2년 지남</b>' : '동의') : c.consentCheck ? '<b>확인 필요</b>' : '<span class="dim">안 함</span>'}</td>
+        <td class="hide-m r">${VISITS.some(v => v.cid === c.id) ? `${lastVisitOf(c.id).no}회차` : '<span class="dim">–</span>'}</td></tr>`).join('')}</tbody></table>` : `<p class="muted">"${esc(qq)}"에 맞는 고객이 없습니다.</p>`}`;
+  },
+};
+INPUTS.cfind = el => { STATE.cfind = el.value; const pos = el.selectionStart; redraw(); const n = $('#cfind'); if (n) { n.focus(); n.setSelectionRange(pos, pos); } };
+
+// 고객 등록 · 수정 — 전체 번호를 저장하고(화면에서만 가림), 같은 번호가 있으면 막는다 (평가 CRM-07 · 08)
+ACTIONS['cf-save'] = el => {
+  const f = n => $(`#cf [name=${n}]`), name = f('name').value.trim(), raw = f('phone').value.trim(), phone = raw ? normPhone(raw) : '';
+  const err = (msg, n) => { $('#cf-err').innerHTML = `<p class="ferr" role="alert">${msg}</p>`; if (n) { f(n).setAttribute('aria-invalid', 'true'); f(n).focus(); } };
+  if (!name) return err('이름을 넣으세요.', 'name');
+  if (raw && !phone) return err('연락처 형식을 확인하세요. 예: 010-1234-5678', 'phone');
+  const dup = phone && CUSTOMERS.find(x => x.phone === phone && x.id !== el.dataset.id);
+  if (dup) return err(`같은 번호로 등록된 고객이 있습니다: <a class="u" href="#/customer/${dup.id}">${esc(dup.name)}</a>. 같은 사람이면 그 고객을 고쳐 주세요.`, 'phone');
+  let c = el.dataset.id ? cust(el.dataset.id) : null;
+  if (!c) { c = { id: nextId(CUSTOMERS, 'c'), first: null, last: null, visits: 0, pass: null, portal: false }; CUSTOMERS.push(c); }
+  const consent = f('consent').checked;
+  Object.assign(c, { name, phone, age: f('age').value, ch: f('ch').value, bday: f('bday').value.trim(), memo: f('memo').value.trim(), consentCheck: false });
+  if (consent && !c.consent) { c.consentAt = TODAY; c.consentHow = f('how').value; }
+  if (!consent) { c.consentAt = ''; c.consentHow = ''; }
+  c.consent = consent;
+  if (f('pass').value) c.pass = { type: `${f('pass').value}회권`, left: Number(f('pass').value) };
+  c.seg = segOf(c);
+  closeDrawer();
+  toast(el.dataset.id ? '고객 정보를 고쳤습니다' : '고객을 등록했습니다');
+  location.hash = '#/customer/' + c.id; renderRoute();
+};
+
+// ── 설정 ──
+NAV2[NAV2.length - 1] = ['#/settings/shop', '설정'];
+SUBNAV.set.splice(0, SUBNAV.set.length, ['#/settings/shop', '매장 정보'], ['#/settings/templates', '메시지 문구'], ['#/settings/import', '가져오기'], ['#/settings/data', '백업 · 내보내기'], ['#/settings/channels', '예약 채널']);
+const SHOP_F = [
+  ['phone', '매장 전화', '광고 문자 머리 "(광고) 모앤브레인 …"에 들어갑니다'],
+  ['addr', '주소', ''], ['map', '지도 링크', '방문 안내 문구의 위치'], ['parking', '주차 안내', ''],
+  ['book', '네이버 예약 링크', '고객 페이지의 예약 버튼 · 광고 문자'], ['review', '리뷰 링크', '첫방문 감사 문구'],
+  ['account', '예약금 계좌', '첫 방문 신청 · 입금 안내 문구. 비어 있으면 그 문구는 복사할 수 없습니다'],
+  ['optout', '수신거부 방법', '광고 문자 맨 끝에 붙습니다. 지금은 예시입니다. 실제로 쓰실 수신거부 방법으로 바꿔 주세요. 모르시면 KISA 118에 물어보세요'],
+];
+VIEWS['#/settings/shop'] = {
+  title: '설정', sub: 'set', lead: '여기 적은 내용이 문자와 고객 페이지에 그대로 들어갑니다.',
+  render() {
+    const st = setupSteps();
+    return `<div class="set2"><section><h2 class="v2-h">처음 시작</h2><ol class="steps">${st.map(x => `<li><a class="u" href="${x.href}">${x.t}</a> <span class="${x.ok ? '' : 'dim'}">${x.ok ? '완료' : '남음'}</span>${x.note ? `<span class="s13 muted">${esc(x.note)}</span>` : ''}</li>`).join('')}</ol></section>
+      <section><h2 class="v2-h">매장 정보</h2><div id="sf">${SHOP_F.map(([k, l, h]) => `<div class="fld"><label for="sf-${k}">${l}</label><input id="sf-${k}" class="input" name="${k}" value="${esc(SHOP[k])}"${h ? ` aria-describedby="sf-${k}-h"` : ''}>${h ? `<p class="s13 muted" id="sf-${k}-h" style="margin:6px 0 0">${h}</p>` : ''}</div>`).join('')}
+        <button type="button" class="btn btn-primary btn-lg" data-act="shop-save">저장</button></div></section></div>`;
+  },
+};
+ACTIONS['shop-save'] = () => { SHOP_F.forEach(([k]) => { SHOP[k] = $(`#sf [name=${k}]`).value.trim(); }); SHOP.saved = true; redraw(); toast('매장 정보를 저장했습니다'); };
+
+VIEWS['#/settings/templates'] = {
+  title: '설정', sub: 'set', lead: '안내 종류별 문구입니다. 사장님 원문을 붙여 넣으면 예시 문구 대신 쓰입니다.',
+  render() {
+    return `<table class="ln ttbl"><thead><tr><th>안내</th><th class="hide-m">보낼 때</th><th>문구</th><th class="r"></th></tr></thead><tbody>${KINDS3.map(k => `<tr><td>${esc(k.name)}${k.ad ? ' <span class="dim s13">(광고)</span>' : ''}</td><td class="hide-m muted">${esc(k.when)}</td><td>${kindSrc(k)}</td><td class="r"><button type="button" class="u" data-act="tpl3" data-id="${k.id}">${kindSrc(k) === '예시 문구' ? '원문 넣기' : '고치기'}</button></td></tr>`).join('')}</tbody></table>
+      <p class="s13 muted" style="margin:16px 0 0">빈 자리는 중괄호로 씁니다: {고객명} {일시} {언제} {시간} {프로그램} {소요시간} {지도} {주차} {예약링크} {리뷰링크} {기록링크} {방문때} {계좌} {지난일수} {회원권} {남은횟수} {방문수}</p>`;
+  },
+};
+ACTIONS.tpl3 = el => {
+  const k = kind3(el.dataset.id);
+  openDrawer(`${esc(k.name)} 문구`, `<div class="stack" id="tf3"><textarea class="textarea out" name="t" rows="16" aria-label="문구">${esc(kindBase(k))}</textarea>
+    ${k.ad ? `<p class="s13 muted" style="margin:0">맨 앞 "${esc(adHead())}"와 맨 끝 수신거부 줄은 자동으로 붙습니다.</p>` : ''}
+    <p class="s13 muted" style="margin:0">${SHOP.texts[k.id] ? '사장님이 넣은 문구입니다.' : k.text ? '사장님 도구의 원문입니다.' : '예시 문구입니다. 원문을 붙여 넣고 저장하세요.'}</p></div>`,
+    `${SHOP.texts[k.id] ? `<button type="button" class="btn btn-pearl" data-act="tpl3-reset" data-id="${k.id}">처음 문구로</button>` : ''}<button type="button" class="btn btn-primary" data-act="tpl3-save" data-id="${k.id}">저장</button>`, 560);
+};
+ACTIONS['tpl3-save'] = el => { const t = $('#tf3 [name=t]').value.trim(); if (t) SHOP.texts[el.dataset.id] = t; closeDrawer(); redraw(); toast('문구를 저장했습니다'); };
+ACTIONS['tpl3-reset'] = el => { delete SHOP.texts[el.dataset.id]; closeDrawer(); redraw(); toast('처음 문구로 되돌렸습니다'); };
+['#/settings/channels'].forEach(h => { VIEWS[h] = { ...VIEWS[h], title: '설정', sub: 'set' }; });
+
+// ── 백업 · 내보내기 ──
+const dl = (name, text, type) => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500); };
+const csvCell = v => { const s = v == null ? '' : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+const toCSV = (head, rows) => '﻿' + [head, ...rows].map(r => r.map(csvCell).join(',')).join('\r\n');
+VIEWS['#/settings/data'] = {
+  title: '설정', sub: 'set', lead: '입력한 내용은 이 브라우저에만 저장됩니다. 다른 기기에서는 보이지 않고, 브라우저 기록을 지우면 사라집니다.',
+  render() {
+    return `<div class="set2"><section><h2 class="v2-h">백업</h2>
+        <p>마지막 백업: <b>${META.backupAt ? `${fmtD(META.backupAt)} (${diffDays(META.backupAt, TODAY)}일 전)` : '없음'}</b></p>
+        <p class="s13 muted">백업 파일에는 고객 연락처와 기록이 들어 있습니다. 사장님 컴퓨터나 휴대폰에만 두세요.</p>
+        <div class="btnrow"><button type="button" class="btn btn-primary btn-lg" data-act="bk-save">백업 파일 받기</button>
+          <label class="btn btn-pearl btn-lg">백업에서 되살리기<input type="file" accept=".json,application/json" data-change="bk-load" hidden></label></div></section>
+      <section><h2 class="v2-h">엑셀용 내보내기</h2><p class="s13 muted">엑셀에서 바로 열리는 CSV 파일입니다.</p>
+        <div class="btnrow"><button type="button" class="u" data-act="ex-cust">고객 명단</button><button type="button" class="u" data-act="ex-visit">회차 기록</button><button type="button" class="u" data-act="ex-log">문자 기록</button></div>
+        <h2 class="v2-h" style="margin-top:48px">처음 상태로</h2><p class="s13 muted">입력한 것을 모두 지우고 데모의 가상 데이터로 돌아갑니다.</p>
+        <button type="button" class="u" data-act="reset-ask">처음 상태로 되돌리기</button></section></div>`;
+  },
+};
+ACTIONS['bk-save'] = () => { const d = snapshot(); dl(`모앤브레인_CRM_백업_${TODAY}.json`, JSON.stringify(d), 'application/json'); META.backupAt = TODAY; redraw(); toast('백업 파일을 받았습니다'); };
+CHANGES['bk-load'] = el => {
+  const f = el.files && el.files[0]; if (!f) return;
+  const fr = new FileReader();
+  fr.onload = () => { try { const d = JSON.parse(fr.result); if (!d || d.app !== 'mb-crm') throw 0; if (!confirm('지금 데이터를 백업 파일 내용으로 바꿉니다. 계속할까요?')) return; restore(d); saveNow(); renderRoute(); toast('백업에서 되살렸습니다'); }
+    catch (e) { toast('이 CRM의 백업 파일이 아닙니다'); } };
+  fr.readAsText(f);
+};
+ACTIONS['ex-cust'] = () => dl(`고객명단_${TODAY}.csv`, toCSV(['이름', '연락처', '연령대', '처음 방문', '마지막 방문', '방문 횟수', '회원권', '남은 횟수', '광고 수신 동의', '동의 날짜', '메모'],
+  CUSTOMERS.map(c => [c.name, c.phone, c.age, c.first, c.last, c.visits, c.pass ? c.pass.type : '', c.pass ? c.pass.left : '', c.consent ? '동의' : '', c.consentAt, c.memo])), 'text/csv');
+ACTIONS['ex-visit'] = () => dl(`회차기록_${TODAY}.csv`, toCSV(['고객', '회차', '날짜', '프로그램', '담당', '아로마', '원장님 한마디', '내부 메모', '홈케어', '다음 방문 권유'],
+  VISITS.map(v => [cust(v.cid).name, v.no, v.date, prog(v.pid).name, STAFF_NAME[v.staff] || '', v.aroma, v.note || '', v.memo || '', (v.home || []).join(' / '), v.next || ''])), 'text/csv');
+ACTIONS['ex-log'] = () => dl(`문자기록_${TODAY}.csv`, toCSV(['날짜', '고객', '안내', '방법', '문구'], MSGLOG.map(l => [l.at, cust(l.cid).name, kindName(l.kid), l.via, l.text || ''])), 'text/csv');
+ACTIONS['reset-ask'] = () => { if (confirm('입력한 내용을 모두 지우고 처음 상태로 돌아갑니다. 백업 파일을 받아 두었나요?')) { wipeStore(); location.reload(); } };
+
+// ── 처음 데이터 가져오기 (평가 CRM-03 · US-07 · UX-4 · UI-10 · DS-04) ──
+const FIELDS = [['', '가져오지 않음'], ['name', '이름'], ['phone', '연락처'], ['age', '연령대'], ['first', '처음 방문'], ['last', '마지막 방문'], ['visits', '방문 횟수'],
+  ['passType', '회원권'], ['passLeft', '회원권 남은 횟수'], ['consent', '광고 수신 동의'], ['consentAt', '동의 날짜'], ['memo', '메모']];
+const GUESS = { name: /이름|성함|고객명|고객 ?이름|name/i, phone: /연락처|전화|휴대|핸드폰|번호|phone|mobile/i, age: /연령|나이|age/i, first: /처음|첫 ?방문|등록일|가입/i,
+  last: /마지막|최근|last/i, visits: /방문 ?횟수|방문수|횟수|visits/i, passType: /회원권(?! ?잔여| ?남은)|이용권|멤버십/i, passLeft: /남은|잔여/i,
+  consentAt: /동의 ?(날짜|일)/i, consent: /광고|수신|마케팅|동의/i, memo: /메모|비고|특이|note/i };
+const SAMPLE_CSV = '이름,연락처,처음 방문,마지막 방문,방문 횟수,회원권,잔여,광고 수신 동의,동의 날짜,메모\n'
+  + `김예시,010-0000-7001,${addDays(TODAY, -200)},${addDays(TODAY, -20)},6,10회권,4,동의,${addDays(TODAY, -200)},정수리 건조\n`
+  + `박예시,01000007002,${addDays(TODAY, -90)},${addDays(TODAY, -90)},1,,,,,첫 방문만\n`
+  + `최예시,+82 10-0000-7003,${addDays(TODAY, -400)},${addDays(TODAY, -250)},3,,,동의,,동의 날짜 모름\n`
+  + `이서준,010-0000-1580,2025-09-20,${addDays(TODAY, -9)},14,10회권,3,동의,2025-09-20,기존 고객과 같은 번호\n`
+  + `정예시,010-123,${addDays(TODAY, -30)},${addDays(TODAY, -30)},1,,,,,번호가 잘못됨\n`
+  + `김예시,010-0000-7001,${addDays(TODAY, -200)},${addDays(TODAY, -20)},6,10회권,4,동의,${addDays(TODAY, -200)},파일 안에서 두 번\n`
+  + `한예시,010.0000.7006,${addDays(TODAY, -15)},${addDays(TODAY, -15)},1,,,,,`;
+function parseCSV(text) {
+  text = text.replace(/^﻿/, '');
+  const first = text.split(/\r?\n/)[0] || '', sep = (first.match(/\t/g) || []).length > (first.match(/,/g) || []).length ? '\t' : (first.match(/;/g) || []).length > (first.match(/,/g) || []).length ? ';' : ',';
+  const rows = []; let row = [], cell = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (q) { if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; } else cell += ch; continue; }
+    if (ch === '"') q = true; else if (ch === sep) { row.push(cell); cell = ''; } else if (ch === '\n' || ch === '\r') { if (ch === '\r' && text[i + 1] === '\n') i++; row.push(cell); rows.push(row); row = []; cell = ''; } else cell += ch;
+  }
+  if (cell !== '' || row.length) { row.push(cell); rows.push(row); }
+  return rows.filter(r => r.some(x => String(x).trim() !== ''));
+}
+function normDate(v) {
+  if (v == null || v === '') return '';
+  if (typeof v === 'number' && v > 20000 && v < 80000) { const d = new Date(Date.UTC(1899, 11, 30) + v * 864e5); return d.toISOString().slice(0, 10); } // 엑셀 날짜 숫자
+  const s = String(v).trim(); let m = s.match(/^(\d{4})[.\-/년 ]\s*(\d{1,2})[.\-/월 ]\s*(\d{1,2})/);
+  if (!m) { m = s.match(/^(\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})$/); if (m) m[1] = '20' + m[1]; }
+  if (!m) return null;
+  const d = `${m[1]}-${String(m[2]).padStart(2, '0')}-${String(m[3]).padStart(2, '0')}`;
+  return isNaN(new Date(d + 'T00:00:00')) ? null : d;
+}
+const yes = v => /^(동의|예|o|ㅇ|y|yes|true|1|v|✓|○)$/i.test(String(v || '').trim());
+const IMP = () => STATE.imp || (STATE.imp = { step: 1, name: '', head: [], rows: [], map: [], dup: 'merge', err: '' });
+VIEWS['#/settings/import'] = {
+  title: '설정', sub: 'set', lead: '지금 쓰는 엑셀, 구글시트, 노션 표를 한 번에 옮깁니다. 파일은 이 브라우저 안에서만 읽고 어디로도 올리지 않습니다.',
+  render() {
+    const s = IMP(), last = BATCHES.filter(b => !b.undone).slice(-1)[0];
+    const head = `<ol class="isteps">${['파일', '열 맞추기', '미리보기', '가져오기'].map((t, i) => `<li class="${s.step === i + 1 ? 'on' : s.step > i + 1 ? 'ok' : ''}"${s.step === i + 1 ? ' aria-current="step"' : ''}>${i + 1}. ${t}</li>`).join('')}</ol>`;
+    if (s.step === 1) return `${head}${last ? `<p class="v3-setup">${fmtAt(last.at)}에 ${last.added.length}명을 가져오고 ${last.merged.length}명을 합쳤습니다. <button type="button" class="u" data-act="imp-undo" data-id="${last.id}">그 가져오기 되돌리기</button></p>` : ''}
+      <div class="set2"><section>
+        <div class="fld"><label for="imp-f">고객 명단 파일</label><p class="s13 muted" id="imp-f-h" style="margin:0 0 10px">엑셀(.xlsx) 또는 CSV 파일 하나. 첫 줄은 열 이름이어야 합니다. 노션은 데이터베이스 메뉴의 "내보내기 → CSV"로 받습니다.</p>
+          <input id="imp-f" type="file" accept=".csv,.txt,.xlsx,.xls" data-change="imp-file" aria-describedby="imp-f-h imp-err"></div>
+        <div class="fld"><label for="imp-p">또는 엑셀에서 복사해 붙여넣기</label><textarea id="imp-p" class="textarea" rows="5" placeholder="열 이름 줄까지 함께 복사해 붙여 넣으세요"></textarea>
+          <button type="button" class="u" data-act="imp-paste" style="margin-top:8px">붙여 넣은 표 읽기</button></div>
+        <p class="ferr" id="imp-err" role="alert">${esc(s.err)}</p></section>
+      <section><h2 class="v2-h">처음이면</h2><p class="s13">예시 파일(가상 7줄)로 먼저 연습할 수 있습니다. 같은 번호, 잘못된 번호, 동의 날짜가 없는 줄이 섞여 있습니다.</p>
+        <div class="btnrow"><button type="button" class="u" data-act="imp-sample">예시 파일로 해 보기</button><button type="button" class="u" data-act="imp-sample-dl">예시 파일 받기</button></div>
+        <h2 class="v2-h" style="margin-top:40px">가져오지 않는 것</h2><p class="s13 muted">네이버 예약자 엑셀은 가져오지 않습니다. 네이버가 예약자 정보는 홍보에 쓰지 말고, 이용이 끝나면 지우라고 안내하고 있어서요. 연락처와 광고 수신 동의는 첫 방문 때 매장에서 직접 받습니다.</p></section></div>`;
+    if (s.step === 2) {
+      const used = s.map.filter(Boolean), dupF = used.filter((x, i) => used.indexOf(x) !== i);
+      return `${head}<p>${esc(s.name)} · ${s.rows.length}줄. 파일의 열마다 CRM 칸을 고르세요. 자동으로 맞춘 칸은 확인만 하면 됩니다.</p>
+        <table class="ln imap"><thead><tr><th>파일의 열</th><th>예시 값</th><th>CRM 칸</th></tr></thead><tbody>${s.head.map((h, i) => `<tr><td>${esc(h)}</td><td class="muted">${s.rows.slice(0, 2).map(r => esc(String(r[i] == null ? '' : r[i]))).filter(Boolean).join(', ') || '–'}</td>
+          <td><select class="input select" data-change="imp-map" data-i="${i}" aria-label="${esc(h)} 열을 넣을 CRM 칸">${FIELDS.map(([k, l]) => `<option value="${k}"${s.map[i] === k ? ' selected' : ''}>${l}</option>`).join('')}</select>${dupF.includes(s.map[i]) && s.map[i] ? '<p class="ferr">같은 칸을 두 번 골랐습니다.</p>' : ''}</td></tr>`).join('')}</tbody></table>
+        <p class="ferr" role="alert">${!s.map.includes('name') ? '이름 열을 골라 주세요.' : ''}</p>
+        <div class="btnrow"><button type="button" class="btn btn-primary btn-lg" data-act="imp-go" data-to="3"${!s.map.includes('name') || dupF.length ? ' disabled' : ''}>미리보기</button><button type="button" class="u" data-act="imp-go" data-to="1">파일 다시 고르기</button></div>`;
+    }
+    const plan = impPlan(), n = k => plan.filter(p => p.act === k).length;
+    if (s.step === 3) return `${head}<p class="isum"><b>새 고객 ${n('new')}명</b>, 기존 고객과 합침 ${n('merge')}명, 건너뜀 ${n('skip')}줄${plan.some(p => p.consentCheck) ? `, 광고 동의 확인 필요 ${plan.filter(p => p.consentCheck).length}명` : ''}</p>
+        <fieldset class="fld"><legend class="lab">같은 번호의 고객이 이미 있으면</legend><div class="rad"><label><input type="radio" name="dup" value="merge" data-change="imp-dup"${s.dup === 'merge' ? ' checked' : ''}>합치기 (빈 칸만 채움)</label><label><input type="radio" name="dup" value="skip" data-change="imp-dup"${s.dup === 'skip' ? ' checked' : ''}>건너뛰기</label></div></fieldset>
+        <table class="ln ipv"><thead><tr><th>줄</th><th>이름</th><th>연락처</th><th class="hide-m">방문</th><th>처리</th></tr></thead><tbody>${plan.map(p => `<tr class="${p.act === 'skip' ? 'skip' : ''}"><td class="num">${p.line}</td><td>${esc(p.o.name || '')}</td><td class="num">${p.o.phone ? showPhone(p.o.phone) : esc(p.rawPhone || '–')}</td><td class="hide-m num">${p.o.visits || ''}${p.o.last ? ` <span class="dim s13">${fmtD(p.o.last)}</span>` : ''}</td>
+          <td>${p.act === 'new' ? '새로 추가' : p.act === 'merge' ? `합침: <a class="u" href="#/customer/${p.into}">${esc(cust(p.into).name)}</a>` : `<b>건너뜀</b> ${esc(p.why)}`}${p.consentCheck ? '<br><span class="s13">광고 동의 날짜가 없어 "확인 필요"로 넣음</span>' : ''}</td></tr>`).join('')}</tbody></table>
+        <p class="s13 muted">누르기 전에는 아무것도 바뀌지 않습니다. 광고 수신 동의는 파일에 동의 날짜가 있을 때만 "동의"로 넣습니다.</p>
+        <div class="btnrow"><button type="button" class="btn btn-primary btn-lg" data-act="imp-run"${n('new') + n('merge') ? '' : ' disabled'}>${n('new')}명 추가${n('merge') ? `하고 ${n('merge')}명 합치기` : '하기'}</button><button type="button" class="u" data-act="imp-go" data-to="2">열 맞추기로</button>${n('skip') ? '<button type="button" class="u" data-act="imp-skipped">건너뛴 줄 받기</button>' : ''}</div>`;
+    const b = BATCHES[BATCHES.length - 1];
+    return `${head}<p class="isum"><b>${b.added.length}명을 추가하고 ${b.merged.length}명을 합쳤습니다.</b> 건너뛴 줄 ${b.skipped}개.</p>
+      <div class="btnrow"><a class="btn btn-primary btn-lg" href="#/customers">고객 관리에서 보기</a><button type="button" class="u" data-act="imp-undo" data-id="${b.id}">이번 가져오기 되돌리기</button><button type="button" class="u" data-act="imp-go" data-to="1">다른 파일 가져오기</button></div>`;
+  },
+};
+function impLoad(name, table) {
+  const s = IMP(), rows = table.map(r => r.map(x => (typeof x === 'string' ? x.trim() : x)));
+  if (rows.length < 2) { s.err = '읽을 줄이 없습니다. 첫 줄은 열 이름, 둘째 줄부터 고객이어야 합니다.'; return redraw(); }
+  const head = rows[0].map(String), taken = new Set();
+  const map = head.map(h => { const k = Object.keys(GUESS).find(k => !taken.has(k) && GUESS[k].test(h)); if (k) taken.add(k); return k || ''; });
+  Object.assign(s, { step: 2, name, head, rows: rows.slice(1), map, err: '' }); redraw();
+}
+CHANGES['imp-file'] = el => {
+  const f = el.files && el.files[0], s = IMP(); if (!f) return;
+  if (!/\.(csv|txt|xlsx|xls)$/i.test(f.name)) { s.err = '선택한 파일은 .xlsx 또는 .csv 여야 합니다.'; return redraw(); }
+  if (!f.size) { s.err = '선택한 파일이 비어 있습니다.'; return redraw(); }
+  const fr = new FileReader();
+  if (/\.xlsx?$/i.test(f.name)) {
+    fr.onload = async () => { try { await needXLSX(); const wb = XLSX.read(new Uint8Array(fr.result), { type: 'array', cellDates: false }); const ws = wb.Sheets[wb.SheetNames[0]];
+      impLoad(f.name + (wb.SheetNames.length > 1 ? ` (첫 시트 "${wb.SheetNames[0]}")` : ''), XLSX.utils.sheet_to_json(ws, { header: 1, raw: true, defval: '' })); }
+      catch (e) { s.err = '파일을 읽지 못했습니다. 엑셀에서 CSV로 저장해 다시 골라 주세요.'; redraw(); } };
+    fr.readAsArrayBuffer(f);
+  } else { fr.onload = () => impLoad(f.name, parseCSV(String(fr.result))); fr.readAsText(f, 'utf-8'); }
+};
+function needXLSX() { // 엑셀 파일을 고를 때만 읽기 도구를 불러온다
+  if (window.XLSX) return Promise.resolve();
+  return new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js'; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); });
+}
+ACTIONS['imp-paste'] = () => { const t = $('#imp-p').value; if (!t.trim()) { IMP().err = '붙여 넣은 내용이 없습니다.'; return redraw(); } impLoad('붙여 넣은 표', parseCSV(t)); };
+ACTIONS['imp-sample'] = () => impLoad('예시 파일 (가상)', parseCSV(SAMPLE_CSV));
+ACTIONS['imp-sample-dl'] = () => dl('고객명단_예시.csv', '﻿' + SAMPLE_CSV, 'text/csv');
+CHANGES['imp-map'] = el => { IMP().map[Number(el.dataset.i)] = el.value; redraw(); };
+CHANGES['imp-dup'] = el => { IMP().dup = el.value; redraw(); };
+ACTIONS['imp-go'] = el => { const s = IMP(); s.step = Number(el.dataset.to); if (s.step === 1) Object.assign(s, { head: [], rows: [], map: [], err: '' }); redraw(); };
+function impPlan() {
+  const s = IMP(), seen = {};
+  return s.rows.map((r, i) => {
+    const g = k => { const j = s.map.indexOf(k); return j < 0 ? '' : r[j]; };
+    const o = { name: String(g('name') || '').trim(), age: String(g('age') || '').trim(), memo: String(g('memo') || '').trim() }, rawPhone = String(g('phone') || '');
+    o.phone = rawPhone ? normPhone(rawPhone) : '';
+    o.first = normDate(g('first')); o.last = normDate(g('last')); o.visits = Number(String(g('visits')).replace(/\D/g, '')) || 0;
+    const pt = String(g('passType') || '').trim(), pl = String(g('passLeft')).replace(/\D/g, '');
+    o.pass = pt || pl ? { type: pt || '회원권', left: Number(pl) || 0 } : null;
+    const cAt = normDate(g('consentAt')), cYes = yes(g('consent'));
+    o.consent = cYes && !!cAt; o.consentAt = o.consent ? cAt : ''; const consentCheck = cYes && !cAt;
+    const p = { line: i + 2, o, rawPhone, consentCheck, act: 'new', why: '' };
+    if (!o.name) return Object.assign(p, { act: 'skip', why: '이름이 비어 있음' });
+    if (rawPhone && !o.phone) return Object.assign(p, { act: 'skip', why: `연락처 형식이 맞지 않음 (${rawPhone})` });
+    if (o.first === null || o.last === null) return Object.assign(p, { act: 'skip', why: '날짜를 읽지 못함 (예: 2026-09-14)' });
+    if (o.phone && seen[o.phone]) return Object.assign(p, { act: 'skip', why: `파일 안에서 ${seen[o.phone]}번째 줄과 같은 번호` });
+    if (o.phone) seen[o.phone] = p.line;
+    const ex = o.phone && CUSTOMERS.find(c => c.phone === o.phone);
+    if (ex) return s.dup === 'merge' ? Object.assign(p, { act: 'merge', into: ex.id }) : Object.assign(p, { act: 'skip', why: `이미 있는 고객 (${ex.name})` });
+    return p;
+  });
+}
+ACTIONS['imp-run'] = () => {
+  const plan = impPlan(), b = { id: 'b' + (BATCHES.length + 1), at: NOW, added: [], merged: [], skipped: plan.filter(p => p.act === 'skip').length, undone: false };
+  plan.forEach(p => {
+    const o = p.o;
+    if (p.act === 'new') {
+      const c = { id: nextId(CUSTOMERS, 'c'), name: o.name, phone: o.phone, age: o.age || '', ch: '가져옴', first: o.first || null, last: o.last || null, visits: o.visits || 0,
+        pass: o.pass, consent: o.consent, consentAt: o.consentAt, consentHow: o.consent ? '가져온 파일' : '', consentCheck: p.consentCheck, portal: false, memo: o.memo, batch: b.id };
+      c.seg = segOf(c); CUSTOMERS.push(c); b.added.push(c.id);
+    } else if (p.act === 'merge') {
+      const c = cust(p.into), prev = JSON.parse(JSON.stringify(c));
+      ['age', 'first', 'memo'].forEach(k => { if (!c[k] && o[k]) c[k] = o[k]; });
+      if (o.last && (!c.last || o.last > c.last)) c.last = o.last;
+      if (o.visits > c.visits) c.visits = o.visits;
+      if (!c.pass && o.pass) c.pass = o.pass;
+      c.seg = segOf(c); b.merged.push({ cid: c.id, prev });
+    }
+  });
+  BATCHES.push(b); IMP().step = 4; IMP().skippedRows = plan.filter(p => p.act === 'skip'); redraw();
+  toast(`${b.added.length}명을 가져왔습니다`);
+};
+ACTIONS['imp-skipped'] = () => { const s = IMP(); dl('건너뛴_줄.csv', toCSV([...s.head, '건너뛴 이유'], impPlan().filter(p => p.act === 'skip').map(p => [...s.rows[p.line - 2], p.why])), 'text/csv'); };
+ACTIONS['imp-undo'] = el => {
+  const b = BATCHES.find(x => x.id === el.dataset.id); if (!b || b.undone) return;
+  b.added.forEach(id => { const i = CUSTOMERS.findIndex(c => c.id === id); if (i >= 0 && !VISITS.some(v => v.cid === id) && !MSGLOG.some(l => l.cid === id)) CUSTOMERS.splice(i, 1); });
+  b.merged.forEach(({ cid, prev }) => { const c = cust(cid); if (c) Object.assign(c, prev); });
+  b.undone = true; Object.assign(IMP(), { step: 1 }); redraw(); toast('이번 가져오기를 되돌렸습니다');
+};
+
+// ── v1 흔적 정리 (평가 DS 범위 밖 발견): 이 CRM에는 예약 달력이 없다 ──
+CH_ROWS.forEach(r => { if (/수기 —/.test(r[2])) r[2] = '그 앱에서 직접 처리'; });
+const _b2bRender = VIEWS['#/b2b'].render;
+VIEWS['#/b2b'] = { ...VIEWS['#/b2b'], render: () => _b2bRender().replace('기업 고객 예약도 같은 달력의 같은 칸을 씁니다 (보라색). ', '기업 고객도 방문하면 같은 회차 기록을 남깁니다. ') };
+const _chRender = VIEWS['#/settings/channels'].render;
+VIEWS['#/settings/channels'] = { ...VIEWS['#/settings/channels'], render: () => _chRender().replace('<b>수락하기 전에 이 달력에서 빈자리를 보고</b>, 수락한 뒤 여기에 입력합니다.', '그 앱에서 직접 수락하고, 방문 날은 홈의 "방문 적기"로 오늘 목록에 적습니다.')
+  .replace('플랫폼들이 바깥 연결을 열어 두지 않아 네이버 외에는 자동으로 맞출 수 없습니다.', '네이버 말고는 예약을 자동으로 가져올 길을 열어 둔 곳이 없습니다.') };
+TASKS.find(t => t.id === 'k5').title = '플레이스 소식 — 50분 메뉴 글 올릴지 정하기';
+TASKS.find(t => t.id === 'k3').title = '회차 기록이 없는 손님 정리';
+
+;
+/* ── v3 저장: 이 브라우저(localStorage)에만 남긴다. 서버로 가지 않는다 (10/14 대표 결정) ──
+   main.js 바로 앞에 붙는다 — 모든 화면 코드가 데이터를 만든 뒤 저장본으로 바꿔 끼운다 */
+const STORE_KEY = 'mb-crm-v3';
+const ARRS = { CUSTOMERS, RESV, VISITS, MSGLOG, TASKS, BATCHES };
+function snapshot() { return { app: 'mb-crm', ver: 3, at: NOW, ...ARRS, NAVER, SHOP, META }; }
+function restore(d) {
+  Object.entries(ARRS).forEach(([k, a]) => { if (Array.isArray(d[k])) a.splice(0, a.length, ...d[k]); });
+  if (d.NAVER) { Object.keys(NAVER).forEach(k => delete NAVER[k]); Object.assign(NAVER, d.NAVER); }
+  if (d.SHOP) Object.assign(SHOP, d.SHOP, { texts: Object.assign({}, d.SHOP.texts) });
+  if (d.META) Object.assign(META, d.META);
+  CUSTOMERS.forEach(c => { c.seg = segOf(c); });
+}
+let saveTimer = 0, saveWarned = false;
+function saveNow() {
+  clearTimeout(saveTimer);
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(snapshot())); }
+  catch (e) { if (!saveWarned) { saveWarned = true; toast('이 브라우저에 저장하지 못했습니다. 사진이 많으면 공간이 모자랄 수 있습니다. 백업 파일을 받아 두세요'); } }
+}
+const saveSoon = () => { clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 400); };
+function wipeStore() { try { localStorage.removeItem(STORE_KEY); } catch (e) { /* 저장소를 못 쓰는 브라우저 */ } }
+try { const raw = localStorage.getItem(STORE_KEY); if (raw) { const d = JSON.parse(raw); if (d && d.app === 'mb-crm') restore(d); } } catch (e) { /* 비공개 창 등 — 저장 없이 진행 */ }
+['click', 'change', 'input'].forEach(t => document.addEventListener(t, saveSoon));
+addEventListener('pagehide', saveNow);
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') saveNow(); });
 
 ;
 /* ── 시작: 클릭 · 입력 · 변경 위임 · 화면 전환 ── */
