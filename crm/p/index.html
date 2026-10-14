@@ -131,7 +131,7 @@ function render(r) {
     <p class="sub">${mdw(r.d)}, ${r.no}회차${r.st ? `, 담당 ${esc(r.st)}` : ''}</p>
     <section class="now"><h2>이번 관리</h2><dl>
       <div><dt>프로그램</dt><dd>${esc(r.p)}</dd></div>${r.a ? `<div><dt>아로마</dt><dd>${esc(r.a)}</dd></div>` : ''}${r.pass ? `<div><dt>회원권</dt><dd>${esc(r.pass[0])}, ${esc(r.pass[1])}회 남음</dd></div>` : ''}</dl>
-      ${r.nt ? `<p class="say"><b>원장님 한마디</b>${esc(r.nt)}</p>` : ''}</section>
+      ${r.nt ? `<p class="say"><b>담당 한마디</b>${esc(r.nt)}</p>` : ''}</section>
     ${photos(r)}
     ${r.hc && r.hc.length ? `<section><h2>홈케어</h2><ul class="hc">${r.hc.map(x => `<li>${esc(x)}</li>`).join('')}</ul></section>` : ''}
     ${meas(r)}
