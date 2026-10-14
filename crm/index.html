@@ -524,6 +524,102 @@ fieldset.fld legend{font-size:13px;color:var(--ink-2);margin-bottom:8px;padding:
 .v2-side .rolesw+.v2-foot{margin-top:0}
 .vdet p:not(.vd-l){margin:0 0 6px}
 .vdet .vd-l{margin-top:20px}
+
+/* ── 10/14 밤: 움직임 (홈페이지 규칙 — 0.2~0.3초 · --ease 하나 · 누른 것에 대한 반응만) ── */
+.route-view{animation:none}
+@keyframes v3-rise{from{opacity:0;transform:translateY(12px)}}
+@keyframes v3-rise-s{from{opacity:0;transform:translateY(6px)}}
+@keyframes v3-drop{from{opacity:0;transform:translateY(-6px)}}
+@keyframes v3-sel{from{background-color:rgba(194,226,211,0)}}
+@keyframes v3-fade{from{opacity:.2}}
+@keyframes v3-ul{from{text-decoration-color:transparent}}
+@keyframes v3-drawer-in{from{opacity:0;transform:translateX(28px)}}
+@keyframes v3-drawer-out{to{opacity:0;transform:translateX(28px)}}
+@keyframes v3-ov-in{from{opacity:0}}
+@keyframes v3-ov-out{to{opacity:0}}
+.is-enter{animation:v3-rise .28s var(--ease) both}
+#v2head.is-enter-h .v2-head{animation:v3-rise-s .24s var(--ease) both}
+.a-drop{animation:v3-drop .24s var(--ease) both}
+.a-sel,.kinds label.a-sel{animation:v3-sel .3s var(--ease) both}
+.segs .u.a-sel{animation:v3-ul .3s var(--ease) both}
+.a-fade{animation:v3-fade .26s var(--ease) both}
+.v2-sub{position:relative}
+.v2-sub.ind-run a.on::after{opacity:0}
+.tab-ind{position:absolute;bottom:-1px;height:2px;background:#000;transition:left .26s var(--ease),width .26s var(--ease);pointer-events:none}
+.overlay{animation:v3-ov-in .24s var(--ease) both}
+.drawer{animation:v3-drawer-in .28s var(--ease) both}
+.overlay[data-state=closed]{animation:v3-ov-out .2s var(--ease) both;pointer-events:none}
+.overlay[data-state=closed] .drawer{animation:v3-drawer-out .2s var(--ease) both}
+.overlay.no-anim,.overlay.no-anim .drawer{animation:none}
+.rec-done{animation:v3-rise-s .26s var(--ease) both}
+.v2-menu.open{animation:v3-drop .22s var(--ease) both}
+.ln tbody tr{transition:background-color .2s var(--ease)}
+.ctbl tbody tr:hover,.ptbl tbody tr:not(.sel):not(.pm-row):hover,.vtbl tbody tr:hover,.ltbl tbody tr:hover,.logtbl tbody tr:hover{background:rgba(0,0,0,.025)}
+.u{transition:opacity .2s var(--ease)}
+.u:active{opacity:.6}
+.pv-frame iframe{opacity:0;transition:opacity .3s var(--ease)}
+.pv-frame iframe.is-loaded{opacity:1}
+.kinds label{transition:background-color .2s var(--ease)}
+@media (prefers-reduced-motion:reduce){
+  .is-enter,#v2head.is-enter-h .v2-head,.a-drop,.a-sel,.a-fade,.overlay,.drawer,.rec-done,.v2-menu.open,.overlay[data-state=closed],.overlay[data-state=closed] .drawer{animation:none!important}
+  .tab-ind{display:none}.pv-frame iframe{opacity:1;transition:none}.ln tbody tr,.u,.kinds label{transition:none}
+}
+
+/* ── 10/14 밤: 정렬 · 여백 (고객 관리 · 컨디션포털 · 표) ── */
+.cfind{margin:0 0 28px}
+/* 고객 한 페이지 — 머리 아래 선이 두 줄로 겹치지 않게, 회원권 칸은 첫 줄과 같은 높이에서 */
+.cgrid .kvl div:first-child{border-top:0}
+.cgrid .pass{border-top:0;padding-top:14px}
+.vmemo{display:block;font-size:13px;line-height:20px;color:var(--ink-3);margin-top:4px}
+.vtbl td>.vmemo:first-child{margin-top:0}
+/* 표 칸 너비 — 숫자 칸과 다음 칸 사이를 띄우고, 넓은 화면에서 칸이 흩어지지 않게 */
+.ctbl td{vertical-align:middle}
+.ctbl th:nth-child(2),.ctbl td:nth-child(2){width:56px;padding-right:40px}
+.ctbl th:nth-child(3),.ctbl td:nth-child(3){width:130px}
+.ctbl th:nth-child(4),.ctbl td:nth-child(4){width:120px}
+.ctbl th:nth-child(5),.ctbl td:nth-child(5){width:180px}
+.ctbl th:nth-child(6),.ctbl td:nth-child(6){width:110px}
+.ctbl th:nth-child(7),.ctbl td:nth-child(7){width:100px}
+.vtbl th:nth-child(1),.vtbl td:nth-child(1){width:56px}
+.vtbl th:nth-child(2),.vtbl td:nth-child(2){width:120px}
+.vtbl th:nth-child(3),.vtbl td:nth-child(3){width:220px}
+.vtbl th:nth-child(5),.vtbl td:nth-child(5){width:64px}
+.ltbl th:nth-child(1),.ltbl td:nth-child(1){width:160px}
+.ltbl th:nth-child(3),.ltbl td:nth-child(3){width:120px}
+.logtbl th:nth-child(1),.logtbl td:nth-child(1){width:140px}
+.logtbl th:nth-child(2),.logtbl td:nth-child(2){width:140px}
+.logtbl th:nth-child(4),.logtbl td:nth-child(4){width:120px}
+/* 컨디션포털 — 두 칸이 같은 높이의 머리 줄에서 시작, 고른 줄은 민트 안에서 글이 숨 쉴 자리 */
+@media (min-width:861px){.portal3{grid-template-columns:minmax(0,1fr) 392px}}
+.ptbl td{vertical-align:middle}
+.ptbl .u{min-height:0}
+.ptbl th:first-child,.ptbl td:first-child{padding-left:12px}
+.ptbl th:last-child,.ptbl td:last-child{padding-right:12px}
+.ptbl th:nth-child(3),.ptbl td:nth-child(3){width:120px}
+.pm-row{display:none}
+.pv-links{display:flex;gap:20px}
+.pv-note{margin:16px 0 20px;max-width:392px}
+.pv .v2-hrow{margin-bottom:12px}
+.ck{align-items:flex-start;line-height:22px}
+.ck input{margin-top:2px}
+@media (max-width:860px){
+  .pv-col{display:none}
+  .pm-row{display:table-row}
+  .pm-row td{background:var(--key);padding:0 12px 16px}
+  .ptbl tr.sel td{border-bottom:0}
+  .pm-acts{display:flex;flex-wrap:wrap;gap:4px 24px}
+  .cgrid{gap:0}
+  .cgrid .pass{order:-1;padding:0 0 20px;border-bottom:1px solid var(--line)}
+  .vtbl th:nth-child(2),.vtbl td:nth-child(2){width:84px}
+  .vtbl th:nth-child(3),.vtbl td:nth-child(3){width:auto}
+}
+.stbl th:nth-child(2),.stbl td:nth-child(2),.stbl th:nth-child(3),.stbl td:nth-child(3){width:120px}
+.stbl th:nth-child(4),.stbl td:nth-child(4),.stbl th:nth-child(5),.stbl td:nth-child(5){width:110px}
+.stbl th:nth-child(6),.stbl td:nth-child(6){width:72px}
+.ttbl th:nth-child(2),.ttbl td:nth-child(2){width:260px}
+.ttbl th:nth-child(3),.ttbl td:nth-child(3){width:140px}
+.ttbl th:nth-child(4),.ttbl td:nth-child(4){width:96px}
+.mgrsec{margin-top:64px}
 </style>
 </head>
 <body>
@@ -2402,9 +2498,9 @@ VIEWS['#/customer'] = {
       : `<div class="k-label">방문</div><div class="k-num num" style="font-size:44px;line-height:52px">${c.visits}<small>회</small></div><div class="k-cmp">${c.visits ? `처음 ${fmtD(c.first)}, 마지막 ${fmtD(c.last)}` : '아직 방문 기록이 없습니다'}</div>`;
     const tabs = [['회차', '회차 기록'], ['페이지', '고객 페이지'], ['문자', '문자 기록']];
     const pane = tab === '회차'
-      ? (visits.length ? `<table class="ln vtbl"><thead><tr><th>회차</th><th>날짜</th><th>프로그램</th><th class="hide-m">담당 한마디</th><th class="r">사진</th></tr></thead><tbody>${visits.map(v => `<tr><td class="num"><button type="button" class="u" data-act="v-open" data-vid="${v.id}" aria-label="${v.no}회차 기록 보기">${v.no}</button></td><td class="num nowrap">${fmtD(v.date)}</td><td>${esc(prog(v.pid).name)}<span class="show-m s13 muted">${esc(v.note || v.memo || '')}</span></td><td class="hide-m">${esc(v.note) || '<span class="dim">–</span>'}${v.memo ? `<br><span class="dim s13">메모: ${esc(v.memo)}</span>` : ''}</td><td class="r">${(v.photos || []).length ? (v.photos.length / 2) + '쌍' : '–'}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 방문 기록이 없습니다. 관리가 끝나면 "회차 기록"을 누르세요.</p>')
-      : tab === '페이지' ? portalPane(c.id)
-        : (logs.length ? `<table class="ln"><thead><tr><th>날짜</th><th>안내</th><th class="r">방법</th></tr></thead><tbody>${logs.map(l => `<tr><td class="num nowrap">${fmtAt(l.at)}</td><td>${esc(kindName(l.kid))}${l.text ? ` <button type="button" class="u s13" data-act="log-text" data-i="${MSGLOG.indexOf(l)}">문구</button>` : ''}</td><td class="r">${esc(l.via)}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 보낸 안내가 없습니다.</p>');
+      ? (visits.length ? `<table class="ln vtbl"><thead><tr><th>회차</th><th>날짜</th><th>프로그램</th><th class="hide-m">담당 한마디</th><th class="r">사진</th></tr></thead><tbody>${visits.map(v => `<tr><td class="num"><button type="button" class="u" data-act="v-open" data-vid="${v.id}" aria-label="${v.no}회차 기록 보기">${v.no}</button></td><td class="num nowrap">${fmtD(v.date)}</td><td>${esc(prog(v.pid).name)}<span class="show-m s13 muted">${esc(v.note || v.memo || '')}</span></td><td class="hide-m">${esc(v.note)}${v.memo ? `<span class="vmemo">메모: ${esc(v.memo)}</span>` : ''}${!v.note && !v.memo ? '<span class="dim">–</span>' : ''}</td><td class="r">${(v.photos || []).length ? (v.photos.length / 2) + '쌍' : '–'}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 방문 기록이 없습니다. 관리가 끝나면 "회차 기록"을 누르세요.</p>')
+      : tab === '페이지' ? portalPane(c.id, true)
+        : (logs.length ? `<table class="ln ltbl"><thead><tr><th>날짜</th><th>안내</th><th class="r">방법</th></tr></thead><tbody>${logs.map(l => `<tr><td class="num nowrap">${fmtAt(l.at)}</td><td>${esc(kindName(l.kid))}${l.text ? ` <button type="button" class="u s13" data-act="log-text" data-i="${MSGLOG.indexOf(l)}">문구</button>` : ''}</td><td class="r">${esc(l.via)}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 보낸 안내가 없습니다.</p>');
     const ub = STATE.delUndo && STATE.delUndo.cid === c.id ? `<p class="undo-bar" role="status">${STATE.delUndo.no}회차 기록을 지웠습니다. <button type="button" class="u" data-act="v-del-undo">되돌리기</button></p>` : '';
     return `${ub}<div class="cgrid"><div class="kvl">${kv.map(([k, v]) => `<div><span>${k}</span><span>${v}</span></div>`).join('')}</div><div class="pass">${right}</div></div>
       <nav class="v2-sub ctabs" aria-label="고객 기록">${tabs.map(([k, l]) => `<a href="#" data-act="ctab" data-t="${k}"${k === tab ? ' class="on" aria-current="true"' : ''}>${l}</a>`).join('')}</nav>${pane}`;
@@ -2417,31 +2513,34 @@ ACTIONS.cust = el => { STATE.ctab = '회차'; _custAct(el); };
 ACTIONS['log-text'] = el => { const l = MSGLOG[Number(el.dataset.i)]; openDrawer(`${esc(kindName(l.kid))} · ${esc(cust(l.cid).name)}`, `<pre class="logtxt">${esc(l.text)}</pre><p class="s13 muted">${fmtAt(l.at)} ${esc(l.via)}</p>`, '', 460); };
 
 // 고객 페이지 미리보기 — 고객이 받는 주소를 그대로 띄운다 (휴대폰 그림이 아님)
-function portalPane(cid) {
+function portalPane(cid, inTab) {
   if (!VISITS.some(v => v.cid === cid)) return '<p class="muted">회차 기록이 없어 고객 페이지가 아직 없습니다.</p>';
   return `<div class="pv">
-    <div class="pv-acts"><button type="button" class="btn btn-primary btn-lg" data-act="compose" data-kid="check" data-cid="${cid}">기록 보내기</button>
-      <button type="button" class="u" data-act="pv-open" data-cid="${cid}">새 창에서 열기</button><button type="button" class="u" data-act="pv-copy" data-cid="${cid}">링크 복사</button></div>
+    <div class="v2-hrow"><h2 class="v2-h">${esc(cust(cid).name)}님 고객 페이지</h2><span class="pv-links"><button type="button" class="u" data-act="pv-open" data-cid="${cid}">새 창에서 열기</button><button type="button" class="u" data-act="pv-copy" data-cid="${cid}">링크 복사</button></span></div>
+    <div class="pv-frame"><iframe data-pv="${cid}" title="${esc(cust(cid).name)}님 고객 페이지 미리보기" loading="lazy"></iframe></div>
     <p class="s13 muted pv-note">손님 휴대폰에는 이렇게 보입니다. 연락처와 내부 메모는 들어가지 않습니다. 링크만 있으면 누구나 열 수 있으니 본인에게만 보내세요.</p>
-    <div class="pv-frame"><iframe data-pv="${cid}" title="${esc(cust(cid).name)}님 고객 페이지 미리보기" loading="lazy"></iframe></div></div>`;
+    ${inTab ? `<button type="button" class="btn btn-pearl btn-lg" data-act="compose" data-kid="check" data-cid="${cid}">기록 보내기</button>` : ''}</div>`;
 }
 async function mountPreview(el) {
   const f = el.querySelector('iframe[data-pv]'); if (!f) return;
+  f.addEventListener('load', () => f.classList.add('is-loaded'), { once: true }); // 불러온 뒤 옅게 나타난다
   const u = await portalLocalURL(f.dataset.pv); if (u && f.isConnected) f.src = u;
 }
 ACTIONS['pv-copy'] = async el => { const u = await portalURL(el.dataset.cid); toast(await copyText(u) ? '고객 페이지 링크를 복사했습니다' : '복사하지 못했습니다. "새 창에서 열기"로 연 뒤 주소를 복사해 주세요'); };
 
 // ── 컨디션포털 — 고객 목록 + 실제 고객 페이지 (평가 DS-02) ──
+const portalList = () => CUSTOMERS.filter(c => VISITS.some(v => v.cid === c.id)).map(c => ({ c, v: lastVisitOf(c.id) })).sort((a, b) => b.v.date.localeCompare(a.v.date));
+const portalSel = () => { const l = portalList(); if (!(STATE.pcid && l.some(x => x.c.id === STATE.pcid))) STATE.pcid = l[0] && l[0].c.id; return STATE.pcid; };
 VIEWS['#/portal'] = {
   title: '컨디션포털', lead: '고객이 링크로 받아 여는 관리 기록 페이지입니다. 회차를 기록하면 바로 반영됩니다.',
+  acts: () => { const sel = portalSel(); return sel ? `<button type="button" class="btn btn-primary btn-lg" data-act="compose" data-kid="check" data-cid="${sel}">${esc(cust(sel).name)}님 기록 보내기</button>` : ''; },
   render() {
-    const list = CUSTOMERS.filter(c => VISITS.some(v => v.cid === c.id)).map(c => ({ c, v: lastVisitOf(c.id) })).sort((a, b) => b.v.date.localeCompare(a.v.date));
-    const sel = STATE.pcid && list.some(x => x.c.id === STATE.pcid) ? STATE.pcid : (list[0] && list[0].c.id);
-    STATE.pcid = sel;
+    const list = portalList(), sel = portalSel();
     return `<div class="portal3"><div>
-        <table class="ln ptbl"><thead><tr><th>고객</th><th>최근 회차</th><th class="r">링크 보낸 날</th></tr></thead><tbody>${list.map(({ c, v }) => `<tr class="${c.id === sel ? 'sel' : ''}"><td><button type="button" class="u" data-act="psel" data-id="${c.id}"${c.id === sel ? ' aria-current="true"' : ''}>${esc(c.name)}</button></td><td class="num">${v.no}회차 <span class="dim s13">${fmtD(v.date)}</span></td><td class="r num">${c.portalSent ? fmtD(c.portalSent) : '<span class="dim">–</span>'}</td></tr>`).join('')}</tbody></table>
-        <p class="s13 muted" style="margin:14px 0 0">회차 기록이 있는 고객만 보입니다. 지금 노션으로 운영하는 페이지는 옮기기 전까지 그대로 씁니다.</p></div>
-      <div>${sel ? portalPane(sel) : '<p class="muted">회차 기록이 있는 고객이 없습니다.</p>'}</div></div>`;
+        <div class="v2-hrow"><h2 class="v2-h">회차 기록이 있는 손님</h2><span class="dim s13">${list.length}명</span></div>
+        <table class="ln ptbl"><thead><tr><th>고객</th><th>최근 회차</th><th class="r">링크 보낸 날</th></tr></thead><tbody>${list.map(({ c, v }) => `<tr class="${c.id === sel ? 'sel' : ''}"${c.id === sel ? ` data-selg="psel:${c.id}"` : ''}><td><button type="button" class="u" data-act="psel" data-id="${c.id}"${c.id === sel ? ' aria-current="true"' : ''}>${esc(c.name)}</button></td><td class="num">${v.no}회차 <span class="dim s13">${fmtD(v.date)}</span></td><td class="r num">${c.portalSent ? fmtD(c.portalSent) : '<span class="dim">–</span>'}</td></tr>${c.id === sel ? `<tr class="pm-row"><td colspan="3"><div class="pm-acts"><button type="button" class="u" data-act="pv-open" data-cid="${c.id}">고객 페이지 열기</button><button type="button" class="u" data-act="pv-copy" data-cid="${c.id}">링크 복사</button></div></td></tr>` : ''}`).join('')}</tbody></table>
+        <p class="s13 muted" style="margin:16px 0 0">지금 노션으로 운영하는 페이지는 옮기기 전까지 그대로 씁니다.</p></div>
+      <div class="pv-col">${sel ? portalPane(sel) : '<p class="muted">회차 기록이 있는 손님이 없습니다.</p>'}</div></div>`;
   },
   mount: el => mountPreview(el),
 };
@@ -2541,7 +2640,7 @@ VIEWS['#/messages'] = {
     const opt = (v, l, cur) => `<option value="${v}"${v === cur ? ' selected' : ''}>${l}</option>`;
     const kinds = KINDS3.map(x => {
       const head = x.grp !== g ? ((g = x.grp) ? `<div class="grp">${x.grp}</div>` : '') : '';
-      return `${head}<label class="${x.id === f.kid ? 'on' : ''}"><input type="radio" name="kid" value="${x.id}" data-change="cmp" data-k="kid"${x.id === f.kid ? ' checked' : ''}><span class="kn">${esc(x.name)}<small>${esc(x.when)}</small></span>${x.ad ? '<span class="wait">광고</span>' : ''}</label>`;
+      return `${head}<label class="${x.id === f.kid ? 'on' : ''}"${x.id === f.kid ? ` data-selg="kind:${x.id}"` : ''}><input type="radio" name="kid" value="${x.id}" data-change="cmp" data-k="kid"${x.id === f.kid ? ' checked' : ''}><span class="kn">${esc(x.name)}<small>${esc(x.when)}</small></span>${x.ad ? '<span class="wait">광고</span>' : ''}</label>`;
     }).join('');
     const people = [...CUSTOMERS].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
     const q = f.queue.length > 1 ? `<div class="qbar" role="status"><b>보낼 사람 ${f.qi + 1} / ${f.queue.length}</b> ${f.queue.map((id, i) => `<button type="button" class="u${i === f.qi ? ' cur' : ''}${sentToday(id, f.kid) ? ' sent' : ''}" data-act="cmp-next" data-i="${i}">${esc(cust(id).name)}${sentToday(id, f.kid) ? ' (보냄)' : ''}</button>`).join(' ')}</div>` : '';
@@ -2634,7 +2733,7 @@ VIEWS['#/customers'] = {
       .sort((a, b) => (b.last || '').localeCompare(a.last || ''));
     const ub = STATE.custUndo ? `<p class="undo-bar" role="status">${esc(STATE.custUndo.c.name)}님을 지웠습니다. <button type="button" class="u" data-act="cust-del-undo">되돌리기</button></p>` : '';
     return `${ub}<div class="cfind"><input class="input" type="search" id="cfind" placeholder="이름이나 번호 뒤 4자리로 찾기" aria-label="고객 찾기" value="${esc(STATE.cfind || '')}" data-input="cfind">
-      <nav class="segs" aria-label="고객 구분">${tabs.map(([l, k]) => `<button type="button" class="u${l === seg ? ' on' : ''}" data-act="seg" data-seg="${l}"${l === seg ? ' aria-pressed="true"' : ' aria-pressed="false"'}>${l} <span class="dim">${k ? CUSTOMERS.filter(c => c.seg === k).length : CUSTOMERS.length}</span></button>`).join('')}</nav></div>
+      <nav class="segs" aria-label="고객 구분">${tabs.map(([l, k]) => `<button type="button" class="u${l === seg ? ' on' : ''}"${l === seg ? ` data-selg="seg:${l}"` : ''} data-act="seg" data-seg="${l}"${l === seg ? ' aria-pressed="true"' : ' aria-pressed="false"'}>${l} <span class="dim">${k ? CUSTOMERS.filter(c => c.seg === k).length : CUSTOMERS.length}</span></button>`).join('')}</nav></div>
       ${list.length ? `<table class="ln ctbl"><thead><tr><th>고객</th><th class="r">방문</th><th>마지막 방문</th><th class="hide-m">담당</th><th class="hide-m">회원권</th><th class="hide-m">광고 수신</th><th class="hide-m r">고객 페이지</th></tr></thead><tbody>${list.map(c => `<tr>
         <td><a class="u" href="#/customer/${c.id}" style="font-size:15px">${esc(c.name)}</a> <span class="dim s13">${c.phone ? last4(c.phone) : '번호 없음'} · ${c.age || ''}</span></td>
         <td class="r num">${c.visits}</td><td class="num nowrap">${fmtD(c.last)}</td>
@@ -3052,6 +3151,69 @@ ACTIONS['cust-del-undo'] = () => {
   const u = STATE.custUndo; if (!u) return;
   CUSTOMERS.splice(u.ci, 0, u.c); VISITS.push(...u.visits); MSGLOG.push(...u.logs); RESV.push(...u.resv);
   STATE.custUndo = null; redraw(); toast(`${u.c.name}님을 되돌렸습니다`);
+};
+
+;
+/* ── v3 움직임 (10/14 밤, 대표 "고객 관리 · 컨디션포털에 애니메이션이 전혀 없다")
+   홈페이지 규칙(docs/07 3-3 움직임)과 같다: 0.2~0.3초 · 곡선 하나(--ease) · 누른 것에 대한 반응만 ·
+   스크롤 등장 효과 · 숫자 올라가기는 넣지 않는다 · 기기의 "동작 줄이기"면 전부 바로 바뀐다.
+   화면은 누를 때마다 다시 그려지므로, 화면 · 탭 · 선택이 실제로 바뀐 때만 움직이게 앞뒤를 비교한다 ── */
+const RM = matchMedia('(prefers-reduced-motion: reduce)');
+const MOVE = () => !RM.matches;
+const DROP = ['.undo-bar', '.mgr-bar', '.donemsg', '.edited', '.qbar', '.why:not(.none)'];
+const relBox = a => a ? { l: a.offsetLeft, w: a.offsetWidth } : null;
+let motionKey = '', motionSub = '';
+
+const _rrMotion = renderRoute;
+renderRoute = function () {
+  const key = (location.hash || '#/') + '|' + (STATE.role || '');
+  const sub = [STATE.ctab, STATE.seg, STATE.sm].join('|');
+  const prevSel = new Set([...document.querySelectorAll('#root [data-selg]')].map(e => e.dataset.selg));
+  const prevGroups = new Set([...prevSel].map(s => s.split(':')[0]));
+  const prevDrop = new Set(DROP.filter(s => document.querySelector('#root ' + s)));
+  const prevTabs = [...document.querySelectorAll('#root nav.v2-sub')].map(n => ({ sig: [...n.querySelectorAll('a')].map(a => a.textContent).join('|'), box: relBox(n.querySelector('a.on')) }));
+  _rrMotion();
+  const routeChanged = key !== motionKey, subChanged = !routeChanged && sub !== motionSub;
+  motionKey = key; motionSub = sub;
+  if (!MOVE()) return;
+  const view = $('#view');
+  if (routeChanged) { view.classList.add('is-enter'); $('#v2head').classList.add('is-enter-h'); }
+  else if (subChanged) view.querySelectorAll('.ctabs ~ *, .ctbl, .stat').forEach(e => e.classList.add('is-enter')); // 탭 아래 내용만 옅게 올라온다 (홈페이지 3번)
+  // 탭 밑줄이 누른 탭으로 옮겨 간다 (홈페이지 3번)
+  document.querySelectorAll('#root nav.v2-sub').forEach(n => {
+    const sig = [...n.querySelectorAll('a')].map(a => a.textContent).join('|'), was = prevTabs.find(t => t.sig === sig), now = relBox(n.querySelector('a.on'));
+    if (!was || !was.box || !now || was.box.l === now.l) return;
+    const ind = document.createElement('i'); ind.className = 'tab-ind'; ind.style.left = was.box.l + 'px'; ind.style.width = was.box.w + 'px';
+    n.classList.add('ind-run'); n.appendChild(ind);
+    const end = () => { n.classList.remove('ind-run'); ind.remove(); };
+    requestAnimationFrame(() => requestAnimationFrame(() => { ind.style.left = now.l + 'px'; ind.style.width = now.w + 'px'; }));
+    ind.addEventListener('transitionend', end, { once: true }); setTimeout(end, 450);
+  });
+  if (routeChanged) return;
+  // 고른 것이 바뀌면 그 줄만 옅게 칠해진다 (안내 종류 · 컨디션포털 고객 · 고객 구분)
+  document.querySelectorAll('#root [data-selg]').forEach(e => {
+    const v = e.dataset.selg, g = v.split(':')[0];
+    if (prevSel.has(v) || !prevGroups.has(g)) return;
+    e.classList.add('a-sel');
+    if (g === 'kind') { const t = $('#cmp-out'); if (t) t.classList.add('a-fade'); }
+    if (g === 'psel') { const c = $('.pv-col'); if (c) c.classList.add('is-enter'); const r = $('.pm-row'); if (r) r.classList.add('a-drop'); }
+  });
+  DROP.forEach(s => { if (!prevDrop.has(s)) { const e = document.querySelector('#root ' + s); if (e) e.classList.add('a-drop'); } });
+};
+
+// 서랍: 닫을 때도 옅어지며 물러난다. 서랍을 바로 바꿔 열 때(저장 뒤 화면)는 다시 미끄러지지 않는다
+const _closeDrawer = closeDrawer, _openDrawer = openDrawer;
+closeDrawer = function () {
+  const o = $('#overlay-root .overlay');
+  document.body.style.overflow = '';
+  if (!o || !MOVE()) return _closeDrawer();
+  o.dataset.state = 'closed';
+  setTimeout(() => { if (o.isConnected) o.remove(); }, 220);
+};
+openDrawer = function (...a) {
+  const had = !!$('#overlay-root .overlay');
+  _openDrawer(...a);
+  if (had) $('#overlay-root .overlay').classList.add('no-anim');
 };
 
 ;

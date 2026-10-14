@@ -65,6 +65,19 @@ summary{cursor:pointer;font-size:15px;min-height:44px;line-height:44px;text-deco
 @media (max-width:600px){.bar{display:block}.next .btn{display:none}}
 @media (min-width:601px){main{padding-bottom:64px}}
 @media print{.bar,.next .btn,.tel{display:none!important}main{padding:0}section{break-inside:avoid}.now{background:none;border:1px solid var(--line)}}
+/* 움직임 — 홈페이지 규칙: 첫 화면만 한 번 16px 올라오며 나타남 · 사진은 불러온 뒤 옅게 · 접이식은 누를 때만 · 동작 줄이기면 끔 */
+:root{--ease:cubic-bezier(.2,0,0,1)}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+@keyframes fadein{from{opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .enter h1,.enter .sub{animation:rise .3s var(--ease) both}
+  .enter .now{animation:rise .3s var(--ease) .06s both}
+  .pair img{opacity:0;transition:opacity .3s var(--ease)}
+  .pair img.is-loaded{opacity:1}
+  details[open]>table{animation:rise .25s var(--ease) both}
+  .btn{transition:background-color .2s var(--ease)}
+  .msg h1,.msg p{animation:rise .3s var(--ease) both}
+}
 </style>
 </head>
 <body>
@@ -123,6 +136,7 @@ function meas(r) {
     <p class="note">측정 장비에 나온 값을 옮겨 적었습니다.</p></section>`;
 }
 function render(r) {
+  app.classList.add('enter');
   document.title = `${r.n}님의 관리 기록 · ${r.s.nm}`;
   const hist = r.h || [], tel = r.s.ph || STORE_TEL;
   const row = h => `<tr><td class="num">${h[0]}회차</td><td class="num">${md(h[1])}</td><td>${esc(h[2])}${h[4] ? `<small>${esc(h[4])}</small>` : ''}</td><td>${esc(h[3])}</td></tr>`;
@@ -146,6 +160,7 @@ function render(r) {
       ${r.demo ? '<p>데모 페이지입니다. 이름과 기록은 가상이고, 사진은 모앤브레인 홈페이지에 공개한 예시 사진입니다.</p>' : ''}
     </footer>
     ${r.s.bk ? `<div class="bar"><a class="btn" href="${esc(r.s.bk)}" target="_blank" rel="noopener">네이버로 다음 예약하기</a></div>` : ''}`;
+  app.querySelectorAll('.pair img').forEach(im => { const on = () => im.classList.add('is-loaded'); if (im.complete && im.naturalWidth) on(); else { im.addEventListener('load', on, { once: true }); im.addEventListener('error', on, { once: true }); } });
 }
 function message(title, body) {
   document.title = '관리 기록 · 모앤브레인';
