@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>모앤브레인 CRM · 데모</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 <style>:root{--blue:#06c;--blue-focus:#0071e3;--blue-hover:#0071e3;--blue-on-dark:#2997ff;--blue-tint:#0066cc14;--canvas:#fff;--parchment:#f5f5f7;--pearl:#fafafc;--tile:#272729;--tile-2:#2a2a2c;--black:#000;--ink:#1d1d1f;--ink-80:#333;--ink-48:#7a7a7a;--ink-24:#b8b8bd;--on-dark:#fff;--muted-on-dark:#ccc;--hairline:#e0e0e0;--divider-soft:#0000000a;--hover-1:#fafafc;--hover-2:#f5f5f7;--hover-3:#0000000a;--press:#00000012;--ok:#1a7f37;--ok-bg:#e8f3ec;--wait:#06c;--wait-bg:#e8f0fb;--bad:#c62828;--bad-bg:#fbeaea;--neutral:#5c5c61;--neutral-bg:#f0f0f2;--r-xs:5px;--r-sm:8px;--r-md:11px;--r-lg:18px;--r-pill:9999px;--s-1:4px;--s-2:8px;--s-3:12px;--s-4:17px;--s-5:24px;--s-6:32px;--s-7:48px;--dur-1:.12s;--dur-2:.18s;--dur-3:.22s;--dur-exit:.16s;--dur-count:.48s;--tip-delay:.15s;--ease:cubic-bezier(.2, 0, 0, 1);--sidebar-w:240px;--topbar-h:52px;--content-max:1280px;--font:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;--fs-hero:32px;--fs-title:24px;--fs-section:18px;--fs-body:15px;--fs-ui:14px;--fs-caption:12px;--ctl-lg:40px;--ctl-md:36px;--ctl-sm:30px}@media (prefers-reduced-motion:reduce){:root{--dur-1:0s;--dur-2:0s;--dur-3:0s;--dur-exit:0s;--dur-count:0s}}*,:before,:after{box-sizing:border-box}html,body,#root{height:100%}body{background:var(--canvas);color:var(--ink);font-family:var(--font);font-size:var(--fs-body);letter-spacing:-.2px;-webkit-font-smoothing:antialiased;word-break:keep-all;margin:0;line-height:1.47}h1,h2,h3,h4{margin:0;font-weight:600}h1{font-size:var(--fs-title);letter-spacing:-.3px;line-height:1.25}h2{font-size:var(--fs-section);letter-spacing:-.2px;line-height:1.33}h3{font-size:var(--fs-body);letter-spacing:-.2px;line-height:1.4}p{margin:0}a{color:var(--blue);text-decoration:none}button,input,select,textarea{font:inherit;letter-spacing:inherit;color:inherit}button{cursor:pointer;background:0 0;border:0;padding:0}button:disabled{cursor:default}:focus-visible{outline:2px solid var(--blue-focus);outline-offset:2px}ul{margin:0;padding:0;list-style:none}table{border-collapse:collapse}.muted{color:var(--ink-48)}.caption{font-size:var(--fs-caption);letter-spacing:-.12px;line-height:1.3}.ui{font-size:var(--fs-ui);letter-spacing:-.224px;line-height:1.29}.strong{font-weight:600}.num{font-variant-numeric:tabular-nums}.row{align-items:center;gap:var(--s-2);display:flex}.row.between{justify-content:space-between}.col{gap:var(--s-2);flex-direction:column;display:flex}.grow{flex:auto;min-width:0}.wrap{flex-wrap:wrap}.mt-2{margin-top:var(--s-2)}.mt-3{margin-top:var(--s-3)}.mt-4{margin-top:var(--s-4)}.mt-5{margin-top:var(--s-5)}.mt-6{margin-top:var(--s-6)}.mb-3{margin-bottom:var(--s-3)}.mb-4{margin-bottom:var(--s-4)}.mb-5{margin-bottom:var(--s-5)}.gap-3{gap:var(--s-3)}.gap-4{gap:var(--s-4)}.gap-5{gap:var(--s-5)}.grid-2{gap:var(--s-5);grid-template-columns:repeat(2,minmax(0,1fr));display:grid}.grid-3{gap:var(--s-5);grid-template-columns:repeat(3,minmax(0,1fr));display:grid}.grid-4{gap:var(--s-5);grid-template-columns:repeat(4,minmax(0,1fr));display:grid}@media (max-width:1100px){.grid-4,.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:760px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}.right{text-align:right}.center{text-align:center}.nowrap{white-space:nowrap}.ellipsis{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.route-view{animation:fade-in var(--dur-2) var(--ease) both}main:focus{outline:none}main:focus-visible{outline:none}@keyframes fade-in{0%{opacity:0}to{opacity:1}}@keyframes fade-out{0%{opacity:1}to{opacity:0}}a:not([class]):hover,a.link:hover{text-underline-offset:3px;text-decoration:underline}.kbd{background:var(--parchment);height:20px;color:var(--ink-48);letter-spacing:0;box-shadow:inset 0 0 0 1px var(--hairline);white-space:nowrap;border-radius:5px;align-items:center;padding:0 6px;font-size:12px;display:inline-flex}@keyframes pulse{0%,to{opacity:1}50%{opacity:.4}}.badge-dot.is-live:before{animation:pulse 2s var(--ease) infinite}@media (prefers-reduced-motion:reduce){.badge-dot.is-live:before{animation:none}}.shell{min-height:100%;display:flex}.sidebar{width:var(--sidebar-w);background:var(--parchment);border-right:1px solid var(--hairline);flex-direction:column;flex:none;height:100vh;display:flex;position:sticky;top:0;overflow:hidden}.sidebar-brand{padding:20px 24px 12px}.sidebar-brand-name{font-size:var(--fs-section);letter-spacing:-.2px;font-weight:600}.sidebar-nav{flex:auto;min-height:0;padding:4px 12px 24px;overflow-y:auto}.sidebar-group{margin-top:18px}.sidebar-group-label{font-size:var(--fs-caption);color:var(--ink-48);letter-spacing:-.12px;padding:0 12px 6px;font-weight:600}.sidebar-item{border-radius:var(--r-sm);width:100%;font-size:var(--fs-ui);letter-spacing:-.224px;color:var(--ink);text-align:left;transition:background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease);justify-content:space-between;align-items:center;gap:8px;padding:6px 12px;line-height:1.29;display:flex}.sidebar-item:hover:not(.active){background:var(--hover-3);color:var(--ink)}.sidebar-item:active:not(.active){background:var(--press)}.sidebar-item.active{background:var(--canvas);color:var(--blue);font-weight:600}.sidebar-item-label{text-overflow:ellipsis;white-space:nowrap;min-width:0;overflow:hidden}.sidebar-count{border-radius:var(--r-pill);min-width:20px;color:var(--ink-80);text-align:center;font-variant-numeric:tabular-nums;letter-spacing:0;background:#0000000f;flex:none;padding:0 6px;font-size:12px;font-weight:600;line-height:18px}.sidebar-item.active .sidebar-count{background:var(--blue-tint);color:var(--blue)}.shell-main{flex-direction:column;flex:auto;min-width:0;display:flex}.topbar{z-index:20;height:var(--topbar-h);-webkit-backdrop-filter:saturate(180%)blur(20px);backdrop-filter:saturate(180%)blur(20px);border-bottom:1px solid var(--hairline);background:#fffc;position:sticky;top:0}.topbar-inner{height:100%;max-width:var(--content-max);padding:0 var(--s-6);align-items:center;gap:var(--s-3);margin:0 auto;display:flex}.topbar-title{letter-spacing:-.2px;white-space:nowrap;flex:auto;align-items:center;gap:2px;min-width:0;margin:0;font-size:18px;font-weight:600;line-height:1.3;display:flex}.topbar-title-text{text-overflow:ellipsis;min-width:0;overflow:hidden}a.topbar-crumb{color:var(--ink-48);transition:color var(--dur-1) var(--ease);flex:none}a.topbar-crumb:hover{color:var(--ink)}.topbar-sep{color:var(--ink-24);flex:none;margin:0 6px;font-weight:400}.sidebar-sub{font-size:var(--fs-caption);color:var(--ink-48);letter-spacing:-.12px;padding:8px 12px 2px}.shell-content{padding:var(--s-5) var(--s-6) var(--s-7);max-width:var(--content-max);width:100%;margin:0 auto}.sidebar-brand{align-items:baseline;gap:8px;display:flex}.sidebar-brand-sub{font-size:var(--fs-ui);color:var(--ink-48);letter-spacing:-.224px}.sidebar-foot{border-top:1px solid var(--hairline);flex-direction:column;gap:6px;padding:12px 12px 16px;display:flex}.sidebar-foot .sidebar-item{color:var(--ink-48)}.sidebar-foot .sidebar-item:hover{color:var(--ink)}.topbar-search{width:260px;position:relative}.topbar-search .search{max-width:none}.pop{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-lg);z-index:40;animation:pop-in var(--dur-2) var(--ease) both;padding:8px;position:absolute}.search-pop{top:44px;left:0;right:0}.persona-pop{min-width:200px;top:calc(100% + 6px);right:0}.pop-item{text-align:left;border-radius:var(--r-sm);width:100%;font-size:var(--fs-ui);letter-spacing:-.224px;transition:background-color var(--dur-1) var(--ease);padding:8px 10px;display:block}.pop-item:hover{background:var(--hover-2)}.pop-item:focus-visible{background:var(--hover-2)}.pop-sep{background:var(--hairline);height:1px;margin:6px 4px}.search-group{font-size:var(--fs-caption);color:var(--ink-48);padding:6px 10px 2px;font-weight:600}.search-row{text-align:left;border-radius:var(--r-sm);width:100%;font-size:var(--fs-ui);letter-spacing:-.224px;transition:background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease);padding:8px 10px;display:block}.search-row:hover,.search-row.is-active{background:var(--hover-2)}.search-row:focus-visible{background:var(--hover-2)}.search-row.is-active{color:var(--blue)}.search-empty{font-size:var(--fs-ui);color:var(--ink-48);letter-spacing:-.224px;padding:10px}.search-kbd{pointer-events:none;transition:opacity var(--dur-1) var(--ease);position:absolute;right:8px}.search:focus-within .search-kbd{opacity:0}.topbar-persona{border-left:1px solid var(--hairline);align-items:center;gap:10px;padding-left:12px;display:flex;position:relative}.persona-btn{border-radius:var(--r-sm);text-align:left;transition:background-color var(--dur-1) var(--ease);align-items:center;gap:10px;margin:-4px 0;padding:4px 8px 4px 4px;display:flex}.persona-btn:hover,.persona-btn.is-open{background:var(--hover-2)}.persona-chevron{color:var(--ink-24);transition:transform var(--dur-1) var(--ease);flex:none}.persona-btn.is-open .persona-chevron{transform:rotate(180deg)}@keyframes pop-in{0%{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}.topbar-persona-text{flex-direction:column;line-height:1.2;display:flex}.ws-toggle{gap:6px}.ws-toggle svg{flex:none}.sidebar-demo{flex-direction:column;gap:6px;padding:0 0 4px;display:flex}.sidebar-demo-label{font-size:var(--fs-caption);color:var(--ink-48);letter-spacing:-.12px;align-items:center;gap:2px;padding:0 12px;font-weight:600;display:flex}.sidebar-demo .seg{width:100%;display:flex}.sidebar-demo .seg>.tt{flex:1 1 0;min-width:0}.sidebar-demo .seg-item{width:100%;padding:0 6px}.shell.is-admin .sidebar{background:var(--tile);border-right-color:var(--tile);color:var(--on-dark)}.shell.is-admin .sidebar-brand-sub{color:var(--muted-on-dark)}.shell.is-admin .sidebar .sidebar-group-label,.shell.is-admin .sidebar .sidebar-sub,.shell.is-admin .sidebar .sidebar-demo-label{color:#ffffff80}.shell.is-admin .sidebar-item{color:#ffffffdb}.shell.is-admin .sidebar-item:hover:not(.active){color:var(--on-dark);background:#ffffff14}.shell.is-admin .sidebar-item:active:not(.active){background:#ffffff1f}.shell.is-admin .sidebar-item.active{color:var(--on-dark);background:#ffffff24}.shell.is-admin .sidebar-count,.shell.is-admin .sidebar-item.active .sidebar-count{color:var(--on-dark);background:#ffffff29}.shell.is-admin .sidebar-foot{border-top-color:#ffffff1f}.shell.is-admin .sidebar-foot .sidebar-item{color:#fff9}.shell.is-admin .sidebar-foot .sidebar-item:hover{color:var(--on-dark)}.shell.is-admin .sidebar-demo .seg{background:#ffffff14}.shell.is-admin .sidebar-demo .seg-item{color:#ffffffc7}.shell.is-admin .sidebar-demo .seg-item:hover:not(.seg-active){color:var(--on-dark);background:#ffffff14}.shell.is-admin .sidebar-demo .seg-active{background:var(--canvas);color:var(--ink)}.sidebar-ws-badge{align-self:center;margin-left:auto}.btn{font-size:var(--fs-body);letter-spacing:-.2px;height:var(--ctl-lg);border-radius:var(--r-pill);white-space:nowrap;transition:transform var(--dur-1) var(--ease), opacity var(--dur-1) var(--ease), background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);justify-content:center;align-items:center;gap:6px;padding:0 20px;font-weight:400;line-height:1;display:inline-flex}.btn:active:not(:disabled){transform:scale(.95)}.btn:disabled{opacity:.4}.btn-primary:disabled{background:var(--parchment);color:var(--ink-24);opacity:1}.btn-primary{background:var(--blue);color:var(--on-dark)}.btn-primary:hover:not(:disabled){background:var(--blue-hover)}.btn-ghost{color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue);background:0 0}.btn-ghost:hover:not(:disabled){background:var(--blue-tint)}.btn-utility{background:var(--ink);color:var(--on-dark)}.btn-utility:hover:not(:disabled){background:var(--ink-80)}.btn-pearl{background:var(--pearl);color:var(--ink-80);box-shadow:inset 0 0 0 1px var(--hairline)}.btn-pearl:hover:not(:disabled){background:var(--parchment);box-shadow:inset 0 0 0 1px var(--ink-24);color:var(--ink)}.btn-link{color:var(--blue);border-radius:var(--r-xs);height:auto;font-size:inherit;line-height:inherit;background:0 0;padding:0}.btn-danger-link{color:var(--bad);border-radius:var(--r-xs);height:auto;font-size:inherit;line-height:inherit;background:0 0;padding:0}.btn-link,.btn-danger-link{text-underline-offset:3px;transition:text-decoration-color var(--dur-1) var(--ease), opacity var(--dur-1) var(--ease);-webkit-text-decoration:underline #0000;text-decoration:underline #0000}.btn-link:hover:not(:disabled),.btn-danger-link:hover:not(:disabled){text-decoration-color:currentColor}.btn-link:active:not(:disabled),.btn-danger-link:active:not(:disabled){opacity:.7;transform:none}.btn-sm{height:var(--ctl-sm);font-size:var(--fs-ui);letter-spacing:-.224px;padding:0 12px}.btn-sm.btn-link,.btn-sm.btn-danger-link{height:auto;padding:0}.toolbar .btn:not(.btn-link):not(.btn-danger-link),.card-actions .btn:not(.btn-link):not(.btn-danger-link){height:var(--ctl-md);font-size:var(--fs-ui);letter-spacing:-.224px;padding:0 16px}.table .btn:not(.btn-link):not(.btn-danger-link){height:var(--ctl-sm);font-size:var(--fs-ui);letter-spacing:-.224px;padding:0 12px}.tt>.btn:disabled{pointer-events:none}.chip-group{flex-wrap:wrap;gap:8px;display:inline-flex}.chip{font-size:var(--fs-ui);letter-spacing:-.224px;color:var(--ink);height:var(--ctl-md);border-radius:var(--r-pill);background:var(--canvas);white-space:nowrap;box-shadow:inset 0 0 0 1px var(--hairline);transition:transform var(--dur-1) var(--ease), background-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);align-items:center;gap:6px;padding:0 14px;line-height:1;display:inline-flex}.chip:hover{background:var(--hover-1);box-shadow:inset 0 0 0 1px var(--ink-24)}.chip:active{transform:scale(.95)}.chip-selected{box-shadow:inset 0 0 0 2px var(--blue-focus);color:var(--blue);font-weight:600}.chip-selected:hover{background:var(--blue-tint);box-shadow:inset 0 0 0 2px var(--blue-focus)}.field{flex-direction:column;gap:6px;min-width:0;display:flex}.field-inline{flex-direction:row;align-items:center;gap:12px}.field-inline .field-label{flex:none;width:120px}.field-label{font-size:var(--fs-ui);letter-spacing:-.224px;color:var(--ink-48);font-weight:600}.field-req{color:var(--bad)}.field-control{min-width:0;display:flex}.field-hint{font-size:var(--fs-caption);color:var(--ink-48)}.input{width:100%;height:var(--ctl-lg);border-radius:var(--r-sm);background:var(--canvas);border:1px solid var(--hairline);color:var(--ink);font-size:var(--fs-body);letter-spacing:-.2px;transition:border-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);padding:0 12px}.input::placeholder{color:var(--ink-24)}.input:hover:not(:disabled):not([readonly]):not(:focus){border-color:var(--ink-24)}.input:focus{border-color:var(--blue-focus);box-shadow:0 0 0 1px var(--blue-focus);outline:none}.input:disabled,.input[readonly]{background:var(--parchment);color:var(--ink-80)}.input.is-invalid{border-color:var(--bad)}.input.is-invalid:focus{border-color:var(--bad);box-shadow:0 0 0 1px var(--bad)}.field-error{font-size:var(--fs-caption);color:var(--bad)}.date::-webkit-calendar-picker-indicator{opacity:.45;cursor:pointer;transition:opacity var(--dur-1) var(--ease)}.date:hover::-webkit-calendar-picker-indicator{opacity:.85}.textarea{resize:vertical;height:auto;min-height:88px;padding:9px 12px;line-height:1.5}.select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231d1d1f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-position:right 12px center;background-repeat:no-repeat;padding-right:34px}.check{font-size:var(--fs-body);cursor:pointer;color:var(--ink-80);transition:color var(--dur-1) var(--ease);align-items:center;gap:8px;display:inline-flex}.check:hover{color:var(--ink)}.check input{width:18px;height:18px;accent-color:var(--blue);margin:0}input[type=checkbox]{accent-color:var(--blue)}.search{width:100%;max-width:320px;color:var(--ink-48);align-items:center;display:inline-flex;position:relative}.search svg{pointer-events:none;position:absolute;left:12px}.search input{width:100%;height:var(--ctl-lg);border-radius:var(--r-sm);border:1px solid var(--hairline);background:var(--canvas);color:var(--ink);font-size:var(--fs-body);letter-spacing:-.2px;-webkit-appearance:none;appearance:none;transition:border-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);padding:0 12px 0 34px}.search input::placeholder{color:var(--ink-24)}.search input:hover:not(:focus){border-color:var(--ink-24)}.search input:focus{border-color:var(--blue-focus);box-shadow:0 0 0 1px var(--blue-focus);outline:none}.search-sm input,.toolbar .search input,.toolbar .input{height:var(--ctl-md);font-size:var(--fs-ui);letter-spacing:-.224px}.toolbar .search{width:240px}.toolbar .input.select{width:auto;min-width:160px}.toolbar .input.date{width:150px}.form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;display:grid}.form-grid .span-2{grid-column:span 2}@media (max-width:760px){.form-grid{grid-template-columns:1fr}.form-grid .span-2{grid-column:auto}}.form-actions{margin-top:var(--s-5);justify-content:flex-end;gap:10px;display:flex}.table-wrap{width:100%;overflow-x:auto}.table{width:100%;font-size:var(--fs-ui);letter-spacing:-.224px;line-height:1.29}.table th{z-index:1;background:var(--canvas);text-align:left;color:var(--ink-48);font-weight:600;font-size:var(--fs-caption);border-bottom:1px solid var(--hairline);white-space:nowrap;padding:10px 12px;position:sticky;top:0}.table td{border-bottom:1px solid var(--divider-soft);vertical-align:middle;transition:background-color var(--dur-1) var(--ease);padding:12px}.table-dense td{padding:8px 12px}.table tr:last-child td{border-bottom:0}.table-clickable tbody tr{cursor:pointer}.table-clickable tbody tr:hover td{background:var(--hover-1)}.table tbody tr:focus-visible{outline:2px solid var(--blue-focus);outline-offset:-2px}.table tr.is-selected td,.table tr.is-checked td,.table-clickable tbody tr.is-selected:hover td,.table-clickable tbody tr.is-checked:hover td{background:var(--parchment)}.table-empty{text-align:center;color:var(--ink-48);font-size:var(--fs-body);padding:40px 12px!important}.table .num{font-variant-numeric:tabular-nums}.toolbar,.table-toolbar{min-height:var(--ctl-md);flex-wrap:wrap;align-items:center;gap:8px;display:flex}.toolbar-inset{padding:16px 20px}.toolbar-spacer,.table-toolbar .spacer{flex:auto}.toolbar-note{font-size:var(--fs-ui);color:var(--ink-48);letter-spacing:-.224px}.toolbar-strong{font-size:var(--fs-ui);color:var(--ink);letter-spacing:-.224px;font-weight:600}.toolbar-sep{background:var(--hairline);width:1px;height:20px;margin:0 4px}.table-count{font-size:var(--fs-ui);color:var(--ink-48)}.tabs{background:var(--parchment);border-radius:var(--r-pill);gap:2px;width:auto;max-width:100%;padding:3px;display:inline-flex;overflow-x:auto}.tab{border-radius:var(--r-pill);height:30px;font-size:var(--fs-ui);letter-spacing:-.224px;color:var(--ink-80);white-space:nowrap;transition:background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease);flex:none;align-items:center;gap:6px;padding:0 14px;display:inline-flex}.tab:hover:not(.tab-active){background:var(--hover-3);color:var(--ink)}.tab-active{background:var(--canvas);color:var(--ink);font-weight:600}.tab-panel{animation:fade-in var(--dur-2) var(--ease) both}.tab-count{font-size:var(--fs-caption);color:var(--ink-48);font-variant-numeric:tabular-nums}.tab-active .tab-count{color:var(--blue)}.tab-count.is-zero{opacity:.35}.seg{background:var(--parchment);border-radius:var(--r-sm);gap:2px;padding:3px;display:inline-flex}.seg-item{height:30px;font-size:var(--fs-ui);letter-spacing:-.224px;color:var(--ink-80);white-space:nowrap;transition:background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease);border-radius:6px;padding:0 12px}.seg-item:hover:not(.seg-active){background:var(--hover-3);color:var(--ink)}.seg-active{background:var(--ink);color:var(--on-dark);font-weight:600}.seg-sm .seg-item{height:26px;font-size:var(--fs-caption);padding:0 10px}.card{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:var(--s-5);min-width:0}.card-flush{padding:0;overflow:hidden}.card-flush .card-head{padding:var(--s-5) var(--s-5) 0}.card-dark{background:var(--tile);color:var(--on-dark);border-color:var(--tile)}.card-dark .card-title{color:var(--on-dark)}.card-dark .muted,.card-dark .card-desc{color:var(--muted-on-dark)}.card-dark a,.card-dark .btn-link{color:var(--blue-on-dark)}.card-head{justify-content:space-between;align-items:flex-start;gap:var(--s-4);margin-bottom:var(--s-4);display:flex}.card-title{font-size:var(--fs-section);align-items:center;gap:2px;display:flex}.card-desc{color:var(--ink-48);font-size:var(--fs-ui);letter-spacing:-.224px;margin-top:4px}.card-actions{flex:none;align-items:center;gap:8px;display:flex}.kpi{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-lg);min-width:0;padding:18px 20px}.kpi-dark{background:var(--tile);border-color:var(--tile);color:var(--on-dark)}.kpi-label{font-size:var(--fs-ui);letter-spacing:-.224px;color:var(--ink-48);align-items:center;gap:2px;display:flex}.kpi-dark .kpi-label,.kpi-dark .kpi-sub{color:var(--muted-on-dark)}.kpi-value{font-size:var(--fs-hero);letter-spacing:-.3px;margin-top:4px;font-weight:600;line-height:1.15}.kpi-unit{font-size:var(--fs-body);color:var(--ink-48);margin-left:4px;font-weight:400}.kpi-dark .kpi-unit{color:var(--muted-on-dark)}.kpi-sub{font-size:var(--fs-ui);color:var(--ink-48);letter-spacing:-.224px;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px;display:flex}.kpi-link{color:var(--ink);text-align:left;width:100%;transition:border-color var(--dur-1) var(--ease), background-color var(--dur-1) var(--ease), transform var(--dur-1) var(--ease);display:block}.kpi-link.kpi-dark{color:var(--on-dark)}.kpi-link:hover{border-color:var(--ink-24);background:var(--hover-1);text-decoration:none}.kpi-link:active{transform:scale(.985)}.kpi-link.kpi-dark:hover{background:var(--tile-2);border-color:var(--tile-2)}.kpi-link .kpi-label{justify-content:space-between;align-items:center;gap:8px;display:flex}.kpi-arrow{color:var(--ink-24);font-size:var(--fs-body);transition:transform var(--dur-1) var(--ease), color var(--dur-1) var(--ease);line-height:1}.kpi-link:hover .kpi-arrow{color:var(--ink-48);transform:translate(2px)}.kpi-dark .kpi-arrow{color:var(--muted-on-dark)}.kpi-band{background:var(--tile);border-radius:var(--r-lg);grid-template-columns:repeat(4,minmax(0,1fr));gap:0;display:grid;overflow:hidden}.kpi-band .kpi{border:0;border-right:1px solid var(--tile-2);background:var(--tile);color:var(--on-dark);border-radius:0}.kpi-band .kpi:last-child{border-right:0}.kpi-band .kpi-label,.kpi-band .kpi-sub,.kpi-band .kpi-unit{color:var(--muted-on-dark)}@media (max-width:900px){.kpi-band{grid-template-columns:repeat(2,minmax(0,1fr))}}.page-head{justify-content:space-between;align-items:flex-start;gap:var(--s-5);margin-bottom:var(--s-6);display:flex}.page-head-text{min-width:0}.page-meta{font-size:var(--fs-ui);color:var(--ink-48);letter-spacing:-.224px;margin-bottom:6px}.page-desc{color:var(--ink-48);max-width:52ch;margin-top:8px}.page-actions{flex-wrap:wrap;flex:none;justify-content:flex-end;align-items:center;gap:10px;margin-top:4px;display:flex}.dl{gap:14px 24px;margin:0;display:grid}.dl-1{grid-template-columns:1fr}.dl-2{grid-template-columns:repeat(2,minmax(0,1fr))}.dl-3{grid-template-columns:repeat(3,minmax(0,1fr))}.dl-item{flex-direction:column;gap:2px;min-width:0;display:flex}.dl dt{font-size:var(--fs-caption);color:var(--ink-48);letter-spacing:-.12px;font-weight:600}.dl dd{font-size:var(--fs-body);overflow-wrap:anywhere;margin:0}@media (max-width:760px){.dl-2,.dl-3{grid-template-columns:1fr}}.section-title{font-size:var(--fs-section);margin-bottom:var(--s-3)}.stack{gap:var(--s-5);flex-direction:column;display:flex}.badge{border-radius:var(--r-pill);font-size:var(--fs-caption);letter-spacing:-.12px;white-space:nowrap;align-items:center;gap:6px;padding:3px 10px;font-weight:600;line-height:1.4;display:inline-flex}.badge-ok{background:var(--ok-bg);color:var(--ok)}.badge-wait{background:var(--wait-bg);color:var(--wait)}.badge-bad{background:var(--bad-bg);color:var(--bad)}.badge-neutral{background:var(--neutral-bg);color:var(--neutral)}.badge-ink{background:var(--ink);color:var(--on-dark)}.badge-dot:before{content:"";background:currentColor;border-radius:50%;width:6px;height:6px}.overlay{z-index:100;animation:fade-in var(--dur-3) var(--ease) both;background:#0006;justify-content:flex-end;display:flex;position:fixed;top:0;bottom:0;left:0;right:0}.overlay[data-state=closed]{animation:fade-out var(--dur-exit) var(--ease) both;pointer-events:none}.overlay-center{justify-content:center;align-items:center;padding:24px}.drawer{background:var(--canvas);border-left:1px solid var(--hairline);max-width:100%;height:100%;animation:drawer-in var(--dur-3) var(--ease) both;outline:none;flex-direction:column;display:flex}.overlay[data-state=closed] .drawer{animation:drawer-out var(--dur-exit) var(--ease) both}.drawer-head{border-bottom:1px solid var(--hairline);justify-content:space-between;align-items:center;gap:12px;padding:16px 16px 16px 24px;display:flex}.drawer-head h2{min-width:0}.drawer-body{flex:1;padding:24px;overflow-y:auto}.drawer-foot{border-top:1px solid var(--hairline);background:var(--pearl);justify-content:flex-end;gap:10px;padding:16px 24px;display:flex}.modal{background:var(--canvas);border-radius:var(--r-lg);max-width:100%;max-height:calc(100vh - 48px);animation:modal-in var(--dur-3) var(--ease) both;outline:none;flex-direction:column;display:flex;position:relative;overflow:hidden}.overlay[data-state=closed] .modal{animation:modal-out var(--dur-exit) var(--ease) both}.modal-head{justify-content:space-between;align-items:flex-start;gap:12px;padding:20px 16px 0 24px;display:flex}.modal-head h2{min-width:0;padding-top:3px}.modal-head-bare{z-index:1;padding:0;position:absolute;top:12px;right:12px}.modal-body{padding:20px 24px;overflow-y:auto}.modal-foot{border-top:1px solid var(--hairline);background:var(--pearl);justify-content:flex-end;gap:10px;padding:16px 24px;display:flex}.icon-btn{border-radius:var(--r-sm);width:32px;height:32px;color:var(--ink-48);transition:background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease), transform var(--dur-1) var(--ease);flex:none;justify-content:center;align-items:center;display:inline-flex}.icon-btn:hover{background:var(--hover-2);color:var(--ink)}.icon-btn:active{transform:scale(.92)}.empty{text-align:center;padding:48px 24px}.empty-title{color:var(--ink-48);font-size:var(--fs-body)}.empty-desc{color:var(--ink-48);font-size:var(--fs-ui);margin-top:6px}.empty-action{justify-content:center;margin-top:16px;display:flex}.floating-bar{z-index:30;margin-top:var(--s-5);border-radius:var(--r-lg);-webkit-backdrop-filter:saturate(180%)blur(20px);backdrop-filter:saturate(180%)blur(20px);border:1px solid var(--hairline);height:64px;animation:float-in var(--dur-2) var(--ease) both;background:#f5f5f7cc;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;display:flex;position:sticky;bottom:16px}.floating-bar[data-state=closed]{animation:float-out var(--dur-1) var(--ease) both;pointer-events:none}.floating-summary{font-size:var(--fs-body)}.floating-actions{gap:10px;display:flex}.toast-stack{z-index:200;pointer-events:none;flex-direction:column;align-items:center;gap:8px;display:flex;position:fixed;bottom:24px;left:50%;transform:translate(-50%)}.toast{background:var(--tile);color:var(--on-dark);border-radius:var(--r-pill);font-size:var(--fs-ui);letter-spacing:-.224px;animation:toast-in var(--dur-2) var(--ease) both;padding:10px 20px}.toast.is-leaving{animation:toast-out var(--dur-exit) var(--ease) both}.tt{align-items:center;min-width:0;max-width:100%;display:inline-flex}.tt-block{display:flex}.tip{z-index:300;border-radius:var(--r-pill);background:var(--tile);max-width:260px;color:var(--on-dark);font-size:var(--fs-caption);letter-spacing:-.12px;white-space:normal;overflow-wrap:anywhere;pointer-events:none;animation:tip-in var(--dur-1) var(--ease) both;padding:5px 10px;font-weight:400;line-height:1.3;position:fixed}.tip-multi{border-radius:var(--r-sm)}.tip[data-side=bottom]{animation-name:tip-in-b}@keyframes drawer-in{0%{opacity:0;transform:translate(24px)}to{opacity:1;transform:none}}@keyframes drawer-out{0%{opacity:1;transform:none}to{opacity:0;transform:translate(24px)}}@keyframes modal-in{0%{opacity:0;transform:scale(.98)}to{opacity:1;transform:none}}@keyframes modal-out{0%{opacity:1;transform:none}to{opacity:0;transform:scale(.98)}}@keyframes float-in{0%{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@keyframes float-out{0%{opacity:1;transform:none}to{opacity:0;transform:translateY(8px)}}@keyframes toast-in{0%{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes toast-out{0%{opacity:1;transform:none}to{opacity:0;transform:translateY(4px)}}@keyframes tip-in{0%{opacity:0;transform:translateY(2px)}to{opacity:1;transform:none}}@keyframes tip-in-b{0%{opacity:0;transform:translateY(-2px)}to{opacity:1;transform:none}}.banner{border-radius:var(--r-sm);background:var(--parchment);font-size:var(--fs-ui);letter-spacing:-.224px;align-items:center;gap:12px;padding:12px 16px;display:flex}.banner-dark{background:var(--tile);color:var(--on-dark)}.link-list li{border-bottom:1px solid var(--divider-soft);justify-content:space-between;align-items:center;gap:12px;padding:10px 0;display:flex}.link-list li:last-child{border-bottom:0}.avatar{background:var(--parchment);width:36px;height:36px;color:var(--ink-80);font-size:var(--fs-ui);border-radius:50%;flex:none;justify-content:center;align-items:center;font-weight:600;display:inline-flex}.avatar-lg{width:56px;height:56px;font-size:var(--fs-section)}.avatar-dark{background:var(--tile);color:var(--on-dark)}.divider{background:var(--hairline);height:1px;margin:var(--s-5) 0}.pill-list{flex-wrap:wrap;gap:8px;display:flex}.status-dot{border-radius:50%;width:8px;height:8px;margin-right:6px;display:inline-block}.modal-head-bare+.modal-body{padding-top:48px}.table th.is-sortable{padding:0}.th-sort{width:100%;color:var(--ink-48);font-size:var(--fs-caption);letter-spacing:-.12px;white-space:nowrap;transition:color var(--dur-1) var(--ease);align-items:center;gap:4px;padding:10px 12px;font-weight:600;display:flex}.th-sort:hover{color:var(--ink)}.th-sort:focus-visible{outline-offset:-2px}.th-arrow{color:var(--ink-24);opacity:0;transition:opacity var(--dur-1) var(--ease), color var(--dur-1) var(--ease);font-size:12px}.th-sort:hover .th-arrow,th.is-sorted .th-arrow{opacity:1}th.is-sorted .th-sort,th.is-sorted .th-arrow{color:var(--ink)}.table td.row-actions{white-space:nowrap;opacity:0;width:1%;transition:opacity var(--dur-1) var(--ease), background-color var(--dur-1) var(--ease)}.table td.row-actions>*{pointer-events:none}.table tr:hover>td.row-actions,.table tr:focus-within>td.row-actions,.table tr.is-selected>td.row-actions,.table tr.is-checked>td.row-actions{opacity:1}.table tr:hover>td.row-actions>*,.table tr:focus-within>td.row-actions>*,.table tr.is-selected>td.row-actions>*,.table tr.is-checked>td.row-actions>*{pointer-events:auto}@media (hover:none){.table td.row-actions{opacity:1}.table td.row-actions>*{pointer-events:auto}}.kpi-link .kpi-label>.tt{min-width:0}.info-tip{width:18px;height:18px;color:var(--ink-24);cursor:help;vertical-align:middle;transition:color var(--dur-1) var(--ease);border-radius:50%;flex:none;justify-content:center;align-items:center;display:inline-flex}.info-tip:hover{color:var(--ink-48)}.info-tip:focus-visible{color:var(--ink-48)}.info-tip:focus-visible{outline-offset:0}.kpi-dark .info-tip,.kpi-band .info-tip,.card-dark .info-tip{color:#fff6}.kpi-dark .info-tip:hover,.kpi-band .info-tip:hover,.card-dark .info-tip:hover{color:#fffc}.th-label,.field-label{align-items:center;gap:2px;display:inline-flex}.table thead tr.th-group th{text-align:center;border-bottom:1px solid var(--divider-soft);color:var(--ink-80);padding:8px 12px 4px}.table thead tr.th-group th.is-blank{border-bottom-color:#0000}.table thead tr.th-group+tr th{top:29px}.table th.col-divide,.table td.col-divide{box-shadow:inset 1px 0 0 var(--divider-soft)}.form-rows{flex-direction:column;display:flex}.form-rows>.field,.form-rows>.form-row{border-bottom:1px solid var(--divider-soft);grid-template-columns:200px minmax(0,440px);align-items:start;gap:6px 24px;padding:16px 0;display:grid}.form-rows>.field:last-child,.form-rows>.form-row:last-child{border-bottom:0}.form-rows>.field>.field-label,.form-rows>.form-row>.field-label{padding-top:10px}.form-rows>.field>.field-control,.form-rows>.field>.field-hint,.form-rows>.field>.field-error{grid-column:2}.form-rows>.field>.field-hint,.form-rows>.field>.field-error{grid-row:2}@media (max-width:900px){.form-rows>.field,.form-rows>.form-row{grid-template-columns:1fr}.form-rows>.field>.field-control,.form-rows>.field>.field-hint,.form-rows>.field>.field-error{grid-column:1}.form-rows>.field>.field-hint,.form-rows>.field>.field-error{grid-row:auto}}.meter{background:var(--parchment);border-radius:3px;min-width:48px;height:6px;display:block;overflow:hidden}.meter>span{background:var(--blue);border-radius:3px;height:100%;display:block}.meter.is-bad>span{background:var(--bad)}.meter-row{align-items:center;gap:8px;display:flex}.meter-row .meter{flex:auto}.th-flex{align-items:center;gap:2px;width:100%;display:flex}.th-flex .th-sort{flex:0 auto;width:auto}.th-flex .th-sort-tight{padding-right:0}.th-flex .th-arrow-out{cursor:pointer;margin-right:12px}.th-flex:hover .th-arrow-out{opacity:1}.kpi-label-text{align-items:center;gap:2px;min-width:0;display:inline-flex}.stale-banner{margin:0 0 var(--s-5);border-radius:var(--r-sm);background:var(--parchment);font-size:var(--fs-ui);letter-spacing:-.224px;color:var(--ink-80);padding:12px 16px}.login{grid-template-columns:1.1fr 1fr;min-height:100vh;display:grid}.login-hero{background:var(--tile);color:var(--on-dark);flex-direction:column;justify-content:space-between;padding:56px 64px;display:flex}.login-hero h1{letter-spacing:-.5px;max-width:12ch;font-size:44px;line-height:1.07}.login-hero .lead{color:var(--muted-on-dark);font-size:var(--fs-section);letter-spacing:-.2px;max-width:34ch;margin-top:16px;font-weight:400}.login-brand{font-size:var(--fs-section);font-weight:600}.login-brand span{color:var(--muted-on-dark);margin-left:8px;font-weight:400}.punch-card{background:var(--tile-2);border-radius:var(--r-lg);margin-top:40px;padding:24px}.punch-card .punch-time{font-size:var(--fs-hero);letter-spacing:-.4px;font-weight:600;line-height:1.1}.punch-card .input{color:var(--on-dark);background:0 0;border-color:#ffffff2e}.punch-card .input::placeholder{color:#fff6}.punch-card .field-label{color:var(--muted-on-dark)}.punch-card .btn-ghost{color:var(--on-dark);box-shadow:inset 0 0 0 1px #fff6}.punch-card .btn-link{color:var(--blue-on-dark)}.login-form{background:var(--canvas);justify-content:center;align-items:center;padding:48px;display:flex}.login-form-inner{width:100%;max-width:400px}.login-form h2{font-size:var(--fs-title);letter-spacing:-.28px}.login-foot{font-size:var(--fs-caption);color:var(--ink-48);margin-top:32px;line-height:1.5}@media (max-width:900px){.login{grid-template-columns:1fr}.login-hero{padding:40px 28px}}.greeting{flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;display:flex}.greeting-text{font-size:var(--fs-body)}.mini-list li{border-bottom:1px solid var(--divider-soft);font-size:var(--fs-ui);letter-spacing:-.224px;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;display:flex}.mini-list li:last-child{border-bottom:0}.mini-list .title{text-overflow:ellipsis;white-space:nowrap;min-width:0;overflow:hidden}.mini-list .meta{color:var(--ink-48);flex:none}.count-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;display:grid}.count-cell{border-radius:var(--r-sm);background:var(--parchment);color:var(--ink);text-align:left;flex-direction:column;gap:2px;padding:14px 16px;display:flex}.count-cell .n{letter-spacing:-.24px;font-size:24px;font-weight:600;line-height:1.15}.count-cell .l{font-size:var(--fs-caption);color:var(--ink-48)}button.count-cell{transition:background-color var(--dur-1) var(--ease), transform var(--dur-1) var(--ease)}button.count-cell:hover{background:#ebebed}.count-cell:active{transform:scale(.97)}.count-cell.is-zero .n{color:var(--ink-24)}.week-bar{background:#ffffff24;border-radius:4px;height:8px;margin-top:12px;overflow:hidden}.week-bar>span{background:var(--blue-on-dark);border-radius:4px;height:100%;display:block}.week-bar.warn>span{background:#ff6b6b}a.count-cell{transition:background-color var(--dur-1) var(--ease), transform var(--dur-1) var(--ease);text-decoration:none}a.count-cell:hover{background:#ebebed}.mini-list li.is-link{border-radius:var(--r-sm);transition:background-color var(--dur-1) var(--ease);margin:0 -8px;padding-left:8px;padding-right:8px}.mini-list li.is-link:hover{background:var(--hover-2)}.mini-list li.is-link a.title:hover{text-decoration:none}.mini-list>li>.tt-block{flex:auto;min-width:0}.mini-list>li>.tt-block>.title{min-width:0}.grid-2.align-start,.grid-3.align-start,.grid-4.align-start{align-items:start}.kpi-actions{gap:8px;margin-top:12px;display:flex}.toolbar-inset+.toolbar-inset,.card-head+.toolbar-inset{padding-top:0}.form-actions.between{justify-content:space-between;align-items:center}.search-full{max-width:none}.picked{border-radius:var(--r-sm);background:var(--parchment);justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;display:flex}.card-note{border-top:1px solid var(--divider-soft);font-size:var(--fs-caption);color:var(--ink-48);padding:14px 24px;line-height:1.5}.card-section-title{font-size:var(--fs-body);padding:16px 24px 4px;font-weight:600}.table .input{height:var(--ctl-sm);font-size:var(--fs-ui);letter-spacing:-.224px}.pct-cell{align-items:center;gap:8px;min-width:120px;display:flex}.pct-cell .meter{flex:auto}.pct-cell .num{text-align:right;color:var(--ink-48);flex:0 0 36px}.meter-list{flex-direction:column;gap:14px;display:flex}.meter-list .meter-row>.l{font-size:var(--fs-ui);color:var(--ink-80);letter-spacing:-.224px;flex:0 0 104px}.meter-list .meter-row>.v{text-align:right;font-size:var(--fs-ui);color:var(--ink-48);letter-spacing:-.224px;flex:0 0 120px}.settings-layout{grid-template-columns:220px minmax(0,1fr);align-items:start;gap:24px;display:grid}.settings-nav{top:calc(var(--topbar-h) + 24px);padding:4px 0 12px;position:sticky}.settings-nav a.rules-item{color:var(--ink);align-items:center;gap:8px;text-decoration:none;display:flex}.settings-nav a.rules-item.is-active{color:var(--blue)}.settings-live{font-size:var(--fs-caption);color:var(--ok);margin-left:auto;font-weight:600}.settings-sub{font-size:var(--fs-body);margin:24px 0 10px}.settings-sub:first-child{margin-top:0}.grade-row{flex-wrap:wrap;align-items:flex-end;gap:12px;display:flex}.grade-row .field{width:112px}.tenure-grid{grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;display:grid}.tenure-cell{flex-direction:column;gap:4px;display:flex}.code-chip{cursor:default;gap:2px;padding-right:6px}.code-chip:hover{background:var(--canvas);box-shadow:inset 0 0 0 1px var(--hairline)}.code-chip:active{transform:none}.code-chip button{width:20px;height:20px;color:var(--ink-48);border-radius:50%;justify-content:center;align-items:center;font-size:14px;line-height:1;display:inline-flex}.code-chip button:hover{background:var(--hover-3);color:var(--ink)}@media (max-width:1100px){.settings-layout{grid-template-columns:1fr}.settings-nav{position:static}.tenure-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.kind-list{flex-direction:column;gap:2px;display:flex}.kind-item{text-align:left;border-radius:var(--r-sm);width:100%;transition:background-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);gap:12px;padding:10px 12px;display:flex}.kind-item:hover{background:var(--hover-2)}.kind-item.is-active{background:var(--blue-tint)}.kind-item.is-active .kind-name{color:var(--blue)}.kind-name{font-size:var(--fs-ui);letter-spacing:-.224px;flex:0 0 40px;font-weight:600}.kind-desc{font-size:var(--fs-ui);color:var(--ink-80);letter-spacing:-.224px}.posting-list>li{border-bottom:1px solid var(--divider-soft);justify-content:space-between;align-items:flex-start;gap:16px;padding:16px 0;display:flex}.posting-list>li:first-child{padding-top:0}.posting-list>li:last-child{border-bottom:0;padding-bottom:0}.posting-title{font-size:var(--fs-body);font-weight:600}.org-layout{display:block}@media (max-width:1100px){.org-layout{grid-template-columns:1fr}}.org-tree{padding-bottom:8px;overflow-x:auto}.org-root{border-radius:var(--r-lg);background:var(--tile);color:var(--on-dark);flex-direction:column;align-items:center;gap:2px;margin:0 0 0 calc(50% - 80px);padding:12px 22px;display:inline-flex;position:relative}.org-root .caption{color:var(--muted-on-dark)}.org-root-name{font-size:var(--fs-body);font-weight:600}.org-root:after{content:"";background:var(--hairline);width:1px;height:20px;position:absolute;top:100%;left:50%}.org-cols{grid-template-columns:repeat(6,minmax(168px,1fr));gap:12px;margin-top:20px;padding-top:20px;display:grid;position:relative}.org-cols:before{content:"";background:var(--hairline);height:1px;position:absolute;top:0;left:8.33333%;right:8.33333%}.org-col{position:relative}.org-col:before{content:"";background:var(--hairline);width:1px;height:20px;position:absolute;top:-20px;left:50%}.org-node{text-align:left;border-radius:var(--r-sm);background:var(--canvas);border:1px solid var(--hairline);width:100%;transition:transform var(--dur-1) var(--ease), border-color var(--dur-1) var(--ease), background-color var(--dur-1) var(--ease), opacity var(--dur-1) var(--ease);padding:10px 12px;display:block}button.org-node:hover{border-color:var(--ink-24);background:var(--hover-1)}button.org-node.is-dim:hover{opacity:.8}.org-node:active{transform:scale(.97)}.org-node-div{background:var(--parchment);border-color:var(--parchment);border-radius:var(--r-md)}.org-node-name{font-size:var(--fs-ui);letter-spacing:-.224px;font-weight:600}.org-node-sub{font-size:var(--fs-caption);color:var(--ink-48);flex-wrap:wrap;align-items:center;gap:6px;margin-top:2px;display:flex}.org-node.is-selected{border-color:var(--blue-focus);box-shadow:inset 0 0 0 1px var(--blue-focus)}.org-node.is-match{border-color:var(--blue)}.org-node.is-dim{opacity:.45}.org-children{border-left:1px solid var(--hairline);flex-direction:column;gap:8px;margin-top:8px;padding-left:12px;display:flex}.org-delta{padding:1px 7px;font-size:12px}.org-panel{top:calc(var(--topbar-h) + 24px);position:sticky}.org-members li{border-bottom:1px solid var(--divider-soft);align-items:center;gap:12px;padding:10px 0;display:flex}.org-members li:last-child{border-bottom:0}.profile-name{font-size:var(--fs-title);line-height:1.25}.rules-layout{grid-template-columns:280px minmax(0,1fr);align-items:start;gap:24px;display:grid}@media (max-width:900px){.rules-layout{grid-template-columns:1fr}}.rules-nav{top:calc(var(--topbar-h) + 24px);max-height:calc(100vh - var(--topbar-h) - 48px);padding-bottom:12px;position:sticky;overflow-y:auto}.rules-group{padding:8px 8px 0}.rules-item{text-align:left;border-radius:var(--r-sm);width:100%;font-size:var(--fs-ui);letter-spacing:-.224px;transition:background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease);padding:7px 12px;display:block}.rules-item:hover:not(.is-active){background:var(--hover-2)}.rules-item.is-active{background:var(--parchment);color:var(--blue);font-weight:600}.rules-doc{min-height:480px}.cal-head{border-bottom:1px solid var(--hairline);text-align:center;font-size:var(--fs-caption);color:var(--ink-48);grid-template-columns:repeat(7,1fr);padding:12px 0 8px;font-weight:600;display:grid}.cal-head .sun{color:var(--bad)}.cal-grid{grid-template-columns:repeat(7,1fr);display:grid}.cal-cell{text-align:left;border-right:1px solid var(--divider-soft);border-bottom:1px solid var(--divider-soft);background:var(--canvas);flex-direction:column;align-items:stretch;gap:4px;min-height:104px;padding:8px;display:flex;overflow:visible}.cal-cell:nth-child(7n){border-right:0}.cal-cell{transition:background-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease)}.cal-cell:hover{background:var(--hover-2)}.cal-cell.is-selected{box-shadow:inset 0 0 0 1px var(--blue-focus)}.cal-cell.is-out{background:var(--pearl)}.cal-cell.is-out .cal-day{color:var(--ink-24)}.cal-cell.is-today .cal-day{background:var(--ink);color:var(--on-dark)}.cal-day{width:24px;height:24px;font-size:var(--fs-caption);border-radius:50%;justify-content:center;align-self:flex-start;align-items:center;font-weight:600;display:inline-flex}.cal-day.sun,.cal-cell.is-holiday .cal-day{color:var(--bad)}.cal-items{flex-direction:column;gap:2px;min-width:0;display:flex}.cal-item{text-overflow:ellipsis;white-space:nowrap;border-radius:4px;height:20px;padding:0 6px;font-size:12px;line-height:20px;display:block;overflow:hidden}.cal-slot{height:20px;display:block}.cal-items>.cal-bar{max-width:none}.cal-items>.cal-bar.is-cont-l{margin-left:-8px}.cal-items>.cal-bar.is-cont-r{margin-right:-9px}.cal-bar.is-cont-l>.cal-item{border-top-left-radius:0;border-bottom-left-radius:0}.cal-bar.is-cont-r>.cal-item{border-top-right-radius:0;border-bottom-right-radius:0}.cal-more{padding-left:6px}.cal-공휴일{background:var(--bad-bg);color:var(--bad)}.cal-회사{background:var(--neutral-bg);color:var(--ink-80)}.cal-부서{background:var(--wait-bg);color:var(--wait)}.cal-개인{background:var(--ok-bg);color:var(--ok)}.cert-doc{padding:16px 24px}.cert-no{font-size:var(--fs-caption);color:var(--ink-48);text-align:right}.cert-title{text-align:center;letter-spacing:8px;margin:12px 0 24px;font-size:28px}.cert-table{border-collapse:collapse;width:100%;font-size:var(--fs-ui);margin-bottom:20px}.cert-table th,.cert-table td{border:1px solid var(--hairline);text-align:left;padding:10px 12px}.cert-table th{background:var(--parchment);color:var(--ink-48);white-space:nowrap;width:96px;font-weight:600}.cert-body{text-align:center;margin:20px 0}.cert-date{text-align:center;color:var(--ink-80)}.cert-sign{text-align:center;margin-top:12px;font-weight:600}.cert-seal{border:2px solid var(--bad);width:34px;height:34px;color:var(--bad);vertical-align:middle;border-radius:4px;justify-content:center;align-items:center;margin-left:8px;font-size:13px;display:inline-flex}.chart-card .recharts-wrapper{font-family:inherit}.chart-card .recharts-legend-item-text{color:var(--ink-80)!important}.chart-tip{background:var(--tile);color:var(--on-dark);border-radius:var(--r-sm);font-size:var(--fs-caption);min-width:140px;padding:8px 12px}.chart-tip-label{color:var(--muted-on-dark);margin-bottom:4px}.chart-tip-row{align-items:center;gap:8px;padding:2px 0;display:flex}.chart-tip-dot{border-radius:50%;flex:none;width:8px;height:8px}.grid-2>.span-2{grid-column:span 2}@media (max-width:760px){.grid-2>.span-2{grid-column:auto}}.heat{grid-template-columns:96px repeat(5,1fr);align-items:stretch;gap:4px;display:grid}.heat-corner{padding:6px}.heat-col,.heat-row{justify-content:center;align-items:center;padding:6px;display:flex}.heat-row{justify-content:flex-end;padding-right:12px}.heat-cell{height:48px;font-size:var(--fs-ui);font-variant-numeric:tabular-nums;border-radius:6px;justify-content:center;align-items:center;font-weight:600;display:flex}.heat-cell.is-diag{box-shadow:inset 0 0 0 1px var(--ink);font-weight:700}.heat .tt-block>.heat-cell,.org-children>.tt-block>.org-node{flex:auto}.cal-items>.tt-block{min-width:0}.cal-items>.tt-block>.cal-item{flex:auto;min-width:0}.cal-month{text-align:center;min-width:96px}#print-root{display:none}@media print{@page{size:A4;margin:18mm 16mm}html,body{background:#fff!important;height:auto!important;padding:0!important;overflow:visible!important}#root,.overlay,.toast-stack,.tip{display:none!important}#print-root{display:block!important}#print-root .print-doc{break-inside:avoid;page-break-inside:avoid;padding:0!important}#print-root *{-webkit-print-color-adjust:exact;-moz-print-color-adjust:exact;print-color-adjust:exact}#print-root .cert-table th{background:#f5f5f7!important}}
 /*$vite$:1*/
 /* ── 모앤브레인 CRM 데모 — e-HR 디자인 시스템 위에 얹는 추가 스타일 ── */
@@ -110,6 +111,254 @@ button.flow-step:hover{background:var(--hover-1)}
   .topbar-search{display:none}
   .grid-3>.wide{grid-column:auto}
   .card-head{flex-wrap:wrap}
+}
+
+/* ── CRM v2 (10/14) — 홈페이지 docs/07 anti-AI 규칙 · 색 B안을 e-HR 부품 위에 덮는다 ──
+   흰 바탕 · 검정 글자와 주 버튼 · 민트 #C2E2D3는 선택 표시만 · 극연 민트 #EEF7F3는 한 화면 두 곳까지
+   제목 마루 부리(네이버 배포 파일) · 본문 Noto Sans KR · 모서리 직각 · 알약 대신 글 · 상자 대신 1px 선 */
+@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'MaruBuri';src:url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2) format('woff2');font-weight:600;font-display:swap}
+
+:root{
+  --key:#C2E2D3;--mint-soft:#EEF7F3;--ink-2:#4d4d4d;--ink-3:#767676;--line:rgba(0,0,0,.12);--bar:#d6d6d6;
+  --serif:"MaruBuri","Noto Serif KR",serif;
+  /* e-HR 토큰 덮기 */
+  --font:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --blue:#000;--blue-focus:#000;--blue-hover:#333;--blue-tint:rgba(0,0,0,.04);--blue-on-dark:#fff;
+  --parchment:#fff;--pearl:#fff;--ink:#000;--ink-80:#222;--ink-48:#4d4d4d;--ink-24:#b3b3b3;
+  --hairline:rgba(0,0,0,.12);--divider-soft:rgba(0,0,0,.12);--hover-1:rgba(0,0,0,.02);--hover-2:rgba(0,0,0,.04);--hover-3:rgba(0,0,0,.04);
+  --ok:#000;--ok-bg:transparent;--wait:#000;--wait-bg:transparent;--bad:#b00020;--bad-bg:transparent;--neutral:#767676;--neutral-bg:transparent;
+  --r-xs:0;--r-sm:0;--r-md:0;--r-lg:0;--r-pill:0;
+  --fs-body:15px;--fs-ui:14px;--fs-caption:13px;--ctl-lg:48px;--ctl-md:40px;--ctl-sm:36px;
+}
+body{font-family:var(--font);color:#000;background:#fff;word-break:keep-all;-webkit-font-smoothing:antialiased}
+.num,td.num{font-variant-numeric:tabular-nums}
+.u{color:#000;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px;white-space:nowrap;background:none;border:0;padding:0;font:inherit;font-size:14px;cursor:pointer}
+.u:hover{text-decoration-thickness:2px}
+.muted{color:var(--ink-2)}
+.dim{color:var(--ink-3)}
+.s13{font-size:13px;line-height:20px}
+
+/* 틀 — 왼쪽 글자 메뉴 (사장님 제안 8개 · 아이콘 없음) */
+.v2{display:grid;grid-template-columns:232px minmax(0,1fr);min-height:100vh}
+.v2-side{border-right:1px solid var(--line);padding:36px 0 28px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;background:#fff}
+.v2-logo{display:block;height:17px;margin:0 28px 44px;color:#000}
+.v2-logo svg{height:100%;width:auto;display:block}
+.v2-nav a{display:block;padding:10px 28px;font-size:15px;line-height:22px;color:#000;text-decoration:none;position:relative}
+.v2-nav a:hover{background:rgba(0,0,0,.03)}
+.v2-nav a.on{font-weight:700}
+.v2-nav a.on::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;background:var(--key)}
+.v2-nav .gap{height:1px;background:var(--line);margin:14px 28px}
+.v2-nav .n{font-size:12px;color:var(--ink-3);margin-left:6px;font-weight:400}
+.v2-foot{margin-top:auto;padding:0 28px;font-size:12px;line-height:18px;color:var(--ink-3)}
+.v2-main{padding:40px 56px 72px;min-width:0;max-width:1384px}
+.v2-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;padding-bottom:20px;border-bottom:1px solid #000;margin-bottom:32px}
+.v2-head h1{font:600 32px/40px var(--serif);margin:0;letter-spacing:0}
+.v2-lead{font-size:14px;line-height:22px;color:var(--ink-2);margin:6px 0 0}
+.v2-crumb{font-size:13px;color:var(--ink-2);margin:0 0 8px}
+.v2-crumb a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.v2-acts{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.v2-mbar,.v2-menu{display:none}
+.v2-sub{display:flex;gap:32px;border-bottom:1px solid var(--line);margin:-12px 0 32px}
+.v2-sub a{padding:0 0 12px;font-size:15px;color:var(--ink-2);text-decoration:none;position:relative}
+.v2-sub a.on{color:#000;font-weight:700}
+.v2-sub a.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#000}
+h2.v2-h,.v2-h{font:600 20px/30px var(--serif);margin:0 0 12px;letter-spacing:0}
+.v2-hrow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:0 0 12px}
+.v2-hrow .v2-h{margin:0}
+
+/* 버튼 — 주 버튼 검정 직각 (tiffany btn-primary) · 나머지는 밑줄 글자 */
+.btn{border-radius:0;letter-spacing:0;font-weight:500}
+.btn-primary{background:#000;color:#fff}
+.btn-primary:hover:not(:disabled){background:#333}
+.btn-pearl{background:#fff;color:#000;box-shadow:inset 0 0 0 1px #000}
+.btn-pearl:hover:not(:disabled){background:rgba(0,0,0,.04);box-shadow:inset 0 0 0 1px #000}
+.btn-link{color:#000;text-decoration:underline;text-underline-offset:4px}
+.btn-lg{height:48px;padding:0 28px;font-size:14px}
+
+/* 알약 → 글 (규칙 7) */
+.badge{background:none!important;border-radius:0;padding:0;font-weight:400;font-size:13px;color:var(--ink-2)!important;gap:4px}
+.badge-ink,.badge-ok{color:#000!important}
+.badge-bad{color:var(--bad)!important}
+.ch-naver,.ch-daangn,.ch-mrt,.ch-phone,.ch-biz{background:none;color:inherit}
+.note-q{background:none;border-radius:0;padding:0;font-weight:500;color:var(--bad)}
+
+/* 상자 → 선 */
+.card{border:0;border-top:1px solid #000;border-radius:0;padding:20px 0 0}
+.card-flush{padding:0}
+.card-flush .card-head{padding:20px 0 0}
+.card-title{font:600 20px/30px var(--serif)}
+.banner{background:none;border-left:2px solid #000;border-radius:0;padding:4px 0 4px 14px;font-size:14px;line-height:22px;color:#000}
+.kpi{border:0;border-top:1px solid #000;border-radius:0;padding:16px 0 0}
+.kpi-value{font:600 40px/48px var(--serif)}
+.kpi-unit{font:500 15px/1 var(--font);color:#000}
+.kpi-label{color:var(--ink-2)}
+.table th{color:var(--ink-2);font-weight:400;font-size:13px;border-bottom:1px solid #000;padding:0 16px 10px 0;background:#fff}
+.table td{border-bottom:1px solid var(--line);padding:14px 16px 14px 0}
+.table tr:last-child td{border-bottom:1px solid var(--line)}
+.table td:last-child,.table th:last-child{padding-right:0}
+.table-dense td{padding:10px 16px 10px 0}
+.table-clickable tbody tr:hover td{background:rgba(0,0,0,.02)}
+.tabs{background:none;border-radius:0;padding:0;gap:28px;border-bottom:1px solid var(--line)}
+.tab{border-radius:0;height:auto;padding:0 0 12px;font-size:15px;color:var(--ink-2);position:relative;background:none}
+.tab-active{background:none;color:#000;font-weight:700}
+.tab-active::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#000}
+.tab-count{color:var(--ink-3);font-size:12px}
+.input,.select,.textarea{border-radius:0;border-color:var(--line)}
+.input:focus,.select:focus,.textarea:focus{border-color:#000;box-shadow:none}
+.chip{border-radius:0;box-shadow:inset 0 0 0 1px var(--line)}
+.chip.on,.chip[aria-pressed=true]{box-shadow:inset 0 0 0 1px #000;background:var(--key)}
+.drawer{border-left:1px solid #000}
+.drawer-head h2{font:600 22px/30px var(--serif)}
+.toast{border-radius:0;background:#000}
+.msg-bubble{border-radius:0;background:var(--mint-soft)}
+.flow-step,.slot-img,.slot-val,.portal-note{border-radius:0}
+.flow-col>h3 .n{border-radius:0}
+.phone{border-radius:28px}
+.dl dt{font-weight:400;color:var(--ink-2)}
+.page-intro p{color:var(--ink-2)}
+
+/* 홈 · 통계 · 업무 */
+.ln{width:100%;border-collapse:collapse;font-size:14px;line-height:22px}
+.ln th{font-weight:400;color:var(--ink-2);font-size:13px;text-align:left;padding:0 16px 10px 0;border-bottom:1px solid #000;white-space:nowrap}
+.ln td{padding:14px 16px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.ln td:last-child,.ln th:last-child{padding-right:0}
+.ln .r{text-align:right}
+.ln .t-time{width:64px}
+.ln td.num{white-space:nowrap}
+.ln td.tk-t .u{white-space:normal}
+.kinds-m{display:none}
+.home-top{display:grid;grid-template-columns:7fr 5fr;gap:56px}
+.sendl{list-style:none;margin:0;padding:0}
+.sendl li{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.sendl li:first-child{border-top:1px solid #000}
+.sendl b{font-size:15px;line-height:22px}
+.sendl span{grid-column:1;font-size:13px;line-height:20px;color:var(--ink-2)}
+.sendl .u{grid-row:1/3;grid-column:2;align-self:center}
+.sendl .empty{display:block;color:var(--ink-3);font-size:14px}
+.month{display:grid;grid-template-columns:5fr 7fr;gap:56px;margin-top:72px;padding-top:28px;border-top:1px solid #000}
+.k-label{font-size:14px;color:var(--ink-2)}
+.k-num{font:600 56px/64px var(--serif);margin:4px 0 2px}
+.k-num small{font:500 18px/1 var(--font);margin-left:4px}
+.k-cmp{font-size:13px;color:var(--ink-2)}
+.bars{display:flex;align-items:flex-end;gap:14px;height:96px;margin-top:24px}
+.bars div{flex:0 0 22px;background:var(--bar)}
+.bars div.part{background:repeating-linear-gradient(135deg,var(--bar) 0 4px,#fff 4px 7px)}
+.bars-x{display:flex;gap:14px;margin-top:6px}
+.bars-x span{flex:0 0 22px;font-size:11px;color:var(--ink-3);text-align:center}
+.spec{width:100%;border-collapse:collapse;font-size:14px;line-height:22px}
+.spec td{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+.spec td:first-child{width:180px;color:var(--ink-2)}
+.spec .v{font:700 20px/28px var(--font);white-space:nowrap;width:110px}
+.spec tr:first-child td{border-top:1px solid #000}
+.tasks{margin-top:48px}
+.chk{width:20px;height:20px;border:1.5px solid #000;background:#fff;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;vertical-align:-4px}
+.chk[aria-checked=true]::after{content:"";width:10px;height:5px;border-left:2px solid #000;border-bottom:2px solid #000;transform:rotate(-45deg) translate(1px,-1px)}
+tr.done td{color:var(--ink-3)}
+tr.done td.tk-t{text-decoration:line-through}
+
+.stat-top{display:grid;grid-template-columns:4fr 8fr;gap:56px}
+.chart{display:flex;align-items:flex-end;gap:18px;height:180px;border-bottom:1px solid #000;padding:0 4px}
+.chart button{flex:1;background:var(--bar);position:relative;border:0;padding:0;cursor:pointer}
+.chart button b{position:absolute;top:-22px;left:0;right:0;text-align:center;font:500 12px/1 var(--font);color:var(--ink-2)}
+.chart button.sel{background:#000}
+.chart button.sel b{color:#000;font-weight:700}
+.chart button.part{background:repeating-linear-gradient(135deg,var(--bar) 0 4px,#fff 4px 7px)}
+.chart-x{display:flex;gap:18px;padding:6px 4px 0}
+.chart-x span{flex:1;text-align:center;font-size:12px;color:var(--ink-3)}
+.chart-x span.sel{color:#000;font-weight:700}
+.mnav2{display:flex;align-items:center;gap:16px;font-size:15px;font-weight:700}
+.arw{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);background:#fff;cursor:pointer;padding:0}
+.arw::before{content:"";width:8px;height:8px;border-left:1.5px solid #000;border-bottom:1.5px solid #000;transform:rotate(45deg) translate(1px,-1px)}
+.arw.nx::before{transform:rotate(-135deg) translate(1px,-1px)}
+.arw:disabled{opacity:.3;cursor:default}
+.stat .ln th:not(:first-child),.stat .ln td:not(:first-child){text-align:right;padding-left:16px;padding-right:16px}
+.stat .ln td:first-child{width:280px}
+.stat .ln th.sel{color:#000;font-weight:700;box-shadow:inset 0 -2px 0 #000}
+.stat .ln td.sel{font-weight:700}
+.stat .ln td.src,.stat .ln th.src{text-align:left;color:var(--ink-2);font-size:13px;width:240px;padding-right:0}
+.stat .v2-h{margin-top:56px}
+.exm{font:400 12px/1 var(--font);color:var(--ink-3);margin-left:8px}
+
+/* 예약문자 */
+.msg{display:grid;grid-template-columns:400px minmax(0,1fr);gap:56px}
+.fld{margin-bottom:22px}
+.fld>label,.fld>.lab{display:block;font-size:13px;color:var(--ink-2);margin-bottom:8px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kinds{border-top:1px solid #000}
+.kinds .grp{font-size:12px;color:var(--ink-3);padding:14px 12px 4px}
+.kinds label{display:flex;align-items:center;gap:12px;padding:9px 12px;font-size:15px;line-height:22px;cursor:pointer}
+.kinds label:hover{background:rgba(0,0,0,.03)}
+.kinds input,.rad input{appearance:none;width:16px;height:16px;border:1.5px solid #000;border-radius:50%;flex:0 0 16px;margin:0;display:grid;place-content:center;cursor:pointer}
+.kinds input:checked::after,.rad input:checked::after{content:"";width:8px;height:8px;border-radius:50%;background:#000}
+.kinds label.on{background:var(--key);font-weight:700}
+.kinds .wait{font-size:12px;color:var(--ink-3);font-weight:400;margin-left:auto}
+.rad{display:flex;gap:28px;height:48px;align-items:center;font-size:15px}
+.rad label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.out{width:100%;background:#fff;border:1px solid var(--line);border-radius:0;padding:28px 32px;font:400 15px/26px var(--font);color:#000;min-height:480px;resize:vertical;white-space:pre-wrap}
+.out:focus{outline:1px solid #000}
+.out.is-empty{color:var(--ink-3)}
+.out-foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:24px}
+.out-foot p{margin:0;max-width:520px}
+
+/* 고객 한 페이지 */
+.cgrid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:56px}
+.kvl div{display:grid;grid-template-columns:140px minmax(0,1fr);gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:22px}
+.kvl div:first-child{border-top:1px solid var(--line)}
+.kvl div>span:first-child{color:var(--ink-2)}
+.pass{border-top:1px solid #000;padding-top:16px;align-self:start}
+.ctabs{margin:48px 0 20px}
+.v2-nav a.no-meet,.v2-menu a.no-meet{font-size:13px;color:var(--ink-3);margin-top:12px}
+.burger[aria-expanded=true] i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded=true] i:nth-child(2){opacity:0}
+.burger[aria-expanded=true] i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.burger i{transition:transform var(--dur-2) var(--ease),opacity var(--dur-2) var(--ease)}
+@media (prefers-reduced-motion:reduce){.burger i{transition:none}}
+
+/* 모바일 — 위 막대 + 글자 메뉴 (홈페이지 모바일 메뉴와 같은 짜임) */
+@media (max-width:860px){
+  .v2{display:block}
+  .v2-side{display:none}
+  .v2-mbar{display:flex;height:56px;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:20}
+  .v2-mbar .v2-logo{margin:0;height:14px}
+  .burger{width:40px;height:40px;margin-right:-8px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:none;border:0;cursor:pointer}
+  .burger i{display:block;width:24px;height:1.5px;background:#000}
+  .v2-menu.open{display:block;position:fixed;inset:56px 0 0;background:#fff;z-index:30;padding:12px 20px 40px;overflow-y:auto}
+  .v2-menu a{display:block;padding:16px 0;border-bottom:1px solid var(--line);font-size:18px;line-height:26px;color:#000;text-decoration:none}
+  .v2-menu a.on{font-weight:700;box-shadow:inset 4px 0 0 var(--key);padding-left:16px}
+  .v2-menu .v2-foot{margin-top:28px;padding:0}
+  .v2-main{padding:28px 20px 96px}
+  .v2-head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:28px}
+  .v2-head h1{font-size:26px;line-height:34px}
+  .v2-h,h2.v2-h{font-size:18px;line-height:26px}
+  .v2-sub{gap:24px;overflow-x:auto;margin-top:-8px}
+  .v2-sub a{white-space:nowrap}
+  .home-top,.month,.stat-top,.msg,.fgrid,.cgrid{grid-template-columns:1fr;gap:40px}
+  .kvl div{grid-template-columns:110px minmax(0,1fr)}
+  .v2-acts{width:100%}
+  .v2-acts .btn-primary{flex:1}
+  .fgrid{gap:0}
+  .month{margin-top:48px}
+  .spec td:first-child{width:auto}
+  .spec tr{display:grid;grid-template-columns:1fr auto;border-bottom:1px solid var(--line)}
+  .spec td{border:0}
+  .spec td:nth-child(3){grid-column:1/-1;padding-top:0;font-size:13px;color:var(--ink-2)}
+  .spec tr:first-child{border-top:1px solid #000}
+  .spec tr:first-child td{border-top:0}
+  .ln .hide-m{display:none}
+  .stat .ln td:first-child{width:auto}
+  .stat .ln .src{display:none}
+  .k-num{font-size:44px;line-height:52px}
+  .chart{height:140px;gap:10px}
+  .chart-x{gap:10px}
+  .out{padding:20px;font-size:14px;line-height:24px;min-height:360px}
+  .out-foot{flex-direction:column;align-items:stretch}
+  .out-foot .btn{position:fixed;left:0;right:0;bottom:0;width:100%;height:56px;z-index:15}
+  .kinds{display:none}
+  .kinds-m{display:block}
+  .cust-tbl th:nth-child(3),.cust-tbl td:nth-child(3),.cust-tbl th:nth-child(5),.cust-tbl td:nth-child(5),.cust-tbl th:nth-child(n+8),.cust-tbl td:nth-child(n+8){display:none}
+  .table-wrap{overflow-x:auto}
 }
 </style>
 </head>
@@ -381,7 +630,7 @@ const NAV = {
 };
 
 // 미팅용 빌드(MEETING) — CRM은 방문 이후만 (9/14 저녁 결정). 예약 화면 · 예약 전 안내(R1~R3) · 본사 모드를 숨긴다
-const BOOKING_ROUTES = ['#/', '#/calendar', '#/requests', '#/settings/channels', '#/settings/programs'];
+const BOOKING_ROUTES = ['#/today', '#/calendar', '#/requests', '#/settings/programs'];
 const PRE_KEYS = ['T_DEPOSIT_GUIDE_FIRST_VISIT', 'T_RESERVATION_CONFIRMED', 'T_D_MINUS_1'];
 const inScope = l => !MEETING || !PRE_KEYS.includes(l.key);
 if (MEETING) {
@@ -389,32 +638,30 @@ if (MEETING) {
   document.body.classList.add('is-meeting');
 }
 
-function renderShell() {
+// ── v2 (10/14) — 메뉴 8개는 대표가 전달한 제안 화면 그대로, 아이콘 없이 글자로 ──
+const LOGO = `<svg xmlns="http://www.w3.org/2000/svg" width="5641" height="705" viewBox="4 -666 5641 705" role="img" aria-label="MO&amp;BRAIN"><path fill="currentColor" d="M117.0 -127.0 127.0 -602.0 156.0 -600.0 145.0 -127.0Q144.0 -74.0 166.5 -43.0Q189.0 -12.0 230.0 -12.0Q233.0 -12.0 233.0 -6.0Q233.0 0.0 230.0 0.0Q208.0 0.0 185.0 -1.0Q162.0 -2.0 133.0 -2.0Q101.0 -2.0 75.0 -1.0Q49.0 0.0 27.0 0.0Q24.0 0.0 24.0 -6.0Q24.0 -12.0 27.0 -12.0Q68.0 -12.0 92.0 -43.0Q116.0 -74.0 117.0 -127.0ZM833.0 -12.0Q835.0 -12.0 835.0 -6.0Q835.0 0.0 833.0 0.0Q807.0 0.0 774.0 -1.0Q741.0 -2.0 705.0 -2.0Q668.0 -2.0 636.0 -1.0Q604.0 0.0 578.0 0.0Q575.0 0.0 575.0 -6.0Q575.0 -12.0 578.0 -12.0Q625.0 -12.0 638.5 -25.0Q652.0 -38.0 649.0 -81.0L626.0 -525.0L677.0 -605.0L422.0 -7.0Q421.0 -3.0 414.5 -3.0Q408.0 -3.0 406.0 -7.0L125.0 -542.0Q87.0 -613.0 34.0 -613.0Q31.0 -613.0 31.0 -619.0Q31.0 -625.0 34.0 -625.0Q55.0 -625.0 78.0 -624.0Q101.0 -623.0 117.0 -623.0Q143.0 -623.0 162.5 -624.0Q182.0 -625.0 193.0 -625.0Q207.0 -625.0 214.5 -615.0Q222.0 -605.0 239.0 -573.0L463.0 -153.0L413.0 -63.0L647.0 -600.0Q653.0 -614.0 659.5 -619.5Q666.0 -625.0 677.0 -625.0Q687.0 -625.0 698.0 -624.0Q709.0 -623.0 724.0 -623.0Q756.0 -623.0 778.5 -624.0Q801.0 -625.0 823.0 -625.0Q826.0 -625.0 826.0 -619.0Q826.0 -613.0 823.0 -613.0Q777.0 -613.0 755.5 -594.0Q734.0 -575.0 736.0 -535.0L760.0 -81.0Q762.0 -52.0 767.5 -37.0Q773.0 -22.0 788.0 -17.0Q803.0 -12.0 833.0 -12.0Z M1253.0 12.0Q1181.0 12.0 1122.5 -13.5Q1064.0 -39.0 1022.5 -84.0Q981.0 -129.0 958.5 -187.5Q936.0 -246.0 936.0 -312.0Q936.0 -393.0 967.5 -454.0Q999.0 -515.0 1051.0 -555.5Q1103.0 -596.0 1165.0 -616.0Q1227.0 -636.0 1288.0 -636.0Q1362.0 -636.0 1420.5 -609.5Q1479.0 -583.0 1520.0 -538.0Q1561.0 -493.0 1582.5 -436.0Q1604.0 -379.0 1604.0 -319.0Q1604.0 -249.0 1576.0 -189.0Q1548.0 -129.0 1499.5 -84.0Q1451.0 -39.0 1387.5 -13.5Q1324.0 12.0 1253.0 12.0ZM1286.0 -13.0Q1342.0 -13.0 1386.0 -45.0Q1430.0 -77.0 1455.5 -139.0Q1481.0 -201.0 1481.0 -290.0Q1481.0 -382.0 1453.0 -454.0Q1425.0 -526.0 1373.0 -567.5Q1321.0 -609.0 1248.0 -609.0Q1157.0 -609.0 1108.0 -540.0Q1059.0 -471.0 1059.0 -349.0Q1059.0 -276.0 1076.0 -214.5Q1093.0 -153.0 1123.5 -107.5Q1154.0 -62.0 1195.5 -37.5Q1237.0 -13.0 1286.0 -13.0Z M1748.0 -131.0Q1748.0 -170.0 1769.0 -201.0Q1790.0 -232.0 1823.5 -259.5Q1857.0 -287.0 1894.5 -314.5Q1932.0 -342.0 1965.5 -373.0Q1999.0 -404.0 2020.0 -441.0Q2041.0 -478.0 2041.0 -525.0Q2041.0 -570.0 2020.0 -594.5Q1999.0 -619.0 1967.0 -619.0Q1939.0 -619.0 1927.0 -600.5Q1915.0 -582.0 1915.0 -547.0Q1915.0 -492.0 1940.5 -435.0Q1966.0 -378.0 2008.5 -323.0Q2051.0 -268.0 2103.5 -218.0Q2156.0 -168.0 2210.0 -127.0Q2281.0 -74.0 2332.0 -46.5Q2383.0 -19.0 2408.0 -12.0Q2412.0 -11.0 2411.5 -5.5Q2411.0 0.0 2408.0 0.0Q2377.0 0.0 2333.5 0.0Q2290.0 0.0 2244.0 0.0Q2233.0 0.0 2215.0 -8.0Q2197.0 -16.0 2166.5 -36.5Q2136.0 -57.0 2087.0 -96.0Q2045.0 -130.0 1999.0 -173.0Q1953.0 -216.0 1913.5 -262.5Q1874.0 -309.0 1850.0 -353.0Q1837.0 -378.0 1829.0 -403.5Q1821.0 -429.0 1821.0 -461.0Q1821.0 -514.0 1844.0 -556.0Q1867.0 -598.0 1910.0 -622.0Q1953.0 -646.0 2013.0 -646.0Q2054.0 -646.0 2084.0 -634.0Q2114.0 -622.0 2130.5 -600.0Q2147.0 -578.0 2147.0 -546.0Q2147.0 -506.0 2125.5 -475.0Q2104.0 -444.0 2070.0 -418.0Q2036.0 -392.0 1998.0 -367.0Q1960.0 -342.0 1926.0 -316.0Q1892.0 -290.0 1870.5 -259.0Q1849.0 -228.0 1849.0 -188.0Q1849.0 -150.0 1871.0 -115.5Q1893.0 -81.0 1934.5 -59.0Q1976.0 -37.0 2034.0 -37.0Q2075.0 -37.0 2105.0 -49.5Q2135.0 -62.0 2154.5 -86.0Q2174.0 -110.0 2183.5 -145.5Q2193.0 -181.0 2193.0 -226.0Q2193.0 -283.0 2174.5 -310.0Q2156.0 -337.0 2112.0 -337.0Q2110.0 -337.0 2109.5 -343.0Q2109.0 -349.0 2112.0 -349.0L2350.0 -350.0Q2353.0 -350.0 2353.0 -344.0Q2353.0 -338.0 2350.0 -338.0Q2320.0 -338.0 2305.0 -331.0Q2290.0 -324.0 2282.5 -307.5Q2275.0 -291.0 2267.0 -262.0Q2259.0 -233.0 2246.0 -196.5Q2233.0 -160.0 2211.5 -123.5Q2190.0 -87.0 2156.5 -56.0Q2123.0 -25.0 2074.0 -6.5Q2025.0 12.0 1957.0 12.0Q1885.0 12.0 1838.5 -9.0Q1792.0 -30.0 1770.0 -63.0Q1748.0 -96.0 1748.0 -131.0Z M2735.0 -335.0 2746.0 -353.0Q2815.0 -353.0 2865.5 -331.0Q2916.0 -309.0 2944.0 -270.5Q2972.0 -232.0 2972.0 -181.0Q2972.0 -129.0 2942.0 -87.0Q2912.0 -45.0 2859.5 -20.5Q2807.0 4.0 2741.0 4.0Q2714.0 4.0 2672.5 1.0Q2631.0 -2.0 2597.0 -2.0Q2561.0 -2.0 2528.5 -1.0Q2496.0 0.0 2470.0 0.0Q2467.0 0.0 2467.0 -6.0Q2467.0 -12.0 2470.0 -12.0Q2498.0 -12.0 2513.5 -17.0Q2529.0 -22.0 2535.5 -37.0Q2542.0 -52.0 2542.0 -81.0V-544.0Q2542.0 -573.0 2536.0 -587.5Q2530.0 -602.0 2514.5 -607.5Q2499.0 -613.0 2471.0 -613.0Q2469.0 -613.0 2469.0 -619.0Q2469.0 -625.0 2471.0 -625.0Q2497.0 -625.0 2529.0 -623.5Q2561.0 -622.0 2597.0 -622.0Q2626.0 -622.0 2657.0 -625.0Q2688.0 -628.0 2720.0 -628.0Q2780.0 -628.0 2822.5 -613.5Q2865.0 -599.0 2888.0 -570.5Q2911.0 -542.0 2911.0 -499.0Q2911.0 -444.0 2867.0 -398.5Q2823.0 -353.0 2735.0 -335.0ZM2705.0 -606.0Q2686.0 -606.0 2674.5 -600.0Q2663.0 -594.0 2658.5 -580.5Q2654.0 -567.0 2654.0 -542.0V-346.0L2617.0 -353.0Q2650.0 -352.0 2671.0 -351.5Q2692.0 -351.0 2694.0 -351.0Q2748.0 -351.0 2775.0 -391.5Q2802.0 -432.0 2802.0 -490.0Q2802.0 -528.0 2790.5 -554.0Q2779.0 -580.0 2757.5 -593.0Q2736.0 -606.0 2705.0 -606.0ZM2724.0 -21.0Q2793.0 -21.0 2824.0 -56.5Q2855.0 -92.0 2855.0 -157.0Q2855.0 -231.0 2819.5 -277.5Q2784.0 -324.0 2706.0 -324.0Q2696.0 -324.0 2672.0 -323.5Q2648.0 -323.0 2621.0 -318.0L2654.0 -330.0V-81.0Q2654.0 -61.0 2658.5 -47.5Q2663.0 -34.0 2678.0 -27.5Q2693.0 -21.0 2724.0 -21.0Z M3584.0 0.0Q3569.0 0.0 3535.5 -37.5Q3502.0 -75.0 3455.0 -146.0Q3408.0 -217.0 3349.0 -316.0L3441.0 -344.0Q3521.0 -223.0 3577.5 -150.0Q3634.0 -77.0 3678.0 -44.5Q3722.0 -12.0 3762.0 -12.0Q3764.0 -12.0 3764.0 -6.0Q3764.0 0.0 3762.0 0.0Q3692.0 0.0 3648.0 0.0Q3604.0 0.0 3584.0 0.0ZM3369.0 -628.0Q3461.0 -628.0 3510.5 -594.5Q3560.0 -561.0 3560.0 -501.0Q3560.0 -442.0 3527.0 -396.5Q3494.0 -351.0 3442.5 -326.0Q3391.0 -301.0 3334.0 -301.0Q3320.0 -301.0 3305.5 -301.0Q3291.0 -301.0 3279.0 -302.0V-81.0Q3279.0 -52.0 3284.0 -37.0Q3289.0 -22.0 3304.0 -17.0Q3319.0 -12.0 3350.0 -12.0Q3352.0 -12.0 3352.0 -6.0Q3352.0 0.0 3350.0 0.0Q3324.0 0.0 3292.0 -1.0Q3260.0 -2.0 3222.0 -2.0Q3186.0 -2.0 3153.5 -1.0Q3121.0 0.0 3095.0 0.0Q3092.0 0.0 3092.0 -6.0Q3092.0 -12.0 3095.0 -12.0Q3126.0 -12.0 3141.0 -17.0Q3156.0 -22.0 3161.5 -37.0Q3167.0 -52.0 3167.0 -81.0V-544.0Q3167.0 -573.0 3162.0 -587.5Q3157.0 -602.0 3142.0 -607.5Q3127.0 -613.0 3096.0 -613.0Q3094.0 -613.0 3094.0 -619.0Q3094.0 -625.0 3096.0 -625.0Q3122.0 -625.0 3154.0 -623.5Q3186.0 -622.0 3222.0 -622.0Q3255.0 -622.0 3294.5 -625.0Q3334.0 -628.0 3369.0 -628.0ZM3446.0 -463.0Q3446.0 -522.0 3434.0 -553.0Q3422.0 -584.0 3401.0 -595.5Q3380.0 -607.0 3353.0 -607.0Q3313.0 -607.0 3296.0 -592.0Q3279.0 -577.0 3279.0 -542.0V-330.0Q3293.0 -328.0 3309.0 -327.0Q3325.0 -326.0 3337.0 -326.0Q3396.0 -326.0 3421.0 -358.5Q3446.0 -391.0 3446.0 -463.0Z M3953.0 -229.0 3968.0 -257.0H4256.0L4263.0 -229.0ZM4499.0 -12.0Q4504.0 -12.0 4504.0 -6.0Q4504.0 0.0 4499.0 0.0Q4469.0 0.0 4436.5 -2.0Q4404.0 -4.0 4374.0 -4.0Q4340.0 -4.0 4315.0 -2.0Q4290.0 0.0 4259.0 0.0Q4255.0 0.0 4255.0 -6.0Q4255.0 -12.0 4259.0 -12.0Q4300.0 -12.0 4306.5 -28.5Q4313.0 -45.0 4288.0 -94.0L4085.0 -495.0L4134.0 -581.0L3935.0 -142.0Q3908.0 -82.0 3934.0 -47.0Q3960.0 -12.0 4016.0 -12.0Q4021.0 -12.0 4021.0 -6.0Q4021.0 0.0 4016.0 0.0Q3986.0 0.0 3961.0 -2.0Q3936.0 -4.0 3898.0 -4.0Q3859.0 -4.0 3835.5 -2.0Q3812.0 0.0 3778.0 0.0Q3774.0 0.0 3774.0 -6.0Q3774.0 -12.0 3778.0 -12.0Q3805.0 -12.0 3824.5 -23.5Q3844.0 -35.0 3863.5 -65.5Q3883.0 -96.0 3908.0 -152.0L4125.0 -629.0Q4126.0 -632.0 4134.0 -632.5Q4142.0 -633.0 4143.0 -629.0L4393.0 -137.0Q4417.0 -90.0 4434.5 -62.5Q4452.0 -35.0 4467.5 -23.5Q4483.0 -12.0 4499.0 -12.0Z M4755.0 -81.0Q4755.0 -52.0 4760.0 -37.0Q4765.0 -22.0 4780.0 -17.0Q4795.0 -12.0 4826.0 -12.0Q4829.0 -12.0 4829.0 -6.0Q4829.0 0.0 4826.0 0.0Q4800.0 0.0 4768.0 -1.0Q4736.0 -2.0 4698.0 -2.0Q4662.0 -2.0 4629.0 -1.0Q4596.0 0.0 4570.0 0.0Q4568.0 0.0 4568.0 -6.0Q4568.0 -12.0 4570.0 -12.0Q4601.0 -12.0 4616.5 -17.0Q4632.0 -22.0 4637.5 -37.0Q4643.0 -52.0 4643.0 -81.0V-544.0Q4643.0 -573.0 4637.5 -587.5Q4632.0 -602.0 4616.5 -607.5Q4601.0 -613.0 4570.0 -613.0Q4568.0 -613.0 4568.0 -619.0Q4568.0 -625.0 4570.0 -625.0Q4596.0 -625.0 4629.0 -623.5Q4662.0 -622.0 4698.0 -622.0Q4736.0 -622.0 4768.5 -623.5Q4801.0 -625.0 4826.0 -625.0Q4829.0 -625.0 4829.0 -619.0Q4829.0 -613.0 4826.0 -613.0Q4796.0 -613.0 4780.5 -607.0Q4765.0 -601.0 4760.0 -586.0Q4755.0 -571.0 4755.0 -542.0Z M5027.0 -127.0V-602.0L5057.0 -600.0V-127.0Q5057.0 -74.0 5079.0 -43.0Q5101.0 -12.0 5140.0 -12.0Q5142.0 -12.0 5142.0 -6.0Q5142.0 0.0 5140.0 0.0Q5118.0 0.0 5094.5 -1.0Q5071.0 -2.0 5043.0 -2.0Q5013.0 -2.0 4984.5 -1.0Q4956.0 0.0 4932.0 0.0Q4929.0 0.0 4929.0 -6.0Q4929.0 -12.0 4932.0 -12.0Q4976.0 -12.0 5001.5 -43.0Q5027.0 -74.0 5027.0 -127.0ZM5537.0 15.0Q5537.0 18.0 5532.5 18.5Q5528.0 19.0 5526.0 18.0L5033.0 -543.0Q4997.0 -584.0 4972.0 -598.5Q4947.0 -613.0 4922.0 -613.0Q4920.0 -613.0 4920.0 -619.0Q4920.0 -625.0 4922.0 -625.0Q4942.0 -625.0 4963.0 -624.0Q4984.0 -623.0 5002.0 -623.0Q5038.0 -623.0 5067.0 -624.0Q5096.0 -625.0 5112.0 -625.0Q5125.0 -625.0 5131.5 -613.5Q5138.0 -602.0 5162.0 -573.0L5529.0 -150.0ZM5537.0 -497.0V15.0L5508.0 -15.0V-497.0Q5508.0 -550.0 5486.0 -581.5Q5464.0 -613.0 5425.0 -613.0Q5423.0 -613.0 5423.0 -619.0Q5423.0 -625.0 5425.0 -625.0Q5447.0 -625.0 5470.5 -623.5Q5494.0 -622.0 5522.0 -622.0Q5549.0 -622.0 5575.0 -623.5Q5601.0 -625.0 5623.0 -625.0Q5625.0 -625.0 5625.0 -619.0Q5625.0 -613.0 5623.0 -613.0Q5583.0 -613.0 5560.0 -581.5Q5537.0 -550.0 5537.0 -497.0Z"/></svg>`;
+const NAV2 = [['#/', '홈'], ['#/customers', '고객 관리'], ['#/portal', '컨디션포털'], ['#/messages', '예약문자'], ['#/content', '콘텐츠 운영'], ['#/ops', '운영 업무'], ['#/stats', '통계'], null, ['#/settings/templates', '설정']];
+const SUBNAV = {
+  cust: [['#/customers', '개인 고객'], ['#/b2b', '기업 · 교육']],
+  msg: [['#/messages', '문자 작성'], ['#/messages/log', '문자 기록'], ['#/campaigns', '광고 문자'], ['#/messages/auto', '자동 발송 (나중)']],
+  set: [['#/settings/templates', '메시지 문구'], ['#/settings/channels', '예약 채널'], ...(MEETING ? [] : [['#/settings/programs', '상품 · 메뉴']])],
+};
+const navOf = h => h.startsWith('#/customer') || h === '#/b2b' ? '#/customers' : (h.startsWith('#/messages') || h === '#/campaigns') ? '#/messages' : h.startsWith('#/settings') ? '#/settings/templates' : h;
+const FOOT = '데모 화면입니다. 인물, 연락처, 숫자는 모두 가상이고 저장되지 않습니다.';
+
+function renderShell(cur) {
   const hq = STATE.mode === 'hq';
-  const cur = location.hash || (hq ? '#/hq' : '#/');
-  const items = NAV[STATE.mode].flatMap(g => g.items);
-  const link = ([h, label, cnt]) => {
-    const n = cnt ? cnt() : 0;
-    return `<a class="sidebar-item${h === cur ? ' active' : ''}" href="${h}"><span class="sidebar-item-label">${label}</span>${n ? `<span class="sidebar-count">${n}</span>` : ''}</a>`;
-  };
+  const nav = hq ? NAV.hq.flatMap(g => g.items).map(i => [i[0], i[1]]) : NAV2;
+  const on = navOf(cur);
+  const links = nav.map(i => i ? `<a href="${i[0]}"${i[0] === on ? ' class="on" aria-current="page"' : ''}>${i[1]}</a>` : '<div class="gap"></div>').join('');
+  const mode = `<a href="#" class="no-meet" data-act="mode" data-mode="${hq ? 'store' : 'hq'}">${hq ? '매장 보기' : '본사 보기 (데모)'}</a>`;
   $('#root').innerHTML = `
-  <div class="shell${hq ? ' is-admin' : ''}">
-    <aside class="sidebar">
-      <div class="sidebar-brand"><span class="sidebar-brand-name">모앤브레인</span><span class="sidebar-brand-sub">${hq ? '본사' : 'CRM'}</span></div>
-      <nav class="sidebar-nav">${NAV[STATE.mode].map(g => g.g ? `<div class="sidebar-group"><div class="sidebar-group-label">${g.g}</div>${g.items.map(i => `<div>${link(i)}</div>`).join('')}</div>` : g.items.map(link).join('')).join('')}</nav>
-      <div class="sidebar-foot">
-        <div class="sidebar-demo no-meet"><div class="sidebar-demo-label">데모 · 보는 사람</div>
-          <div class="seg"><button class="seg-item${hq ? '' : ' seg-active'}" data-act="mode" data-mode="store">매장 원장</button><button class="seg-item${hq ? ' seg-active' : ''}" data-act="mode" data-mode="hq">본사</button></div></div>
-        <p class="demo-flag">${MEETING ? '<b>미팅용 · CRM은 방문 이후만</b><br>' : ''}목표 모습을 보여 주는 데모입니다. 인물 · 연락처 · 수치는 모두 가상이고, 저장되지 않습니다.</p>
-      </div>
-    </aside>
-    <div class="shell-main">
-      <nav class="mnav">${items.map(([h, l]) => `<a href="${h}" class="${h === cur ? 'active' : ''}">${l}</a>`).join('')}<a href="#" class="no-meet" data-act="mode" data-mode="${hq ? 'store' : 'hq'}">${hq ? '매장 보기' : '본사 보기'}</a></nav>
-      <header class="topbar"><div class="topbar-inner"><h1 class="topbar-title"><span class="topbar-title-text" id="page-title"></span></h1>
-        <div class="topbar-search"><span class="search search-sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input placeholder="고객 이름 · 전화 뒤 4자리" type="search" data-act="noop"><span class="kbd search-kbd">⌘K</span></span></div>
-        <div class="topbar-persona"><button type="button" class="persona-btn"><span class="avatar">${hq ? '본' : 'A'}</span><span class="topbar-persona-text"><span class="ui strong">${hq ? '본사 관리자' : '원장 A'}</span><span class="caption muted">${hq ? '모앤브레인 본사' : '모앤브레인 본점 (석촌)'}</span></span></button></div>
-      </div></header>
-      <main class="shell-content"><div class="route-view" id="view"></div></main>
+  <div class="v2${hq ? ' is-admin' : ''}">
+    <aside class="v2-side"><a class="v2-logo" href="#/" aria-label="홈">${LOGO}</a><nav class="v2-nav" aria-label="메뉴">${links}${mode}</nav><p class="v2-foot">${FOOT}</p></aside>
+    <div>
+      <header class="v2-mbar"><a class="v2-logo" href="#/" aria-label="홈">${LOGO}</a><button type="button" class="burger" data-act="menu" aria-label="메뉴" aria-expanded="false"><i></i><i></i><i></i></button></header>
+      <nav class="v2-menu" id="v2menu" aria-label="메뉴">${links}${mode}<p class="v2-foot">MO&amp;BRAIN 내부 운영 공간<br>${FOOT}</p></nav>
+      <main class="v2-main"><div id="v2head"></div><div class="route-view" id="view"></div></main>
     </div>
   </div>`;
 }
@@ -422,17 +669,24 @@ function renderShell() {
 function renderRoute() {
   const hq = STATE.mode === 'hq';
   let h = location.hash || (hq ? '#/hq' : '#/');
-  if (MEETING && (BOOKING_ROUTES.includes(h) || h.startsWith('#/hq') || !VIEWS[h])) { h = '#/customers'; STATE.mode = 'store'; history.replaceState(null, '', h); }
+  const m = h.match(/^#\/customer\/(c\d+)$/);
+  if (m && cust(m[1])) { STATE.cid = m[1]; h = '#/customer'; }
+  else if (h.startsWith('#/customer/') || (h === '#/customer' && !STATE.cid)) h = '#/customers';
+  if (MEETING && (BOOKING_ROUTES.includes(h) || h.startsWith('#/hq') || !VIEWS[h])) { h = '#/'; STATE.mode = 'store'; history.replaceState(null, '', h); }
   if (!VIEWS[h] || (hq !== h.startsWith('#/hq'))) { STATE.mode = h.startsWith('#/hq') && VIEWS[h] ? 'hq' : 'store'; if (!VIEWS[h]) h = STATE.mode === 'hq' ? '#/hq' : '#/'; }
   closeDrawer();
-  renderShell();
-  const v = VIEWS[h];
-  $('#page-title').textContent = v.title;
-  document.title = `${v.title} · 모앤브레인 CRM 데모`;
+  renderShell(h);
+  const v = VIEWS[h], val = x => typeof x === 'function' ? x() : (x || '');
+  const title = val(v.title), sub = v.sub ? SUBNAV[v.sub] : null;
+  $('#v2head').innerHTML = `${v.crumb ? `<p class="v2-crumb">${val(v.crumb)}</p>` : ''}
+    <div class="v2-head"><div><h1 id="page-title">${title}</h1>${v.lead ? `<p class="v2-lead">${val(v.lead)}</p>` : ''}</div>${v.acts ? `<div class="v2-acts">${val(v.acts)}</div>` : ''}</div>
+    ${sub ? `<nav class="v2-sub">${sub.map(([sh, l]) => `<a href="${sh}"${sh === h ? ' class="on"' : ''}>${l}</a>`).join('')}</nav>` : ''}`;
+  document.title = `${title.replace(/<[^>]+>/g, '')} · 모앤브레인 CRM 데모`;
   $('#view').innerHTML = v.render();
   if (v.mount) v.mount($('#view'));
   window.scrollTo(0, 0);
 }
+ACTIONS.menu = el => { const m = $('#v2menu'), open = !m.classList.contains('open'); m.classList.toggle('open', open); el.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; };
 
 // ── 드로어 · 토스트 ──
 function openDrawer(title, body, foot, width = 520) {
@@ -483,7 +737,7 @@ function pendingItem(r) {
   return `<li class="is-link" data-act="req" data-id="${r.id}"><span class="title">${fmtD(r.date)} ${r.time} · ${esc(c.name)} · ${CHANNELS[r.ch].short}</span><span class="meta">${tag}</span></li>`;
 }
 
-VIEWS['#/'] = {
+VIEWS['#/today'] = {
   title: '오늘',
   render() {
     const today = resvOn(TODAY), first = today.filter(r => r.first).length;
@@ -523,7 +777,7 @@ function monthCells(ym) {
   return cells;
 }
 const legendHTML = () => `<span class="legend">${Object.values(CHANNELS).map(c => `<span><i class="ch-dot ${c.cls}"></i>${c.short}</span>`).join('')}<span><i class="ch-dot" style="background:var(--ink-24)"></i>수락 전</span><span><i class="ch-dot" style="background:var(--bad)"></i>겹침</span></span>`;
-const AUTO_BANNER = `<div class="banner"><span><b>자동으로 들어오는 건 네이버 예약뿐입니다</b> (예약관리 프로그램을 연동했을 때). 당근 · 마이리얼트립 · 전화 예약은 <b>수락하기 전에 이 달력에서 빈자리를 보고</b>, 수락한 뒤 여기에 입력합니다. <a href="#/settings/channels">채널별 연결 방식 보기</a></span></div>`;
+const AUTO_BANNER = `<div class="banner"><span><b>자동으로 들어오는 건 네이버 예약뿐입니다</b> (예약관리 프로그램을 연동했을 때). 당근, 마이리얼트립, 전화 예약은 <b>수락하기 전에 이 달력에서 빈자리를 보고</b>, 수락한 뒤 여기에 입력합니다. <a href="#/settings/channels">채널별 연결 방식 보기</a></span></div>`;
 
 VIEWS['#/calendar'] = {
   title: '통합 예약',
@@ -633,7 +887,7 @@ ACTIONS.paid = el => {
 const nextResv = cid => RESV.filter(r => r.cid === cid && r.date >= TODAY && ['CONFIRMED', 'DEPOSIT_PENDING', 'REQUESTED'].includes(r.status)).sort((a, b) => a.date.localeCompare(b.date))[0];
 
 VIEWS['#/customers'] = {
-  title: '고객',
+  title: '고객 관리',
   render() {
     const seg = STATE.seg || '전체';
     const tabs = [['전체', null], ['신규', 'NEW'], ['VIP · 회원권', 'VIP'], ['일반', '일반'], ['휴면', 'DORMANT']];
@@ -641,7 +895,7 @@ VIEWS['#/customers'] = {
     return `<div class="stack">
       <div class="page-intro"><div class="tabs">${tabs.map(([l, k]) => `<button class="tab${l === seg ? ' tab-active' : ''}" data-act="seg" data-seg="${l}">${l}<span class="tab-count">${k ? CUSTOMERS.filter(c => c.seg === k).length : CUSTOMERS.length}</span></button>`).join('')}</div>
         <p>고객 1명 = 페이지 1개. 노션 고객 페이지와 같은 칸입니다.</p><button class="btn btn-sm btn-primary" data-act="cf-open">고객 등록</button></div>
-      <section class="card card-flush"><div class="table-wrap"><table class="table table-clickable">
+      <section class="card card-flush"><div class="table-wrap"><table class="table table-clickable cust-tbl">
         <thead><tr><th>고객</th><th>구분</th><th>처음 온 곳</th><th class="right">방문</th><th>마지막 방문</th><th class="no-meet">다음 예약</th><th>회원권</th><th>포털</th><th>광고 수신</th></tr></thead>
         <tbody>${list.map(c => {
           const n = nextResv(c.id);
@@ -697,11 +951,11 @@ const TEMPLATES = [
   T('T_FOLLOWUP_30D', 'F30', '30일 뒤 재방문 안내', '재방문', '마지막 방문 30일 뒤', '재예약 없음 · 광고 수신 동의', '문자(광고)', '광고성', '', '노션에 칸만 있고 문구가 비어 있습니다'),
   T('T_FOLLOWUP_3M', 'F3M', '3개월 뒤 재방문 안내', '재방문', '마지막 방문 3개월 뒤 11:00', '재예약 없음 · 광고 수신 동의', '문자(광고)', '광고성',
     '(광고) 모앤브레인\n#{고객명}님, 마지막 관리 후 3개월이 지났습니다.\n계절이 바뀌는 때 두피 컨디션을 한 번 확인해 보세요.\n무료수신거부 (번호 자리)'),
-  T('T_DORMANT_6_12M', '휴면', '휴면 고객 안내', '재방문', '6~12개월 미방문 · 주 1회', '광고 수신 동의', '문자(광고)', '광고성',
+  T('T_DORMANT_6_12M', '휴면', '휴면 고객 안내', '재방문', '6~12개월 미방문, 주 1회', '광고 수신 동의', '문자(광고)', '광고성',
     '(광고) 모앤브레인\n#{고객명}님, 오랜만에 인사드립니다.\n개인 페이지의 지난 기록은 그대로 남아 있습니다.\n#{포털링크}\n무료수신거부 (번호 자리)'),
   T('T_BIRTHDAY', '캠페인', '생일 축하', '캠페인', '생일 당일', '광고 수신 동의 · 생일 칸', '문자(광고)', '광고성',
     '(광고) 모앤브레인\n#{고객명}님, 생일 축하드립니다.\n(혜택 문구 자리)\n무료수신거부 (번호 자리)', '고객 정보에 생일 칸이 아직 없습니다'),
-  T('T_SEASON', '캠페인', '계절 · 신제품 · VIP 안내', '캠페인', '캠페인 달력대로', '광고 수신 동의', '문자(광고)', '광고성',
+  T('T_SEASON', '캠페인', '계절, 신제품, VIP 안내', '캠페인', '캠페인 달력대로', '광고 수신 동의', '문자(광고)', '광고성',
     '(광고) 모앤브레인\n(계절 두피 관리 · 신제품 · VIP 행사 문구 자리)\n무료수신거부 (번호 자리)'),
 ];
 const tplName = key => (TEMPLATES.find(t => t.key === key) || { name: key }).name;
@@ -709,15 +963,15 @@ const LOGST = { SENT: ['발송', 'badge-ok'], FAILED: ['실패', 'badge-bad'], H
 const logBadge = s => `<span class="badge ${LOGST[s][1]}">${LOGST[s][0]}</span>`;
 const viaBadge = t => `<span class="badge ${t.kind === '광고성' ? 'badge-bad' : 'badge-ok'}">${t.via}</span>`;
 
-VIEWS['#/messages'] = {
-  title: '자동 안내',
+VIEWS['#/messages/auto'] = {
+  title: '자동 발송 (나중)',
   render() {
     const stages = [['예약', '방문율을 올리는 단계'], ['첫 방문', '신뢰를 만드는 단계'], ['재방문', '다시 오게 하는 단계'], ['캠페인', '자동 흐름과 따로']];
     const qu = buildQueue();
     return `<div class="stack">
       <div class="banner"><span><b>알림톡은 예약 · 방문 안내만 됩니다.</b> 재방문 · 휴면 · 생일은 광고라서 광고 수신에 동의한 고객에게 (광고) 표시 문자로 보냅니다. 보내는 도구는 예약관리 프로그램의 자동 발송이나 알림톡 대행사 ${q('카카오 비즈니스 채널 보유')}</span></div>
       <div class="flow">${stages.map(([s, d], i) => `<div class="flow-col"><h3><span class="n">${i + 1}</span>${s} <span class="caption">· ${d}</span></h3>
-        ${MEETING && s === '예약' ? '<div class="flow-step is-off"><span class="k">CRM 밖</span><span class="t">네이버 예약 쪽에서 지금 방식 그대로</span><span class="caption muted">예약금 안내 · 확정 안내 · 전날 안내</span></div>' : TEMPLATES.filter(t => t.stage === s).map(t =>`<button class="flow-step${t.text ? '' : ' is-off'}" data-act="tpl" data-key="${t.key}"><span class="k">${t.code} · ${t.when}</span><span class="t">${t.name}</span>
+        ${MEETING && s === '예약' ? '<div class="flow-step is-off"><span class="k">지금은 예약문자</span><span class="t">문구를 복사해 직접 보냄</span><span class="caption muted">예약금 안내, 확정 안내, 전날 안내</span></div>' : TEMPLATES.filter(t => t.stage === s).map(t =>`<button class="flow-step${t.text ? '' : ' is-off'}" data-act="tpl" data-key="${t.key}"><span class="k">${t.code} · ${t.when}</span><span class="t">${t.name}</span>
           <span class="row">${viaBadge(t)}${t.text ? '' : '<span class="badge badge-wait">문구 비어 있음</span>'}</span></button>`).join('')}</div>`).join('')}</div>
       <div class="grid-3 align-start">
         <section class="card card-flush wide"><header class="card-head"><div><h2 class="card-title">오늘 보낼 안내</h2><p class="caption muted mt-2">${fmtDL(TODAY)} 기준 · 위 규칙을 오늘 날짜에 대입한 결과</p></div></header>
@@ -732,7 +986,7 @@ VIEWS['#/messages'] = {
 };
 
 VIEWS['#/messages/log'] = {
-  title: '발송 기록',
+  title: '문자 기록',
   render() {
     const rows = MSGLOG.map((l, i) => Object.assign({ i }, l)).filter(inScope).sort((a, b) => b.at.localeCompare(a.at));
     return `<div class="stack"><div class="page-intro"><p>같은 안내를 두 번 보내지 않도록 이 기록으로 막습니다. 실패 · 보류는 사람이 다시 확인합니다.</p></div>
@@ -743,10 +997,10 @@ VIEWS['#/messages/log'] = {
 
 const CAMPAIGNS = [
   ['2026-09-23', '추석 인사', '전체 · 광고 수신 동의', '예약됨'], ['2026-10-01', '10월 생일 고객', '생일 칸이 있는 고객', '생일 칸 없음'],
-  ['2026-10-06', '환절기 두피 관리 안내', '최근 6개월 방문 · 동의', '초안'], ['미정', '신제품 안내', 'VIP · 회원권 · 동의', '계획'], ['2026-12-20', '연말 인사', '전체 · 동의', '계획'],
+  ['2026-10-06', '환절기 두피 관리 안내', '최근 6개월 방문 · 동의', '초안'], ['미정', '신제품 안내', 'VIP 회원권, 동의', '계획'], ['2026-12-20', '연말 인사', '전체 · 동의', '계획'],
 ];
 VIEWS['#/campaigns'] = {
-  title: '캠페인',
+  title: '광고 문자',
   render() {
     const consent = CUSTOMERS.filter(c => c.consent).length;
     return `<div class="stack"><div class="banner"><span>노션 하단의 계절별 발송 계획 표를 옮긴 것입니다. 전부 광고라서 <b>광고 수신 동의 ${consent}명</b>(전체 ${CUSTOMERS.length}명 중)에게만 보냅니다.</span></div>
@@ -758,9 +1012,9 @@ VIEWS['#/campaigns'] = {
 VIEWS['#/settings/templates'] = {
   title: '메시지 문구',
   render() {
-    return `<div class="stack"><div class="banner"><span>문구는 <b>예시</b>입니다. 사장님 노션의 실제 문구로 바꿉니다. 알림톡 문구는 카카오 심사(영업일 2일 안팎)를 거칩니다.</span></div>
+    return `<div class="stack"><div class="banner"><span>코드가 <b>원문</b>인 것은 제안 도구의 문구 그대로, 나머지는 예시입니다. 알림톡 문구는 카카오 심사(영업일 2일 안팎)를 거칩니다.</span></div>
       <section class="card card-flush"><div class="table-wrap"><table class="table table-clickable"><thead><tr><th>코드</th><th>안내</th><th>보내는 때</th><th>조건</th><th>방법</th><th>문구</th></tr></thead>
-      <tbody>${TEMPLATES.map(t => `<tr data-act="tpl" data-key="${t.key}"${t.stage === '예약' ? ' class="no-meet"' : ''}><td class="num nowrap">${t.code}</td><td class="strong">${t.name}</td><td>${t.when}</td><td class="muted">${t.cond}</td><td>${viaBadge(t)}</td><td>${t.text ? '있음' : '<span class="badge badge-wait">비어 있음</span>'}</td></tr>`).join('')}</tbody></table></div></section></div>`;
+      <tbody>${TEMPLATES.map(t => `<tr data-act="tpl" data-key="${t.key}"><td class="num nowrap">${t.code}</td><td class="strong">${t.name}</td><td>${t.when}</td><td class="muted">${t.cond}</td><td>${viaBadge(t)}</td><td>${t.text ? '있음' : '<span class="badge badge-wait">비어 있음</span>'}</td></tr>`).join('')}</tbody></table></div></section></div>`;
   },
 };
 
@@ -778,7 +1032,7 @@ ACTIONS.tpl = el => {
 ;
 /* ── 포털 · 기업 · 설정 · 본사 ── */
 VIEWS['#/portal'] = {
-  title: '컨디션 포털',
+  title: '컨디션포털',
   render() {
     const withPortal = CUSTOMERS.filter(c => c.portal && c.visits);
     const c = cust(STATE.portalCid || 'c2');
@@ -797,8 +1051,8 @@ VIEWS['#/portal'] = {
           <div class="portal-sec"><button class="btn btn-primary" style="width:100%" data-act="demo" data-msg="네이버 예약으로 이동 — 데모">다음 예약 신청하기</button></div>
         </div></div>
         <section class="card"><header class="card-head"><h2 class="card-title">CRM과 포털의 역할</h2></header><ul class="mini-list">
-          <li><span class="title"><b>메시지</b>는 행동 유도 — 예약 확정 · 방문 · 리뷰 · 재방문</span></li>
-          <li><span class="title"><b>포털</b>은 신뢰 — 근거 · 기록 · 개인화</span></li>
+          <li><span class="title"><b>메시지</b>는 행동 유도 — 예약 확정, 방문, 리뷰, 재방문</span></li>
+          <li><span class="title"><b>포털</b>은 신뢰 — 근거, 기록, 개인화</span></li>
           <li><span class="title">CRM은 <b>포털 링크와 회차 기록</b>만 알면 된다</span></li>
           <li><span class="title">가장 중요한 순간 = 방문 다음날 링크를 보낼 때 (V1)</span></li>
           <li><span class="title">지금은 노션 유지 · 칸을 이 구조에 맞춰 두면 나중에 옮기기만 하면 된다</span></li></ul>
@@ -832,7 +1086,7 @@ const CH_ROWS = [
   ['마이리얼트립', '이용권 판매 + 날짜 신청', '수기 — 파트너앱 알림을 보고 입력', '24시간 안에 확정', '수기', 'badge-wait'],
   ['전화 · 문자', '예약 받음', '수기 — 통화 중 바로 입력', '바로', '수기', 'badge-wait'],
   ['구글 지도', '예약 링크 → 네이버 예약', '네이버로 들어옴 (따로 관리할 창구 아님)', '–', '링크', 'badge-neutral'],
-  ['홈페이지 · 인스타 · 카톡 채널', '예약 버튼 → 네이버 예약', '네이버로 들어옴', '–', '링크', 'badge-neutral'],
+  ['홈페이지, 인스타, 카톡 채널', '예약 버튼 → 네이버 예약', '네이버로 들어옴', '–', '링크', 'badge-neutral'],
   ['스마트스토어', '이용권 판매', '주문은 읽을 수 있음 (판매자 API) · 예약은 네이버로 안내', '–', '이용권', 'badge-neutral'],
   ['카카오 예약', '뷰티 · 헤어 업종 서비스 준비 중', '–', '–', '불가', 'badge-bad'],
   ['현대이지웰', '입점 준비 중', '–', '–', '준비 중', 'badge-neutral'],
@@ -1152,6 +1406,326 @@ ACTIONS['req-reject'] = el => {
   r.status = 'CANCELED'; r.reason = '거절';
   renderRoute(); toast(`거절했습니다 — ${CHANNELS[r.ch].short} 앱에서도 거절 처리하세요 (데모)`);
 };
+
+;
+/* ── v2 (10/14): 홈 · 고객 한 페이지 · 예약문자 작성 · 통계 · 운영 업무 · 콘텐츠 운영 ──
+   대표가 전달한 제안 화면(메뉴 8개 · 예약 · 안내 문자 작성)을 뼈대로, 홈페이지 docs/07 anti-AI 규칙으로 그린다.
+   시안과 검수 기록: docs/시안_v2/ · 숫자는 모두 가상 */
+
+// 예약문자 — 제안 화면의 안내 종류 11가지 순서 그대로 (앞의 이모지는 묶음 이름으로 바꿈)
+// text = 제안 화면에 보인 원문 · tpl = 데모의 예시 문구 · 둘 다 없으면 "원문 대기"
+const VISIT_BEFORE_TEXT = '안녕하세요, {고객명}님\n모앤브레인 방문 예약을 안내드립니다🍀\n\n✅ 예약정보\n- 일시: {일시}\n- 프로그램: [{프로그램}]\n- 소요시간: {소요시간}분\n\n✅ 주소 및 위치\nhttps://naver.me/Futtj0EO\n서울시 송파구 삼학사로 40 이영빌딩 4층 401호 (빽다방 오른편 건물)\n\n9호선 석촌고분역 3번 출구 도보 3분\n(3번출구 오른편 식자재마트 방향)\n\n📌 주차 안내\n건물 1층 주차 가능\n만차 시 인근 공영주차장 이용';
+const KINDS = [
+  { id: 'before', name: 'MO&BRAIN 방문 전 알림', grp: '', text: VISIT_BEFORE_TEXT, visit: true },
+  { id: 'd1', name: '방문 전날 안내', grp: '방문 전후', tpl: 'T_D_MINUS_1', visit: true },
+  { id: 'd0', name: '당일 안내', grp: '방문 전후', visit: true },
+  { id: 'thanks', name: '첫방문 감사', grp: '방문 전후', tpl: 'T_REVIEW_REQUEST_2_3D' },
+  { id: 'check', name: '상태 확인', grp: '방문 전후', tpl: 'T_POSTCARE_PORTAL_NEXT_DAY' },
+  { id: 'revisit', name: '재방문 안내', grp: '방문 전후', tpl: 'T_FOLLOWUP_15D', ad: true },
+  { id: 'freq', name: '첫 방문 [ 예약 신청·입금 ] 안내', grp: '첫 방문', tpl: 'T_DEPOSIT_GUIDE_FIRST_VISIT' },
+  { id: 'fpaid', name: '첫 방문 [ 입금 완료·예약 ] 확정', grp: '첫 방문', tpl: 'T_RESERVATION_CONFIRMED', visit: true },
+  { id: 'fconf', name: '첫 방문 [ 예약 확정 ] 안내', grp: '첫 방문', visit: true },
+  { id: 'trial', name: '체험단 [ 신청·예약 절차 ] 안내', grp: '체험단 · 협업' },
+  { id: 'influ', name: '인플루언서 [ 협업·신청 예약 절차 ] 안내', grp: '체험단 · 협업' },
+];
+// 설정 › 메시지 문구에도 보이게 — 원문 1개 + 원문 대기 4개
+TEMPLATES.unshift(T('K_before', '원문', 'MO&BRAIN 방문 전 알림', '예약', '예약을 받은 뒤', '날짜, 시간, 프로그램', '복사해서 직접', '정보성', VISIT_BEFORE_TEXT.replace(/\{([^}]+)\}/g, '#{$1}'), '제안 화면 원문 (화면에 보인 부분까지)'));
+KINDS.filter(k => !k.text && !k.tpl).forEach(k => TEMPLATES.push(T('K_' + k.id, '원문 대기', k.name, k.grp || '예약', '–', '–', '복사해서 직접', '정보성', '', '제안 도구의 문구를 옮겨 넣을 자리')));
+PRE_KEYS.length = 0; // v2: 방문 전 안내도 예약문자에서 만든다 (예약 자체는 여전히 네이버)
+
+const kindOf = id => KINDS.find(k => k.id === id);
+const tplKey = k => k.text ? 'K_' + k.id : k.tpl || 'K_' + k.id;
+const fmtWhen = (d, t) => d ? `${Number(d.slice(5, 7))}월 ${Number(d.slice(8, 10))}일(${WD[dow(d)]})${t ? ' ' + t : ''}` : '{일시}';
+function kindText(k, f) {
+  const base = k.text || (k.tpl ? (TEMPLATES.find(t => t.key === k.tpl) || {}).text : '') || '';
+  if (!base) return '';
+  const c = f.cid ? cust(f.cid) : null, p = f.pid ? prog(f.pid) : null;
+  return base.replace(/#?\{고객명\}/g, c ? c.name : '{고객명}').replace(/#?\{일시\}/g, fmtWhen(f.date, f.time))
+    .replace(/#?\{프로그램\}/g, p ? p.name : '{프로그램}').replace(/\{소요시간\}/g, p ? p.min : '{소요시간}')
+    .replace(/#\{포털링크\}/g, f.link || '{고객 페이지 링크}').replace(/#\{리뷰링크\}/g, '{리뷰 링크}');
+}
+function cmpFor(cid) { // 고객을 고르면 방문 구분 · 다음 일정 · 포털 링크를 채운다
+  const c = cid ? cust(cid) : null, r = c && RESV.filter(x => x.cid === cid && x.date >= TODAY && HOLDS.includes(x.status)).sort((a, b) => (a.date + a.time).localeCompare(b.date + b.time))[0];
+  return { cid: cid || '', visit: c && c.visits ? 'again' : 'first', date: r ? r.date : TODAY, time: r ? r.time : '', pid: r ? r.pid : 'p1',
+    link: c && c.portal ? (c.portalUrl || `https://….notion.site/${c.id}`) : '' };
+}
+const cmpState = () => STATE.cmp || (STATE.cmp = { kid: 'before', text: null, copied: false, ...cmpFor('c20') });
+function redraw() { const y = window.scrollY; renderRoute(); window.scrollTo(0, y); }
+ACTIONS.compose = el => {
+  const d = el.dataset;
+  STATE.cmp = { kid: d.kid || 'before', text: null, copied: false, ...cmpFor(d.cid || '') };
+  if (d.date) STATE.cmp.date = d.date;
+  if (location.hash === '#/messages') redraw(); else location.hash = '#/messages';
+};
+ACTIONS['msg-open'] = el => ACTIONS.compose({ dataset: { cid: el.dataset.id, kid: 'check' } });
+CHANGES.cmp = el => {
+  const f = cmpState(), k = el.dataset.k;
+  if (k === 'cid') Object.assign(f, cmpFor(el.value)); else f[k] = el.value;
+  f.text = null; f.copied = false; redraw();
+};
+INPUTS['cmp-text'] = el => { cmpState().text = el.value; };
+function upsertVisit(f) { // 복사한 방문 안내의 날짜 · 시간이 홈의 "오늘 방문"이 된다
+  const c = cust(f.cid), r = RESV.find(x => x.cid === f.cid && x.date === f.date && x.status !== 'CANCELED');
+  if (r) Object.assign(r, { time: f.time, pid: f.pid, status: r.status === 'VISIT_COMPLETED' ? r.status : 'CONFIRMED' });
+  else RESV.push(Object.assign(R(f.date, f.time, f.cid, f.pid, c.ch, 'CONFIRMED', laneFor(f.date, f.time, f.pid) || 'a', !c.visits), { id: nextId(RESV, 'r'), deposit: null }));
+}
+ACTIONS['cmp-copy'] = () => {
+  const f = cmpState(), k = kindOf(f.kid), txt = f.text != null ? f.text : kindText(k, f);
+  try { if (navigator.clipboard) navigator.clipboard.writeText(txt).catch(() => {}); } catch (e) { /* 데모 — 복사 권한이 없어도 기록은 남긴다 */ }
+  if (f.cid) {
+    MSGLOG.push(L(NOW, f.cid, tplKey(k), '복사 → 직접', 'SENT', '복사함'));
+    if (k.visit && f.date && f.time) upsertVisit(f);
+  }
+  f.copied = true; redraw(); toast('복사했습니다. 카카오톡이나 문자에 붙여 넣어 보내세요 (데모)');
+};
+
+VIEWS['#/messages'] = {
+  title: '예약 · 안내 문자 작성', sub: 'msg', lead: '안내를 고르고, 문구를 완성해 보내세요.',
+  render() {
+    const f = cmpState(), k = kindOf(f.kid), c = f.cid ? cust(f.cid) : null;
+    const auto = kindText(k, f), txt = f.text != null ? f.text : auto, src = k.text ? '원문' : k.tpl ? '예시 문구' : '';
+    const blocked = k.ad && c && !c.consent;
+    let g = null;
+    const opt = (v, l, cur) => `<option value="${v}"${v === cur ? ' selected' : ''}>${l}</option>`;
+    const kinds = KINDS.map(x => {
+      const head = x.grp !== g ? ((g = x.grp) ? `<div class="grp">${x.grp}</div>` : '') : '';
+      return `${head}<label class="${x.id === f.kid ? 'on' : ''}"><input type="radio" name="kid" value="${x.id}" data-change="cmp" data-k="kid"${x.id === f.kid ? ' checked' : ''}>${esc(x.name)}${x.text || x.tpl ? '' : '<span class="wait">원문 대기</span>'}</label>`;
+    }).join('');
+    const people = [...CUSTOMERS].sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+    return `<div class="msg">
+      <div class="fld"><span class="lab">안내 종류</span><div class="kinds">${kinds}</div>
+        <select class="input select kinds-m" aria-label="안내 종류" data-change="cmp" data-k="kid">${[...new Set(KINDS.map(x => x.grp))].map(gr => { const o = KINDS.filter(x => x.grp === gr).map(x => opt(x.id, esc(x.name) + (x.text || x.tpl ? '' : ' (원문 대기)'), f.kid)).join(''); return gr ? `<optgroup label="${gr}">${o}</optgroup>` : o; }).join('')}</select></div>
+      <div>
+        <div class="fgrid">
+          <div class="fld"><label for="cmp-cid">고객</label><select id="cmp-cid" class="input select" data-change="cmp" data-k="cid">${opt('', '고르지 않음 — 이름 자리 그대로', f.cid)}${people.map(p => opt(p.id, `${esc(p.name)} (${p.visits ? p.visits + '회 방문' : '첫 방문 전'})`, f.cid)).join('')}</select></div>
+          <div class="fld"><span class="lab">방문 구분</span><div class="rad"><label><input type="radio" name="visit" value="first" data-change="cmp" data-k="visit"${f.visit === 'first' ? ' checked' : ''}>첫 방문</label><label><input type="radio" name="visit" value="again" data-change="cmp" data-k="visit"${f.visit === 'again' ? ' checked' : ''}>재방문</label></div></div>
+          <div class="fld"><label for="cmp-date">예약 날짜 · 시간</label><div class="two"><input id="cmp-date" type="date" class="input num" value="${f.date}" data-change="cmp" data-k="date"><input type="time" class="input num" value="${f.time}" step="1800" data-change="cmp" data-k="time" aria-label="예약 시간"></div></div>
+          <div class="fld"><label for="cmp-pid">프로그램</label><select id="cmp-pid" class="input select" data-change="cmp" data-k="pid">${PROGRAMS.map(p => opt(p.id, `${esc(p.name)} — ${p.min}분`, f.pid)).join('')}</select></div>
+        </div>
+        <div class="fld"><label for="cmp-link">고객 전용 Notion 페이지 링크 (포털·리뷰 안내에 사용)</label><input id="cmp-link" class="input" value="${esc(f.link)}" placeholder="https://….notion.site/…" data-change="cmp" data-k="link"></div>
+        <div class="fld" style="margin-bottom:8px"><label for="cmp-out">완성 문구 <span class="dim">${src ? '(' + src + ')' : ''}</span></label></div>
+        <textarea id="cmp-out" class="out${txt ? '' : ' is-empty'}" data-input="cmp-text"${txt ? '' : ' readonly'}>${esc(txt || '이 안내의 문구는 아직 옮기지 않았습니다.\n제안 도구의 원문을 설정 › 메시지 문구에 넣으면 여기에 채워집니다.')}</textarea>
+        ${blocked ? `<p class="banner" style="margin-top:12px">${esc(c.name)}님은 광고 수신에 동의하지 않았습니다. 재방문 안내는 광고라서 보낼 수 없습니다.</p>` : ''}
+        <div class="out-foot"><p class="s13 muted">문구를 직접 수정할 수 있습니다. 입력 정보나 안내 종류를 바꾸면 수정한 내용 대신 새 문구가 생성됩니다. 기본 문구는 변경되지 않습니다.</p>
+          <button type="button" class="btn btn-primary btn-lg" data-act="cmp-copy"${txt && !blocked ? '' : ' disabled'}>${f.copied ? '복사했습니다' : '안내 문구 복사'}</button></div>
+        <p class="s13 dim" style="margin:10px 0 0">복사한 날짜는 ${c ? esc(c.name) + '님의 ' : ''}문자 기록에 남습니다.${k.visit ? ' 날짜와 시간은 홈의 오늘 방문에 들어갑니다.' : ''}</p>
+      </div></div>`;
+  },
+};
+
+// ── 홈 ──
+const todayVisits = () => RESV.filter(r => r.date === TODAY && HOLDS.includes(r.status)).sort((a, b) => a.time.localeCompare(b.time));
+const maxNo = cid => Math.max(0, ...VISITS.filter(v => v.cid === cid).map(v => v.no));
+const names = ids => { const n = ids.map(id => cust(id).name); return n.slice(0, 2).join('님, ') + '님' + (n.length > 2 ? ` 외 ${n.length - 2}명` : ''); };
+const custLinks = ids => ids.map(id => `<a class="u" href="#/customer/${id}">${esc(cust(id).name)}</a>`).join(', ');
+function sendRows() { // 보낼 날이 된 안내 — 회차 기록 · 복사 기록으로만 계산 (네이버 예약 정보는 모른다)
+  const rows = [], tm = RESV.filter(r => r.date === addDays(TODAY, 1) && HOLDS.includes(r.status));
+  if (tm.length) rows.push({ kid: 'd1', ids: tm.map(r => r.cid), why: `내일 방문 ${tm.length}명` });
+  const map = { T_POSTCARE_PORTAL_NEXT_DAY: 'check', T_REVIEW_REQUEST_2_3D: 'thanks', T_FOLLOWUP_15D: 'revisit', T_FOLLOWUP_3M: 'revisit', T_DORMANT_6_12M: 'revisit' };
+  const why = { check: '어제 첫 방문한 ', thanks: '2~3일 전 첫 방문한 ', revisit: '광고 수신에 동의한 ' };
+  const q = buildQueue().filter(x => x.state === 'send');
+  ['check', 'thanks', 'revisit'].forEach(kid => {
+    const ids = [...new Set(q.filter(x => map[x.key] === kid).map(x => x.cid))];
+    if (ids.length) rows.push({ kid, ids, why: why[kid] + names(ids) });
+  });
+  return rows;
+}
+const MONTHS = ['2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09'];
+const mName = m => `${Number(m.slice(5))}월`;
+const THIS_M = TODAY.slice(0, 7);
+// 지난달까지는 가상 숫자 · 이번 달은 데모 기록에서 센다
+const STATS = {
+  '2026-04': { done: 12, first: 4, back: 1, pass: 1, noshow: 1 }, '2026-05': { done: 15, first: 6, back: 2, pass: 0, noshow: 1 },
+  '2026-06': { done: 13, first: 5, back: 2, pass: 1, noshow: 1 }, '2026-07': { done: 11, first: 4, back: 1, pass: 0, noshow: 2 },
+  '2026-08': { done: 16, first: 7, back: 3, pass: 2, noshow: 1 },
+};
+function statOf(m) {
+  if (m !== THIS_M) return STATS[m];
+  const inM = d => d && d.startsWith(m) && d <= TODAY;
+  const firsts = RESV.filter(r => r.first && r.status === 'VISIT_COMPLETED' && inM(r.date));
+  return { done: VISITS.filter(v => inM(v.date)).length, first: firsts.length,
+    back: firsts.filter(r => VISITS.some(v => v.cid === r.cid && v.date > r.date && diffDays(r.date, v.date) <= 30)).length,
+    pass: 0, noshow: RESV.filter(r => ['NO_SHOW', 'CANCELED'].includes(r.status) && inM(r.date)).length };
+}
+const NAVER = { // 사장님이 매월 옮겨 적는 숫자 — 데모 값은 예시
+  '2026-06': { rate: '9%', rev: '2', rank: '14위', ad: '안 함' }, '2026-07': { rate: '8%', rev: '1', rank: '13위', ad: '안 함' },
+  '2026-08': { rate: '12%', rev: '4', rank: '13위', ad: '8/18부터' },
+};
+function barsHTML(cls, sel, act) {
+  const max = Math.max(...MONTHS.map(m => statOf(m).done));
+  const bar = m => { const v = statOf(m).done, part = m === THIS_M, c = [m === sel ? 'sel' : '', part ? 'part' : ''].join(' ').trim();
+    return act ? `<button type="button" class="${c}" style="height:${Math.round(v / max * 100)}%" data-act="sm" data-m="${m}" aria-label="${mName(m)} ${v}건"><b>${v}</b></button>` : `<div class="${c}" style="height:${Math.round(v / max * 100)}%"></div>`; };
+  return cls === 'chart'
+    ? `<div class="chart">${MONTHS.map(bar).join('')}</div><div class="chart-x">${MONTHS.map(m => `<span class="${m === sel ? 'sel' : ''}">${mName(m)}${m === THIS_M ? ' 14일까지' : ''}</span>`).join('')}</div>`
+    : `<div class="bars">${MONTHS.map(bar).join('')}</div><div class="bars-x">${MONTHS.map(m => `<span>${mName(m)}</span>`).join('')}</div>`;
+}
+
+VIEWS['#/'] = {
+  title: () => fmtDL(TODAY),
+  lead: () => `오늘 방문 ${todayVisits().length}명, 보낼 문자 ${sendRows().reduce((n, r) => n + r.ids.length, 0)}건`,
+  acts: () => '<button type="button" class="btn btn-primary btn-lg" data-act="compose" data-kid="before">예약문자 만들기</button>',
+  render() {
+    const tv = todayVisits(), rows = sendRows(), s = statOf(THIS_M), prev = STATS['2026-08'];
+    const low = CUSTOMERS.filter(c => c.pass && c.pass.left <= 3);
+    const notBack = CUSTOMERS.filter(c => c.visits === 1 && c.last && diffDays(c.last, TODAY) >= 14 && !hasRebook(c.id, c.last));
+    const dorm = CUSTOMERS.filter(c => c.seg === 'DORMANT');
+    const tasks = TASKS.filter(t => !t.done).sort((a, b) => a.due.localeCompare(b.due)).slice(0, 3);
+    return `<div class="home-top">
+      <section><div class="v2-hrow"><h2 class="v2-h">오늘 방문</h2><button type="button" class="u" data-act="compose" data-kid="before" data-date="${TODAY}">방문 추가</button></div>
+        ${tv.length ? `<table class="ln"><thead><tr><th class="t-time">시간</th><th>고객</th><th class="hide-m">프로그램</th><th class="r">컨디션포털</th></tr></thead><tbody>${tv.map(r => {
+          const c = cust(r.cid), first = !c.visits;
+          return `<tr><td class="num">${r.time}</td><td><a class="u" style="font-size:15px" href="#/customer/${c.id}">${esc(c.name)}</a> <span class="dim s13">${first ? '첫 방문' : (maxNo(c.id) + 1) + '회차'}</span></td><td class="hide-m">${esc(prog(r.pid).name)}</td>
+            <td class="r">${c.portal ? `<button type="button" class="u" data-act="portal" data-id="${c.id}">열기</button>` : `<button type="button" class="u" data-act="portal-open" data-id="${c.id}">작성</button>`}</td></tr>`; }).join('')}</tbody></table>`
+          : '<p class="muted">오늘 방문할 손님이 없습니다.</p>'}
+        <p class="s13 muted" style="margin:12px 0 0">예약은 네이버에서 받습니다. 이 목록은 예약문자를 만들 때 적은 날짜와 시간으로 채워집니다.</p></section>
+      <section><div class="v2-hrow"><h2 class="v2-h">보낼 문자</h2><a class="u" href="#/messages/log">문자 기록</a></div>
+        <ul class="sendl">${rows.map(r => `<li><b>${esc(kindOf(r.kid).name)}</b><span>${r.why}</span><button type="button" class="u" data-act="compose" data-kid="${r.kid}" data-cid="${r.ids[0]}">문구 만들기</button></li>`).join('') || '<li><span class="empty">오늘 보낼 안내가 없습니다.</span></li>'}</ul>
+        <p class="s13 muted" style="margin:12px 0 0">보낼 날이 된 안내만 보입니다. 재방문 안내는 광고라서 수신에 동의한 손님만 나옵니다.</p></section>
+    </div>
+    <section class="month">
+      <div><h2 class="v2-h">${mName(THIS_M)} (${Number(TODAY.slice(8))}일까지)</h2>
+        <div class="k-label">이용 완료</div><div class="k-num num">${s.done}<small>건</small></div>
+        <div class="k-cmp">8월 한 달 ${prev.done}건</div>${barsHTML('bars', THIS_M, false)}</div>
+      <div><h2 class="v2-h">살필 고객</h2>
+        <table class="spec">
+          <tr><td>회원권 3회 이하</td><td class="v num">${low.length}명</td><td>재등록 상담 · ${custLinks(low.map(c => c.id)) || '없음'}</td></tr>
+          <tr><td>첫 방문 뒤 2주 넘게 안 온 손님</td><td class="v num">${notBack.length}명</td><td>${custLinks(notBack.map(c => c.id)) || '없음'} (광고 수신 동의 ${notBack.filter(c => c.consent).length}명)</td></tr>
+          <tr><td>6개월 넘게 안 온 고객</td><td class="v num">${dorm.length}명</td><td>${custLinks(dorm.map(c => c.id))} (광고 수신 동의 ${dorm.filter(c => c.consent).length}명)</td></tr>
+        </table>
+        <p class="s13 muted" style="margin:12px 0 0">다음 방문 날짜를 이미 적어 둔 손님은 빼고 셉니다.</p></div>
+    </section>
+    <section class="tasks"><h2 class="v2-h">남은 업무</h2>${taskTable(tasks, true)}</section>`;
+  },
+};
+
+// ── 운영 업무 · 콘텐츠 운영 (제안 화면 홈의 "고객 업무 · 운영 업무 · 콘텐츠 업무") ──
+const TK = (id, cat, title, due, every, done, href) => ({ id, cat, title, due, every: every || '', done: !!done, href: href || '' });
+const TASKS = [
+  TK('k1', 'ops', '월 1회 확인표 — 8월 숫자 옮겨 적기', '2026-09-07', '매월 첫 주', false, '#/stats'),
+  TK('k2', 'ops', '회원권 3회 이하 손님 재등록 상담', '2026-09-14', '', false, '#/customer/c2'),
+  TK('k3', 'ops', '컨디션포털 링크가 없는 손님 정리', '2026-09-20', '', false, '#/customers'),
+  TK('k4', 'ops', '스마트플레이스 통계 화면 저장', '2026-10-05', '분기마다'),
+  TK('k5', 'content', '플레이스 소식 — 50분 메뉴 안내 게시 여부 정하기', '2026-09-18'),
+  TK('k6', 'content', '블로그 · 인스타그램 관리 후기 글', '2026-09-25', '매월'),
+  TK('k7', 'content', '가을 안내 문자 문구 정하기 (광고 수신 동의 손님)', '2026-09-30', '계절마다', false, '#/campaigns'),
+  TK('k8', 'content', '홈페이지 공지 띠 문구 바꾸기', '2026-09-10', '필요할 때', true),
+];
+const CAT = { ops: '운영 업무', content: '콘텐츠 운영' };
+const dueTxt = t => `${Number(t.due.slice(5, 7))}/${Number(t.due.slice(8))}${!t.done && t.due < TODAY ? ' 지남' : ''}`;
+function taskTable(list, withCat) {
+  if (!list.length) return '<p class="muted">남은 업무가 없습니다.</p>';
+  return `<table class="ln"><thead><tr>${withCat ? '<th class="hide-m">구분</th>' : ''}<th>할 일</th><th>기한</th>${withCat ? '' : '<th class="hide-m">주기</th>'}<th class="r">완료</th></tr></thead><tbody>${list.map(t => `<tr class="${t.done ? 'done' : ''}">
+    ${withCat ? `<td class="hide-m muted" style="width:120px">${CAT[t.cat]}</td>` : ''}<td class="tk-t">${t.href && !t.done ? `<a class="u" style="font-size:14px" href="${t.href}">${esc(t.title)}</a>` : esc(t.title)}</td><td class="num nowrap">${dueTxt(t)}</td>${withCat ? '' : `<td class="hide-m muted">${t.every || '–'}</td>`}
+    <td class="r"><button type="button" class="chk" role="checkbox" aria-checked="${t.done}" aria-label="${esc(t.title)} 완료" data-act="task" data-id="${t.id}"></button></td></tr>`).join('')}</tbody></table>`;
+}
+ACTIONS.task = el => { const t = TASKS.find(x => x.id === el.dataset.id); t.done = !t.done; redraw(); };
+const taskView = (cat, lead) => ({
+  title: CAT[cat], lead,
+  acts: () => `<button type="button" class="btn btn-primary btn-lg" data-act="task-new" data-cat="${cat}">할 일 추가</button>`,
+  render() {
+    const list = TASKS.filter(t => t.cat === cat).sort((a, b) => (a.done - b.done) || a.due.localeCompare(b.due));
+    return taskTable(list, false);
+  },
+});
+VIEWS['#/ops'] = taskView('ops', '매장을 돌리는 데 반복되는 일입니다.');
+VIEWS['#/content'] = taskView('content', '플레이스, 블로그, 인스타그램, 홈페이지에 올릴 것입니다.');
+ACTIONS['task-new'] = el => {
+  openDrawer(`${CAT[el.dataset.cat]} 추가`, `<div class="stack" id="tf">
+    <div class="fld"><label for="tf-t">할 일</label><input id="tf-t" class="input" name="title" placeholder="예: 플레이스 소식 올리기"></div>
+    <div class="fld"><label for="tf-d">기한</label><input id="tf-d" type="date" class="input" name="due" value="${addDays(TODAY, 7)}"></div>
+    <div class="fld"><label for="tf-e">주기</label><select id="tf-e" class="input select" name="every">${['', '매주', '매월', '매월 첫 주', '분기마다', '계절마다', '필요할 때'].map(v => `<option value="${v}">${v || '한 번'}</option>`).join('')}</select></div>
+    <div id="tf-err"></div></div>`, `<button type="button" class="btn btn-primary btn-lg" data-act="task-save" data-cat="${el.dataset.cat}">저장</button>`, 440);
+};
+ACTIONS['task-save'] = el => {
+  const v = n => $(`#tf [name=${n}]`).value.trim();
+  if (!v('title')) { $('#tf-err').innerHTML = '<p class="banner">할 일을 적어 주세요.</p>'; return; }
+  TASKS.push(TK(nextId(TASKS, 'k'), el.dataset.cat, v('title'), v('due') || TODAY, v('every')));
+  closeDrawer(); redraw(); toast('추가했습니다 (데모 — 새로고침하면 사라집니다)');
+};
+
+// ── 통계 — 최종보고서 5장 확인 지표와 같은 숫자 ──
+const ROWS_CRM = [
+  ['done', '이용 완료', '회차 기록을 남긴 방문'],
+  ['first', '첫 방문 손님', '1회차 기록'],
+  ['back', '첫 방문 뒤 30일 안에 다시 온 손님', '1회차 다음 회차가 30일 안'],
+  ['pass', '회원권 새로 등록', '고객 정보의 회원권'],
+  ['noshow', '노쇼 · 취소', '사장님이 노쇼 · 취소로 표시한 일정'],
+];
+const ROWS_NAVER = [
+  ['rate', '예약 화면을 본 사람 중 신청한 비율', '스마트플레이스 통계 › 예약'],
+  ['rev', '방문자 후기', '플레이스 후기 탭, 최신순'],
+  ['rank', '검색 순위 (잠실 헤드스파)', '매장에서 같은 휴대폰으로 검색'],
+  ['ad', '플레이스 광고', '시작 · 중단 날짜'],
+];
+VIEWS['#/stats'] = {
+  title: '통계', lead: '매월 첫 주에 지난달 숫자를 확인합니다.',
+  acts: () => { const m = STATE.sm || '2026-08', i = MONTHS.indexOf(m);
+    return `<div class="mnav2"><button type="button" class="arw" data-act="sm" data-m="${MONTHS[i - 1] || ''}" aria-label="이전 달"${i ? '' : ' disabled'}></button><span>2026년 ${mName(m)}</span><button type="button" class="arw nx" data-act="sm" data-m="${MONTHS[i + 1] || ''}" aria-label="다음 달"${i < MONTHS.length - 1 ? '' : ' disabled'}></button></div>`; },
+  render() {
+    const m = STATE.sm || '2026-08', i = MONTHS.indexOf(m), s = statOf(m), part = m === THIS_M;
+    const cols = MONTHS.slice(Math.max(0, i - 2), i + 1), full = MONTHS.slice(0, 5), avg = Math.round(full.reduce((n, x) => n + STATS[x].done, 0) / full.length);
+    const old = x => cols.length === 3 && x === cols[0] ? ' hide-m' : '';
+    const head = `<thead><tr><th>지표</th>${cols.map(x => `<th class="${x === m ? 'sel' : ''}${old(x)}">${mName(x)}${x === THIS_M ? ' (14일까지)' : ''}</th>`).join('')}<th class="src">${'세는 방법'}</th></tr></thead>`;
+    const crmCell = (k, x) => { const v = statOf(x); return k === 'back' ? `${v.first}명 중 ${v.back}명` : v[k]; };
+    const nv = NAVER[m];
+    return `<div class="stat"><div class="stat-top">
+        <div><div class="k-label">${mName(m)} 이용 완료${part ? ' (14일까지)' : ''}</div><div class="k-num num">${s.done}<small>건</small></div>
+          <div class="k-cmp">${i ? `${mName(MONTHS[i - 1])} ${statOf(MONTHS[i - 1]).done}건, ` : ''}4~8월 평균 ${avg}건</div>
+          <p class="s13" style="margin:20px 0 0;max-width:320px">이용 완료는 회차 기록을 남긴 방문을 셉니다. 노쇼 · 취소는 빼고 셉니다.</p></div>
+        <div>${barsHTML('chart', m, true)}</div></div>
+      <h2 class="v2-h">이 화면이 세는 것</h2>
+      <table class="ln">${head}<tbody>${ROWS_CRM.map(([k, l, how]) => `<tr><td>${l}</td>${cols.map(x => `<td class="num${x === m ? ' sel' : ''}${old(x)}">${crmCell(k, x)}</td>`).join('')}<td class="src">${how}</td></tr>`).join('')}</tbody></table>
+      <h2 class="v2-h">네이버에서 옮겨 적는 것 <span class="exm">숫자는 예시</span></h2>
+      <table class="ln">${head.replace('세는 방법', '어디서')}<tbody>${ROWS_NAVER.map(([k, l, src]) => `<tr><td>${l}</td>${cols.map(x => `<td class="num${x === m ? ' sel' : ''}${old(x)}">${NAVER[x] ? esc(NAVER[x][k]) : '–'}</td>`).join('')}<td class="src">${src}</td></tr>`).join('')}</tbody></table>
+      <p style="margin:16px 0 0"><button type="button" class="u" data-act="nv-open" data-m="${m}">${mName(m)} 숫자 ${nv ? '고치기' : '적기'}</button></p></div>`;
+  },
+};
+ACTIONS.sm = el => { if (!el.dataset.m) return; STATE.sm = el.dataset.m; redraw(); };
+ACTIONS['nv-open'] = el => {
+  const m = el.dataset.m, v = NAVER[m] || {};
+  openDrawer(`${mName(m)} 네이버 숫자`, `<div class="stack" id="nf">${ROWS_NAVER.map(([k, l, src]) => `<div class="fld"><label for="nf-${k}">${l}</label><input id="nf-${k}" class="input" name="${k}" value="${esc(v[k] || '')}"><p class="s13 muted" style="margin:6px 0 0">${src}</p></div>`).join('')}</div>`,
+    `<button type="button" class="btn btn-primary btn-lg" data-act="nv-save" data-m="${m}">저장</button>`, 440);
+};
+ACTIONS['nv-save'] = el => {
+  NAVER[el.dataset.m] = Object.fromEntries(ROWS_NAVER.map(([k]) => [k, $(`#nf [name=${k}]`).value.trim() || '–']));
+  closeDrawer(); redraw(); toast('저장했습니다 (데모 — 새로고침하면 사라집니다)');
+};
+
+// ── 고객 한 페이지 (서랍 대신) ──
+ACTIONS.cust = el => { const h = '#/customer/' + el.dataset.id; if (location.hash === h) renderRoute(); else location.hash = h; };
+ACTIONS.ctab = el => { STATE.ctab = el.dataset.t; redraw(); };
+VIEWS['#/customer'] = {
+  crumb: () => `<a href="#/customers">고객 관리</a> / ${esc(cust(STATE.cid).name)}`,
+  title: () => esc(cust(STATE.cid).name),
+  lead: () => { const c = cust(STATE.cid); return c.first ? `${c.age}, ${c.first.slice(0, 4)}년 ${Number(c.first.slice(5, 7))}월 처음 방문` : `${c.age}, 아직 방문 전`; },
+  acts: () => `<button type="button" class="u" data-act="cf-open" data-id="${STATE.cid}">정보 수정</button><button type="button" class="btn btn-primary btn-lg" data-act="compose" data-cid="${STATE.cid}" data-kid="${cust(STATE.cid).visits ? 'check' : 'before'}">예약문자 만들기</button>`,
+  render() {
+    const c = cust(STATE.cid), tab = STATE.ctab || '회차';
+    const visits = VISITS.filter(v => v.cid === c.id).sort((a, b) => b.date.localeCompare(a.date));
+    const logs = MSGLOG.filter(l => l.cid === c.id && inScope(l)).sort((a, b) => b.at.localeCompare(a.at));
+    const kv = [['연락처', c.phone ? `<span class="num">${c.phone}</span>` : '<span class="muted">없음 — 앱 예약이라 받지 못함</span>'],
+      ['광고 수신 동의', c.consent ? '동의 — 재방문 · 계절 안내 문자를 보낼 수 있음' : '동의 안 함 — 예약 · 방문 안내만'],
+      ['처음 온 곳', CHANNELS[c.ch].name],
+      ['컨디션포털', c.portal ? `${esc(c.portalUrl ? c.portalUrl.replace(/^https?:\/\//, '').slice(0, 30) : 'notion.site/…/' + c.id)} &nbsp;<button type="button" class="u" data-act="portal" data-id="${c.id}">열기</button>` : `<span class="muted">아직 없음</span> &nbsp;<button type="button" class="u" data-act="portal-open" data-id="${c.id}">링크 등록</button>`],
+      ...(c.memo ? [['메모', esc(c.memo)]] : [])];
+    const right = c.pass
+      ? `<div class="k-label">회원권 ${c.pass.type}</div><div class="k-num num" style="font-size:44px;line-height:52px">${c.pass.left}<small>회 남음</small></div><div class="k-cmp">방문 ${c.visits}회, 마지막 ${fmtD(c.last)}</div>${c.pass.left <= 3 ? '<p class="s13" style="margin:16px 0 0">3회 이하라 재등록 상담 대상입니다.</p>' : ''}`
+      : `<div class="k-label">방문</div><div class="k-num num" style="font-size:44px;line-height:52px">${c.visits}<small>회</small></div><div class="k-cmp">${c.visits ? `처음 ${fmtD(c.first)}, 마지막 ${fmtD(c.last)}` : '아직 방문 기록이 없습니다'}</div>`;
+    const tabs = [['회차', '회차 기록'], ['사진', '사진 · 측정'], ['문자', '문자 기록']];
+    const pane = tab === '회차'
+      ? (visits.length ? `<table class="ln"><thead><tr><th>회차</th><th>날짜</th><th>프로그램</th><th class="hide-m">아로마</th><th class="hide-m">기록</th></tr></thead><tbody>${visits.map(v => `<tr><td class="num">${v.no}</td><td class="num nowrap">${fmtD(v.date)}</td><td>${esc(prog(v.pid).name)}</td><td class="hide-m">${v.aroma}</td><td class="hide-m">${esc(v.memo) || '–'}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 방문 기록이 없습니다.</p>')
+      : tab === '사진'
+        ? (visits.length ? `<p class="s13 muted" style="margin:0 0 12px">${visits[0].no}회차 · 실제 사진과 측정값은 노션에 있고 이 데모에는 자리만 있습니다.</p><div class="slot-row"><div class="slot-img">케어 전 사진<br>(현미경)</div><div class="slot-img">케어 후 사진<br>(현미경)</div></div><div class="slot-row mt-3"><div class="slot-val">뇌파 · 맥파 결과 — 측정 장비에서 옮겨 적는 칸</div><div class="slot-val">두피 상태 메모 — 원장님 기록</div></div>` : '<p class="muted">첫 방문 뒤에 사진과 측정 결과가 남습니다.</p>')
+        : (logs.length ? `<table class="ln"><thead><tr><th>날짜</th><th>안내</th><th class="hide-m">방법</th><th class="r">상태</th></tr></thead><tbody>${logs.map(l => `<tr><td class="num nowrap">${fmtAt(l.at)}</td><td>${esc(tplName(l.key))}</td><td class="hide-m muted">${esc(l.via)}</td><td class="r">${LOGST[l.status][0]}${l.note ? ` <span class="dim s13">${esc(l.note)}</span>` : ''}</td></tr>`).join('')}</tbody></table>` : '<p class="muted">아직 보낸 안내가 없습니다.</p>');
+    return `<div class="cgrid"><div class="kvl">${kv.map(([k, v]) => `<div><span>${k}</span><span>${v}</span></div>`).join('')}</div><div class="pass">${right}</div></div>
+      <nav class="v2-sub ctabs">${tabs.map(([k, l]) => `<a href="#" data-act="ctab" data-t="${k}"${k === tab ? ' class="on"' : ''}>${l}</a>`).join('')}</nav>${pane}`;
+  },
+};
+const _custView = VIEWS['#/customers'];
+VIEWS['#/customers'] = { ..._custView, sub: 'cust' };
+VIEWS['#/b2b'] = { ...VIEWS['#/b2b'], title: '고객 관리', sub: 'cust' };
+['#/messages/log', '#/campaigns', '#/messages/auto'].forEach(h => { VIEWS[h] = { ...VIEWS[h], sub: 'msg' }; });
+['#/settings/templates', '#/settings/channels', '#/settings/programs'].forEach(h => { VIEWS[h] = { ...VIEWS[h], title: '설정', sub: 'set' }; });
 
 ;
 /* ── 시작: 클릭 · 입력 · 변경 위임 · 화면 전환 ── */
